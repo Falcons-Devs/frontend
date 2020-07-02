@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     /* Posicionamiento */
     /* Modelo de caja (Box-model) */
     /* Tipografía */
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', system-ui, sans-serif;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', system-ui, sans-serif;
     /* Visual */
     box-sizing: border-box;
     /* Misc */

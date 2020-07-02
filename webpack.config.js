@@ -3,7 +3,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   output: {
     filename: "index.js",
-    publicPath: "/"
+    publicPath: "/",
+  },
+  devServer: {
+    hot: true,
+    open: true,
+    port: 3000,
   },
   plugins: [
     new HtmlWebpackPlugin({
