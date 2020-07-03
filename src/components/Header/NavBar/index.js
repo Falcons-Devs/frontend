@@ -6,7 +6,7 @@ export const NavBar = () => {
   return (
     <Nav>
       <Link to="/about">Nosotros</Link>
-      <Link to="/schedule">Mi agenda</Link>
+      <Link to="/agenda">Mi agenda</Link>
       <Link to="/signin">Registrarse</Link>
       <Link to="/login">
         <IconAvatar fill="#DE18AD" /> Iniciar sesión
