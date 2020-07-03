@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const FooterStyle = styled.footer`
-  /* Posicionamiento */
-  /* Modelo de caja (Box-model) */
+  /* Positioning */
+  /* Box-model */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -12,7 +12,7 @@ export const FooterStyle = styled.footer`
   padding-bottom: 30px;
   padding-left: 26px;
   width: 100%;
-  /* Tipografía */
+  /* Typography */
   font-size: 16px;
   font-weight: 300;
   /* Visual */
@@ -21,10 +21,10 @@ export const FooterStyle = styled.footer`
 `;
 
 export const P = styled.p`
-  /* Posicionamiento */
-  /* Modelo de caja (Box-model) */
+  /* Positioning */
+  /* Box-model */
   margin: 25px 0 16px;
-  /* Tipografía */
+  /* Typography */
   /* Visual */
   /* Misc */
 `;
