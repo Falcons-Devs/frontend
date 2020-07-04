@@ -1,10 +1,11 @@
 import React from "react";
-import { Social } from "./Social";
-import { FooterStyle, P } from "./styles";
+import { NavBarFooter } from "./NavBar";
+import { FooterStyle, Wrap } from "./styles";
 
 export const Footer = () => (
   <FooterStyle>
-    <P>Siguenos en:</P>
-    <Social />
+    <Wrap>
+      <NavBarFooter />
+    </Wrap>
   </FooterStyle>
 );
