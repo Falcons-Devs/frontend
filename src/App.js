@@ -15,6 +15,7 @@ import { Procedures as ProcedureBeautician } from "./components/Main/Pages/Beaut
 import { Diary as DiaryBeautician } from "./components/Main/Pages/Beautician/Diary";
 
 import { Home as HomeClient } from "./components/Main/Pages/Client/Home";
+import { Appointment as AppointmentsClient } from "./components/Main/Pages/Client/appointment";
 
 export const App = () => (
   <>
@@ -32,6 +33,7 @@ export const App = () => (
       <DiaryBeautician path="/beautician-diary" />
       {/* Client */}
       <HomeClient path="/client" />
+      <AppointmentsClient path="/client-appointments" />
     </Router>
     <Footer />
   </>
