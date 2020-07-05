@@ -20,6 +20,8 @@ import { CreateAppointment as CreateAppointmentClient } from "./components/Main/
 
 import { Home as HomeAdmin } from "./components/Main/Pages/Admin/Home";
 import { Client as ClientAdmin } from "./components/Main/Pages/Admin/Client";
+import { ClientInformation as ClientInformationAdmin } from "./components/Main/Pages/Admin/ClientInformation";
+import { Procedures as ProceduresAdmin } from "./components/Main/Pages/Admin/Procedures";
 
 export const App = () => (
   <>
@@ -42,6 +44,8 @@ export const App = () => (
       {/* Admin */}
       <HomeAdmin path="/admin" />
       <ClientAdmin path="/admin-clients" />
+      <ClientInformationAdmin path="/admin-client-info" />
+      <ProceduresAdmin path="/admin-procedures" />
     </Router>
     <Footer />
   </>
