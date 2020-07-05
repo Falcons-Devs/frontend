@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Router } from "@reach/router";
 
 import { GlobalStyle } from "./GlobalStyles";
 import { Header } from "./components/Header";
@@ -14,19 +14,17 @@ import { Schedules } from "./components/Main/Pages/Beatucian/Schedules";
 
 export const App = () => (
   <>
+    <GlobalStyle />
+    <Header />
     <Router>
-      <GlobalStyle />
-      <Header />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/signin" component={Signin} />
-        <Route exact path="/login" component={Login} />
-        {/* Beautician */}
-        <Route exact path="/beautician" component={HomeBeatucian} />
-        <Route exact path="/beautician-schedule" component={Schedules} />
-      </Switch>
-      <Footer />
+      <Home path="/" />
+      <About path="/about" />
+      <Signin path="/signin" />
+      <Login path="/login" />
+      {/* Beautician */}
+      <HomeBeatucian path="/beautician" />
+      <Schedules path="/beautician-schedule" />
     </Router>
+    <Footer />
   </>
 );
