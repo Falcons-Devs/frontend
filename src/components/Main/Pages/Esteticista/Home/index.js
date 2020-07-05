@@ -1,5 +1,17 @@
 import React from "react";
+import { ShowMyProfile } from "../../../../ShowMyProfile";
+import { ImagesWithProcess } from "../../../../ImagesWithProcess";
 
 export const Home = () => {
-  return <h1>Holaaa</h1>;
+  return (
+    <>
+      {/* <ShowMyProfile nameUser="Jhon Carlos COlorado" /> */}
+      <ImagesWithProcess
+        nameImage="2"
+        alt="Procedimientos"
+        width=""
+        height=""
+      />
+    </>
+  );
 };
