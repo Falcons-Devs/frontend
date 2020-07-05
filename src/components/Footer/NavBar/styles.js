@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   /* Box-model */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   /* Typography */
   /* Visual */
   /* Misc */
@@ -37,23 +37,14 @@ export const Link = styled(LinkRouter)`
   &:focus,
   &:hover {
     /* Positioning */
-    bottom: -1px;
     /* Box-model */
-    border-bottom: 2px solid #de18ad;
     /* Typography */
     color: #000;
     /* Visual */
     /* Misc */
   }
+`;
 
-  &[aria-current] {
-    /* Positioning */
-    bottom: -1px;
-    /* Box-model */
-    border-bottom: 2px solid #de18ad;
-    /* Typography */
-    color: #000;
-    /* Visual */
-    /* Misc */
-  }
+export const P = styled.p`
+  margin-left: 20px;
 `;

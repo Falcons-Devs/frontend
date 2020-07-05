@@ -1,30 +1,29 @@
 import styled from "styled-components";
 
-export const FooterStyle = styled.footer`
-  /* Posicionamiento */
-  /* Modelo de caja (Box-model) */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  padding-top: 30px;
-  padding-right: 26px;
-  padding-bottom: 30px;
-  padding-left: 26px;
-  width: 100%;
-  /* Tipografía */
-  font-size: 16px;
-  font-weight: 300;
+export const Wrap = styled.div`
+  /* Positioning */
+  /* (Box-model) */
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  height: 60px;
+  width: 1200px;
+  max-width: 1200px;
+  /* Typography */
   /* Visual */
-  background: #f8f9fa;
+  background: #02b3b1;
+  border-radius: 10px 10px 0 0;
   /* Misc */
 `;
 
-export const P = styled.p`
-  /* Posicionamiento */
-  /* Modelo de caja (Box-model) */
-  margin: 25px 0 16px;
-  /* Tipografía */
+export const FooterStyle = styled.footer`
+  /* Positioning */
+  /* Box-model */
+  height: inherit;
+  width: 100%;
+  /* Typography */
   /* Visual */
   /* Misc */
+  bottom: 0;
 `;
+

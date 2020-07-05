@@ -1,60 +1,60 @@
 import { createGlobalStyle } from "styled-components";
 
-/*------ Orden de la declaración ------*/
+/*------ Declaration order ------*/
 
-/* Posicionamiento */
-/* Modelo de caja (Box-model) */
-/* Tipografía */
+/* Positioning */
+/* Box-model */
+/* Typography */
 /* Visual */
 /* Misc */
 
-/*-- Misc: (Misceláneas - se puede conocer como todas las propiedades que son altamente experimentales o que no se ajustan a ninguna otra categoría --*/
+/*-- Misc: (Miscellaneous - can be known as all properties that are highly experimental or do not fit any other category) --*/
 
-/*------ Fin Orden de la declaración ------*/
+/*------ Fin Declaration order ------*/
 
 export const GlobalStyle = createGlobalStyle`
   html {
-    /* Posicionamiento */
-    /* Modelo de caja (Box-model) */
-    /* Tipografía */
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', system-ui, sans-serif;
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', system-ui, sans-serif;
     /* Visual */
     box-sizing: border-box;
     /* Misc */
   }
 
   *, *::before, *::after {
-    /* Posicionamiento */
-    /* Modelo de caja (Box-model) */
-    /* Tipografía */
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
     /* Visual */
     box-sizing: inherit;
     /* Misc */
   }
 
   ul, li, h1, h2, h3, p, button {
-    /* Posicionamiento */
-    /* Modelo de caja (Box-model) */
+    /* Positioning */
+    /* Box-model */
     margin: 0;
     padding: 0;
-    /* Tipografía */
+    /* Typography */
     /* Visual */
     /* Misc */
   }
 
   ul {
-    /* Posicionamiento */
-    /* Modelo de caja (Box-model) */
-    /* Tipografía */
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
     /* Visual */
     list-style: none;
     /* Misc */
   }
 
   button {
-    /* Posicionamiento */
-    /* Modelo de caja (Box-model) */
-    /* Tipografía */
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
     /* Visual */
     background: transparent;
     border: 0;
@@ -63,18 +63,18 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    /* Posicionamiento */
-    /* Modelo de caja (Box-model) */
+    /* Positioning */
+    /* Box-model */
     margin: 0 auto;
     width: 100%;
-    /* Tipografía */
+    /* Typography */
     font-size: 17px;
     color: #202124;
     text-rendering: optimizeLegibility;
     /* Visual */
     background-color: #fff;
     /* Misc */
-    overscroll-behavior: none; /* Evitar rebotes cuando hacemos scroll */
+    overscroll-behavior: none; /* Avoid bounces when we scroll */
   }
 
   body a {
