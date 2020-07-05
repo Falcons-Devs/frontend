@@ -14,6 +14,8 @@ import { Schedules as ScheduleBeautician } from "./components/Main/Pages/Beautic
 import { Procedures as ProcedureBeautician } from "./components/Main/Pages/Beautician/Procedures";
 import { Diary as DiaryBeautician } from "./components/Main/Pages/Beautician/Diary";
 
+import { Home as HomeClient } from "./components/Main/Pages/Client/Home";
+
 export const App = () => (
   <>
     <GlobalStyle />
@@ -28,6 +30,8 @@ export const App = () => (
       <ScheduleBeautician path="/beautician-schedule" />
       <ProcedureBeautician path="/beautician-procedure" />
       <DiaryBeautician path="/beautician-diary" />
+      {/* Client */}
+      <HomeClient path="/client" />
     </Router>
     <Footer />
   </>
