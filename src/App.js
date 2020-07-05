@@ -9,8 +9,8 @@ import { Login } from "./components/Main/Home/Login";
 import { Signin } from "./components/Main/Home/Signin";
 import { Footer } from "./components/Footer";
 
-import { Home as HomeBeatucian } from "./components/Main/Pages/Beatucian/Home";
-import { Schedules } from "./components/Main/Pages/Beatucian/Schedules";
+import { Home as HomeBeautician } from "./components/Main/Pages/Beatucian/Home";
+import { Schedules as ScheduleBeautician } from "./components/Main/Pages/Beatucian/Schedules";
 
 export const App = () => (
   <>
@@ -22,8 +22,8 @@ export const App = () => (
       <Signin path="/signin" />
       <Login path="/login" />
       {/* Beautician */}
-      <HomeBeatucian path="/beautician" />
-      <Schedules path="/beautician-schedule" />
+      <HomeBeautician path="/beautician" />
+      <ScheduleBeautician path="/beautician-schedule" />
     </Router>
     <Footer />
   </>
