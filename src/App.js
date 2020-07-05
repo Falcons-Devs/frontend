@@ -1,7 +1,7 @@
 import React from "react";
-
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+import { GlobalStyle } from "./GlobalStyles";
 import { Header } from "./components/Header";
 import { Home } from "./components/Main/Home";
 import { About } from "./components/Main/Home/About";
@@ -10,9 +10,7 @@ import { Signin } from "./components/Main/Home/Signin";
 import { Footer } from "./components/Footer";
 
 import { Home as HomeBeatucian } from "./components/Main/Pages/Beatucian/Home";
-import { Schedules as ScheduleBeatucian } from "./components/Main/Pages/Beatucian/Schedules";
-
-import { GlobalStyle } from "./GlobalStyles";
+import { Schedules } from "./components/Main/Pages/Beatucian/Schedules";
 
 export const App = () => (
   <>
@@ -20,13 +18,13 @@ export const App = () => (
       <GlobalStyle />
       <Header />
       <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/signin" component={Signin} />
-        <Route path="/login" component={Login} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/signin" component={Signin} />
+        <Route exact path="/login" component={Login} />
         {/* Beautician */}
-        <Route path="/beautician" component={HomeBeatucian} />
-        <Route path="/beautician/schedule" component={ScheduleBeatucian} />
+        <Route exact path="/beautician" component={HomeBeatucian} />
+        <Route exact path="/beautician-schedule" component={Schedules} />
       </Switch>
       <Footer />
     </Router>
