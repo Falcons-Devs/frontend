@@ -5,6 +5,7 @@ import Hero from '../../../assets/img/hero.jpg'
 import Hero_card1 from '../../../assets/img/hero_card1.jpg'
 import Hero_card2 from '../../../assets/img/hero_card2.jpg'
 import Hero_card3 from '../../../assets/img/hero_card3.jpg'
+import { Buttons } from "../../Buttons";
 
 export const Home = () => (
   <>
@@ -30,7 +31,7 @@ export const Home = () => (
       <InfoParallax>
         <h4>Agenda tu primera cita</h4>
         <p>Te sorprenderás con lo fácil y rapido que es agendar una cita con tu esteticista favorita y tu procedimiento favorito</p>
-        <Link to='/signin'>Registrarse</Link>
+        <Buttons vaue="Registrarse" to="/signin" />
       </InfoParallax>
     </SectionParallax>
   </>
