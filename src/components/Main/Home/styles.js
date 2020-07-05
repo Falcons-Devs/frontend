@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link as LinkRouter } from "@reach/router";
 
-import BackgroundParallax from '../../../assets/img/Background-parallax.jpg'
+import BackgroundParallax from "../../../assets/img/Background-parallax.jpg";
 
 export const Wrap = styled.div`
   /* Positioning */
@@ -38,19 +38,19 @@ export const SectionHero = styled.section`
   /* Visual */
   /* Misc */
 
-  img{
+  img {
     position: relative;
   }
 
-  h1{
+  h1 {
     position: absolute;
     top: 38%;
     left: 8%;
     color: white;
     /* Typography */
     font-family: "Italianno", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", system-ui,
-      sans-serif;
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      system-ui, sans-serif;
     font-size: 4em;
     font-weight: 400;
     color: #fff;
@@ -61,25 +61,25 @@ export const SectionEslogan = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: normal;
 
-  h2{
+  h2 {
     margin-bottom: -15px;
-    color: #DE18AD;
-    font-family: 'Italianno', cursive;
+    color: #de18ad;
+    font-family: "Italianno", cursive;
     font-size: 2.8em;
     font-weight: 400;
   }
 
-  h3{
+  h3 {
     margin-bottom: 10px;
-    color: #2F2F2F;
+    color: #2f2f2f;
     font-size: 2em;
   }
 
-  p{
-    color: rgba(47,47,47,.7);
+  p {
+    color: rgba(47, 47, 47, 0.7);
   }
 `;
 
@@ -100,46 +100,43 @@ export const SectionParallax = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: normal;
 `;
-
 
 export const InfoParallax = styled.section`
   /* border: 1px solid red; */
   width: 575px;
   text-align: center;
-  color: #FCFCFC;
+  color: #fcfcfc;
 
-  h4{
-    font-family: 'Italianno', cursive;
+  h4 {
+    font-family: "Italianno", cursive;
     font-size: 2.6em;
     font-weight: 400;
     color: #000000;
     margin: 0px;
   }
 
-  p{
+  p {
     font-size: 1.7em;
     font-weight: 400;
     margin-bottom: 40px;
   }
 
-  button{
-    color: #FCFCFC;
+  button {
+    color: #fcfcfc;
     font-size: 1.5em;
-    background-color: #DE18AD;
+    background-color: #de18ad;
     padding: 8px 50px;
     border-radius: 50px;
   }
 `;
 
 export const Link = styled(LinkRouter)`
-  color: #FCFCFC;
+  color: #fcfcfc;
   font-size: 1.5em;
-  background-color: #DE18AD;
+  background-color: #de18ad;
   padding: 8px 50px;
   border-radius: 50px;
 `;
-
-
