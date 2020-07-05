@@ -14,6 +14,10 @@ import { Schedules as ScheduleBeautician } from "./components/Main/Pages/Beautic
 import { Procedures as ProcedureBeautician } from "./components/Main/Pages/Beautician/Procedures";
 import { Diary as DiaryBeautician } from "./components/Main/Pages/Beautician/Diary";
 
+import { Home as HomeClient } from "./components/Main/Pages/Client/Home";
+import { AppointmentHistory as AppointmentsClient } from "./components/Main/Pages/Client/appointment-history";
+import { CreateAppointment as CreateAppointmentClient } from "./components/Main/Pages/Client/appointment";
+
 export const App = () => (
   <>
     <GlobalStyle />
@@ -28,6 +32,10 @@ export const App = () => (
       <ScheduleBeautician path="/beautician-schedule" />
       <ProcedureBeautician path="/beautician-procedure" />
       <DiaryBeautician path="/beautician-diary" />
+      {/* Client */}
+      <HomeClient path="/client" />
+      <AppointmentsClient path="/client-appointments" />
+      <CreateAppointmentClient path="/client-create-appointment" />
     </Router>
     <Footer />
   </>
