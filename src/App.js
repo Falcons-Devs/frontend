@@ -11,6 +11,7 @@ import { Footer } from "./components/Footer";
 
 import { Home as HomeBeautician } from "./components/Main/Pages/Beatucian/Home";
 import { Schedules as ScheduleBeautician } from "./components/Main/Pages/Beatucian/Schedules";
+import { Procedures as ProcedureBeautician } from "./components/Main/Pages/Beatucian/Procedures";
 
 export const App = () => (
   <>
@@ -24,6 +25,7 @@ export const App = () => (
       {/* Beautician */}
       <HomeBeautician path="/beautician" />
       <ScheduleBeautician path="/beautician-schedule" />
+      <ProcedureBeautician path="/beautician-procedure" />
     </Router>
     <Footer />
   </>
