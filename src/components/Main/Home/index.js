@@ -1,12 +1,10 @@
 import React from "react";
-import { Login } from "./Login";
 import { Main, Wrap, SectionHero, SectionEslogan, SectionCards, SectionParallax, InfoParallax, Link } from "./styles";
 
 import Hero from '../../../assets/img/hero.jpg'
 import Hero_card1 from '../../../assets/img/hero_card1.jpg'
 import Hero_card2 from '../../../assets/img/hero_card2.jpg'
 import Hero_card3 from '../../../assets/img/hero_card3.jpg'
-import BackgroundParallax from '../../../assets/img/Background-parallax.jpg'
 
 export const Home = () => (
   <>

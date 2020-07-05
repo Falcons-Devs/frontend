@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link as LinkRouter } from "@reach/router";
 
 export const Wrap = styled.div`
     /* Positioning */

@@ -22,7 +22,7 @@ export const Signin = () => {
                     </div>
                     <div>
                         <label htmlFor="password"> <IconPassword width="50px" height="50px" fill="#DE18AD" /> </label>
-                        <input type="text" id="password" placeholder="password"/>
+                        <input type="text" id="password" placeholder="Password"/>
                     </div>
                     <button>Registrarse</button>
                 </form>
