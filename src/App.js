@@ -18,6 +18,8 @@ import { Home as HomeClient } from "./components/Main/Pages/Client/Home";
 import { AppointmentHistory as AppointmentsClient } from "./components/Main/Pages/Client/appointment-history";
 import { CreateAppointment as CreateAppointmentClient } from "./components/Main/Pages/Client/appointment";
 
+import { Home as HomeAdmin } from "./components/Main/Pages/Admin/Home";
+
 export const App = () => (
   <>
     <GlobalStyle />
@@ -36,6 +38,8 @@ export const App = () => (
       <HomeClient path="/client" />
       <AppointmentsClient path="/client-appointments" />
       <CreateAppointmentClient path="/client-create-appointment" />
+      {/* Admin */}
+      <HomeAdmin path="/admin" />
     </Router>
     <Footer />
   </>
