@@ -51,14 +51,4 @@ export const SectionForm = styled.section`
         }
     }
 
-    button{
-        color: #FCFCFC;
-        display: flex;
-        font-size: 1.5em;
-        background-color: #DE18AD;
-        padding: 8px 50px;
-        border-radius: 50px;
-        margin: 30px auto;
-    }
-
 `;
