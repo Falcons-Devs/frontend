@@ -1,7 +1,15 @@
 import React from "react";
-import { Container, ArrowButton, Title, Appointments } from "./styles";
+import {
+  Container,
+  ArrowButton,
+  Title,
+  Beautician,
+  Calendar,
+  Procedures,
+  CreateButton,
+} from "./styles";
 
-export const Appointment = () => {
+export const CreateAppointment = () => {
   return (
     <Container>
       <ArrowButton>
@@ -10,9 +18,18 @@ export const Appointment = () => {
       <Title>
         <h1>Titulo</h1>
       </Title>
-      <Appointments>
-        <h1>Citas</h1>
-      </Appointments>
+      <Beautician>
+        <h1>Esteticista</h1>
+      </Beautician>
+      <Calendar>
+        <h1>Calendario</h1>
+      </Calendar>
+      <Procedures>
+        <h1>Procedimientos</h1>
+      </Procedures>
+      <CreateButton>
+        <h1>Crear boton</h1>
+      </CreateButton>
     </Container>
   );
 };
