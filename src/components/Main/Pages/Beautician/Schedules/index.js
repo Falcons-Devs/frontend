@@ -9,6 +9,7 @@ import {
   ArrowButton,
   Title,
 } from "./styles";
+import { Buttons } from "../../../../Buttons";
 
 export const Schedules = () => {
   return (
@@ -29,10 +30,10 @@ export const Schedules = () => {
         <h1>Horario</h1>
       </ScheduleCard>
       <CancelButton>
-        <h1>Cancelar</h1>
+        <Buttons value="Cancelar" color="#DE3C48" />
       </CancelButton>
       <ConfirmButton>
-        <h1>Confirmar</h1>
+        <Buttons value="Confirmar" color="#2DD881" />
       </ConfirmButton>
     </Container>
   );

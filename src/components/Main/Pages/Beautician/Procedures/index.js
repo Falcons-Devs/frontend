@@ -8,6 +8,7 @@ import {
   CancelButton,
   ConfirmButton,
 } from "./styles";
+import { Buttons } from "../../../../Buttons";
 
 export const Procedures = () => {
   return (
@@ -25,10 +26,10 @@ export const Procedures = () => {
         <h1>Procedures</h1>
       </ProceduresContainer>
       <CancelButton>
-        <h1>Cancel</h1>
+        <Buttons value="Cancelar" color="#DE3C48" />
       </CancelButton>
       <ConfirmButton>
-        <h1>Confirm</h1>
+        <Buttons value="Confirmar" color="#2DD881" />
       </ConfirmButton>
     </Container>
   );
