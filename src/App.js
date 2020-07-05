@@ -9,9 +9,10 @@ import { Login } from "./components/Main/Home/Login";
 import { Signin } from "./components/Main/Home/Signin";
 import { Footer } from "./components/Footer";
 
-import { Home as HomeBeautician } from "./components/Main/Pages/Beatucian/Home";
-import { Schedules as ScheduleBeautician } from "./components/Main/Pages/Beatucian/Schedules";
-import { Procedures as ProcedureBeautician } from "./components/Main/Pages/Beatucian/Procedures";
+import { Home as HomeBeautician } from "./components/Main/Pages/Beautician/Home";
+import { Schedules as ScheduleBeautician } from "./components/Main/Pages/Beautician/Schedules";
+import { Procedures as ProcedureBeautician } from "./components/Main/Pages/Beautician/Procedures";
+import { Diary as DiaryBeautician } from "./components/Main/Pages/Beautician/Diary";
 
 export const App = () => (
   <>
@@ -26,6 +27,7 @@ export const App = () => (
       <HomeBeautician path="/beautician" />
       <ScheduleBeautician path="/beautician-schedule" />
       <ProcedureBeautician path="/beautician-procedure" />
+      <DiaryBeautician path="/beautician-diary" />
     </Router>
     <Footer />
   </>
