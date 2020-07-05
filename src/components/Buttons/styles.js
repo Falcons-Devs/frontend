@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link as LinkRouter } from "@reach/router";
+import { Link as LinkRouter } from "react-router-dom";
 
 export const Button = styled.button`
   color: #fcfcfc;

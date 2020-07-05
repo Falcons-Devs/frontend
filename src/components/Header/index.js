@@ -1,6 +1,6 @@
 import React from "react";
 import { LogoOCSF } from "../../assets/static/logo-ocs-f";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 import { NavBar } from "./NavBar";
 import { HeaderStyle, Wrap } from "./styles";
 
