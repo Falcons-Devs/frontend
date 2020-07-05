@@ -19,6 +19,7 @@ import { AppointmentHistory as AppointmentsClient } from "./components/Main/Page
 import { CreateAppointment as CreateAppointmentClient } from "./components/Main/Pages/Client/appointment";
 
 import { Home as HomeAdmin } from "./components/Main/Pages/Admin/Home";
+import { Client as ClientAdmin } from "./components/Main/Pages/Admin/Client";
 
 export const App = () => (
   <>
@@ -40,6 +41,7 @@ export const App = () => (
       <CreateAppointmentClient path="/client-create-appointment" />
       {/* Admin */}
       <HomeAdmin path="/admin" />
+      <ClientAdmin path="/admin-clients" />
     </Router>
     <Footer />
   </>
