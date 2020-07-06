@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Wrap, Container, ArrowButton } from "./styles";
 import { ShowAppointmentHistory } from "../../../../ShowAppointmentHistory";
 import { NameStatus } from "../../../../NameStatus";
 
 export const AppointmentHistory = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <Wrap>
       <Container>

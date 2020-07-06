@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Container,
   ArrowButton,
@@ -10,6 +10,9 @@ import {
 } from "./styles";
 
 export const EditUser = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <Container>
       <ArrowButton>

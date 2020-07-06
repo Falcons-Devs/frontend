@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, ArrowButton, Title, CreateButton, Table } from "./styles";
 
 export const Users = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <Container>
       <ArrowButton>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Wrap,
   Container,
@@ -11,6 +11,9 @@ import {
 import { ImagesWithProcess } from "../../../../ImagesWithProcess";
 
 export const Home = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <Wrap>
       <Container>

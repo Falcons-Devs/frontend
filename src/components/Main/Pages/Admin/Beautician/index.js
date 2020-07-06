@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Container,
   ArrowButton,
@@ -9,6 +9,9 @@ import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
 
 export const Beautician = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <Container>
       <ArrowButton>
