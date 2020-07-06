@@ -1,5 +1,18 @@
 import React from "react";
+import { Container, ProcedureContainer, P, Title } from "./styles";
 
-export const List = () => {
-  return <h1>Lista</h1>;
+import { IconCheckboxFalse } from "../../assets/static/icon-checkbox-false";
+
+export const List = ({ list, title }) => {
+  return (
+    <Container>
+      {list.map((item) => (
+        <ProcedureContainer>
+          <P>{item}</P>
+          <IconCheckboxFalse />
+        </ProcedureContainer>
+      ))}
+      <Title>{title}</Title>
+    </Container>
+  );
 };

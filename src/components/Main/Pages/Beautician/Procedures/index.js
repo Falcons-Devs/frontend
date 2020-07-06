@@ -13,6 +13,25 @@ import { NameStatus } from "../../../../NameStatus";
 import { HeaderImages } from "../../../../HeaderImages";
 import { List } from "../../../../List";
 
+const list = [
+  "Procedimiento 1",
+  "Procedimiento 2",
+  "Procedimiento 3",
+  "Procedimiento 4",
+  "Procedimiento 5",
+  "Procedimiento 6",
+  "Procedimiento 7",
+  "Procedimiento 8",
+  "Procedimiento 9",
+  "Procedimiento 10",
+  "Procedimiento 11",
+  "Procedimiento 11",
+  "Procedimiento 12",
+  "Procedimiento 13",
+  "Procedimiento 14",
+  "Procedimiento 15",
+];
+
 export const Procedures = () => {
   return (
     <div>
@@ -25,7 +44,7 @@ export const Procedures = () => {
             <HeaderImages numberImg="2" />
           </Hero>
           <ProceduresContainer>
-            <List />
+            <List list={list} title="Procedimientos" />
           </ProceduresContainer>
           <CancelButton>
             <Buttons value="Cancelar" color="#DE3C48" />
