@@ -1,21 +1,27 @@
 import styled from "styled-components";
 
+export const Wrap = styled.div`
+  /* Positioning */
+  /* (Box-model) */
+  margin: 20px auto;
+  width: 1200px;
+  max-width: 1200px;
+  padding: 0px 20px;
+  /* Typography */
+  /* Visual */
+`;
+
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(1fr, 3);
-  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
 `;
 export const ArrowButton = styled.div`
-  margin-top: 30px;
-  margin-left: 20px;
   grid-column: 1 / 3;
   grid-row: 1 / 2;
 `;
-export const CreateButton = styled.div`
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-`;
-export const Beautician = styled.div`
-  grid-column: 1 / 4;
-  grid-row: 2 / 3;
+export const Title = styled.div`
+  display: flex;
+  align-items: center;
 `;
