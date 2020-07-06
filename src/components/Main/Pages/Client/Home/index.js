@@ -19,7 +19,11 @@ export const Home = () => {
         </Profile>
         <MyAppointment>
           {" "}
-          <ImagesWithProcess nameImage="1" alt="Mis citas" />{" "}
+          <ImagesWithProcess
+            nameImage="1"
+            alt="Mis citas"
+            to="/client-create-appointment"
+          />{" "}
         </MyAppointment>
         <CreateAppointment>
           <ImagesWithProcess
@@ -27,6 +31,7 @@ export const Home = () => {
             alt="Crear cita"
             width="1200px"
             height="300px"
+            to="/client-appointments"
           />
         </CreateAppointment>
       </Container>
