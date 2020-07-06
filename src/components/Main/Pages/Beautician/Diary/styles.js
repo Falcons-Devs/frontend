@@ -6,11 +6,9 @@ export const Container = styled.div`
   grid-template-rows: 1fr 1fr;
 `;
 export const ArrowButton = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-`;
-export const Title = styled.div`
-  grid-column: 2 / 3;
+  margin-top: 20px;
+  margin-left: 20px;
+  grid-column: 1 / 3;
   grid-row: 1 / 2;
 `;
 export const Dairy = styled.div`
