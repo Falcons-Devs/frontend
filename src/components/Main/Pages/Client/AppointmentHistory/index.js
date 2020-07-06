@@ -9,10 +9,9 @@ export const AppointmentHistory = () => {
   });
   return (
     <Wrap>
+      <NameStatus title="Mi historial de citas" to={"/client"} />
       <Container>
-        <ArrowButton>
-          <NameStatus title="Mi historial de citas" to={"/client"} />
-        </ArrowButton>
+        <ArrowButton></ArrowButton>
         <ShowAppointmentHistory
           dateTime="01-08-2020"
           estheticianName="Esteticista 1"
