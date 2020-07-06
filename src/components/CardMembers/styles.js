@@ -13,3 +13,11 @@ export const Article = styled.article`
     grid-template-rows: 1fr 1fr;
   }
 `;
+
+export const Image = styled.img`
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 90px;
+  height: 90px;
+  border-radius: 200px;
+`;

@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import LogoFalconsDevs from "../../../../assets/img/Logo_Falcons_Devs.jpg";
 import { IconAccountCircle } from "../../../../assets/static/icon-accountCircle";
-
 import { Wrap, SectionAbout, SectionMembers } from "./styles";
 import { CardMembers } from "../../../CardMembers";
+
+import ErickMata from "../../../../assets/img/erick-mata.jpg";
 
 export const About = () => {
   useEffect(() => {
@@ -41,6 +42,10 @@ export const About = () => {
         <CardMembers
           nameMember="Erick Daniel Pérez Mata"
           position="Project Manager"
+          img={ErickMata}
+          github="https://github.com/Erickowski"
+          linkedin="https://www.linkedin.com/in/erick-mata/"
+          twitter="https://twitter.com/Erickowski"
         />
         <CardMembers
           nameMember="Byron Miguel Piedrahita Hernandez"
