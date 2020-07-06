@@ -13,6 +13,7 @@ import { Home as HomeBeautician } from "./components/Main/Pages/Beautician/Home"
 import { Schedules as ScheduleBeautician } from "./components/Main/Pages/Beautician/Schedules";
 import { Procedures as ProcedureBeautician } from "./components/Main/Pages/Beautician/Procedures";
 import { Diary as DiaryBeautician } from "./components/Main/Pages/Beautician/Diary";
+import { HomeEsteticista } from "./components/Main/Pages/Esteticista/Home";
 
 export const App = () => (
   <>
@@ -28,6 +29,8 @@ export const App = () => (
       <ScheduleBeautician path="/beautician-schedule" />
       <ProcedureBeautician path="/beautician-procedure" />
       <DiaryBeautician path="/beautician-diary" />
+      {/* Prueba para la creacion de componentes */}
+      <HomeEsteticista path="esteticista" />
     </Router>
     <Footer />
   </>

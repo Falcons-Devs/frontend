@@ -1,17 +1,12 @@
 import React from "react";
-import { ShowMyProfile } from "../../../../ShowMyProfile";
-import { ImagesWithProcess } from "../../../../ImagesWithProcess";
+import { NameStatus } from "../../../../NameStatus";
+import { HeaderImages } from "../../../../HeaderImages";
 
-export const Home = () => {
+export const HomeEsteticista = () => {
   return (
     <>
-      {/* <ShowMyProfile nameUser="Jhon Carlos COlorado" /> */}
-      <ImagesWithProcess
-        nameImage="2"
-        alt="Procedimientos"
-        width=""
-        height=""
-      />
+      <NameStatus />
+      <HeaderImages numberImg="3" />
     </>
   );
 };

@@ -24,8 +24,4 @@ export const Link = styled(LinkRouter)`
   background-color: rgba(252, 252, 252, 0.9);
   color: #de18ad;
   text-align: center;
-
-  :hover {
-    background-color: red;
-  }
 `;
