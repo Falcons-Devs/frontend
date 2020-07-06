@@ -19,6 +19,17 @@ import { Home as HomeClient } from "./components/Main/Pages/Client/Home";
 import { AppointmentHistory as AppointmentsClient } from "./components/Main/Pages/Client/appointment-history";
 import { CreateAppointment as CreateAppointmentClient } from "./components/Main/Pages/Client/appointment";
 
+import { Home as HomeAdmin } from "./components/Main/Pages/Admin/Home";
+import { Client as ClientAdmin } from "./components/Main/Pages/Admin/Client";
+import { ClientInformation as ClientInformationAdmin } from "./components/Main/Pages/Admin/ClientInformation";
+import { Procedures as ProceduresAdmin } from "./components/Main/Pages/Admin/Procedures";
+import { CreateProcedure as CreateProcedureAdmin } from "./components/Main/Pages/Admin/Create-procedure";
+import { Beautician as BeauticianAdmin } from "./components/Main/Pages/Admin/Beautician";
+import { Diary as DiaryAdmin } from "./components/Main/Pages/Admin/Diary";
+import { Users as UsersAdmin } from "./components/Main/Pages/Admin/Users";
+import { CreateUser as CreateUserAdmin } from "./components/Main/Pages/Admin/Create-user";
+import { EditUser as EditUserAdmin } from "./components/Main/Pages/Admin/Edit-user";
+
 export const App = () => (
   <>
     <GlobalStyle />
@@ -37,6 +48,17 @@ export const App = () => (
       <HomeClient path="/client" />
       <AppointmentsClient path="/client-appointments" />
       <CreateAppointmentClient path="/client-create-appointment" />
+      {/* Admin */}
+      <HomeAdmin path="/admin" />
+      <ClientAdmin path="/admin-clients" />
+      <ClientInformationAdmin path="/admin-client-info" />
+      <ProceduresAdmin path="/admin-procedures" />
+      <CreateProcedureAdmin path="/admin-create-procedure" />
+      <BeauticianAdmin path="/admin-beautician" />
+      <DiaryAdmin path="/admin-beautician-diary" />
+      <UsersAdmin path="/admin-users" />
+      <CreateUserAdmin path="/admin-create-user" />
+      <EditUserAdmin path="/admin-edit-user" />
     </Router>
     <Footer />
   </>
