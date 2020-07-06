@@ -11,6 +11,7 @@ import {
 import { Buttons } from "../../../../Buttons";
 import { NameStatus } from "../../../../NameStatus";
 import { HeaderImages } from "../../../../HeaderImages";
+import { List } from "../../../../List";
 
 export const Procedures = () => {
   return (
@@ -18,13 +19,13 @@ export const Procedures = () => {
       <Wrap>
         <Container>
           <ArrowButton>
-            <NameStatus />
+            <NameStatus title="Mis procedimientos" to={"/beautician"} />
           </ArrowButton>
           <Hero>
             <HeaderImages numberImg="2" />
           </Hero>
           <ProceduresContainer>
-            <h1>Procedures</h1>
+            <List />
           </ProceduresContainer>
           <CancelButton>
             <Buttons value="Cancelar" color="#DE3C48" />
