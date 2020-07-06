@@ -30,36 +30,38 @@ import { Users as UsersAdmin } from "./components/Main/Pages/Admin/Users";
 import { CreateUser as CreateUserAdmin } from "./components/Main/Pages/Admin/Create-user";
 import { EditUser as EditUserAdmin } from "./components/Main/Pages/Admin/Edit-user";
 
-export const App = () => (
-  <>
-    <GlobalStyle />
-    <Header />
-    <Router>
-      <Home path="/" />
-      <About path="/about" />
-      <Signin path="/signin" />
-      <Login path="/login" />
-      {/* Beautician */}
-      <HomeBeautician path="/beautician" />
-      <ScheduleBeautician path="/beautician-schedule" />
-      <ProcedureBeautician path="/beautician-procedure" />
-      <DiaryBeautician path="/beautician-diary" />
-      {/* Client */}
-      <HomeClient path="/client" />
-      <AppointmentsClient path="/client-appointments" />
-      <CreateAppointmentClient path="/client-create-appointment" />
-      {/* Admin */}
-      <HomeAdmin path="/admin" />
-      <ClientAdmin path="/admin-clients" />
-      <ClientInformationAdmin path="/admin-client-info" />
-      <ProceduresAdmin path="/admin-procedures" />
-      <CreateProcedureAdmin path="/admin-create-procedure" />
-      <BeauticianAdmin path="/admin-beautician" />
-      <DiaryAdmin path="/admin-beautician-diary" />
-      <UsersAdmin path="/admin-users" />
-      <CreateUserAdmin path="/admin-create-user" />
-      <EditUserAdmin path="/admin-edit-user" />
-    </Router>
-    <Footer />
-  </>
-);
+export const App = () => {
+  return (
+    <>
+      <GlobalStyle />
+      <Header />
+      <Router>
+        <Home path="/" />
+        <About path="/about" />
+        <Signin path="/signin" />
+        <Login path="/login" />
+        {/* Beautician */}
+        <HomeBeautician path="/beautician" />
+        <ScheduleBeautician path="/beautician-schedule" />
+        <ProcedureBeautician path="/beautician-procedure" />
+        <DiaryBeautician path="/beautician-diary" />
+        {/* Client */}
+        <HomeClient path="/client" />
+        <AppointmentsClient path="/client-appointments" />
+        <CreateAppointmentClient path="/client-create-appointment" />
+        {/* Admin */}
+        <HomeAdmin path="/admin" />
+        <ClientAdmin path="/admin-clients" />
+        <ClientInformationAdmin path="/admin-client-info" />
+        <ProceduresAdmin path="/admin-procedures" />
+        <CreateProcedureAdmin path="/admin-create-procedure" />
+        <BeauticianAdmin path="/admin-beautician" />
+        <DiaryAdmin path="/admin-beautician-diary" />
+        <UsersAdmin path="/admin-users" />
+        <CreateUserAdmin path="/admin-create-user" />
+        <EditUserAdmin path="/admin-edit-user" />
+      </Router>
+      <Footer />
+    </>
+  );
+};
