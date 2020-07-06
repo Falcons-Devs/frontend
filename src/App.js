@@ -22,6 +22,7 @@ import { Home as HomeAdmin } from "./components/Main/Pages/Admin/Home";
 import { Client as ClientAdmin } from "./components/Main/Pages/Admin/Client";
 import { ClientInformation as ClientInformationAdmin } from "./components/Main/Pages/Admin/ClientInformation";
 import { Procedures as ProceduresAdmin } from "./components/Main/Pages/Admin/Procedures";
+import { CreateProcedure as CreateProcedureAdmin } from "./components/Main/Pages/Admin/Create-procedure";
 
 export const App = () => (
   <>
@@ -46,6 +47,7 @@ export const App = () => (
       <ClientAdmin path="/admin-clients" />
       <ClientInformationAdmin path="/admin-client-info" />
       <ProceduresAdmin path="/admin-procedures" />
+      <CreateProcedureAdmin path="/admin-create-procedure" />
     </Router>
     <Footer />
   </>
