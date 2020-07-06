@@ -2,22 +2,20 @@ import React from "react";
 import {
   Container,
   ArrowButton,
-  Title,
   CreateButton,
   Beautician as BeauticianContainer,
 } from "./styles";
+import { NameStatus } from "../../../../NameStatus";
+import { Buttons } from "../../../../Buttons";
 
 export const Beautician = () => {
   return (
     <Container>
       <ArrowButton>
-        <h1>Flecha</h1>
+        <NameStatus title="Esteticistas" to={"/admin"} />
       </ArrowButton>
-      <Title>
-        <h1>Titulo</h1>
-      </Title>
       <CreateButton>
-        <h1>Crear</h1>
+        <Buttons value="Crear esteticista" color="#2DD881" />
       </CreateButton>
       <BeauticianContainer>
         <h1>Esteticistas</h1>
