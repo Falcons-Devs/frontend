@@ -25,6 +25,7 @@ import { Procedures as ProceduresAdmin } from "./components/Main/Pages/Admin/Pro
 import { CreateProcedure as CreateProcedureAdmin } from "./components/Main/Pages/Admin/Create-procedure";
 import { Beautician as BeauticianAdmin } from "./components/Main/Pages/Admin/Beautician";
 import { Diary as DiaryAdmin } from "./components/Main/Pages/Admin/Diary";
+import { Users as UsersAdmin } from "./components/Main/Pages/Admin/Users";
 
 export const App = () => (
   <>
@@ -52,6 +53,7 @@ export const App = () => (
       <CreateProcedureAdmin path="/admin-create-procedure" />
       <BeauticianAdmin path="/admin-beautician" />
       <DiaryAdmin path="/admin-beautician-diary" />
+      <UsersAdmin path="/admin-users" />
     </Router>
     <Footer />
   </>
