@@ -13,6 +13,7 @@ import { Home as HomeBeautician } from "./components/Main/Pages/Beautician/Home"
 import { Schedules as ScheduleBeautician } from "./components/Main/Pages/Beautician/Schedules";
 import { Procedures as ProcedureBeautician } from "./components/Main/Pages/Beautician/Procedures";
 import { Diary as DiaryBeautician } from "./components/Main/Pages/Beautician/Diary";
+import { HomeEsteticista } from "./components/Main/Pages/Esteticista/Home";
 
 import { Home as HomeClient } from "./components/Main/Pages/Client/Home";
 import { AppointmentHistory as AppointmentsClient } from "./components/Main/Pages/Client/appointment-history";
