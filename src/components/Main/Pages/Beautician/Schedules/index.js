@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Container,
   Hero,
@@ -7,33 +7,52 @@ import {
   CancelButton,
   ConfirmButton,
   ArrowButton,
-  Title,
+  Wrap,
 } from "./styles";
+import { Buttons } from "../../../../Buttons";
+import { NameStatus } from "../../../../NameStatus";
+import { HeaderImages } from "../../../../HeaderImages";
+import { List } from "../../../../List";
+
+const days = [
+  "Lunes",
+  "Martes",
+  "Miercoles",
+  "Jueves",
+  "Viernes",
+  "Sabado",
+  "Domingo",
+];
+const schedules = ["8:00 - 14:00", "15:00 - 21:00"];
 
 export const Schedules = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
-    <Container>
-      <ArrowButton>
-        <h1>Flecha</h1>
-      </ArrowButton>
-      <Title>
-        <h1>Titulo</h1>
-      </Title>
-      <Hero>
-        <h1>Imagen</h1>
-      </Hero>
-      <DayCard>
-        <h1>Dias</h1>
-      </DayCard>
-      <ScheduleCard>
-        <h1>Horario</h1>
-      </ScheduleCard>
-      <CancelButton>
-        <h1>Cancelar</h1>
-      </CancelButton>
-      <ConfirmButton>
-        <h1>Confirmar</h1>
-      </ConfirmButton>
-    </Container>
+    <div>
+      <Wrap>
+        <Container>
+          <ArrowButton>
+            <NameStatus title="Mis horarios" to={"/beautician"} />
+          </ArrowButton>
+          <Hero>
+            <HeaderImages numberImg="1" />
+          </Hero>
+          <DayCard>
+            <List list={days} title="Días" />
+          </DayCard>
+          <ScheduleCard>
+            <List list={schedules} title="Horario" full />
+          </ScheduleCard>
+          <CancelButton>
+            <Buttons value="Cancelar" color="#DE3C48" />
+          </CancelButton>
+          <ConfirmButton>
+            <Buttons value="Confirmar" color="#2DD881" />
+          </ConfirmButton>
+        </Container>
+      </Wrap>
+    </div>
   );
 };

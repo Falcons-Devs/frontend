@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ShowMyProfile } from "../../../../ShowMyProfile";
 import { ImagesWithProcess } from "../../../../ImagesWithProcess";
 
@@ -12,6 +12,9 @@ import {
 } from "./styles";
 
 export const Home = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <Wrap>
       <Container>
@@ -21,7 +24,11 @@ export const Home = () => {
         </Profile>
         <Agenda>
           {" "}
-          <ImagesWithProcess nameImage="3" alt="Mi agenda" />{" "}
+          <ImagesWithProcess
+            nameImage="3"
+            alt="Mi agenda"
+            to="/beautician-diary"
+          />{" "}
         </Agenda>
         <Schedule>
           <ImagesWithProcess
@@ -29,6 +36,7 @@ export const Home = () => {
             alt="Mis horarios"
             width="500px"
             height="300px"
+            to="/beautician-schedule"
           />
         </Schedule>
         <Procedures>
@@ -37,6 +45,7 @@ export const Home = () => {
             alt="Mis procedimientos"
             width="500px"
             height="300px"
+            to="/beautician-procedure"
           />
         </Procedures>
       </Container>

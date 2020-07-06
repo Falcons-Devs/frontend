@@ -13,33 +13,36 @@ export const Wrap = styled.div`
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 75px 1fr 1fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
 `;
 export const ArrowButton = styled.div`
-  margin-top: 20px;
-  margin-left: 20px;
-  grid-column: 1 / 4;
+  grid-column: 1 / 3;
   grid-row: 1 / 2;
 `;
+
 export const Hero = styled.div`
-  grid-column: 1 / 4;
+  grid-column: 1 / 3;
   grid-row: 2 / 3;
 `;
-export const DayCard = styled.div`
+export const Beautician = styled.div`
   grid-column: 1 / 3;
   grid-row: 3 / 4;
-  width: 80%;
 `;
-export const ScheduleCard = styled.div`
-  grid-column: 3 / 4;
-  grid-row: 3 / 4;
+export const Procedures = styled.div`
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+`;
+export const Calendar = styled.div`
+  grid-column: 1 / 3;
+  grid-row: 5 / 6;
 `;
 export const CancelButton = styled.div`
   grid-column: 1 / 2;
-  grid-row: 4 / 5;
+  grid-row: 6 / 7;
 `;
 export const ConfirmButton = styled.div`
-  grid-column: 2 / 4;
-  grid-row: 4 / 5;
+  grid-column: 2 / 3;
+  grid-row: 6 / 7;
 `;

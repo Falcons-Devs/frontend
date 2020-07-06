@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, ArrowButton, Title, Table } from "./styles";
 
 export const Diary = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <Container>
       <ArrowButton>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import LogoFalconsDevs from "../../../../assets/img/Logo_Falcons_Devs.jpg";
 import { IconAccountCircle } from "../../../../assets/static/icon-accountCircle";
 
@@ -6,6 +6,9 @@ import { Wrap, SectionAbout, SectionMembers } from "./styles";
 import { CardMembers } from "../../../CardMembers";
 
 export const About = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <Wrap>
       <SectionAbout>

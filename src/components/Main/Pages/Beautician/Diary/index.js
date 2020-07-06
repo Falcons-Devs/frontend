@@ -1,15 +1,16 @@
-import React from "react";
-import { Container, ArrowButton, Title, Dairy } from "./styles";
+import React, { useEffect } from "react";
+import { Container, ArrowButton, Dairy } from "./styles";
+import { NameStatus } from "../../../../NameStatus";
 
 export const Diary = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <Container>
       <ArrowButton>
-        <h1>Flecha</h1>
+        <NameStatus title="Ver agenda" to={"/beautician"} />
       </ArrowButton>
-      <Title>
-        <h1>Titulo</h1>
-      </Title>
       <Dairy>
         <h1>Agenda</h1>
       </Dairy>
