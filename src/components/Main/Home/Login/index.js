@@ -28,7 +28,7 @@ export const Login = () => {
             </label>
             <input type="text" id="password" placeholder="Password" />
           </div>
-          <Buttons value="Iniciar sesión" />
+          <Buttons value="Iniciar sesión" color="#DE18AD" />
         </form>
         <div>
           <p>

@@ -33,7 +33,7 @@ export const Signin = () => {
             </label>
             <input type="text" id="password" placeholder="Password" />
           </div>
-          <Buttons value="Registrarse" />
+          <Buttons value="Registrarse" color="#DE18AD" />
         </form>
         <div>
           <p>O registrate con:</p>
