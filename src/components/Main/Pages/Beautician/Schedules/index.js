@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Container,
   Hero,
@@ -26,6 +26,9 @@ const days = [
 const schedules = ["8:00 - 14:00", "15:00 - 21:00"];
 
 export const Schedules = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <div>
       <Wrap>
