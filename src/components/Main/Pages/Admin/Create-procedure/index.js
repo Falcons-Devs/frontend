@@ -1,38 +1,84 @@
 import React, { useEffect } from "react";
 import {
   Container,
-  ArrowButton,
-  Title,
+  Main,
   Hero,
   Form,
   CancelButton,
   ConfirmButton,
+  Wrap,
+  SectionForm,
+  Title,
 } from "./styles";
+import { NameStatus } from "../../../../NameStatus";
+import { HeaderImages } from "../../../../HeaderImages";
+import { Buttons } from "../../../../Buttons";
+import { IconAccountCircle } from "../../../../../assets/static/icon-accountCircle";
+import { IconPassword } from "../../../../../assets/static/icon-password";
+import { IconEmail } from "../../../../../assets/static/icon-email";
+import { IconPrice } from "../../../../../assets/static/icon-price";
+import { IconDuration } from "../../../../../assets/static/icon-duration";
 
 export const CreateProcedure = () => {
   useEffect(() => {
     window.scroll(0, 0);
   });
   return (
-    <Container>
-      <ArrowButton>
-        <h1>Flecha</h1>
-      </ArrowButton>
-      <Title>
-        <h1>Titulo</h1>
-      </Title>
-      <Hero>
-        <h1>Hero</h1>
-      </Hero>
-      <Form>
-        <h1>Form</h1>
-      </Form>
-      <CancelButton>
-        <h1>Cancelar</h1>
-      </CancelButton>
-      <ConfirmButton>
-        <h1>Confirmar</h1>
-      </ConfirmButton>
-    </Container>
+    <Wrap>
+      <Container>
+        <Main>
+          <NameStatus title="Crear procedimiento" to="/admin-procedures" />
+        </Main>
+        <Hero>
+          <HeaderImages numberImg="1" />
+        </Hero>
+        <Form>
+          <SectionForm>
+            <form>
+              <div>
+                <label htmlFor="name">
+                  {" "}
+                  <IconAccountCircle
+                    width="50px"
+                    height="50px"
+                    fill="#DE18AD"
+                  />{" "}
+                </label>
+                <input type="text" id="name" placeholder="Nombre" />
+              </div>
+              <div>
+                <label htmlFor="price">
+                  {" "}
+                  <IconPrice width="50px" height="50px" fill="#DE18AD" />{" "}
+                </label>
+                <input type="number" id="price" placeholder="Price" />
+              </div>
+              <div>
+                <label htmlFor="duration">
+                  {" "}
+                  <IconDuration
+                    width="50px"
+                    height="50px"
+                    fill="#DE18AD"
+                  />{" "}
+                </label>
+                <input
+                  type="number"
+                  id="duration"
+                  placeholder="Duracion (horas)"
+                />
+              </div>
+            </form>
+            <Title>Crear Procedimiento</Title>
+          </SectionForm>
+        </Form>
+        <CancelButton>
+          <Buttons color="#DE3C48" value="Cancelar" />
+        </CancelButton>
+        <ConfirmButton>
+          <Buttons color="#2DD881" value="Confirmar" />
+        </ConfirmButton>
+      </Container>
+    </Wrap>
   );
 };
