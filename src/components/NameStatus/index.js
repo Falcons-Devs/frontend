@@ -4,13 +4,13 @@ import IconArrowBack from "../../assets/static/icon-arrow-back.png";
 
 import { Status, Link } from "./styles";
 
-export const NameStatus = () => {
+export const NameStatus = ({ title, to }) => {
   return (
     <Status>
-      <Link to="history">
+      <Link to={to}>
         <img src={IconArrowBack} alt="Ir Atras" />
       </Link>
-      <h3>Mis horarios</h3>
+      <h3>{title}</h3>
     </Status>
   );
 };
