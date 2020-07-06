@@ -5,6 +5,7 @@ import { Nav, Link } from "./styles";
 export const NavBar = () => {
   return (
     <Nav>
+      <Link to="/">Inicio</Link>
       <Link to="/about">Nosotros</Link>
       {/* <Link to="/agenda">Mi agenda</Link> */}
       <Link to="/signin">Registrarse</Link>
