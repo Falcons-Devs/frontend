@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const ProcedureContainer = styled.div`
-  width: 33.3%;
+  width: ${(props) => (props.full ? "100%" : "33.3%")};
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
