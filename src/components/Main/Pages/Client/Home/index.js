@@ -1,18 +1,35 @@
 import React from "react";
-import { Container, Profile, MyAppointment, CreateAppointment } from "./styles";
+import { ShowMyProfile } from "../../../../ShowMyProfile";
+import { ImagesWithProcess } from "../../../../ImagesWithProcess";
+import {
+  Wrap,
+  Container,
+  Profile,
+  MyAppointment,
+  CreateAppointment,
+} from "./styles";
 
 export const Home = () => {
   return (
-    <Container>
-      <Profile>
-        <h1>Perfil</h1>
-      </Profile>
-      <MyAppointment>
-        <h1>Mis citas</h1>
-      </MyAppointment>
-      <CreateAppointment>
-        <h1>Crear Cita</h1>
-      </CreateAppointment>
-    </Container>
+    <Wrap>
+      <Container>
+        <Profile>
+          {" "}
+          <ShowMyProfile nameUser="Nombre del esteticista" />{" "}
+        </Profile>
+        <MyAppointment>
+          {" "}
+          <ImagesWithProcess nameImage="1" alt="Mis citas" />{" "}
+        </MyAppointment>
+        <CreateAppointment>
+          <ImagesWithProcess
+            nameImage="5"
+            alt="Crear cita"
+            width="1200px"
+            height="300px"
+          />
+        </CreateAppointment>
+      </Container>
+    </Wrap>
   );
 };
