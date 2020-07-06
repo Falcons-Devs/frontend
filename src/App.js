@@ -16,7 +16,7 @@ import { Diary as DiaryBeautician } from "./components/Main/Pages/Beautician/Dia
 import { HomeEsteticista } from "./components/Main/Pages/Esteticista/Home";
 
 import { Home as HomeClient } from "./components/Main/Pages/Client/Home";
-import { AppointmentHistory as AppointmentsClient } from "./components/Main/Pages/Client/appointment-history";
+import { AppointmentHistory as AppointmentsClient } from "./components/Main/Pages/Client/AppointmentHistory";
 import { CreateAppointment as CreateAppointmentClient } from "./components/Main/Pages/Client/Appointment";
 
 import { Home as HomeAdmin } from "./components/Main/Pages/Admin/Home";
