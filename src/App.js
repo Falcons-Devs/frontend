@@ -27,6 +27,7 @@ import { Beautician as BeauticianAdmin } from "./components/Main/Pages/Admin/Bea
 import { Diary as DiaryAdmin } from "./components/Main/Pages/Admin/Diary";
 import { Users as UsersAdmin } from "./components/Main/Pages/Admin/Users";
 import { CreateUser as CreateUserAdmin } from "./components/Main/Pages/Admin/Create-user";
+import { EditUser as EditUserAdmin } from "./components/Main/Pages/Admin/Edit-user";
 
 export const App = () => (
   <>
@@ -56,6 +57,7 @@ export const App = () => (
       <DiaryAdmin path="/admin-beautician-diary" />
       <UsersAdmin path="/admin-users" />
       <CreateUserAdmin path="/admin-create-user" />
+      <EditUserAdmin path="/admin-edit-user" />
     </Router>
     <Footer />
   </>
