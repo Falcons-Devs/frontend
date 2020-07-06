@@ -23,6 +23,7 @@ import { Client as ClientAdmin } from "./components/Main/Pages/Admin/Client";
 import { ClientInformation as ClientInformationAdmin } from "./components/Main/Pages/Admin/ClientInformation";
 import { Procedures as ProceduresAdmin } from "./components/Main/Pages/Admin/Procedures";
 import { CreateProcedure as CreateProcedureAdmin } from "./components/Main/Pages/Admin/Create-procedure";
+import { Beautician as BeauticianAdmin } from "./components/Main/Pages/Admin/Beautician";
 
 export const App = () => (
   <>
@@ -48,6 +49,7 @@ export const App = () => (
       <ClientInformationAdmin path="/admin-client-info" />
       <ProceduresAdmin path="/admin-procedures" />
       <CreateProcedureAdmin path="/admin-create-procedure" />
+      <BeauticianAdmin path="/admin-beautician" />
     </Router>
     <Footer />
   </>
