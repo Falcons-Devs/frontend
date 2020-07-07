@@ -17,7 +17,7 @@ export const Procedures = () => {
           <Link to="/admin-create-procedure">
             <Buttons
               value="Crear procedimiento"
-              responsiveTablet
+              responsivetablet
               color="#2DD881"
             />
           </Link>

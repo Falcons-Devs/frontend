@@ -15,7 +15,7 @@ export const Users = () => {
         <Main>
           <NameStatus title="Ver usuarios" to="/admin" />
           <Link to="/admin-create-user">
-            <Buttons value="Crear usuario" responsiveTablet color="#2DD881" />
+            <Buttons value="Crear usuario" responsivetablet color="#2DD881" />
           </Link>
         </Main>
         <Table>

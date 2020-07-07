@@ -3,11 +3,11 @@ import { Container, ProcedureContainer, P, Title } from "./styles";
 
 import { IconCheckboxFalse } from "../../assets/static/icon-checkbox-false";
 
-export const List = ({ list, title, full }) => {
+export const List = ({ list, title, full, topic }) => {
   return (
     <Container>
-      {list.map((item) => (
-        <ProcedureContainer full={full}>
+      {list.map((item, index) => (
+        <ProcedureContainer full={full} key={topic + index}>
           <P>{item}</P>
           <IconCheckboxFalse />
         </ProcedureContainer>

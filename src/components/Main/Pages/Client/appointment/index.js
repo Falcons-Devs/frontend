@@ -57,10 +57,18 @@ export const CreateAppointment = () => {
           <NameStatus title="Crear cita" to={"/client"} />
         </ArrowButton>
         <Beautician>
-          <List list={listBeauticians} title="Elige esteticista" />
+          <List
+            list={listBeauticians}
+            topic="Beautician"
+            title="Elige esteticista"
+          />
         </Beautician>
         <Procedures>
-          <List list={listProcedures} title="Elige procedimientos" />
+          <List
+            list={listProcedures}
+            topic="Procedure"
+            title="Elige procedimientos"
+          />
         </Procedures>
         <Schedule>
           <ShowSchedule title="Elige un horario" />

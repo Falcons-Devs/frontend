@@ -14,7 +14,7 @@ export const ImagesWithProcess = ({
   width,
   height,
   to,
-  responsiveTablet,
+  responsivetablet,
 }) => {
   let cover;
   nameImage == 1 ? (cover = Hero_card1) : "";
@@ -29,7 +29,7 @@ export const ImagesWithProcess = ({
       aria-label={alt}
       width={width}
       height={height}
-      responsiveTablet={responsiveTablet}
+      responsivetablet={responsivetablet}
     >
       <Article>
         <Section>

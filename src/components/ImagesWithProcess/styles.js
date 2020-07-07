@@ -28,7 +28,7 @@ export const Link = styled(LinkRouter)`
     height: 368px;
     border-radius: 20px;
     margin-bottom: 30px;
-    height: ${(props) => (props.responsiveTablet ? "184px" : "")};
+    height: ${(props) => (props.responsivetablet ? "184px" : "")};
   }
   &:hover {
     box-shadow: 0 4px 5px rgba(0,0,0,0.4);

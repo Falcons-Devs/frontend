@@ -41,10 +41,10 @@ export const Schedules = () => {
             <HeaderImages numberImg="1" />
           </Hero>
           <DayCard>
-            <List list={days} title="Días" />
+            <List list={days} topic="Dia" title="Días" />
           </DayCard>
           <ScheduleCard>
-            <List list={schedules} title="Horario" full />
+            <List list={schedules} topic="Horario" title="Horario" full />
           </ScheduleCard>
           <CancelButton>
             <Link to="/beautician">

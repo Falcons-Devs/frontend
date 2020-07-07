@@ -26,22 +26,22 @@ export const ClientInformation = () => {
         <HistoryAppointments>
           <Buttons
             value="Historial de citas"
-            responsiveTablet
+            responsivetablet
             color="#de18ad"
           />
         </HistoryAppointments>
         <RealizedProcedures>
           <Buttons
             value="Procedimientos realizados"
-            responsiveTablet
+            responsivetablet
             color="#de18ad"
           />
         </RealizedProcedures>
         <RealizedPayments>
-          <Buttons value="Pagos realizados" responsiveTablet color="#de18ad" />
+          <Buttons value="Pagos realizados" responsivetablet color="#de18ad" />
         </RealizedPayments>
         <FollowingAppointments>
-          <Buttons value="Próximas citas" responsiveTablet color="#de18ad" />
+          <Buttons value="Próximas citas" responsivetablet color="#de18ad" />
         </FollowingAppointments>
         <Table>
           <TableInfo

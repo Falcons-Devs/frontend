@@ -45,17 +45,20 @@ export const Schedule = ({ title }) => {
       <Title>{title}</Title>
       <Week>
         {listNameOfTheDay.map((item, index) => (
-          <NameOfTheDay key={index} name={item} />
+          <NameOfTheDay key={"Day Name" + index} name={item} />
         ))}
         {listDayNumber.map((item, index) => (
-          <DayNumber key={index} number={item} />
+          <DayNumber key={"Day Number " + index} number={item} />
         ))}
         {listTimeOfDay.map((item, index) => {
           return (
             <>
-              <TimeOfDay key={index} time={item} />
+              <TimeOfDay key={"Hour " + index} time={item} />
               {listSummaryOfTheAppointment.map((item, index) => (
-                <SummaryOfTheAppointment client="Nombre del cliente" />
+                <SummaryOfTheAppointment
+                  key={"Client " + index}
+                  client="Nombre del cliente"
+                />
               ))}
             </>
           );

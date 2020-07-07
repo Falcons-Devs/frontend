@@ -37,10 +37,12 @@ export const Table = (props) => {
             {col8 && <th> {col8} </th>}
           </tr>
         </thead>
-        <tbody>{createTable(countColum)}</tbody>
-        <tr>
-          <td colSpan={countColum}> {title} </td>
-        </tr>
+        <tbody>
+          {createTable(countColum)}
+          <tr>
+            <td colSpan={countColum}> {title} </td>
+          </tr>
+        </tbody>
       </ShowTable>
     </>
   );
