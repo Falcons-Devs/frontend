@@ -7,7 +7,6 @@ import {
   SectionCards,
   SectionParallax,
   InfoParallax,
-  Link,
 } from "./styles";
 import Context from "../../../Context";
 
