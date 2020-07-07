@@ -10,7 +10,9 @@ export const Button = styled.button`
   margin: 30px auto;
   cursor: pointer;
   /* Responsive */
-  width: ${(props) => (props.responsiveTablet ? "125px" : "")};
-  justify-content: ${(props) => (props.responsiveTablet ? "center" : "")};
-  font-size: ${(props) => (props.responsiveTablet ? "14px" : "")};
+  @media (max-width: 768px) {
+    width: ${(props) => (props.responsiveTablet ? "125px" : "")};
+    justify-content: ${(props) => (props.responsiveTablet ? "center" : "")};
+    font-size: ${(props) => (props.responsiveTablet ? "14px" : "")};
+  }
 `;

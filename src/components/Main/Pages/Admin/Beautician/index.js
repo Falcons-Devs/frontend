@@ -14,7 +14,7 @@ export const Beautician = () => {
       <Title>
         <NameStatus title="Esteticistas" to={"/admin"} />
         <Link to="/admin-create-beautician">
-          <Buttons value="Crear esteticista" color="#2DD881" />
+          <Buttons value="Crear esteticista" responsiveTablet color="#2DD881" />
         </Link>
       </Title>
       <Container>

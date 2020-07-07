@@ -6,6 +6,10 @@ export const Beautician = styled.section`
   border-radius: 20px;
   padding: 10px 40px;
   font-family: "Lato", sans-serif;
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 350px;
+  }
 `;
 
 export const BeauticianName = styled.section`
@@ -24,6 +28,10 @@ export const BeauticianName = styled.section`
     margin-left: 10px;
     text-align: center;
     width: 100%;
+    /* Responsive */
+    @media (max-width: 768px) {
+      font-size: 22px;
+    }
   }
 `;
 
@@ -33,10 +41,20 @@ export const Information = styled.section`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    /* Responsive */
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   label[for="duration"] {
     margin-left: 10px;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    label {
+      display: none;
+    }
   }
 
   input {
@@ -47,5 +65,10 @@ export const Information = styled.section`
     margin-left: 10px;
     text-align: center;
     width: 100%;
+    /* Responsive */
+    @media (max-width: 768px) {
+      margin: 10px 0;
+      font-size: 18px;
+    }
   }
 `;
