@@ -3,6 +3,7 @@ import { Container, Main, Table, Wrap } from "./styles";
 import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
 import { Table as TableInfo } from "../../../../Table";
+import { Link } from "@reach/router";
 
 export const Users = () => {
   useEffect(() => {
@@ -13,7 +14,9 @@ export const Users = () => {
       <Container>
         <Main>
           <NameStatus title="Ver usuarios" to="/admin" />
-          <Buttons value="Crear usuario" color="#2DD881" />
+          <Link to="/admin-create-user">
+            <Buttons value="Crear usuario" color="#2DD881" />
+          </Link>
         </Main>
         <Table>
           <TableInfo

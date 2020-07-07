@@ -23,6 +23,7 @@ export const Main = styled.div`
   grid-row: 1 / 2;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const Table = styled.div`

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconAccountCircle } from "../../assets/static/icon-accountCircle";
-
+import { Link } from "@reach/router";
 import { Beautician, BeauticianName, Information } from "./styles";
 import { Buttons } from "../Buttons";
 
@@ -21,7 +21,9 @@ export const CardBeautician = ({ estheticianName, email, schedule }) => {
           <input type="text" className="hous" value={schedule} />
         </div>
       </Information>
-      <Buttons value="Ver agenda" color="#2DD881" />
+      <Link to="/admin-beautician-diary">
+        <Buttons value="Ver agenda" color="#2DD881" />
+      </Link>
     </Beautician>
   );
 };

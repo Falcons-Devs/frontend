@@ -13,6 +13,7 @@ import { Buttons } from "../../../../Buttons";
 import { NameStatus } from "../../../../NameStatus";
 import { HeaderImages } from "../../../../HeaderImages";
 import { List } from "../../../../List";
+import { Link } from "@reach/router";
 
 const days = [
   "Lunes",
@@ -46,7 +47,9 @@ export const Schedules = () => {
             <List list={schedules} title="Horario" full />
           </ScheduleCard>
           <CancelButton>
-            <Buttons value="Cancelar" color="#DE3C48" />
+            <Link to="/beautician">
+              <Buttons value="Cancelar" color="#DE3C48" />
+            </Link>
           </CancelButton>
           <ConfirmButton>
             <Buttons value="Confirmar" color="#2DD881" />

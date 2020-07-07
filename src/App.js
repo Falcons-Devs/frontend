@@ -1,5 +1,6 @@
 import React from "react";
 import { Router } from "@reach/router";
+import Context from "./Context";
 
 import { GlobalStyle } from "./GlobalStyles";
 import { Header } from "./components/Header";
@@ -25,6 +26,7 @@ import { ClientInformation as ClientInformationAdmin } from "./components/Main/P
 import { Procedures as ProceduresAdmin } from "./components/Main/Pages/Admin/Procedures";
 import { CreateProcedure as CreateProcedureAdmin } from "./components/Main/Pages/Admin/Create-procedure";
 import { Beautician as BeauticianAdmin } from "./components/Main/Pages/Admin/Beautician";
+import { CreateBeautician as CreateBeauticianAdmin } from "./components/Main/Pages/Admin/Create-beautician";
 import { Diary as DiaryAdmin } from "./components/Main/Pages/Admin/Diary";
 import { Users as UsersAdmin } from "./components/Main/Pages/Admin/Users";
 import { CreateUser as CreateUserAdmin } from "./components/Main/Pages/Admin/Create-user";
@@ -32,7 +34,7 @@ import { EditUser as EditUserAdmin } from "./components/Main/Pages/Admin/Edit-us
 
 export const App = () => {
   return (
-    <>
+    <Context.Provider>
       <GlobalStyle />
       <Header />
       <Router>
@@ -56,12 +58,13 @@ export const App = () => {
         <ProceduresAdmin path="/admin-procedures" />
         <CreateProcedureAdmin path="/admin-create-procedure" />
         <BeauticianAdmin path="/admin-beautician" />
+        <CreateBeauticianAdmin path="/admin-create-beautician" />
         <DiaryAdmin path="/admin-beautician-diary" />
         <UsersAdmin path="/admin-users" />
         <CreateUserAdmin path="/admin-create-user" />
         <EditUserAdmin path="/admin-edit-user" />
       </Router>
       <Footer />
-    </>
+    </Context.Provider>
   );
 };
