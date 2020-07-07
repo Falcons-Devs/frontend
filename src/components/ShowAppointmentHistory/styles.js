@@ -6,6 +6,9 @@ export const MyProfile = styled.section`
   border-radius: 20px;
   padding: 30px 40px;
   font-family: "Lato", sans-serif;
+  @media (max-width: 768px) {
+    width: 350px;
+  }
 `;
 
 export const Profile = styled.section`
