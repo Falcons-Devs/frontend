@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Table as ShowTable } from "./styles";
 
 export const Table = (props) => {
