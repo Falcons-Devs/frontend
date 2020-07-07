@@ -28,4 +28,9 @@ export const Wrap = styled.div`
   /* Typography */
   /* Visual */
   /* Misc */
+  @media (max-width: 768px) {
+    width: 100vw;
+    padding: 0;
+    justify-content: space-around;
+  }
 `;
