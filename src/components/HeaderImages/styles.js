@@ -19,7 +19,7 @@ export const BackgroudImages = styled.div`
   background-size: cover;
     /* Responsive */
     @media (max-width: 768px) {
-    width: 85vw;
+    width: 90vw;
     height: 150px;
   }
 

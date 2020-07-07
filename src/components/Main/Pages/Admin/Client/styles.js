@@ -10,6 +10,11 @@ export const Wrap = styled.div`
   /* Typography */
   /* Visual */
   /* Misc */
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 90vw;
+    height: 80.5vh;
+  }
 `;
 
 export const Container = styled.div`
@@ -17,6 +22,10 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 75px 250px 1fr;
   grid-gap: 20px;
+  /* Responsive */
+  @media (max-width: 768px) {
+    grid-template-rows: 75px 150px 1fr;
+  }
 `;
 export const ArrowButton = styled.div`
   margin-top: 20px;
