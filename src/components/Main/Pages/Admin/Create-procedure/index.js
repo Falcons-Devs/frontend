@@ -14,10 +14,9 @@ import { NameStatus } from "../../../../NameStatus";
 import { HeaderImages } from "../../../../HeaderImages";
 import { Buttons } from "../../../../Buttons";
 import { IconAccountCircle } from "../../../../../assets/static/icon-accountCircle";
-import { IconPassword } from "../../../../../assets/static/icon-password";
-import { IconEmail } from "../../../../../assets/static/icon-email";
 import { IconPrice } from "../../../../../assets/static/icon-price";
 import { IconDuration } from "../../../../../assets/static/icon-duration";
+import { Link } from "@reach/router";
 
 export const CreateProcedure = () => {
   useEffect(() => {
@@ -73,7 +72,9 @@ export const CreateProcedure = () => {
           </SectionForm>
         </Form>
         <CancelButton>
-          <Buttons color="#DE3C48" value="Cancelar" />
+          <Link to="/admin-procedures">
+            <Buttons color="#DE3C48" value="Cancelar" />
+          </Link>
         </CancelButton>
         <ConfirmButton>
           <Buttons color="#2DD881" value="Confirmar" />
