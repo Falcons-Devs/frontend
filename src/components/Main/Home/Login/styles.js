@@ -13,6 +13,11 @@ export const Wrap = styled.div`
   /* Typography */
   /* Visual */
   /* Misc */
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 90vw;
+    height: 80.5vh;
+  }
 `;
 
 export const SectionForm = styled.section`
@@ -21,10 +26,16 @@ export const SectionForm = styled.section`
   border-radius: 20px;
   padding: 30px 60px;
   font-family: "Lato", sans-serif;
-
+  @media (max-width: 768px) {
+    width: 600px;
+    border-width: 10px;
+  }
   h2 {
     text-align: center;
     margin-bottom: 20px;
+    @media (max-width: 768px) {
+      font-size: 48px;
+    }
   }
 
   div {
@@ -36,6 +47,9 @@ export const SectionForm = styled.section`
   div:last-child {
     display: flex;
     justify-content: center;
+    a {
+      color: #de18ad;
+    }
   }
 
   input {
@@ -48,6 +62,10 @@ export const SectionForm = styled.section`
 
     &::placeholder {
       color: rgba(47, 47, 47, 0.5);
+    }
+    @media (max-width: 768px) {
+      font-size: 24px;
+      margin: 20px 0;
     }
   }
 `;

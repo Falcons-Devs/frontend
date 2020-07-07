@@ -32,7 +32,7 @@ export const Login = () => {
         </form>
         <div>
           <p>
-            Cliente nuevo? <Link to="/signin">Resgistrate aquí</Link>
+            ¿Cliente nuevo? <Link to="/signin">Registrate aquí</Link>
           </p>
         </div>
       </SectionForm>

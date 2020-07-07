@@ -67,6 +67,7 @@ export const GlobalStyle = createGlobalStyle`
     /* Box-model */
     margin: 0 auto;
     width: 100%;
+    height: 100vh;
     /* Typography */
     font-size: 17px;
     color: #202124;
