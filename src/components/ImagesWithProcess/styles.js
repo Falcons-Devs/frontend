@@ -22,6 +22,7 @@ export const Link = styled(LinkRouter)`
   position: relative;
   transition: background-color .2s cubic-bezier(0.4, 0, 0.2, 1),box-shadow .3s cubic-bezier(0.4, 0, 0.2, 1),color .2s cubic-bezier(0.4, 0, 0.2, 1),fill .2s cubic-bezier(0.4, 0, 0.2, 1);
   /* Misc */
+  margin-bottom: 20px;
 
   &:hover {
     box-shadow: 0 4px 5px rgba(0,0,0,0.4);

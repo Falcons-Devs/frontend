@@ -1,21 +1,23 @@
-import React from "react";
-import { Container, ArrowButton, Title, CreateButton, Table } from "./styles";
+import React, { useEffect } from "react";
+import { Container, Main, Table, Wrap } from "./styles";
+import { NameStatus } from "../../../../NameStatus";
+import { Buttons } from "../../../../Buttons";
 
 export const Users = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
-    <Container>
-      <ArrowButton>
-        <h1>Flecha</h1>
-      </ArrowButton>
-      <Title>
-        <h1>Titulo</h1>
-      </Title>
-      <CreateButton>
-        <h1>Crear</h1>
-      </CreateButton>
-      <Table>
-        <h1>Tabla</h1>
-      </Table>
-    </Container>
+    <Wrap>
+      <Container>
+        <Main>
+          <NameStatus title="Ver usuarios" to="/admin" />
+          <Buttons value="Crear usuario" color="#2DD881" />
+        </Main>
+        <Table>
+          <h1>Tabla</h1>
+        </Table>
+      </Container>
+    </Wrap>
   );
 };

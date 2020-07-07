@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import LogoFalconsDevs from "../../../../assets/img/Logo_Falcons_Devs.jpg";
 import { IconAccountCircle } from "../../../../assets/static/icon-accountCircle";
-
 import { Wrap, SectionAbout, SectionMembers } from "./styles";
 import { CardMembers } from "../../../CardMembers";
 
+import ErickMata from "../../../../assets/img/erick-mata.jpg";
+import ByronPiedrahita from "../../../../assets/img/byron-piedrahita.png";
+
 export const About = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <Wrap>
       <SectionAbout>
@@ -38,18 +43,25 @@ export const About = () => {
         <CardMembers
           nameMember="Erick Daniel Pérez Mata"
           position="Project Manager"
+          img={ErickMata}
+          github="https://github.com/Erickowski"
+          linkedin="https://www.linkedin.com/in/erick-mata/"
+          twitter="https://twitter.com/Erickowski"
         />
         <CardMembers
           nameMember="Byron Miguel Piedrahita Hernandez"
           position="Backend Developer"
+          img={ByronPiedrahita}
+          github="https://github.com/ByronPiedrahita"
+          linkedin="http://www.linkedin.com/in/byron-miguel-piedrahita-hernandez-2b96b4a2"
         />
         <CardMembers
           nameMember="Jhon Carlos Colorado Angulo"
-          position="Frontend Developers"
+          position="Frontend Developer"
         />
         <CardMembers
           nameMember="Héctor Martínez Reséndiz"
-          position="Frontend Developers"
+          position="Frontend Developer"
         />
         <CardMembers
           nameMember="Ernesto Lázaro Guerrero"

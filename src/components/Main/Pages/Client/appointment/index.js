@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Wrap,
   Container,
@@ -48,6 +48,9 @@ const listProcedures = [
 ];
 
 export const CreateAppointment = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <Wrap>
       <Container>

@@ -1,9 +1,21 @@
 import styled from "styled-components";
 
+export const Wrap = styled.div`
+  /* Positioning */
+  /* (Box-model) */
+  margin: 20px auto;
+  height: inherit;
+  width: 1200px;
+  max-width: 1200px;
+  /* Typography */
+  /* Visual */
+  /* Misc */
+`;
+
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr 1fr;
 `;
 export const ArrowButton = styled.div`
   grid-column: 1 / 2;

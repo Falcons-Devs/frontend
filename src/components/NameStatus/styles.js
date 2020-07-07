@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link as LinkRouter } from "@reach/router";
 
 export const Status = styled.div`
-  width: 30%;
+  width: 40%;
   display: flex;
   justify-content: space-between;
   align-content: center;

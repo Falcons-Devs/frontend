@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Wrap, Container, ArrowButton } from "./styles";
 import { ShowAppointmentHistory } from "../../../../ShowAppointmentHistory";
 import { NameStatus } from "../../../../NameStatus";
 
 export const AppointmentHistory = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <Wrap>
+      <NameStatus title="Mi historial de citas" to={"/client"} />
       <Container>
-        <ArrowButton>
-          <NameStatus title="Mi historial de citas" to={"/client"} />
-        </ArrowButton>
+        <ArrowButton></ArrowButton>
         <ShowAppointmentHistory
           dateTime="01-08-2020"
           estheticianName="Esteticista 1"
