@@ -9,6 +9,11 @@ export const Wrap = styled.div`
   /* Typography */
   /* Visual */
   /* Misc */
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 90vw;
+    height: 80.5vh;
+  }
 `;
 export const Container = styled.div`
   display: grid;
@@ -21,12 +26,24 @@ export const Container = styled.div`
 export const Profile = styled.div`
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  @media (max-width: 768px) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
 `;
 export const MyAppointment = styled.div`
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  @media (max-width: 768px) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
 `;
 export const CreateAppointment = styled.div`
   grid-column: 1 / 3;
   grid-row: 2 / 3;
+  @media (max-width: 768px) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
 `;

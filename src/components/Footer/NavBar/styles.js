@@ -32,7 +32,9 @@ export const Link = styled(LinkRouter)`
   /* Visual */
   vertical-align: middle;
   /* Misc */
-
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
   &:active,
   &:focus,
   &:hover {
@@ -56,4 +58,7 @@ export const P = styled.p`
   color: #fff;
   letter-spacing: 0.25px;
   line-height: 1.28571;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;

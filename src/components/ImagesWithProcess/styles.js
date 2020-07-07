@@ -23,7 +23,13 @@ export const Link = styled(LinkRouter)`
   transition: background-color .2s cubic-bezier(0.4, 0, 0.2, 1),box-shadow .3s cubic-bezier(0.4, 0, 0.2, 1),color .2s cubic-bezier(0.4, 0, 0.2, 1),fill .2s cubic-bezier(0.4, 0, 0.2, 1);
   /* Misc */
   margin-bottom: 20px;
-
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 368px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    height: ${(props) => (props.responsiveTablet ? "184px" : "")};
+  }
   &:hover {
     box-shadow: 0 4px 5px rgba(0,0,0,0.4);
   }

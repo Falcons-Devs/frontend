@@ -5,6 +5,10 @@ export const Table = styled.table`
   border: 6px solid #de18ad;
   border-collapse: collapse;
   vertical-align: top;
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 88vw;
+  }
 
   th,
   td {

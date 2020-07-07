@@ -6,9 +6,9 @@ import {
   SummaryOfTheAppointment,
   MonthAndYear,
 } from "./Components";
-import { Week } from "./styles";
+import { Week, Title } from "./styles";
 
-export const Schedule = () => {
+export const Schedule = ({ title }) => {
   var hoy = new Date();
   var dd = hoy.getDate();
   var mm = hoy.getMonth() + 1;
@@ -41,24 +41,27 @@ export const Schedule = () => {
   ];
   const listSummaryOfTheAppointment = ["5", "6", "7", "8", "9", "10", "11"];
   return (
-    <Week>
-      {listNameOfTheDay.map((item, index) => (
-        <NameOfTheDay key={index} name={item} />
-      ))}
-      {listDayNumber.map((item, index) => (
-        <DayNumber key={index} number={item} />
-      ))}
-      {listTimeOfDay.map((item, index) => {
-        return (
-          <>
-            <TimeOfDay key={index} time={item} />
-            {listSummaryOfTheAppointment.map((item, index) => (
-              <SummaryOfTheAppointment client="Nombre del cliente" />
-            ))}
-          </>
-        );
-      })}
-      <MonthAndYear month="Julio" year="2020" />
-    </Week>
+    <>
+      <Title>{title}</Title>
+      <Week>
+        {listNameOfTheDay.map((item, index) => (
+          <NameOfTheDay key={index} name={item} />
+        ))}
+        {listDayNumber.map((item, index) => (
+          <DayNumber key={index} number={item} />
+        ))}
+        {listTimeOfDay.map((item, index) => {
+          return (
+            <>
+              <TimeOfDay key={index} time={item} />
+              {listSummaryOfTheAppointment.map((item, index) => (
+                <SummaryOfTheAppointment client="Nombre del cliente" />
+              ))}
+            </>
+          );
+        })}
+        <MonthAndYear month="Julio" year="2020" />
+      </Week>
+    </>
   );
 };

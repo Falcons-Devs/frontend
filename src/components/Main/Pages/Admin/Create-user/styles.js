@@ -9,6 +9,11 @@ export const Wrap = styled.div`
   padding: 0px 20px;
   /* Typography */
   /* Visual */
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 90vw;
+    height: 80.5vh;
+  }
 `;
 
 export const Container = styled.div`
@@ -46,6 +51,10 @@ export const SectionForm = styled.section`
   border-radius: 20px;
   padding: 30px 60px;
   font-family: "Lato", sans-serif;
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 75vw;
+  }
 
   h2 {
     text-align: center;
@@ -66,13 +75,24 @@ export const SectionForm = styled.section`
     padding: 7px 0px;
     text-align: center;
     width: 80%;
-
+    /* Responsive */
+    @media (max-width: 768px) {
+      margin: 20px 0;
+    }
     &::placeholder {
       color: rgba(47, 47, 47, 0.5);
+      /* Responsive */
+      @media (max-width: 768px) {
+        font-size: 22px;
+      }
     }
   }
   select {
     color: rgba(47, 47, 47, 0.5);
+    /* Responsive */
+    @media (max-width: 768px) {
+      font-size: 22px;
+    }
   }
 `;
 
@@ -81,4 +101,8 @@ export const Title = styled.h2`
   width: 100%;
   border-top: 5px solid #de18ad;
   text-align: center;
+  /* Responsive */
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `;

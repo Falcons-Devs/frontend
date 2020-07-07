@@ -9,6 +9,10 @@ export const Wrap = styled.div`
   padding: 0px 20px;
   /* Typography */
   /* Visual */
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 90vw;
+  }
 `;
 
 export const Container = styled.div`

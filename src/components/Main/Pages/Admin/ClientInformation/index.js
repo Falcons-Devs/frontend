@@ -24,16 +24,24 @@ export const ClientInformation = () => {
       </Main>
       <Container>
         <HistoryAppointments>
-          <Buttons value="Historial de citas" color="#de18ad" />
+          <Buttons
+            value="Historial de citas"
+            responsiveTablet
+            color="#de18ad"
+          />
         </HistoryAppointments>
         <RealizedProcedures>
-          <Buttons value="Procedimientos realizados" color="#de18ad" />
+          <Buttons
+            value="Procedimientos realizados"
+            responsiveTablet
+            color="#de18ad"
+          />
         </RealizedProcedures>
         <RealizedPayments>
-          <Buttons value="Pagos realizados" color="#de18ad" />
+          <Buttons value="Pagos realizados" responsiveTablet color="#de18ad" />
         </RealizedPayments>
         <FollowingAppointments>
-          <Buttons value="Próximas citas" color="#de18ad" />
+          <Buttons value="Próximas citas" responsiveTablet color="#de18ad" />
         </FollowingAppointments>
         <Table>
           <TableInfo

@@ -10,6 +10,11 @@ export const Wrap = styled.div`
   /* Typography */
   /* Visual */
   /* Misc */
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 90vw;
+    height: 80.5vh;
+  }
 `;
 
 export const Container = styled.div`
@@ -47,6 +52,10 @@ export const SectionForm = styled.section`
   border-radius: 20px;
   padding: 30px 60px;
   font-family: "Lato", sans-serif;
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 75vw;
+  }
 
   h2 {
     text-align: center;
@@ -57,6 +66,10 @@ export const SectionForm = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* Responsive */
+    @media (max-width: 768px) {
+      margin: 20px 0;
+    }
   }
 
   input {
@@ -69,6 +82,10 @@ export const SectionForm = styled.section`
 
     &::placeholder {
       color: rgba(47, 47, 47, 0.5);
+      /* Responsive */
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
     }
   }
 `;
@@ -78,4 +95,9 @@ export const Title = styled.h2`
   width: 100%;
   border-top: 5px solid #de18ad;
   text-align: center;
+  /* Responsive */
+  @media (max-width: 768px) {
+    margin-top: 30px;
+    font-size: 32px;
+  }
 `;

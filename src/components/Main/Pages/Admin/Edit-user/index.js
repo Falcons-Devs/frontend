@@ -26,7 +26,7 @@ export const EditUser = () => {
     <Wrap>
       <Container>
         <Main>
-          <NameStatus title="Crear usuario" to="/admin" />
+          <NameStatus title="Editar usuario" to="/admin-users" />
         </Main>
         <Hero>
           <HeaderImages numberImg="4" />

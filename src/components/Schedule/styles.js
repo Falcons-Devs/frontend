@@ -16,4 +16,13 @@ export const Week = styled.div`
   border: 5px solid #de18ad;
   border-radius: 20px;
   /* Misc */
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 85vw;
+    grid-template-columns: repeat(8, 65px);
+  }
+`;
+
+export const Title = styled.h2`
+  margin: 10px 0;
 `;

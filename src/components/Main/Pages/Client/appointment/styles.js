@@ -9,12 +9,21 @@ export const Wrap = styled.div`
   padding: 0px 20px;
   /* Typography */
   /* Visual */
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 90vw;
+  }
 `;
 
 export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(1fr, 2);
   grid-template-rows: repeat(1fr, 4);
+  /* Responsive */
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr, 4);
+  }
 `;
 export const ArrowButton = styled.div`
   grid-column: 1 / 3;
@@ -37,11 +46,7 @@ export const Schedule = styled.div`
   grid-column: 1 / 3;
   grid-row: 5 / 6;
 `;
-export const CancelButton = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 6 / 7;
-`;
 export const ConfirmButton = styled.div`
-  grid-column: 2 / 3;
+  grid-column: 1 / 3;
   grid-row: 6 / 7;
 `;

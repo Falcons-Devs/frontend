@@ -15,7 +15,7 @@ export const Users = () => {
         <Main>
           <NameStatus title="Ver usuarios" to="/admin" />
           <Link to="/admin-create-user">
-            <Buttons value="Crear usuario" color="#2DD881" />
+            <Buttons value="Crear usuario" responsiveTablet color="#2DD881" />
           </Link>
         </Main>
         <Table>
@@ -25,7 +25,7 @@ export const Users = () => {
             col3="Email"
             col4="Tipo"
             col5="Editar usuarios"
-            title="Procedimientos"
+            title="Usuarios"
           />
         </Table>
       </Container>

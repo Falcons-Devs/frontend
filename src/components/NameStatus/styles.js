@@ -6,7 +6,9 @@ export const Status = styled.div`
   display: flex;
   justify-content: space-between;
   align-content: center;
-
+  @media (max-width: 768px) {
+    width: 70%;
+  }
   h3 {
     font-size: 2em;
   }

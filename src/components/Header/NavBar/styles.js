@@ -10,6 +10,10 @@ export const Nav = styled.nav`
   /* Typography */
   /* Visual */
   /* Misc */
+  /* Responsive */
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const Link = styled(LinkRouter)`
@@ -55,6 +59,9 @@ export const Link = styled(LinkRouter)`
     color: #000;
     /* Visual */
     /* Misc */
+  }
+  @media (max-width: 768px) {
+    font-size: 24px;
   }
 `;
 

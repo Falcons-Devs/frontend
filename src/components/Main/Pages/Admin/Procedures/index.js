@@ -15,7 +15,11 @@ export const Procedures = () => {
         <Main>
           <NameStatus title="Ver procedimientos" to="/admin" />
           <Link to="/admin-create-procedure">
-            <Buttons value="Crear procedimiento" color="#2DD881" />
+            <Buttons
+              value="Crear procedimiento"
+              responsiveTablet
+              color="#2DD881"
+            />
           </Link>
         </Main>
         <Table>
