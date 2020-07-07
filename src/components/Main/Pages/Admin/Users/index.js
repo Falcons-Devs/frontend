@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Container, Main, Table, Wrap } from "./styles";
 import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
+import { Table as TableInfo } from "../../../../Table";
 import { Link } from "@reach/router";
 
 export const Users = () => {
@@ -18,7 +19,14 @@ export const Users = () => {
           </Link>
         </Main>
         <Table>
-          <h1>Tabla</h1>
+          <TableInfo
+            col1="#"
+            col2="Nombre"
+            col3="Email"
+            col4="Tipo"
+            col5="Editar usuarios"
+            title="Procedimientos"
+          />
         </Table>
       </Container>
     </Wrap>

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Container, Main, Table, Wrap } from "./styles";
 import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
+import { Table as TableInfo } from "../../../../Table";
 import { Link } from "@reach/router";
 
 export const Procedures = () => {
@@ -18,7 +19,12 @@ export const Procedures = () => {
           </Link>
         </Main>
         <Table>
-          <h1>Tablas</h1>
+          <TableInfo
+            col1="#"
+            col2="Nombre"
+            col3="Acciones"
+            title="Procedimientos"
+          />
         </Table>
       </Container>
     </Wrap>
