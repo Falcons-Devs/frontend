@@ -7,7 +7,7 @@ export const Table = styled.table`
   vertical-align: top;
   /* Responsive */
   @media (max-width: 768px) {
-    width: 90vw;
+    width: 88vw;
   }
 
   th,
