@@ -16,10 +16,9 @@ import { HeaderImages } from "../../../../HeaderImages";
 import { IconEmail } from "../../../../../assets/static/icon-email";
 import { IconPassword } from "../../../../../assets/static/icon-password";
 import { IconAccountCircle } from "../../../../../assets/static/icon-accountCircle";
-import { IconType } from "../../../../../assets/static/icon-type";
 import { Link } from "@reach/router";
 
-export const CreateUser = () => {
+export const CreateBeautician = () => {
   useEffect(() => {
     window.scroll(0, 0);
   });
@@ -27,10 +26,10 @@ export const CreateUser = () => {
     <Wrap>
       <Container>
         <Main>
-          <NameStatus title="Crear usuario" to="/admin-users" />
+          <NameStatus title="Crear esteticista" to="/admin-beautician" />
         </Main>
         <Hero>
-          <HeaderImages numberImg="4" />
+          <HeaderImages numberImg="2" />
         </Hero>
         <Form>
           <SectionForm>
@@ -64,23 +63,12 @@ export const CreateUser = () => {
                 </label>
                 <input type="password" id="password" placeholder="Password" />
               </div>
-              <div>
-                <label htmlFor="type">
-                  {" "}
-                  <IconType width="50px" height="50px" fill="#DE18AD" />{" "}
-                </label>
-                <select name="type" id="type">
-                  <option value="admin">Administrador</option>
-                  <option value="beautician">Esteticista</option>
-                  <option value="client">Cliente</option>
-                </select>
-              </div>
             </form>
-            <Title>Crear usuario</Title>
+            <Title>Crear esteticista</Title>
           </SectionForm>
         </Form>
         <CancelButton>
-          <Link to="/admin-users">
+          <Link to="/admin-beautician">
             <Buttons color="#DE3C48" value="Cancelar" />
           </Link>
         </CancelButton>

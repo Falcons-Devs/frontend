@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link as LinkRouter } from "@reach/router";
 
 export const Button = styled.button`
   color: #fcfcfc;
@@ -9,12 +8,5 @@ export const Button = styled.button`
   padding: 8px 50px;
   border-radius: 50px;
   margin: 30px auto;
-`;
-
-export const Link = styled(LinkRouter)`
-  color: #fcfcfc;
-  font-size: 1.5em;
-  background-color: #de18ad;
-  padding: 8px 50px;
-  border-radius: 50px;
+  cursor: pointer;
 `;
