@@ -5,12 +5,13 @@ import {
   ArrowButton,
   Beautician,
   Procedures,
-  Calendar,
+  Schedule,
   CancelButton,
   ConfirmButton,
 } from "./styles";
 import { Buttons } from "../../../../Buttons";
 import { NameStatus } from "../../../../NameStatus";
+import { Schedule as ShowSchedule } from "../../../../Schedule";
 import { List } from "../../../../List";
 import { Link } from "@reach/router";
 
@@ -63,9 +64,9 @@ export const CreateAppointment = () => {
         <Procedures>
           <List list={listProcedures} title="Elige procedimientos" />
         </Procedures>
-        <Calendar>
-          <h1>Calendario</h1>
-        </Calendar>
+        <Schedule>
+          <ShowSchedule />
+        </Schedule>
         <CancelButton>
           <Link to="/client">
             <Buttons value="Cancelar" color="#DE3C48" />
