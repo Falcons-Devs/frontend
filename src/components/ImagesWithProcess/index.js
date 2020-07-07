@@ -8,7 +8,14 @@ import Hero_card3 from "../../assets/img/hero_card3.jpg";
 import Hero_card4 from "../../assets/img/hero_card4.jpg";
 import { Link, Article, Section, H2 } from "./styles";
 
-export const ImagesWithProcess = ({ nameImage, alt, width, height, to }) => {
+export const ImagesWithProcess = ({
+  nameImage,
+  alt,
+  width,
+  height,
+  to,
+  responsiveTablet,
+}) => {
   let cover;
   nameImage == 1 ? (cover = Hero_card1) : "";
   nameImage == 2 ? (cover = Hero_card2) : "";
@@ -16,7 +23,14 @@ export const ImagesWithProcess = ({ nameImage, alt, width, height, to }) => {
   nameImage == 4 ? (cover = Hero_card4) : "";
   nameImage == 5 ? (cover = Client_1) : "";
   return (
-    <Link cover={cover} to={to} aria-label={alt} width={width} height={height}>
+    <Link
+      cover={cover}
+      to={to}
+      aria-label={alt}
+      width={width}
+      height={height}
+      responsiveTablet={responsiveTablet}
+    >
       <Article>
         <Section>
           <H2>{alt}</H2>

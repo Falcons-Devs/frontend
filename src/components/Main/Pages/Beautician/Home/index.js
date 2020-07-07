@@ -41,6 +41,7 @@ export const Home = () => {
                   width="500px"
                   height="300px"
                   to="/beautician-schedule"
+                  responsiveTablet
                 />
               </Schedule>
               <Procedures>
@@ -50,6 +51,7 @@ export const Home = () => {
                   width="500px"
                   height="300px"
                   to="/beautician-procedure"
+                  responsiveTablet
                 />
               </Procedures>
             </Container>
