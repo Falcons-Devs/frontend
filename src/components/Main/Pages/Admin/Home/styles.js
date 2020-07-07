@@ -13,7 +13,7 @@ export const Wrap = styled.div`
   /* Responsive */
   @media (max-width: 768px) {
     width: 85vw;
-    height: 80.5vh;
+    height: calc(100vh - 200px);
   }
 `;
 
