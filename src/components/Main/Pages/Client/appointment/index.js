@@ -5,13 +5,13 @@ import {
   ArrowButton,
   Beautician,
   Procedures,
-  Calendar,
+  Schedule,
   CancelButton,
   ConfirmButton,
 } from "./styles";
 import { Buttons } from "../../../../Buttons";
 import { NameStatus } from "../../../../NameStatus";
-import { Calendar as ShowCalendar } from "../../../../Calendar";
+import { Schedule as ShowSchedule } from "../../../../Schedule";
 import { List } from "../../../../List";
 
 const listBeauticians = [
@@ -63,9 +63,9 @@ export const CreateAppointment = () => {
         <Procedures>
           <List list={listProcedures} title="Elige procedimientos" />
         </Procedures>
-        <Calendar>
-          <ShowCalendar />
-        </Calendar>
+        <Schedule>
+          <ShowSchedule />
+        </Schedule>
         <CancelButton>
           <Buttons value="Cancelar" color="#DE3C48" />
         </CancelButton>

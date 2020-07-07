@@ -33,7 +33,7 @@ export const Procedures = styled.div`
   grid-column: 1 / 3;
   grid-row: 4 / 5;
 `;
-export const Calendar = styled.div`
+export const Schedule = styled.div`
   grid-column: 1 / 3;
   grid-row: 5 / 6;
 `;
