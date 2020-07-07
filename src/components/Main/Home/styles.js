@@ -14,9 +14,9 @@ export const Wrap = styled.div`
   /* Visual */
   /* Misc */
   /* Responsive */
-  /* @media (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 100vw;
-  } */
+  }
 `;
 
 export const Main = styled.main`
@@ -106,6 +106,9 @@ export const SectionParallax = styled.section`
   align-items: center;
   font-family: "Lato", sans-serif;
   font-weight: normal;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const InfoParallax = styled.section`
