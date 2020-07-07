@@ -11,6 +11,7 @@ import {
 } from "./styles";
 import { Buttons } from "../../../../Buttons";
 import { NameStatus } from "../../../../NameStatus";
+import { Calendar as ShowCalendar } from "../../../../Calendar";
 import { List } from "../../../../List";
 
 const listBeauticians = [
@@ -60,7 +61,7 @@ export const CreateAppointment = () => {
           <List list={listProcedures} title="Elige procedimientos" />
         </Procedures>
         <Calendar>
-          <h1>Calendario</h1>
+          <ShowCalendar />
         </Calendar>
         <CancelButton>
           <Buttons value="Cancelar" color="#DE3C48" />
