@@ -17,4 +17,10 @@ export const BackgroudImages = styled.div`
       (props.numberImg == 3 && `url(${Header_3})`) ||
       (props.numberImg == 4 && `url(${Header_4})`)};
   background-size: cover;
+    /* Responsive */
+    @media (max-width: 768px) {
+    width: 85vw;
+    height: 150px;
+  }
+
 `;
