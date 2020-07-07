@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Container, Main, Table, Wrap } from "./styles";
 import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
+import { Table as TableInfo } from "../../../../Table";
 
 export const Users = () => {
   useEffect(() => {
@@ -15,7 +16,14 @@ export const Users = () => {
           <Buttons value="Crear usuario" color="#2DD881" />
         </Main>
         <Table>
-          <h1>Tabla</h1>
+          <TableInfo
+            col1="#"
+            col2="Nombre"
+            col3="Email"
+            col4="Tipo"
+            col5="Editar usuarios"
+            title="Procedimientos"
+          />
         </Table>
       </Container>
     </Wrap>

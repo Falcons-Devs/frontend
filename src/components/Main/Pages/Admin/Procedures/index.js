@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Container, Main, Table, Wrap } from "./styles";
 import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
+import { Table as TableInfo } from "../../../../Table";
 
 export const Procedures = () => {
   useEffect(() => {
@@ -15,7 +16,12 @@ export const Procedures = () => {
           <Buttons value="Crear procedimiento" color="#2DD881" />
         </Main>
         <Table>
-          <h1>Tablas</h1>
+          <TableInfo
+            col1="#"
+            col2="Nombre"
+            col3="Acciones"
+            title="Procedimientos"
+          />
         </Table>
       </Container>
     </Wrap>

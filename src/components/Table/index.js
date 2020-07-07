@@ -3,7 +3,7 @@ import React from "react";
 import { Table as ShowTable } from "./styles";
 
 export const Table = (props) => {
-  const { col1, col2, col3, col4, col5, col6, col7, title } = props;
+  const { col1, col2, col3, col4, col5, col6, col7, col8, title } = props;
   let countColum = -1;
 
   Object.keys(props).forEach((col) => {
@@ -35,6 +35,7 @@ export const Table = (props) => {
             {col5 && <th> {col5} </th>}
             {col6 && <th> {col6} </th>}
             {col7 && <th> {col7} </th>}
+            {col8 && <th> {col8} </th>}
           </tr>
         </thead>
         <tbody>{createTable(countColum)}</tbody>
