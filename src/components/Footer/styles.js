@@ -28,5 +28,4 @@ export const FooterStyle = styled.footer`
   /* Typography */
   /* Visual */
   /* Misc */
-  bottom: 0;
 `;
