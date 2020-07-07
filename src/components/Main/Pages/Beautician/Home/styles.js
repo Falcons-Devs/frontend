@@ -50,9 +50,11 @@ export const Agenda = styled.div`
 
 export const Schedule = styled.div`
   grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  grid-row: 2 / 3;
   /* Responsive */
   @media (max-width: 768px) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
   }
 `;
 
