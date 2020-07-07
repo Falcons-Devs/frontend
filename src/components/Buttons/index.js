@@ -1,15 +1,7 @@
 import React from "react";
 
-import { Button, Link } from "./styles";
+import { Button } from "./styles";
 
-export const Buttons = ({ value, to, color }) => {
-  return (
-    <>
-      {to ? (
-        <Link to="/signin">Registrarse</Link>
-      ) : (
-        <Button color={color}> {value} </Button>
-      )}
-    </>
-  );
+export const Buttons = ({ value, color }) => {
+  return <Button color={color}> {value} </Button>;
 };

@@ -3,6 +3,7 @@ import { Wrap, Container, ArrowButton, Title } from "./styles";
 import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
 import { CardBeautician } from "../../../../CardBeautician";
+import { Link } from "@reach/router";
 
 export const Beautician = () => {
   useEffect(() => {
@@ -12,7 +13,9 @@ export const Beautician = () => {
     <Wrap>
       <Title>
         <NameStatus title="Esteticistas" to={"/admin"} />
-        <Buttons value="Crear esteticista" color="#2DD881" />
+        <Link to="/admin-create-beautician">
+          <Buttons value="Crear esteticista" color="#2DD881" />
+        </Link>
       </Title>
       <Container>
         <ArrowButton></ArrowButton>

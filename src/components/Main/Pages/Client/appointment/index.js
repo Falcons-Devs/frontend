@@ -13,6 +13,7 @@ import { Buttons } from "../../../../Buttons";
 import { NameStatus } from "../../../../NameStatus";
 import { Schedule as ShowSchedule } from "../../../../Schedule";
 import { List } from "../../../../List";
+import { Link } from "@reach/router";
 
 const listBeauticians = [
   "Esteticista 1",
@@ -67,7 +68,9 @@ export const CreateAppointment = () => {
           <ShowSchedule />
         </Schedule>
         <CancelButton>
-          <Buttons value="Cancelar" color="#DE3C48" />
+          <Link to="/client">
+            <Buttons value="Cancelar" color="#DE3C48" />
+          </Link>
         </CancelButton>
         <ConfirmButton>
           <Buttons value="Confirmar" color="#2DD881" />
