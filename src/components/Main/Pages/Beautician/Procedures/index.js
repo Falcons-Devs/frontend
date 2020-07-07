@@ -12,6 +12,7 @@ import { Buttons } from "../../../../Buttons";
 import { NameStatus } from "../../../../NameStatus";
 import { HeaderImages } from "../../../../HeaderImages";
 import { List } from "../../../../List";
+import { Link } from "@reach/router";
 
 const list = [
   "Procedimiento 1",
@@ -50,7 +51,9 @@ export const Procedures = () => {
             <List list={list} title="Procedimientos" />
           </ProceduresContainer>
           <CancelButton>
-            <Buttons value="Cancelar" color="#DE3C48" />
+            <Link to="/beautician">
+              <Buttons value="Cancelar" color="#DE3C48" />
+            </Link>
           </CancelButton>
           <ConfirmButton>
             <Buttons value="Confirmar" color="#2DD881" />
