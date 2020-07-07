@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Container, ArrowButton, Wrap, Table } from "./styles";
 import { NameStatus } from "../../../../NameStatus";
+import { Schedule as ShowSchedule } from "../../../../Schedule";
 
 export const Diary = () => {
   useEffect(() => {
@@ -13,7 +14,7 @@ export const Diary = () => {
           <NameStatus title="Agenda de [NAME]" to="/admin-beautician" />
         </ArrowButton>
         <Table>
-          <h1>Tabla</h1>
+          <ShowSchedule />
         </Table>
       </Container>
     </Wrap>
