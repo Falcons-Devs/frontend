@@ -26,7 +26,9 @@ export const SectionForm = styled.section`
   border-radius: 20px;
   padding: 30px 60px;
   font-family: "Lato", sans-serif;
-
+  @media (max-width: 768px) {
+    border-width: 10px;
+  }
   h2 {
     text-align: center;
     margin-bottom: 20px;
