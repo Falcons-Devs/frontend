@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import LogoFalconsDevs from "../../../../assets/img/Logo_Falcons_Devs.jpg";
-import { IconAccountCircle } from "../../../../assets/static/icon-accountCircle";
 import { Wrap, SectionAbout, SectionMembers } from "./styles";
 import { CardMembers } from "../../../CardMembers";
 
