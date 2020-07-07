@@ -17,6 +17,7 @@ import { IconEmail } from "../../../../../assets/static/icon-email";
 import { IconPassword } from "../../../../../assets/static/icon-password";
 import { IconAccountCircle } from "../../../../../assets/static/icon-accountCircle";
 import { IconType } from "../../../../../assets/static/icon-type";
+import { Link } from "@reach/router";
 
 export const CreateUser = () => {
   useEffect(() => {
@@ -26,7 +27,7 @@ export const CreateUser = () => {
     <Wrap>
       <Container>
         <Main>
-          <NameStatus title="Crear usuario" to="/admin" />
+          <NameStatus title="Crear usuario" to="/admin-users" />
         </Main>
         <Hero>
           <HeaderImages numberImg="4" />
@@ -79,7 +80,9 @@ export const CreateUser = () => {
           </SectionForm>
         </Form>
         <CancelButton>
-          <Buttons color="#DE3C48" value="Cancelar" />
+          <Link to="/admin-users">
+            <Buttons color="#DE3C48" value="Cancelar" />
+          </Link>
         </CancelButton>
         <CreateButton>
           <Buttons color="#2DD881" value="Confirmar" />
