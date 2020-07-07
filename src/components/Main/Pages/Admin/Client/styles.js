@@ -15,14 +15,13 @@ export const Wrap = styled.div`
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px 1fr 1fr;
+  grid-template-rows: 75px 250px 1fr;
+  grid-gap: 20px;
 `;
 export const ArrowButton = styled.div`
+  margin-top: 20px;
+  margin-left: 20px;
   grid-column: 1 / 2;
-  grid-row: 1 / 2;
-`;
-export const Title = styled.div`
-  grid-column: 2 / 3;
   grid-row: 1 / 2;
 `;
 export const Hero = styled.div`

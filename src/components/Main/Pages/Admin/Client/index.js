@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Wrap, Container, ArrowButton, Title, Hero, Table } from "./styles";
 import { NameStatus } from "../../../../NameStatus";
 import { BackgroudImages } from "../../../../HeaderImages/styles";
+import { Table as TableInfo } from "../../../../Table";
 
 export const Client = () => {
   useEffect(() => {
@@ -17,7 +18,13 @@ export const Client = () => {
           <BackgroudImages numberImg="3" />
         </Hero>
         <Table>
-          <h1>Tabla</h1>
+          <TableInfo
+            col1="#"
+            col2="Nombre"
+            col3="Email"
+            col4="Ver más información"
+            title="Home"
+          />
         </Table>
       </Container>
     </Wrap>
