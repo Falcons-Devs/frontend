@@ -14,6 +14,10 @@ export const Wrap = styled.div`
   background: #02b3b1;
   border-radius: 10px 10px 0 0;
   /* Misc */
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 90vw;
+  }
 `;
 
 export const FooterStyle = styled.footer`
@@ -26,4 +30,3 @@ export const FooterStyle = styled.footer`
   /* Misc */
   bottom: 0;
 `;
-
