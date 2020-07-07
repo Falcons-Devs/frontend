@@ -27,6 +27,7 @@ export const DayNumberStyle = styled.div`
   /* Visual */
   border-bottom: 5px solid #de18ad;
   /* Misc */
+  /* Responsive */
 `;
 
 export const TimeOfDayStyle = styled.div`
@@ -76,6 +77,10 @@ export const Name = styled.div`
   /* Visual */
   overflow: hidden;
   /* Misc */
+  /* Responsive */
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const MonthAndYearStyle = styled.div`

@@ -8,6 +8,9 @@ export const Container = styled.div`
   padding: 30px 40px;
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 768px) {
+    width: 85vw;
+  }
 `;
 
 export const ProcedureContainer = styled.div`
