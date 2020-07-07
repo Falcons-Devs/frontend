@@ -6,6 +6,10 @@ export const Link = styled(LinkRouter)`
   /* Box-model */
   width: ${(props) => props.width || "300px"};
   height: ${(props) => props.height || "368px"};
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 368px;
+  }
   /* Typography */
   outline: none;
   /* Visual */

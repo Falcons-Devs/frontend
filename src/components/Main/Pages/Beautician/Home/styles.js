@@ -10,6 +10,11 @@ export const Wrap = styled.div`
   /* Typography */
   /* Visual */
   /* Misc */
+  /* Reponsive */
+  @media (max-width: 768px) {
+    width: 90vw;
+    height: 80.5vh;
+  }
 `;
 
 export const Container = styled.div`
