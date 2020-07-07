@@ -9,6 +9,7 @@ export const Button = styled.button`
   padding: 8px 50px;
   border-radius: 50px;
   margin: 30px auto;
+  cursor: pointer;
 `;
 
 export const Link = styled(LinkRouter)`
