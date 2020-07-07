@@ -5,6 +5,7 @@ import { Wrap, SectionAbout, SectionMembers } from "./styles";
 import { CardMembers } from "../../../CardMembers";
 
 import ErickMata from "../../../../assets/img/erick-mata.jpg";
+import ByronPiedrahita from "../../../../assets/img/byron-piedrahita.png";
 
 export const About = () => {
   useEffect(() => {
@@ -50,14 +51,17 @@ export const About = () => {
         <CardMembers
           nameMember="Byron Miguel Piedrahita Hernandez"
           position="Backend Developer"
+          img={ByronPiedrahita}
+          github="https://github.com/ByronPiedrahita"
+          linkedin="http://www.linkedin.com/in/byron-miguel-piedrahita-hernandez-2b96b4a2"
         />
         <CardMembers
           nameMember="Jhon Carlos Colorado Angulo"
-          position="Frontend Developers"
+          position="Frontend Developer"
         />
         <CardMembers
           nameMember="Héctor Martínez Reséndiz"
-          position="Frontend Developers"
+          position="Frontend Developer"
         />
         <CardMembers
           nameMember="Ernesto Lázaro Guerrero"
