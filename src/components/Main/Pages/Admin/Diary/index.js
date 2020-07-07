@@ -10,7 +10,7 @@ export const Diary = () => {
     <Wrap>
       <Container>
         <ArrowButton>
-          <NameStatus title="Agenda de [NAME]" to="/admin" />
+          <NameStatus title="Agenda de [NAME]" to="/admin-beautician" />
         </ArrowButton>
         <Table>
           <h1>Tabla</h1>

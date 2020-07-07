@@ -24,4 +24,5 @@ export const ArrowButton = styled.div`
 export const Title = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
