@@ -1,5 +1,6 @@
 import React from "react";
 import { Router } from "@reach/router";
+import Context from "./Context";
 
 import { GlobalStyle } from "./GlobalStyles";
 import { Header } from "./components/Header";
@@ -32,7 +33,7 @@ import { EditUser as EditUserAdmin } from "./components/Main/Pages/Admin/Edit-us
 
 export const App = () => {
   return (
-    <>
+    <Context.Provider>
       <GlobalStyle />
       <Header />
       <Router>
@@ -62,6 +63,6 @@ export const App = () => {
         <EditUserAdmin path="/admin-edit-user" />
       </Router>
       <Footer />
-    </>
+    </Context.Provider>
   );
 };

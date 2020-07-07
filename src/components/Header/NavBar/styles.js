@@ -57,3 +57,7 @@ export const Link = styled(LinkRouter)`
     /* Misc */
   }
 `;
+
+export const Profile = styled.div`
+  margin-left: 15px;
+`;
