@@ -29,8 +29,8 @@ export const Wrap = styled.div`
   /* Visual */
   /* Misc */
   @media (max-width: 768px) {
-    width: 100vw;
+    width: 90vw;
     padding: 0;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 `;

@@ -15,7 +15,7 @@ export const Wrap = styled.div`
   /* Misc */
   /* Responsive */
   @media (max-width: 768px) {
-    width: 100vw;
+    width: 90vw;
   }
 `;
 
