@@ -14,6 +14,10 @@ export const Wrap = styled.div`
   @media (max-width: 768px) {
     width: 90vw;
   }
+  @media (max-width: 375px) {
+    width: 100vw;
+    margin: 10px 0;
+  }
 `;
 
 export const Container = styled.div`
@@ -54,6 +58,10 @@ export const SectionForm = styled.section`
   /* Responsive */
   @media (max-width: 768px) {
     width: 75vw;
+  }
+  @media (max-width: 375px) {
+    border-width: 1px;
+    padding: 10px 20px;
   }
 
   h2 {
@@ -98,5 +106,8 @@ export const Title = styled.h2`
   @media (max-width: 768px) {
     margin-top: 30px;
     font-size: 32px;
+  }
+  @media (max-width: 375px) {
+    display: none;
   }
 `;

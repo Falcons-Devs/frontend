@@ -11,7 +11,7 @@ export const Status = styled.div`
     width: 70%;
   }
   @media (max-width: 375px) {
-    width: 100%;
+    width: 95%;
   }
   h3 {
     font-size: 2em;
