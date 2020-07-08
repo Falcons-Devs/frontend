@@ -5,7 +5,7 @@ export const Status = styled.div`
   width: 40%;
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   /* Responsive */
   @media (max-width: 768px) {
     width: 70%;
@@ -17,7 +17,7 @@ export const Status = styled.div`
     font-size: 2em;
     /* Responsive */
     @media (max-width: 375px) {
-      font-size: 32px;
+      font-size: 24px;
     }
   }
 `;
