@@ -4,6 +4,7 @@ import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
 import { CardBeautician } from "../../../../CardBeautician";
 import { Link } from "@reach/router";
+import { IconAdd } from "../../../../../assets/static/icon-add";
 
 export const Beautician = () => {
   useEffect(() => {
@@ -14,7 +15,15 @@ export const Beautician = () => {
       <Title>
         <NameStatus title="Esteticistas" to={"/admin"} />
         <Link to="/admin-create-beautician">
-          <Buttons value="Crear esteticista" responsivetablet color="#2DD881" />
+          {screen.width <= 375 ? (
+            <IconAdd width="50px" height="50px" fill="#2DD881" />
+          ) : (
+            <Buttons
+              value="Crear esteticista"
+              responsivetablet
+              color="#2DD881"
+            />
+          )}
         </Link>
       </Title>
       <Container>

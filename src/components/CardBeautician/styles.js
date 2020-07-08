@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkRouter } from "@reach/router";
 
 export const Beautician = styled.section`
   width: 500px;
@@ -9,6 +10,12 @@ export const Beautician = styled.section`
   /* Responsive */
   @media (max-width: 768px) {
     width: 350px;
+  }
+  @media (max-width: 375px) {
+    border-width: 1px;
+    display: grid;
+    grid-template-columns: 225px 50px;
+    grid-template-rows: 75px;
   }
 `;
 
@@ -33,6 +40,11 @@ export const BeauticianName = styled.section`
       font-size: 22px;
     }
   }
+  @media (max-width: 375px) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-right: 20px;
+  }
 `;
 
 export const Information = styled.section`
@@ -44,6 +56,9 @@ export const Information = styled.section`
     /* Responsive */
     @media (max-width: 768px) {
       flex-direction: column;
+    }
+    @media (max-width: 375px) {
+      display: none;
     }
   }
 
@@ -70,5 +85,16 @@ export const Information = styled.section`
       margin: 10px 0;
       font-size: 18px;
     }
+  }
+`;
+
+export const Link = styled(LinkRouter)`
+  /* Responsive */
+  @media (max-width: 375px) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
