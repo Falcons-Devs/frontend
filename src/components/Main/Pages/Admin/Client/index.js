@@ -3,6 +3,7 @@ import { Wrap, Container, ArrowButton, Title, Hero, Table } from "./styles";
 import { NameStatus } from "../../../../NameStatus";
 import { BackgroudImages } from "../../../../HeaderImages/styles";
 import { Table as TableInfo } from "../../../../Table";
+import { CardPerson } from "../../../../CardPerson";
 
 export const Client = () => {
   useEffect(() => {
@@ -18,13 +19,22 @@ export const Client = () => {
           <BackgroudImages numberImg="3" />
         </Hero>
         <Table>
-          <TableInfo
-            col1="#"
-            col2="Nombre"
-            col3="Email"
-            col4="Ver más información"
-            title="Home"
-          />
+          {screen.width <= 375 ? (
+            <>
+              <CardPerson name="Cliente 1" to="/admin-client-info" />
+              <CardPerson name="Cliente 2" to="/admin-client-info" />
+              <CardPerson name="Cliente 3" to="/admin-client-info" />
+              <CardPerson name="Cliente 4" to="/admin-client-info" />
+            </>
+          ) : (
+            <TableInfo
+              col1="#"
+              col2="Nombre"
+              col3="Email"
+              col4="Ver más información"
+              title="Home"
+            />
+          )}
         </Table>
       </Container>
     </Wrap>

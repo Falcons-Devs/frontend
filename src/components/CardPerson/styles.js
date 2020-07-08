@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link as LinkRouter } from "@reach/router";
 
-export const Beautician = styled.section`
+export const Person = styled.section`
   width: 500px;
   border: 5px solid #de18ad;
   border-radius: 20px;
@@ -16,10 +16,11 @@ export const Beautician = styled.section`
     display: grid;
     grid-template-columns: 225px 50px;
     grid-template-rows: 75px;
+    margin-bottom: 10px;
   }
 `;
 
-export const BeauticianName = styled.section`
+export const PersonName = styled.section`
   display: flex;
   align-items: center;
 
