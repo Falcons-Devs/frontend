@@ -20,7 +20,11 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 `;
-export const ArrowButton = styled.div`
+export const Span = styled.div`
   grid-column: 1 / 3;
   grid-row: 1 / 2;
+  /* Responsive */
+  @media (max-width: 375px) {
+    display: none;
+  }
 `;
