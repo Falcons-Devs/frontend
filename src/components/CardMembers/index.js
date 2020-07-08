@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "@reach/router";
 import { IconAccountCircle } from "../../assets/static/icon-accountCircle";
 import { Article, Image } from "./styles";
 import { IconGitHub } from "../../assets/static/icon-github";
@@ -16,6 +15,7 @@ export const CardMembers = ({
 }) => {
   return (
     <Article>
+      <h2>{nameMember}</h2>
       <article>
         <span>
           {img ? (
