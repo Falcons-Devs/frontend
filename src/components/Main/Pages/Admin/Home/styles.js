@@ -24,6 +24,10 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }
+  @media (max-width: 375px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
 `;
 export const Clients = styled.div`
   grid-column: 1 / 2;
@@ -36,6 +40,11 @@ export const Clients = styled.div`
 export const Beautician = styled.div`
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  /* Responsive */
+  @media (max-width: 375px) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
 `;
 export const Procedures = styled.div`
   grid-column: 2 / 3;
@@ -43,6 +52,9 @@ export const Procedures = styled.div`
   /* Responsive */
   @media (max-width: 768px) {
     grid-column: 1 / 2;
+  }
+  @media (max-width: 375px) {
+    grid-row: 3 / 4;
   }
 `;
 export const Users = styled.div`
@@ -52,5 +64,9 @@ export const Users = styled.div`
   @media (max-width: 768px) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+  }
+  @media (max-width: 375px) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
   }
 `;

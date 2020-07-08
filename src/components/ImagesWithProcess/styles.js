@@ -34,6 +34,8 @@ export const Link = styled(LinkRouter)`
   @media (max-width: 375px) {
     width: 150px;
     border-radius: 5px;
+    height: ${(props) => (props.responsivemobile ? "150px" : "")};
+    width: ${(props) => (props.responsivemobile ? "300px" : "")};
   }
   &:hover {
     box-shadow: 0 4px 5px rgba(0,0,0,0.4);
