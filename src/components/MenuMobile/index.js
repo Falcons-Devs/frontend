@@ -15,6 +15,16 @@ export const MenuMobile = () => (
           </Menu>
         );
       }
+      if (userType === "Client") {
+        return (
+          <Menu>
+            <Link to="/client">Inicio</Link>
+            <Link to="/about">About</Link>
+            <Link to="/client-appointments">Mis citas</Link>
+            <Link to="#">Cerrar sesión</Link>
+          </Menu>
+        );
+      }
     }}
   </Context.Consumer>
 );

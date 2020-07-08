@@ -12,7 +12,10 @@ export const Wrap = styled.div`
   /* Responsive */
   @media (max-width: 768px) {
     width: 90vw;
-    height: calc(100vh - 200px);
+  }
+  /* Responsive */
+  @media (max-width: 375px) {
+    margin: 0 auto;
   }
 `;
 export const Container = styled.div`
@@ -22,28 +25,58 @@ export const Container = styled.div`
   grid-gap: 20px;
   align-items: center;
   justify-items: center;
+  /* Responsive */
+  @media (max-width: 375px) {
+    grid-template-rows: 180px 1fr;
+    grid-gap: 5px;
+  }
 `;
 export const Profile = styled.div`
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  /* Responsive */
   @media (max-width: 768px) {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
+  }
+  @media (max-width: 375px) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
   }
 `;
 export const MyAppointment = styled.div`
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  /* Responsive */
   @media (max-width: 768px) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+  }
+  @media (max-width: 375px) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
   }
 `;
 export const CreateAppointment = styled.div`
   grid-column: 1 / 3;
   grid-row: 2 / 3;
+  /* Responsive */
   @media (max-width: 768px) {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+  }
+  @media (max-width: 375px) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+`;
+
+export const H2 = styled.h2`
+  display: none;
+  /* Responsive */
+  @media (max-width: 375px) {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
   }
 `;

@@ -77,4 +77,7 @@ export const Profile = styled.div`
   margin-left: 15px;
 `;
 
-export const NavMobile = styled.nav``;
+export const NavMobile = styled.nav`
+  display: flex;
+  align-items: center;
+`;

@@ -30,6 +30,11 @@ export const Link = styled(LinkRouter)`
     margin-bottom: 30px;
     height: ${(props) => (props.responsivetablet ? "184px" : "")};
   }
+  /* Responsive */
+  @media (max-width: 375px) {
+    width: 150px;
+    border-radius: 5px;
+  }
   &:hover {
     box-shadow: 0 4px 5px rgba(0,0,0,0.4);
   }
@@ -72,4 +77,8 @@ export const H2 = styled.h2`
   line-height: 1.3;
   /* Visual */
   /* Misc */
+  /* Responsive */
+  @media (max-width: 375px) {
+    font-size: 24px;
+  }
 `;

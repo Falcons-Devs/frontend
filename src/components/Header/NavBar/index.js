@@ -36,6 +36,18 @@ export const NavBar = () => (
         );
       }
       if (userType === "Client") {
+        if (screen.width <= 375) {
+          return (
+            <NavMobile>
+              <Profile>
+                <IconAvatar fill="#DE18AD" width="48px" height="48px" />
+              </Profile>
+              <Link to="/menu">
+                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+              </Link>
+            </NavMobile>
+          );
+        }
         return (
           <Nav>
             <Link to="/client">Inicio</Link>
