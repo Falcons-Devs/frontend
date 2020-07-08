@@ -4,7 +4,7 @@
     "description": "Repositorio del código frontend para el proyecto final C2 [OneClickStyle](https://ocs.life)",
     "main": "index.js",
     "scripts": {
-        "build": "webpack",
+        "build": "webpack --mode production",
         "dev": "webpack-dev-server --history-api-fallback --open"
     },
     "repository": {
