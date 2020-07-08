@@ -9,6 +9,7 @@ import { About } from "./components/Main/Home/About";
 import { Login } from "./components/Main/Home/Login";
 import { Signin } from "./components/Main/Home/Signin";
 import { Footer } from "./components/Footer";
+import { MenuMobile } from "./components/MenuMobile";
 
 import { Home as HomeBeautician } from "./components/Main/Pages/Beautician/Home";
 import { Schedules as ScheduleBeautician } from "./components/Main/Pages/Beautician/Schedules";
@@ -42,6 +43,7 @@ export const App = () => {
         <About path="/about" />
         <Signin path="/signin" />
         <Login path="/login" />
+        <MenuMobile path="/menu" />
         {/* Beautician */}
         <HomeBeautician path="/beautician" />
         <ScheduleBeautician path="/beautician-schedule" />

@@ -11,7 +11,7 @@ export const NavBar = () => (
         if (screen.width <= 375) {
           return (
             <NavMobile>
-              <Link to="/">
+              <Link to="/menu">
                 <IconMenu fill="#FCFCFC" width="50px" height="50px" />
               </Link>
             </NavMobile>
