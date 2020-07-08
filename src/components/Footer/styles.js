@@ -22,7 +22,7 @@ export const Wrap = styled.div`
   @media (max-width: 375px) {
     width: 100vw;
     border-radius: 0;
-    height: 150px;
+    height: 175px;
     font-size: 24px;
   }
 `;

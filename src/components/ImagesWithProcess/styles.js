@@ -23,6 +23,7 @@ export const Link = styled(LinkRouter)`
   transition: background-color .2s cubic-bezier(0.4, 0, 0.2, 1),box-shadow .3s cubic-bezier(0.4, 0, 0.2, 1),color .2s cubic-bezier(0.4, 0, 0.2, 1),fill .2s cubic-bezier(0.4, 0, 0.2, 1);
   /* Misc */
   margin-bottom: 20px;
+  /* Responsive */
   @media (max-width: 768px) {
     width: 300px;
     height: 368px;
@@ -30,7 +31,6 @@ export const Link = styled(LinkRouter)`
     margin-bottom: 30px;
     height: ${(props) => (props.responsivetablet ? "184px" : "")};
   }
-  /* Responsive */
   @media (max-width: 375px) {
     width: 150px;
     border-radius: 5px;
@@ -79,6 +79,6 @@ export const H2 = styled.h2`
   /* Misc */
   /* Responsive */
   @media (max-width: 375px) {
-    font-size: 24px;
+    font-size: 18px;
   }
 `;
