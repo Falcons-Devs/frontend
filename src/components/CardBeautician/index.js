@@ -1,8 +1,8 @@
 import React from "react";
 import { IconAccountCircle } from "../../assets/static/icon-accountCircle";
-import { Link } from "@reach/router";
-import { Beautician, BeauticianName, Information } from "./styles";
+import { Beautician, BeauticianName, Information, Link } from "./styles";
 import { Buttons } from "../Buttons";
+import { IconAdd } from "../../assets/static/icon-add";
 
 export const CardBeautician = ({ estheticianName, email, schedule }) => {
   return (
@@ -10,7 +10,7 @@ export const CardBeautician = ({ estheticianName, email, schedule }) => {
       <BeauticianName>
         <IconAccountCircle width="80px" height="90px" fill="#DE18AD" />
         <div>
-          <input type="text" className="duration" value={estheticianName} />
+          <input type="text" value={estheticianName} />
         </div>
       </BeauticianName>
       <Information>
@@ -22,7 +22,11 @@ export const CardBeautician = ({ estheticianName, email, schedule }) => {
         </div>
       </Information>
       <Link to="/admin-beautician-diary">
-        <Buttons value="Ver agenda" color="#2DD881" />
+        {screen.width <= 375 ? (
+          <IconAdd width="30px" height="30px" fill="#de18ad" />
+        ) : (
+          <Buttons value="Ver agenda" color="#2DD881" />
+        )}
       </Link>
     </Beautician>
   );

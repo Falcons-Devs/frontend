@@ -27,6 +27,15 @@ export const NavBar = () => (
         );
       }
       if (userType === "Admin") {
+        if (screen.width <= 375) {
+          return (
+            <NavMobile>
+              <Link to="/menu">
+                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+              </Link>
+            </NavMobile>
+          );
+        }
         return (
           <Nav>
             <Link to="/admin">Inicio</Link>

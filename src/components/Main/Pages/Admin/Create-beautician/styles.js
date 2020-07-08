@@ -12,7 +12,10 @@ export const Wrap = styled.div`
   /* Responsive */
   @media (max-width: 768px) {
     width: 90vw;
-    height: calc(100vh - 200px);
+  }
+  @media (max-width: 375px) {
+    margin: 10px 0;
+    padding: 0 10px;
   }
 `;
 
@@ -20,6 +23,9 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(1fr, 4);
+  @media (max-width: 375px) {
+    grid-template-columns: 175px 175px;
+  }
 `;
 export const Main = styled.div`
   grid-column: 1 / 3;
@@ -54,6 +60,11 @@ export const SectionForm = styled.section`
   /* Responsive */
   @media (max-width: 768px) {
     width: 75vw;
+  }
+  @media (max-width: 375px) {
+    width: 90vw;
+    border-width: 1px;
+    padding: 10px 15px;
   }
 
   h2 {
@@ -97,5 +108,8 @@ export const Title = styled.h2`
   /* Responsive */
   @media (max-width: 768px) {
     font-size: 32px;
+  }
+  @media (max-width: 375px) {
+    display: none;
   }
 `;
