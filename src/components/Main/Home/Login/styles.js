@@ -18,6 +18,10 @@ export const Wrap = styled.div`
     width: 90vw;
     height: calc(100vh - 200px);
   }
+  @media (max-width: 375px) {
+    margin-top: 10px;
+    height: 400px;
+  }
 `;
 
 export const SectionForm = styled.section`
@@ -30,11 +34,19 @@ export const SectionForm = styled.section`
     width: 600px;
     border-width: 10px;
   }
+  @media (max-width: 375px) {
+    width: 100vw;
+    border: none;
+    padding: 15px 10px;
+  }
   h2 {
     text-align: center;
     margin-bottom: 20px;
     @media (max-width: 768px) {
       font-size: 48px;
+    }
+    @media (max-width: 375px) {
+      font-size: 32px;
     }
   }
 
@@ -42,11 +54,17 @@ export const SectionForm = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 375px) {
+      justify-content: space-around;
+    }
   }
 
   div:last-child {
     display: flex;
     justify-content: center;
+    @media (max-width: 375px) {
+      font-size: 16px;
+    }
     a {
       color: #de18ad;
     }
@@ -66,6 +84,10 @@ export const SectionForm = styled.section`
     @media (max-width: 768px) {
       font-size: 24px;
       margin: 20px 0;
+    }
+    @media (max-width: 375px) {
+      font-size: 18px;
+      width: 70%;
     }
   }
 `;

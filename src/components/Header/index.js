@@ -6,12 +6,13 @@ import { HeaderStyle, Wrap } from "./styles";
 import { LogoOCS } from "../../assets/static/logo-ocs";
 
 export const Header = () => {
-  const logo =
-    screen.width <= 768 ? (
-      <LogoOCS width="100px" height="75px" />
-    ) : (
-      <LogoOCSF width="260px" />
-    );
+  let logo = <LogoOCSF width="260px" />;
+  if (screen.width <= 768) {
+    logo = <LogoOCS width="100px" height="75px" />;
+  }
+  if (screen.width <= 375) {
+    logo = <LogoOCS width="50px" height="50px" />;
+  }
   return (
     <HeaderStyle>
       <Wrap>
