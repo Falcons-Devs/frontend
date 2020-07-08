@@ -9,6 +9,7 @@ import {
   Agenda,
   Schedule,
   Procedures,
+  Title,
 } from "./styles";
 
 export const Home = () => {
@@ -20,42 +21,45 @@ export const Home = () => {
       {({ changeType }) => {
         changeType("Beautician");
         return (
-          <Wrap>
-            <Container>
-              <Profile>
-                {" "}
-                <ShowMyProfile nameUser="Nombre del usuario" />{" "}
-              </Profile>
-              <Agenda>
-                {" "}
-                <ImagesWithProcess
-                  nameImage="3"
-                  alt="Mi agenda"
-                  to="/beautician-diary"
-                />{" "}
-              </Agenda>
-              <Schedule>
-                <ImagesWithProcess
-                  nameImage="4"
-                  alt="Mis horarios"
-                  width="500px"
-                  height="300px"
-                  to="/beautician-schedule"
-                  responsivetablet="true"
-                />
-              </Schedule>
-              <Procedures>
-                <ImagesWithProcess
-                  nameImage="2"
-                  alt="Mis procedimientos"
-                  width="500px"
-                  height="300px"
-                  to="/beautician-procedure"
-                  responsivetablet="true"
-                />
-              </Procedures>
-            </Container>
-          </Wrap>
+          <>
+            <Title>Hola [NAME]</Title>
+            <Wrap>
+              <Container>
+                <Profile>
+                  {" "}
+                  <ShowMyProfile nameUser="Nombre del usuario" />{" "}
+                </Profile>
+                <Agenda>
+                  {" "}
+                  <ImagesWithProcess
+                    nameImage="3"
+                    alt="Mi agenda"
+                    to="/beautician-diary"
+                  />{" "}
+                </Agenda>
+                <Schedule>
+                  <ImagesWithProcess
+                    nameImage="4"
+                    alt="Mis horarios"
+                    width="500px"
+                    height="300px"
+                    to="/beautician-schedule"
+                    responsivetablet="true"
+                  />
+                </Schedule>
+                <Procedures>
+                  <ImagesWithProcess
+                    nameImage="2"
+                    alt="Mis procedimientos"
+                    width="500px"
+                    height="300px"
+                    to="/beautician-procedure"
+                    responsivetablet="true"
+                  />
+                </Procedures>
+              </Container>
+            </Wrap>
+          </>
         );
       }}
     </Context.Consumer>

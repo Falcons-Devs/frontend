@@ -8,8 +8,14 @@ export const Container = styled.div`
   padding: 30px 40px;
   display: flex;
   flex-wrap: wrap;
+  /* Responsive */
   @media (max-width: 768px) {
     width: 85vw;
+  }
+  @media (max-width: 375px) {
+    width: 90vw;
+    border: none;
+    flex-direction: column;
   }
 `;
 
@@ -18,6 +24,10 @@ export const ProcedureContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+  /* Responsive */
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 `;
 
 export const P = styled.p`

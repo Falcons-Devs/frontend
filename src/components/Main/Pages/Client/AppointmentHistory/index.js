@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Wrap, Container, ArrowButton } from "./styles";
+import { Wrap, Container, Span } from "./styles";
 import { ShowAppointmentHistory } from "../../../../ShowAppointmentHistory";
 import { NameStatus } from "../../../../NameStatus";
 
@@ -11,7 +11,7 @@ export const AppointmentHistory = () => {
     <Wrap>
       <NameStatus title="Mi historial de citas" to={"/client"} />
       <Container>
-        <ArrowButton></ArrowButton>
+        <Span></Span>
         <ShowAppointmentHistory
           dateTime="01-08-2020"
           estheticianName="Esteticista 1"

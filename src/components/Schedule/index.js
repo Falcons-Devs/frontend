@@ -7,7 +7,7 @@ import {
   SummaryOfTheAppointment,
   MonthAndYear,
 } from "./Components";
-import { Week, Title } from "./styles";
+import { Week, Title, InputContainer } from "./styles";
 
 /*---Getting the name of the day---*/
 const functionDayOfTheWeekNumber = (number, daysToShow) => {
@@ -147,6 +147,16 @@ export const Schedule = ({
           year={year}
         />
       </Week>
+      <InputContainer>
+        <div>
+          <label htmlFor="date">Día</label>
+          <input type="date" />
+        </div>
+        <div>
+          <label htmlFor="time">Hora</label>
+          <input type="time" />
+        </div>
+      </InputContainer>
     </>
   );
 };

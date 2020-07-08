@@ -17,7 +17,10 @@ export const Wrap = styled.div`
   @media (max-width: 768px) {
     width: 90vw;
     height: calc(100vh - 200px);
-    position: relative;
+  }
+  @media (max-width: 375px) {
+    margin-top: 10px;
+    height: 500px;
   }
 `;
 
@@ -30,11 +33,19 @@ export const SectionForm = styled.section`
   @media (max-width: 768px) {
     border-width: 10px;
   }
+  @media (max-width: 375px) {
+    width: 100vw;
+    border: none;
+    padding: 15px 10px;
+  }
   h2 {
     text-align: center;
     margin-bottom: 20px;
     @media (max-width: 768px) {
       font-size: 48px;
+    }
+    @media (max-width: 375px) {
+      font-size: 32px;
     }
   }
 

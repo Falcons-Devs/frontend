@@ -51,7 +51,7 @@ export const Home = () => {
                   Te sorprenderás con lo fácil y rapido que es agendar una cita
                   con tu esteticista favorita y tu procedimiento favorito
                 </p>
-                <Buttons vaue="Registrarse" to="/signin" />
+                <Buttons value="Registrarse" to="/signin" />
               </InfoParallax>
             </SectionParallax>
           </>
