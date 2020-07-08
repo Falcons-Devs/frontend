@@ -25,6 +25,16 @@ export const MenuMobile = () => (
           </Menu>
         );
       }
+      if (userType === "Beautician") {
+        return (
+          <Menu>
+            <Link to="/beautician">Inicio</Link>
+            <Link to="/about">About</Link>
+            <Link to="/beautician-diary">Mi agenda</Link>
+            <Link to="#">Cerrar sesión</Link>
+          </Menu>
+        );
+      }
     }}
   </Context.Consumer>
 );
