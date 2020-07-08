@@ -19,6 +19,10 @@ export const Wrap = styled.div`
     height: calc(100vh - 250px);
     margin-top: 75px;
   }
+  /* Responsive */
+  @media (max-width: 375px) {
+    margin-top: 20px;
+  }
 `;
 
 export const Main = styled.main`
@@ -46,6 +50,11 @@ export const SectionHero = styled.section`
 
   img {
     position: relative;
+    /* Responsive */
+    @media (max-width: 375px) {
+      width: 350px;
+      margin-top: 20px;
+    }
   }
 
   h1 {
@@ -60,6 +69,10 @@ export const SectionHero = styled.section`
     font-size: 4em;
     font-weight: 400;
     color: #fff;
+    /* Responsive */
+    @media (max-width: 375px) {
+      font-size: 32px;
+    }
   }
 `;
 
@@ -69,7 +82,10 @@ export const SectionEslogan = styled.section`
   align-items: center;
   font-family: "Lato", sans-serif;
   font-weight: normal;
-
+  /* Responsive */
+  @media (max-width: 375px) {
+    grid-row: 1 / 2;
+  }
   h2 {
     margin-bottom: -15px;
     color: #de18ad;
@@ -95,6 +111,10 @@ export const SectionCards = styled.section`
   /* border: 1px solid red; */
   display: flex;
   justify-content: space-around;
+  /* Responsive */
+  @media (max-width: 375px) {
+    display: none;
+  }
 `;
 
 export const SectionParallax = styled.section`
@@ -114,7 +134,6 @@ export const SectionParallax = styled.section`
 `;
 
 export const InfoParallax = styled.section`
-  /* border: 1px solid red; */
   width: 575px;
   text-align: center;
   color: #fcfcfc;

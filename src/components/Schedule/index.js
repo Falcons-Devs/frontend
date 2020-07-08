@@ -6,7 +6,7 @@ import {
   SummaryOfTheAppointment,
   MonthAndYear,
 } from "./Components";
-import { Week, Title } from "./styles";
+import { Week, Title, InputContainer } from "./styles";
 
 export const Schedule = ({ title }) => {
   var hoy = new Date();
@@ -65,6 +65,16 @@ export const Schedule = ({ title }) => {
         })}
         <MonthAndYear month="Julio" year="2020" />
       </Week>
+      <InputContainer>
+        <div>
+          <label htmlFor="date">Día</label>
+          <input type="date" />
+        </div>
+        <div>
+          <label htmlFor="time">Hora</label>
+          <input type="time" />
+        </div>
+      </InputContainer>
     </>
   );
 };

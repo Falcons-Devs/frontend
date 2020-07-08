@@ -6,9 +6,15 @@ export const MyProfile = styled.section`
   border-radius: 20px;
   padding: 30px 40px;
   font-family: "Lato", sans-serif;
+  /* Responsive */
   @media (max-width: 768px) {
     width: 600px;
     border-width: 10px;
+  }
+  @media (max-width: 375px) {
+    padding: 10px 10px;
+    width: 350px;
+    border-width: 1px;
   }
 `;
 
@@ -20,6 +26,10 @@ export const Profile = styled.section`
     display: flex;
     /* border: 1px solid red; */
     flex-direction: column;
+  }
+  /* Responsive */
+  @media (max-width: 375px) {
+    display: none;
   }
 `;
 
@@ -43,6 +53,17 @@ export const NextAppointment = styled.section`
     margin-left: 10px;
     text-align: center;
     width: 100%;
+    /* Responsive */
+    @media (max-width: 375px) {
+      display: none;
+    }
+  }
+  h4 {
+    /* Responsive */
+    @media (max-width: 375px) {
+      font-size: 32px;
+      margin: 0;
+    }
   }
 `;
 

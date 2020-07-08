@@ -19,6 +19,9 @@ export const Wrap = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: repeat(1fr, 3);
   }
+  @media (max-width: 375px) {
+    padding: 0;
+  }
 `;
 
 export const SectionAbout = styled.section`
@@ -28,6 +31,9 @@ export const SectionAbout = styled.section`
     @media (max-width: 768px) {
       font-size: 36px;
     }
+    @media (max-width: 375px) {
+      margin-bottom: 0;
+    }
   }
 
   p {
@@ -36,6 +42,9 @@ export const SectionAbout = styled.section`
     line-height: 25px;
     @media (max-width: 768px) {
       font-size: 18px;
+    }
+    @media (max-width: 375px) {
+      margin-bottom: 0;
     }
   }
 `;
@@ -61,6 +70,11 @@ export const SectionMembers = styled.section`
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    /* Responsive */
+    @media (max-width: 375px) {
+      justify-content: space-evenly;
+      width: 77%;
+    }
 
     div {
       width: 20px;

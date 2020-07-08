@@ -10,6 +10,10 @@ export const Nav = styled.nav`
   /* Typography */
   /* Visual */
   /* Misc */
+  /* Responsive */
+  @media (max-width: 375px) {
+    flex-direction: column;
+  }
 `;
 
 export const Link = styled(LinkRouter)`

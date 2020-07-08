@@ -18,6 +18,13 @@ export const Wrap = styled.div`
   @media (max-width: 768px) {
     width: 90vw;
   }
+  /* Responsive */
+  @media (max-width: 375px) {
+    width: 100vw;
+    border-radius: 0;
+    height: 150px;
+    font-size: 24px;
+  }
 `;
 
 export const FooterStyle = styled.footer`

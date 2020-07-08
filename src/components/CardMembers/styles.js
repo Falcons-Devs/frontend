@@ -11,6 +11,21 @@ export const Article = styled.article`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    div {
+      p {
+        @media (max-width: 375px) {
+          display: none;
+        }
+      }
+    }
+  }
+  h2 {
+    display: none;
+    @media (max-width: 375px) {
+      display: block;
+      margin: 5px 0;
+      font-size: 18px;
+    }
   }
 `;
 

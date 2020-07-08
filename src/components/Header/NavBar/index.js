@@ -1,12 +1,22 @@
 import React from "react";
 import { IconAvatar } from "../../../assets/static/icon-avatar";
-import { Nav, Link, Profile } from "./styles";
+import { Nav, Link, Profile, NavMobile } from "./styles";
 import Context from "../../../Context";
+import { IconMenu } from "../../../assets/static/icon-menu";
 
 export const NavBar = () => (
   <Context.Consumer>
     {({ userType }) => {
       if (userType === "Public") {
+        if (screen.width <= 375) {
+          return (
+            <NavMobile>
+              <Link to="/menu">
+                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+              </Link>
+            </NavMobile>
+          );
+        }
         return (
           <Nav>
             <Link to="/">Inicio</Link>
@@ -26,6 +36,18 @@ export const NavBar = () => (
         );
       }
       if (userType === "Client") {
+        if (screen.width <= 375) {
+          return (
+            <NavMobile>
+              <Profile>
+                <IconAvatar fill="#DE18AD" width="48px" height="48px" />
+              </Profile>
+              <Link to="/menu">
+                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+              </Link>
+            </NavMobile>
+          );
+        }
         return (
           <Nav>
             <Link to="/client">Inicio</Link>
@@ -39,6 +61,18 @@ export const NavBar = () => (
         );
       }
       if (userType === "Beautician") {
+        if (screen.width <= 375) {
+          return (
+            <NavMobile>
+              <Profile>
+                <IconAvatar fill="#DE18AD" width="48px" height="48px" />
+              </Profile>
+              <Link to="/menu">
+                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+              </Link>
+            </NavMobile>
+          );
+        }
         return (
           <Nav>
             <Link to="/beautician">Inicio</Link>

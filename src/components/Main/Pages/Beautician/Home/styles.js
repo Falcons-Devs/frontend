@@ -13,7 +13,6 @@ export const Wrap = styled.div`
   /* Reponsive */
   @media (max-width: 768px) {
     width: 90vw;
-    height: calc(100vh - 200px);
   }
 `;
 
@@ -37,6 +36,12 @@ export const Profile = styled.div`
     grid-row: 3 / 4;
     margin-top: 20px;
   }
+  @media (max-width: 375px) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
 `;
 
 export const Agenda = styled.div`
@@ -45,6 +50,10 @@ export const Agenda = styled.div`
   /* Responsive */
   @media (max-width: 768px) {
     grid-row: 1 / 3;
+  }
+  @media (max-width: 375px) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
   }
 `;
 
@@ -56,6 +65,10 @@ export const Schedule = styled.div`
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
+  @media (max-width: 375px) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
 `;
 
 export const Procedures = styled.div`
@@ -65,5 +78,19 @@ export const Procedures = styled.div`
   @media (max-width: 768px) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+  }
+  @media (max-width: 375px) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+`;
+
+export const Title = styled.h2`
+  display: none;
+  /* Responsive */
+  @media (max-width: 375px) {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
   }
 `;

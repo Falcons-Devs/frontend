@@ -9,7 +9,7 @@ export const List = ({ list, title, full, topic }) => {
       {list.map((item, index) => (
         <ProcedureContainer full={full} key={topic + index}>
           <P>{item}</P>
-          <IconCheckboxFalse />
+          <IconCheckboxFalse width="24px" />
         </ProcedureContainer>
       ))}
       <Title>{title}</Title>

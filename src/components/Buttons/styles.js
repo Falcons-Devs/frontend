@@ -15,4 +15,7 @@ export const Button = styled.button`
     justify-content: ${(props) => (props.responsivetablet ? "center" : "")};
     font-size: ${(props) => (props.responsivetablet ? "14px" : "")};
   }
+  @media (max-width: 375px) {
+    font-size: 18px;
+  }
 `;

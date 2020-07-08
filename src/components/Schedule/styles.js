@@ -21,8 +21,23 @@ export const Week = styled.div`
     width: 85vw;
     grid-template-columns: repeat(8, 65px);
   }
+  @media (max-width: 375px) {
+    display: none;
+  }
 `;
 
 export const Title = styled.h2`
   margin: 10px 0;
+`;
+
+export const InputContainer = styled.div`
+  display: none;
+  /* Responsive */
+  @media (max-width: 375px) {
+    display: block;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
