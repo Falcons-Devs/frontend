@@ -1,12 +1,22 @@
 import React from "react";
 import { IconAvatar } from "../../../assets/static/icon-avatar";
-import { Nav, Link, Profile } from "./styles";
+import { Nav, Link, Profile, NavMobile } from "./styles";
 import Context from "../../../Context";
+import { IconMenu } from "../../../assets/static/icon-menu";
 
 export const NavBar = () => (
   <Context.Consumer>
     {({ userType }) => {
       if (userType === "Public") {
+        if (screen.width <= 375) {
+          return (
+            <NavMobile>
+              <Link to="/">
+                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+              </Link>
+            </NavMobile>
+          );
+        }
         return (
           <Nav>
             <Link to="/">Inicio</Link>

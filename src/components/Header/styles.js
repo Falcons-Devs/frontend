@@ -11,6 +11,10 @@ export const HeaderStyle = styled.header`
   background: #02b3b1;
   /* Misc */
   z-index: 999999;
+
+  @media (max-width: 375px) {
+    width: 375px;
+  }
 `;
 
 export const Wrap = styled.div`
@@ -28,6 +32,7 @@ export const Wrap = styled.div`
   /* Typography */
   /* Visual */
   /* Misc */
+  /* Responsive */
   @media (max-width: 768px) {
     width: 90vw;
     padding: 0;
