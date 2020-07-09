@@ -5,6 +5,7 @@ import { CardMembers } from "../../../CardMembers";
 
 import ErickMata from "../../../../assets/img/erick-mata.jpg";
 import ByronPiedrahita from "../../../../assets/img/byron-piedrahita.png";
+import JhonColorado from "../../../../assets/img/jhon-colorado.jpg";
 
 export const About = () => {
   useEffect(() => {
@@ -57,6 +58,10 @@ export const About = () => {
         <CardMembers
           nameMember="Jhon Carlos Colorado Angulo"
           position="Frontend Developer"
+          img={JhonColorado}
+          github="https://github.com/jcolorado19"
+          linkedin="https://www.linkedin.com/in/jhon-carlos-colorado-angulo-6aa134b9"
+          twitter="https://twitter.com/JhonColorado07"
         />
         <CardMembers
           nameMember="Héctor Martínez Reséndiz"
