@@ -4,7 +4,6 @@ export const Wrap = styled.div`
   /* Positioning */
   /* (Box-model) */
   margin: 20px auto;
-  width: 1200px;
   max-width: 1200px;
   display: grid;
   padding: 0px 20px;
@@ -25,6 +24,11 @@ export const Wrap = styled.div`
 `;
 
 export const SectionAbout = styled.section`
+  width: 95%;
+  @media (max-width: 375px) {
+    padding-right: 30px;
+  }
+
   h3 {
     font-size: 2em;
     margin-bottom: 20px;
@@ -51,6 +55,9 @@ export const SectionAbout = styled.section`
 
 export const SectionMembers = styled.section`
   color: #2f2f2f;
+  @media (max-width: 375px) {
+    width: 90%;
+  }
 
   h3 {
     font-size: 2em;

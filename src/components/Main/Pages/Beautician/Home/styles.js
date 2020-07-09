@@ -5,7 +5,6 @@ export const Wrap = styled.div`
   /* (Box-model) */
   margin: 20px auto;
   height: inherit;
-  width: 1200px;
   max-width: 1200px;
   /* Typography */
   /* Visual */
@@ -24,6 +23,7 @@ export const Container = styled.div`
   /* Responsive */
   @media (max-width: 768px) {
     grid-template-rows: 190px 190px 1fr;
+    grid-row-gap: 20px;
   }
 `;
 
@@ -34,7 +34,7 @@ export const Profile = styled.div`
   @media (max-width: 768px) {
     grid-column: 1 / 3;
     grid-row: 3 / 4;
-    margin-top: 20px;
+    margin: 20px 0px;
   }
   @media (max-width: 375px) {
     grid-column: 1 / 3;

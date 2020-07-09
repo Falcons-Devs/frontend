@@ -5,7 +5,6 @@ export const Wrap = styled.div`
   /* (Box-model) */
   margin: 20px auto;
   height: 500px;
-  width: 1200px;
   max-width: 1200px;
   display: grid;
   justify-content: center;
@@ -16,7 +15,6 @@ export const Wrap = styled.div`
   /* Responsive */
   @media (max-width: 768px) {
     width: 90vw;
-    height: 550px;
   }
   @media (max-width: 375px) {
     margin-top: 10px;
@@ -31,7 +29,8 @@ export const SectionForm = styled.section`
   padding: 30px 60px;
   font-family: "Lato", sans-serif;
   @media (max-width: 768px) {
-    border-width: 10px;
+    border-width: 3px;
+    padding: 15px 30px;
   }
   @media (max-width: 375px) {
     width: 100vw;
@@ -42,7 +41,8 @@ export const SectionForm = styled.section`
     text-align: center;
     margin-bottom: 20px;
     @media (max-width: 768px) {
-      font-size: 48px;
+      margin-bottom: 5px;
+      font-size: 1.5em;
     }
     @media (max-width: 375px) {
       font-size: 32px;
@@ -53,6 +53,9 @@ export const SectionForm = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 375px) {
+      justify-content: space-around;
+    }
   }
 
   div:last-child {
@@ -72,24 +75,15 @@ export const SectionForm = styled.section`
     border-radius: 10px;
     padding: 7px 0px;
     text-align: center;
-    width: 80%;
+    width: 90%;
     @media (max-width: 768px) {
-      font-size: 24px;
-      margin: 20px 0;
+      padding: 2px 0px;
+      font-size: 18px;
+      margin: 10px 0;
     }
 
     &::placeholder {
       color: rgba(47, 47, 47, 0.5);
     }
-  }
-
-  button {
-    color: #fcfcfc;
-    display: flex;
-    font-size: 1.5em;
-    background-color: #de18ad;
-    padding: 8px 50px;
-    border-radius: 50px;
-    margin: 30px auto;
   }
 `;
