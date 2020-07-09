@@ -6,6 +6,7 @@ import { CardMembers } from "../../../CardMembers";
 import ErickMata from "../../../../assets/img/erick-mata.jpg";
 import ByronPiedrahita from "../../../../assets/img/byron-piedrahita.png";
 import JhonColorado from "../../../../assets/img/jhon-colorado.jpg";
+import ErnestoLazaro from "../../../../assets/img/ernesto-lazaro.png";
 
 export const About = () => {
   useEffect(() => {
@@ -70,6 +71,10 @@ export const About = () => {
         <CardMembers
           nameMember="Ernesto Lázaro Guerrero"
           position="UI Designer"
+          img={ErnestoLazaro}
+          github="https://github.com/ErnestoLazaro"
+          linkedin="https://www.linkedin.com/in/ernesto-lazaro/"
+          twitter="https://twitter.com/FTonEnergiasA"
         />
       </SectionMembers>
     </Wrap>
