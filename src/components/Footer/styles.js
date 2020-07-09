@@ -7,7 +7,6 @@ export const Wrap = styled.div`
   padding-right: 15px;
   margin: 0 auto;
   height: 60px;
-  width: 1200px;
   max-width: 1200px;
   /* Typography */
   /* Visual */
@@ -16,7 +15,7 @@ export const Wrap = styled.div`
   /* Misc */
   /* Responsive */
   @media (max-width: 768px) {
-    width: 90vw;
+    max-width: 90vw;
   }
   /* Responsive */
   @media (max-width: 375px) {

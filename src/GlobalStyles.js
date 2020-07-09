@@ -32,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     /* Misc */
   }
 
-  ul, li, h1, h2, h3, p, button {
+  * {
     /* Positioning */
     /* Box-model */
     margin: 0;
@@ -65,9 +65,9 @@ export const GlobalStyle = createGlobalStyle`
   body {
     /* Positioning */
     /* Box-model */
-    margin: 0 auto;
     width: 100%;
-    height: 100vh;
+    ${"" /* margin: 0 auto;
+    height: 100vh; */}
     /* Typography */
     font-size: 17px;
     color: #202124;
