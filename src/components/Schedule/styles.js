@@ -20,6 +20,7 @@ export const Week = styled.div`
   @media (max-width: 768px) {
     width: 85vw;
     grid-template-columns: repeat(8, 65px);
+    margin-bottom: 30px;
   }
   @media (max-width: 375px) {
     display: none;
