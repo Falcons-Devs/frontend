@@ -14,6 +14,9 @@ export const Wrap = styled.div`
   @media (max-width: 768px) {
     width: 90vw;
   }
+  @media (max-width: 375px) {
+    margin: 10px;
+  }
 `;
 
 export const Container = styled.div`
@@ -24,6 +27,10 @@ export const Container = styled.div`
   /* Responsive */
   @media (max-width: 768px) {
     grid-template-rows: 75px 150px 1fr;
+  }
+  @media (max-width: 375px) {
+    grid-template-rows: 50px 1px 1fr;
+    width: 90%;
   }
 `;
 export const ArrowButton = styled.div`
