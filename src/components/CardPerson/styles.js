@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link as LinkRouter } from "@reach/router";
 
-export const Beautician = styled.section`
+export const Person = styled.section`
   width: 500px;
   border: 5px solid #de18ad;
   border-radius: 20px;
@@ -10,15 +11,24 @@ export const Beautician = styled.section`
   @media (max-width: 768px) {
     width: 350px;
   }
+  @media (max-width: 375px) {
+    width: 325px;
+    border-width: 1px;
+    display: grid;
+    grid-template-columns: 250px 50px;
+    grid-template-rows: 75px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+  }
 `;
 
-export const BeauticianName = styled.section`
+export const PersonName = styled.section`
   display: flex;
   align-items: center;
-
   div {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   input {
     outline: none;
@@ -32,6 +42,15 @@ export const BeauticianName = styled.section`
     @media (max-width: 768px) {
       font-size: 22px;
     }
+    @media (max-width: 375px) {
+      font-size: 18px;
+      border: none;
+    }
+  }
+  @media (max-width: 375px) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-right: 20px;
   }
 `;
 
@@ -44,6 +63,9 @@ export const Information = styled.section`
     /* Responsive */
     @media (max-width: 768px) {
       flex-direction: column;
+    }
+    @media (max-width: 375px) {
+      display: none;
     }
   }
 
@@ -70,5 +92,16 @@ export const Information = styled.section`
       margin: 10px 0;
       font-size: 18px;
     }
+  }
+`;
+
+export const Link = styled(LinkRouter)`
+  /* Responsive */
+  @media (max-width: 375px) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;

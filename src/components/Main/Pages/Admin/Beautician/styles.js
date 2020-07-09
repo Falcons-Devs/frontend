@@ -13,6 +13,9 @@ export const Wrap = styled.div`
   @media (max-width: 768px) {
     width: 90vw;
   }
+  @media (max-width: 375px) {
+    margin: 10px 0;
+  }
 `;
 
 export const Container = styled.div`
@@ -20,10 +23,16 @@ export const Container = styled.div`
   grid-gap: 20px;
   align-items: center;
   justify-content: center;
+  @media (max-width: 375px) {
+    width: 90vw;
+  }
 `;
 export const ArrowButton = styled.div`
   grid-column: 1 / 3;
   grid-row: 1 / 2;
+  @media (max-width: 375px) {
+    display: none;
+  }
 `;
 export const Title = styled.div`
   display: flex;

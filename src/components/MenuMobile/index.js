@@ -35,6 +35,15 @@ export const MenuMobile = () => (
           </Menu>
         );
       }
+      if (userType === "Admin") {
+        return (
+          <Menu>
+            <Link to="/admin">Inicio</Link>
+            <Link to="/about">About</Link>
+            <Link to="#">Cerrar sesión</Link>
+          </Menu>
+        );
+      }
     }}
   </Context.Consumer>
 );

@@ -12,7 +12,6 @@ export const Wrap = styled.div`
   /* Responsive */
   @media (max-width: 768px) {
     width: 90vw;
-    height: calc(100vh - 200px);
   }
 `;
 
@@ -54,6 +53,11 @@ export const SectionForm = styled.section`
   /* Responsive */
   @media (max-width: 768px) {
     width: 75vw;
+  }
+  @media (max-width: 375px) {
+    width: 80vw;
+    border-width: 1px;
+    padding: 10px 15px;
   }
 
   h2 {
@@ -104,5 +108,8 @@ export const Title = styled.h2`
   /* Responsive */
   @media (max-width: 768px) {
     font-size: 32px;
+  }
+  @media (max-width: 375px) {
+    display: none;
   }
 `;

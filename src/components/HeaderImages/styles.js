@@ -22,5 +22,8 @@ export const BackgroudImages = styled.div`
     width: 90vw;
     height: 150px;
   }
+  @media (max-width: 375px) {
+    display: none;
+  }
 
 `;
