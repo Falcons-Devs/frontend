@@ -22,7 +22,7 @@ export const ShowAppointmentHistory = ({
       <NextAppointment>
         <div>
           <label htmlFor="cost">Costo</label>
-          <input type="text" className="duration" value={cost} />
+          <input type="text" className="cost" value={cost} />
           <label htmlFor="duration">Duración</label>
           <input type="text" className="hous" value={duration} />
         </div>
