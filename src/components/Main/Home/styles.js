@@ -7,8 +7,7 @@ export const Wrap = styled.div`
   /* Positioning */
   /* (Box-model) */
   margin: 20px auto;
-  height: inherit;
-  width: 1200px;
+  /* height: inherit; */
   max-width: 1200px;
   /* Typography */
   /* Visual */
@@ -27,7 +26,6 @@ export const Wrap = styled.div`
 export const Main = styled.main`
   /* Positioning */
   /* Box-model */
-  /* border: 1px solid red; */
   width: 100%;
   height: auto;
   display: grid;
@@ -37,6 +35,14 @@ export const Main = styled.main`
   /* Typography */
   /* Visual */
   /* Misc */
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  /* Responsive */
+  @media (max-width: 375px) {
+    /* margin-top: 20px; */
+  }
 `;
 
 export const SectionHero = styled.section`
@@ -50,8 +56,10 @@ export const SectionHero = styled.section`
   img {
     position: relative;
     /* Responsive */
-    @media (max-width: 375px) {
-      width: 350px;
+    @media (max-width: 768px) {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
       margin-top: 20px;
     }
   }
@@ -69,6 +77,9 @@ export const SectionHero = styled.section`
     font-weight: 400;
     color: #fff;
     /* Responsive */
+    @media (max-width: 768px) {
+      font-size: 3em;
+    }
     @media (max-width: 375px) {
       font-size: 32px;
     }
@@ -107,9 +118,18 @@ export const SectionEslogan = styled.section`
 export const SectionCards = styled.section`
   margin-top: 40px;
   width: 100%;
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-around;
+
+  img {
+    @media (max-width: 768px) {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      margin-top: 20px;
+    }
+  }
+
   /* Responsive */
   @media (max-width: 375px) {
     display: none;

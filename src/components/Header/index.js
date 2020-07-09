@@ -8,7 +8,7 @@ import { LogoOCS } from "../../assets/static/logo-ocs";
 export const Header = () => {
   let logo = <LogoOCSF width="260px" />;
   if (screen.width <= 768) {
-    logo = <LogoOCS width="100px" height="75px" />;
+    logo = <LogoOCS width="90px" height="65px" />;
   }
   if (screen.width <= 375) {
     logo = <LogoOCS width="50px" height="50px" />;
