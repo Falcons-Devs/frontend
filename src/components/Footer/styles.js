@@ -1,5 +1,21 @@
 import styled from "styled-components";
 
+export const FooterStyle = styled.footer`
+  /* Positioning */
+  position: absolute;
+  bottom: 0;
+  /* Box-model */
+  height: inherit;
+  width: 100%;
+  /* Typography */
+  /* Visual */
+  /* Misc */
+
+  @media (max-width: 375px) {
+    background: #02b3b1;
+  }
+`;
+
 export const Wrap = styled.div`
   /* Positioning */
   /* (Box-model) */
@@ -24,14 +40,4 @@ export const Wrap = styled.div`
     height: 150px;
     font-size: 24px;
   }
-`;
-
-export const FooterStyle = styled.footer`
-  /* Positioning */
-  /* Box-model */
-  height: inherit;
-  width: 100%;
-  /* Typography */
-  /* Visual */
-  /* Misc */
 `;

@@ -11,9 +11,8 @@ export const Button = styled.button`
   cursor: pointer;
   /* Responsive */
   @media (max-width: 768px) {
-    width: ${(props) => (props.responsivetablet ? "125px" : "")};
     justify-content: ${(props) => (props.responsivetablet ? "center" : "")};
-    font-size: ${(props) => (props.responsivetablet ? "14px" : "")};
+    font-size: ${(props) => (props.responsivetablet ? "1em" : "")};
   }
   @media (max-width: 375px) {
     font-size: 18px;

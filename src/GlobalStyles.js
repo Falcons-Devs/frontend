@@ -15,6 +15,8 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
   html {
     /* Positioning */
+    min-height: 100%;
+  position: relative;
     /* Box-model */
     /* Typography */
     font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', system-ui, sans-serif;
@@ -66,6 +68,7 @@ export const GlobalStyle = createGlobalStyle`
     /* Positioning */
     /* Box-model */
     width: 100%;
+    margin-bottom: 60px;
     ${"" /* margin: 0 auto;
     height: 100vh; */}
     /* Typography */
@@ -76,6 +79,10 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #fff;
     /* Misc */
     overscroll-behavior: none; /* Avoid bounces when we scroll */
+    
+    @media (max-width: 375px) {
+      margin-bottom: 150px;
+    }
   }
 
   body a {
