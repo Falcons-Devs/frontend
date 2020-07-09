@@ -13,6 +13,9 @@ export const Wrap = styled.div`
   @media (max-width: 768px) {
     width: 90vw;
   }
+  @media (max-width: 375px) {
+    margin: 10px 0;
+  }
 `;
 
 export const Container = styled.div`

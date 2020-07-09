@@ -4,6 +4,8 @@ import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
 import { Table as TableInfo } from "../../../../Table";
 import { Link } from "@reach/router";
+import { IconAdd } from "../../../../../assets/static/icon-add";
+import { CardPerson } from "../../../../CardPerson";
 
 export const Users = () => {
   useEffect(() => {
@@ -15,18 +17,37 @@ export const Users = () => {
         <Main>
           <NameStatus title="Ver usuarios" to="/admin" />
           <Link to="/admin-create-user">
-            <Buttons value="Crear usuario" responsivetablet color="#2DD881" />
+            {screen.width <= 375 ? (
+              <IconAdd width="40px" height="40px" fill="#2DD881" />
+            ) : (
+              <Buttons value="Crear usuario" responsivetablet color="#2DD881" />
+            )}
           </Link>
         </Main>
         <Table>
-          <TableInfo
-            col1="#"
-            col2="Nombre"
-            col3="Email"
-            col4="Tipo"
-            col5="Editar usuarios"
-            title="Usuarios"
-          />
+          {screen.width <= 375 ? (
+            <>
+              <CardPerson
+                name="Manolo Fernandez"
+                to="/admin-edit-user"
+                type="Usuario"
+              />
+              <CardPerson
+                name="Gustabo Garcia"
+                to="/admin-edit-user"
+                type="Cliente"
+              />
+            </>
+          ) : (
+            <TableInfo
+              col1="#"
+              col2="Nombre"
+              col3="Email"
+              col4="Tipo"
+              col5="Editar usuarios"
+              title="Usuarios"
+            />
+          )}
         </Table>
       </Container>
     </Wrap>
