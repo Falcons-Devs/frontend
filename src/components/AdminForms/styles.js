@@ -1,6 +1,20 @@
 import styled from "styled-components";
 
-
+export const Wrap = styled.div`
+  /* Positioning */
+  /* (Box-model) */
+  margin: 20px auto;
+  width: 1200px;
+  max-width: 1200px;
+  padding: 0px 20px;
+  /* Typography */
+  /* Visual */
+  /* Responsive */
+  @media (max-width: 768px) {
+    width: 90vw;
+    height: calc(100vh - 200px);
+  }
+`;
 export const Form = styled.div`
   grid-column: 1 / 3;
   grid-row: 3 / 4;
@@ -8,12 +22,20 @@ export const Form = styled.div`
   display: flex;
   justify-content: center;
 `;
-
+export const CancelButton = styled.div`
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+`;
+export const CreateButton = styled.div`
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+`;
 export const SectionForm = styled.section`
   width: 50%;
   border: 5px solid #de18ad;
   border-radius: 20px;
   padding: 30px 60px;
+  margin-block-end: 20px;
   font-family: "Lato", sans-serif;
   /* Responsive */
   @media (max-width: 768px) {
