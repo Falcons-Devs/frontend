@@ -15,6 +15,7 @@ export const ImagesWithProcess = ({
   height,
   to,
   responsivetablet,
+  responsivemobile,
 }) => {
   let cover;
   nameImage == 1 ? (cover = Hero_card1) : "";
@@ -30,6 +31,7 @@ export const ImagesWithProcess = ({
       width={width}
       height={height}
       responsivetablet={responsivetablet}
+      responsivemobile={responsivemobile}
     >
       <Article>
         <Section>

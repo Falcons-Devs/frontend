@@ -30,6 +30,25 @@ export const DayNumberStyle = styled.div`
   /* Responsive */
 `;
 
+export const SelectedDayNumberStyle = styled.div`
+  /* Positioning */
+  /* Box-model */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  /* Typography */
+  font-size: 32px;
+  color: #de18ad;
+  /* Visual */
+  border-top: 2px solid #de18ad;
+  border-bottom: 5px solid #de18ad;
+  border-radius: 14px;
+  /* Misc */
+  /* Responsive */
+`;
+
 export const TimeOfDayStyle = styled.div`
   /* Positioning */
   /* Box-model */
@@ -89,7 +108,7 @@ export const MonthAndYearStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  grid-column: 1 / 9;
+  grid-column: 1 / ${({ columns }) => columns + 2};
   width: 100%;
   height: 100%;
   /* Typography */
