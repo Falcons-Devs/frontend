@@ -52,6 +52,9 @@
         "verbose": true,
         "setupFilesAfterEnv": [
             "<rootDir>/src/__test__/setupTest.js"
-        ]
+        ],
+        "moduleNameMapper": {
+            "\\.(jpg|jpeg|png)$": "<rootDir>/src/__mocks__/fileMock.js"
+        }
     }
 }
