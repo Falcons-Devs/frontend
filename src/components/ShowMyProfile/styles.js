@@ -9,11 +9,11 @@ export const MyProfile = styled.section`
   /* Responsive */
   @media (max-width: 768px) {
     width: 600px;
-    border-width: 10px;
+    border-width: 3px;
   }
   @media (max-width: 375px) {
     padding: 10px 10px;
-    width: 350px;
+    width: 90vw;
     border-width: 1px;
   }
 `;

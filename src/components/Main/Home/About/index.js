@@ -5,6 +5,8 @@ import { CardMembers } from "../../../CardMembers";
 
 import ErickMata from "../../../../assets/img/erick-mata.jpg";
 import ByronPiedrahita from "../../../../assets/img/byron-piedrahita.png";
+import JhonColorado from "../../../../assets/img/jhon-colorado.jpg";
+import ErnestoLazaro from "../../../../assets/img/ernesto-lazaro.png";
 
 export const About = () => {
   useEffect(() => {
@@ -57,6 +59,10 @@ export const About = () => {
         <CardMembers
           nameMember="Jhon Carlos Colorado Angulo"
           position="Frontend Developer"
+          img={JhonColorado}
+          github="https://github.com/jcolorado19"
+          linkedin="https://www.linkedin.com/in/jhon-carlos-colorado-angulo-6aa134b9"
+          twitter="https://twitter.com/JhonColorado07"
         />
         <CardMembers
           nameMember="Héctor Martínez Reséndiz"
@@ -65,6 +71,10 @@ export const About = () => {
         <CardMembers
           nameMember="Ernesto Lázaro Guerrero"
           position="UI Designer"
+          img={ErnestoLazaro}
+          github="https://github.com/ErnestoLazaro"
+          linkedin="https://www.linkedin.com/in/ernesto-lazaro/"
+          twitter="https://twitter.com/FTonEnergiasA"
         />
       </SectionMembers>
     </Wrap>
