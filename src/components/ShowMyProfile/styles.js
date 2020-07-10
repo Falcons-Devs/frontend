@@ -13,7 +13,7 @@ export const MyProfile = styled.section`
   }
   @media (max-width: 375px) {
     padding: 10px 10px;
-    width: 350px;
+    width: 90vw;
     border-width: 1px;
   }
 `;
