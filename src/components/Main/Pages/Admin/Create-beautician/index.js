@@ -1,14 +1,8 @@
 import React, { useEffect } from "react";
-import {
-  Container,
-  Main,
-  Hero,
-  Wrap,
-} from "./styles";
+import { Container, Main, Hero, Wrap } from "./styles";
 import { NameStatus } from "../../../../NameStatus";
 import { HeaderImages } from "../../../../HeaderImages";
 import { AdminForms } from "../../../../AdminForms";
-import { Link } from "@reach/router";
 
 export const CreateBeautician = () => {
   useEffect(() => {
@@ -23,9 +17,11 @@ export const CreateBeautician = () => {
         <Hero>
           <HeaderImages numberImg="2" />
         </Hero>
-       
-        <AdminForms actionUser="Crear Esteticista" type="Usuario" buttonAction="Crear Esteticista"/>
-
+        <AdminForms
+          actionUser="Crear Esteticista"
+          type="Esteticista"
+          buttonAction="Crear"
+        />
       </Container>
     </Wrap>
   );
