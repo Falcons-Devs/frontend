@@ -3,8 +3,8 @@ import { mount } from "enzyme";
 import { MenuMobile } from "../../components/MenuMobile";
 import Context from "../../Context";
 
-describe("<Buttons />", () => {
-  test("Component Buttons Rendering", () => {
+describe("<MenuMobile />", () => {
+  test("Component Menu Mobile Rendering", () => {
     const menu = mount(
       <Context.Provider>
         <MenuMobile />
