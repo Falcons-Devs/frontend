@@ -4,7 +4,6 @@ export const Wrap = styled.div`
   /* Positioning */
   /* (Box-model) */
   margin: 20px auto;
-  width: 1200px;
   max-width: 1200px;
   padding: 0px 20px;
   /* Typography */
@@ -12,6 +11,9 @@ export const Wrap = styled.div`
   /* Responsive */
   @media (max-width: 768px) {
     width: 90vw;
+  }
+  @media (max-width: 375px) {
+    padding: 0;
   }
 `;
 
