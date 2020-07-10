@@ -6,7 +6,8 @@
     "scripts": {
         "build": "webpack --mode production",
         "dev": "webpack-dev-server --history-api-fallback --open",
-        "test": "jest"
+        "test": "jest",
+        "test:coverage": "jest --coverage"
     },
     "repository": {
         "type": "git",
