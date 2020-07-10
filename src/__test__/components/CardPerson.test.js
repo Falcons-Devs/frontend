@@ -13,10 +13,19 @@ import {
 } from "../../components/CardPerson/styles";
 
 import { color, responsivetablet, value } from "../../__mocks__/Buttons";
+import { name, email, schedule, to, type } from "../../__mocks__/CardPerson";
 
 describe("<CardPerson />", () => {
   test("Render of CardPerson component", () => {
-    const cardPerson = mount(<CardPerson />);
+    const cardPerson = mount(
+      <CardPerson
+        name={name}
+        email={email}
+        schedule={schedule}
+        to={to}
+        type={type}
+      />
+    );
     expect(cardPerson.length).toEqual(1);
   });
 });
