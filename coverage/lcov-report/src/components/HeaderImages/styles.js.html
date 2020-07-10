@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/Header/index.js</title>
+    <title>Code coverage report for src/components/HeaderImages/styles.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/Header</a> index.js</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/HeaderImages</a> styles.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>5/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -83,7 +83,10 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -91,15 +94,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -109,32 +110,40 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
-import { LogoOCSF } from "../../assets/static/logo-ocs-f";
-import { Link } from "@reach/router";
-import { NavBar } from "./NavBar";
-import { HeaderStyle, Wrap } from "./styles";
-import { LogoOCS } from "../../assets/static/logo-ocs";
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import styled from "styled-components";
 &nbsp;
-export const Header = () =&gt; {
-  let logo = &lt;LogoOCSF width="300px" height="62px" /&gt;;
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (screen.width &lt;= 768) {
-    logo = &lt;LogoOCS width="90px" height="65px" /&gt;;
+import Header_1 from "../../assets/img/Background-header1.jpg";
+import Header_2 from "../../assets/img/Background-header2.jpg";
+import Header_3 from "../../assets/img/Background-header3.jpg";
+import Header_4 from "../../assets/img/Background-header4.jpg";
+&nbsp;
+export const BackgroudImages = styled.div`
+  height: 200px;
+  width: 100%;
+  border-radius: 20px;
+    /* background: ${(props) =&gt;
+      props.numberImg == 1 ? <span class="branch-0 cbranch-no" title="branch not covered" >"red" </span>: `url(${Header_1})`}; */
+    background: ${(props) =&gt;
+      (props.numberImg == 1 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >`url(${Header_1})`)</span> ||
+      (props.numberImg == 2 &amp;&amp; <span class="branch-3 cbranch-no" title="branch not covered" >`url(${Header_2})`)</span> ||
+      (props.numberImg == 3 &amp;&amp; <span class="branch-5 cbranch-no" title="branch not covered" >`url(${Header_3})`)</span> ||
+      (props.numberImg == 4 &amp;&amp; <span class="branch-7 cbranch-no" title="branch not covered" >`url(${Header_4})`)</span>};
+  background-size: cover;
+    /* Responsive */
+    @media (max-width: 768px) {
+    max-width: 100%;
+    height: 150px;
   }
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (screen.width &lt;= 375) {
-    logo = &lt;LogoOCS width="50px" height="50px" /&gt;;
+  @media (max-width: 375px) {
+    display: none;
   }
-  return (
-    &lt;HeaderStyle&gt;
-      &lt;Wrap&gt;
-        &lt;Link to="/" aria-label="Logo de OCS"&gt;
-          {logo}
-        &lt;/Link&gt;
-        &lt;NavBar /&gt;
-      &lt;/Wrap&gt;
-    &lt;/HeaderStyle&gt;
-  );
-};
+&nbsp;
+`;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
