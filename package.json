@@ -49,6 +49,7 @@
         "styled-components": "5.1.1"
     },
     "jest": {
+        "verbose": true,
         "setupFilesAfterEnv": [
             "<rootDir>/src/__test__/setupTest.js"
         ]
