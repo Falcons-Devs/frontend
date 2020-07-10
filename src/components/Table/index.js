@@ -23,27 +23,25 @@ export const Table = (props) => {
   };
 
   return (
-    <>
-      <ShowTable>
-        <thead>
-          <tr>
-            {col1 && <th> {col1} </th>}
-            {col2 && <th> {col2} </th>}
-            {col3 && <th> {col3} </th>}
-            {col4 && <th> {col4} </th>}
-            {col5 && <th> {col5} </th>}
-            {col6 && <th> {col6} </th>}
-            {col7 && <th> {col7} </th>}
-            {col8 && <th> {col8} </th>}
-          </tr>
-        </thead>
-        <tbody>
-          {createTable(countColum)}
-          <tr>
-            <td colSpan={countColum}> {title} </td>
-          </tr>
-        </tbody>
-      </ShowTable>
-    </>
+    <ShowTable>
+      <thead>
+        <tr>
+          {col1 && <th> {col1} </th>}
+          {col2 && <th> {col2} </th>}
+          {col3 && <th> {col3} </th>}
+          {col4 && <th> {col4} </th>}
+          {col5 && <th> {col5} </th>}
+          {col6 && <th> {col6} </th>}
+          {col7 && <th> {col7} </th>}
+          {col8 && <th> {col8} </th>}
+        </tr>
+      </thead>
+      <tbody>
+        {createTable(countColum)}
+        <tr>
+          <td colSpan={countColum}> {title} </td>
+        </tr>
+      </tbody>
+    </ShowTable>
   );
 };
