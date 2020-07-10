@@ -10,6 +10,10 @@ export const Nav = styled.nav`
   /* Typography */
   /* Visual */
   /* Misc */
+  /* Responsive */
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const Link = styled(LinkRouter)`
@@ -44,6 +48,10 @@ export const Link = styled(LinkRouter)`
     color: #000;
     /* Visual */
     /* Misc */
+    /* Responsive */
+    @media (max-width: 375px) {
+      border: none;
+    }
   }
 
   &[aria-current] {
@@ -55,5 +63,21 @@ export const Link = styled(LinkRouter)`
     color: #000;
     /* Visual */
     /* Misc */
+    /* Responsive */
+    @media (max-width: 375px) {
+      border: none;
+    }
   }
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+`;
+
+export const Profile = styled.div`
+  margin-left: 15px;
+`;
+
+export const NavMobile = styled.nav`
+  display: flex;
+  align-items: center;
 `;

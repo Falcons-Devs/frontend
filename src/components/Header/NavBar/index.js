@@ -1,19 +1,99 @@
 import React from "react";
 import { IconAvatar } from "../../../assets/static/icon-avatar";
-import { Nav, Link } from "./styles";
+import { Nav, Link, Profile, NavMobile } from "./styles";
+import Context from "../../../Context";
+import { IconMenu } from "../../../assets/static/icon-menu";
 
-export const NavBar = () => {
-  return (
-    <Nav>
-      <Link to="/">Inicio</Link>
-      <Link to="/about">Nosotros</Link>
-      {/* <Link to="/agenda">Mi agenda</Link> */}
-      <Link to="/signin">Registrarse</Link>
-      {/* <Link to="/login">
-        <IconAvatar fill="#DE18AD" /> Iniciar sesión
-      </Link> */}
-      <Link to="/login">Iniciar sesión</Link>
-      {/* <Link to="/logout">Cerrar sesión</Link> */}
-    </Nav>
-  );
-};
+export const NavBar = () => (
+  <Context.Consumer>
+    {({ userType }) => {
+      if (userType === "Public") {
+        if (screen.width <= 375) {
+          return (
+            <NavMobile>
+              <Link to="/menu">
+                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+              </Link>
+            </NavMobile>
+          );
+        }
+        return (
+          <Nav>
+            <Link to="/">Inicio</Link>
+            <Link to="/about">Nosotros</Link>
+            <Link to="/signin">Registrarse</Link>
+            <Link to="/login">Iniciar sesión</Link>
+          </Nav>
+        );
+      }
+      if (userType === "Admin") {
+        if (screen.width <= 375) {
+          return (
+            <NavMobile>
+              <Link to="/menu">
+                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+              </Link>
+            </NavMobile>
+          );
+        }
+        return (
+          <Nav>
+            <Link to="/admin">Inicio</Link>
+            <Link to="/about">Nosotros</Link>
+            <Link to="#">Cerrar sesión</Link>
+          </Nav>
+        );
+      }
+      if (userType === "Client") {
+        if (screen.width <= 375) {
+          return (
+            <NavMobile>
+              <Profile>
+                <IconAvatar fill="#DE18AD" width="48px" height="48px" />
+              </Profile>
+              <Link to="/menu">
+                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+              </Link>
+            </NavMobile>
+          );
+        }
+        return (
+          <Nav>
+            <Link to="/client">Inicio</Link>
+            <Link to="/about">Nosotros</Link>
+            <Link to="/client-appointments">Mis citas</Link>
+            <Profile>
+              <IconAvatar fill="#DE18AD" />
+            </Profile>
+            <Link to="#">Cerrar sesión</Link>
+          </Nav>
+        );
+      }
+      if (userType === "Beautician") {
+        if (screen.width <= 375) {
+          return (
+            <NavMobile>
+              <Profile>
+                <IconAvatar fill="#DE18AD" width="48px" height="48px" />
+              </Profile>
+              <Link to="/menu">
+                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+              </Link>
+            </NavMobile>
+          );
+        }
+        return (
+          <Nav>
+            <Link to="/beautician">Inicio</Link>
+            <Link to="/about">Nosotros</Link>
+            <Link to="/beautician-diary">Ver agenda</Link>
+            <Profile>
+              <IconAvatar fill="#DE18AD" />
+            </Profile>
+            <Link to="#">Cerrar sesión</Link>
+          </Nav>
+        );
+      }
+    }}
+  </Context.Consumer>
+);

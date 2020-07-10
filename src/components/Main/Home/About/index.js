@@ -1,68 +1,82 @@
-import React from 'react';
-import LogoFalconsDevs from '../../../../assets/img/Logo_Falcons_Devs.jpg';
-import { IconAccountCircle } from '../../../../assets/static/icon-accountCircle';
+import React, { useEffect } from "react";
+import LogoFalconsDevs from "../../../../assets/img/Logo_Falcons_Devs.jpg";
+import { Wrap, SectionAbout, SectionMembers } from "./styles";
+import { CardMembers } from "../../../CardMembers";
 
-import { Wrap, SectionAbout, SectionMembers } from './styles';
+import ErickMata from "../../../../assets/img/erick-mata.jpg";
+import ByronPiedrahita from "../../../../assets/img/byron-piedrahita.png";
+import JhonColorado from "../../../../assets/img/jhon-colorado.jpg";
+import ErnestoLazaro from "../../../../assets/img/ernesto-lazaro.png";
 
 export const About = () => {
-    return (
-        <Wrap>
-            <SectionAbout>
-                <article>
-                    <h3>Nosotros</h3>
-                    <p>“OCS: One Click Style” es nuestro proyecto final de graduación en Platzi Master. Trabajamos durante dos semanas desde su analisis, diseño, desarrollo e implementación.</p>
-                    <p>Estamos orgullosos del producto realizado y nos motiva a seguir aprendiendo y contruyendo cosas increibles.</p>
-                    <p>Gracias por visitar One Click Style.</p>
-                </article>
-                <article>
-                    <h3>Equipo</h3>
-                    <img src={LogoFalconsDevs} alt="Falcons Devs"/>
-                    <p>Falcons Devs es el nombre de nuestro equipo, el halcon destaca por su vision y conocimiento. Estos dos atributos son claves para el desarollo del proyecto y por eso lo elegimos para ser nuestro animal representativo.</p>
-                </article>
-            </SectionAbout>
-            <SectionMembers>
-                <h3>Integrantes</h3>
-                <article>
-                    <span><IconAccountCircle width="110px" height="110px" fill="#DE18AD"/></span>
-                    <div id="name">
-                        <p>Erick Daniel Pérez Mata</p>
-                        <div></div>
-                    </div>
-                    <p id="project">Project Manager</p>
-                </article>
-                <article>
-                    <span><IconAccountCircle width="110px" height="110px" fill="#DE18AD"/></span>
-                    <div id="name">
-                        <p>Byron Miguel Piedrahita Hernandez</p>
-                        <div></div>
-                    </div>
-                    <p id="project">Backend Developer</p>
-                </article>
-                <article>
-                    <span><IconAccountCircle width="110px" height="110px" fill="#DE18AD"/></span>
-                    <div id="name">
-                        <p>Jhon Carlos Colorado Angulo</p>
-                        <div></div>
-                    </div>
-                    <p id="project">Frontend Developers</p>
-                </article>
-                <article>
-                    <span><IconAccountCircle width="110px" height="110px" fill="#DE18AD"/></span>
-                    <div id="name">
-                        <p>Héctor Martínez Reséndiz</p>
-                        <div></div>
-                    </div>
-                    <p id="project">Frontend Developers</p>
-                </article>
-                <article>
-                    <span><IconAccountCircle width="110px" height="110px" fill="#DE18AD"/></span>
-                    <div id="name">
-                        <p>Ernesto Lázaro Guerrero</p>
-                        <div></div>
-                    </div>
-                    <p id="project">UI Designer</p>
-                </article>
-            </SectionMembers>
-        </Wrap>
-    )
-}
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
+  return (
+    <Wrap>
+      <SectionAbout>
+        <article>
+          <h3>Nosotros</h3>
+          <p>
+            “OCS: One Click Style” es nuestro proyecto final de graduación en
+            Platzi Master. Trabajamos durante dos semanas desde su analisis,
+            diseño, desarrollo e implementación.
+          </p>
+          <p>
+            Estamos orgullosos del producto realizado y nos motiva a seguir
+            aprendiendo y contruyendo cosas increibles.
+          </p>
+          <p>Gracias por visitar One Click Style.</p>
+        </article>
+        <article>
+          <h3>Equipo</h3>
+          <img src={LogoFalconsDevs} alt="Falcons Devs" />
+          <p>
+            Falcons Devs es el nombre de nuestro equipo, el halcon destaca por
+            su vision y conocimiento. Estos dos atributos son claves para el
+            desarollo del proyecto y por eso lo elegimos para ser nuestro animal
+            representativo.
+          </p>
+        </article>
+      </SectionAbout>
+      <SectionMembers>
+        <h3>Integrantes</h3>
+        <CardMembers
+          nameMember="Erick Daniel Pérez Mata"
+          position="Project Manager"
+          img={ErickMata}
+          github="https://github.com/Erickowski"
+          linkedin="https://www.linkedin.com/in/erick-mata/"
+          twitter="https://twitter.com/Erickowski"
+        />
+        <CardMembers
+          nameMember="Byron Miguel Piedrahita Hernandez"
+          position="Backend Developer"
+          img={ByronPiedrahita}
+          github="https://github.com/ByronPiedrahita"
+          linkedin="http://www.linkedin.com/in/byron-miguel-piedrahita-hernandez-2b96b4a2"
+        />
+        <CardMembers
+          nameMember="Jhon Carlos Colorado Angulo"
+          position="Frontend Developer"
+          img={JhonColorado}
+          github="https://github.com/jcolorado19"
+          linkedin="https://www.linkedin.com/in/jhon-carlos-colorado-angulo-6aa134b9"
+          twitter="https://twitter.com/JhonColorado07"
+        />
+        <CardMembers
+          nameMember="Héctor Martínez Reséndiz"
+          position="Frontend Developer"
+        />
+        <CardMembers
+          nameMember="Ernesto Lázaro Guerrero"
+          position="UI Designer"
+          img={ErnestoLazaro}
+          github="https://github.com/ErnestoLazaro"
+          linkedin="https://www.linkedin.com/in/ernesto-lazaro/"
+          twitter="https://twitter.com/FTonEnergiasA"
+        />
+      </SectionMembers>
+    </Wrap>
+  );
+};
