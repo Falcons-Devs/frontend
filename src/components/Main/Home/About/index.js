@@ -7,6 +7,7 @@ import ErickMata from "../../../../assets/img/erick-mata.jpg";
 import ByronPiedrahita from "../../../../assets/img/byron-piedrahita.png";
 import JhonColorado from "../../../../assets/img/jhon-colorado.jpg";
 import ErnestoLazaro from "../../../../assets/img/ernesto-lazaro.png";
+import HectorMartinez from "../../../../assets/img/hector-martinez.jpg";
 
 export const About = () => {
   useEffect(() => {
@@ -67,6 +68,10 @@ export const About = () => {
         <CardMembers
           nameMember="Héctor Martínez Reséndiz"
           position="Frontend Developer"
+          img={HectorMartinez}
+          github="https://github.com/HectorMartinezResendiz"
+          linkedin="https://www.linkedin.com/in/h%C3%A9ctor-mart%C3%ADnez-32b2621ab/"
+          twitter="https://twitter.com/HectorMR206"
         />
         <CardMembers
           nameMember="Ernesto Lázaro Guerrero"
