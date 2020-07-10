@@ -10,35 +10,27 @@ import {
 } from "../../components/ImagesWithProcess/styles";
 
 import {
-  cover,
-  to,
+  nameImage,
   alt,
   width,
   height,
+  to,
   responsivetablet,
   responsivemobile,
-} from "../../__mocks__/Link";
+} from "../../__mocks__/imageWithProcess";
 
 describe("<ImagesWithProcess />", () => {
   test("Render of ImagesWithProcess component", () => {
     const imagesWithProcess = mount(
-      <ImagesWithProcess>
-        <Link
-          cover={cover}
-          to={to}
-          aria-label={alt}
-          width={width}
-          height={height}
-          responsivetablet={responsivetablet}
-          responsivemobile={responsivemobile}
-        >
-          <Article>
-            <Section>
-              <H2>{alt}</H2>
-            </Section>
-          </Article>
-        </Link>
-      </ImagesWithProcess>
+      <ImagesWithProcess
+        nameImage={nameImage}
+        alt={alt}
+        width={width}
+        height={height}
+        to={to}
+        responsivetablet={responsivetablet}
+        responsivemobile={responsivemobile}
+      />
     );
     expect(imagesWithProcess.length).toEqual(1);
   });

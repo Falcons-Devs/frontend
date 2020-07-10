@@ -14,19 +14,9 @@ import { list, title, full, topic } from "../../__mocks__/List";
 
 describe("<List />", () => {
   test("Render of List component", () => {
-    const list = mount(
-      <List>
-        <Container>
-          {list.map((item, index) => (
-            <ProcedureContainer full={full} key={topic + index}>
-              <P>{item}</P>
-              <IconCheckboxFalse width="24px" />
-            </ProcedureContainer>
-          ))}
-          <Title>{title}</Title>
-        </Container>
-      </List>
+    const singleList = mount(
+      <List list={list} title={title} full={full} topic={topic} />
     );
-    expect(list.length).toEqual(1);
+    expect(singleList.length).toEqual(1);
   });
 });

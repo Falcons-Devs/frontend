@@ -2,7 +2,7 @@ import React from "react";
 import { mount } from "enzyme";
 
 import { HeaderImages } from "../../components/HeaderImages";
-import { BackgroudImages } from "../../components/HeaderImage/styles";
+import { BackgroudImages } from "../../components/HeaderImages/styles";
 
 import { numberImg } from "../../__mocks__/HeaderImages";
 

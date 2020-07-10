@@ -11,16 +11,16 @@ export const CardPerson = ({ name, email, schedule, to, type }) => {
       <PersonName>
         <IconAccountCircle width="80px" height="90px" fill="#DE18AD" />
         <div>
-          <input type="text" value={name} />
+          <input type="text" defaultValue={name} />
           {type ? <p>{type}</p> : ""}
         </div>
       </PersonName>
       <Information>
         <div>
           <label htmlFor="cost">Email</label>
-          <input type="text" className="duration" value={email} />
+          <input type="text" className="duration" defaultValue={email} />
           <label htmlFor="duration">Horario</label>
-          <input type="text" className="hous" value={schedule} />
+          <input type="text" className="hous" defaultValue={schedule} />
         </div>
       </Information>
       <Link to={to}>

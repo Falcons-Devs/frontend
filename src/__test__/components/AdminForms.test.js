@@ -1,6 +1,5 @@
 import React from "react";
 import { mount } from "enzyme";
-
 import { AdminForms } from "../../components/AdminForms";
 import { IconEmail } from "../../assets/static/icon-email";
 import { IconPassword } from "../../assets/static/icon-password";
@@ -20,8 +19,11 @@ import {
 
 describe("<AdminForms />", () => {
   test("Render of AdminForms component", () => {
+    const jsdomScroll = window.scroll;
+    window.scroll = () => {};
     const adminForms = mount(<AdminForms />);
-    expect(adminForms.length).toEqual(1);
+    return expect(adminForms.length).toEqual(1);
+    window.scroll = jsdomScroll;
   });
 });
 
