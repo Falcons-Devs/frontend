@@ -1,54 +1,264 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1594349420947" clover="3.2.0">
-  <project timestamp="1594349420947" name="All files">
-    <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4" elements="20" coveredelements="20" complexity="0" loc="16" ncloc="16" packages="4" files="7" classes="7"/>
-    <package name="assets.static">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="icon-github.js" path="C:\Users\Erick Daniel\Desktop\Platzi_Master\Proyecto_Final_C2\frontend\src\assets\static\icon-github.js">
+<coverage generated="1594357797186" clover="3.2.0">
+  <project timestamp="1594357797186" name="All files">
+    <metrics statements="115" coveredstatements="98" conditionals="44" coveredconditionals="16" methods="32" coveredmethods="29" elements="191" coveredelements="143" complexity="0" loc="115" ncloc="115" packages="12" files="36" classes="36"/>
+    <package name="src">
+      <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="Context.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\Context.js">
+        <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.assets.static">
+      <metrics statements="30" coveredstatements="28" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="13"/>
+      <file name="icon-accountCircle.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\icon-accountCircle.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+      </file>
+      <file name="icon-add.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\icon-add.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="icon-avatar.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\icon-avatar.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="icon-duration.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\icon-duration.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+      <file name="icon-edit.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\icon-edit.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="icon-email.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\icon-email.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="icon-github.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\icon-github.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+      <file name="icon-linkedin.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\icon-linkedin.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="icon-menu.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\icon-menu.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="icon-password.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\icon-password.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="icon-price.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\icon-price.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+      <file name="icon-twitter.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\icon-twitter.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="icon-type.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\icon-type.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="logo-ocs-f.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\logo-ocs-f.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="logo-ocs.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\assets\static\logo-ocs.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.Footer">
+    <package name="src.components.AdminForms">
+      <metrics statements="14" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="index.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\AdminForms\index.js">
+        <metrics statements="7" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="25" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="85" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="113" count="1" type="stmt"/>
+      </file>
+      <file name="styles.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\AdminForms\styles.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="108" count="1" type="stmt"/>
+        <line num="112" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Buttons">
+      <metrics statements="7" coveredstatements="7" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="4"/>
+      <file name="index.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\Buttons\index.js">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="8" count="5" type="stmt"/>
+      </file>
+      <file name="styles.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\Buttons\styles.js">
+        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="16" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="5" type="cond" truecount="1" falsecount="1"/>
+      </file>
+    </package>
+    <package name="src.components.CardInformation">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\CardInformation\index.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="styles.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\CardInformation\styles.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.CardMembers">
+      <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\CardMembers\index.js">
+        <metrics statements="2" coveredstatements="2" conditionals="8" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+      <file name="styles.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\CardMembers\styles.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.CardPerson">
+      <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\CardPerson\index.js">
+        <metrics statements="2" coveredstatements="2" conditionals="6" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+      </file>
+      <file name="styles.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\CardPerson\styles.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="98" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Footer">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.js" path="C:\Users\Erick Daniel\Desktop\Platzi_Master\Proyecto_Final_C2\frontend\src\components\Footer\index.js">
+      <file name="index.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\Footer\index.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
       </file>
-      <file name="styles.js" path="C:\Users\Erick Daniel\Desktop\Platzi_Master\Proyecto_Final_C2\frontend\src\components\Footer\styles.js">
+      <file name="styles.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\Footer\styles.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.Footer.NavBar">
+    <package name="src.components.Footer.NavBar">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.js" path="C:\Users\Erick Daniel\Desktop\Platzi_Master\Proyecto_Final_C2\frontend\src\components\Footer\NavBar\index.js">
+      <file name="index.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\Footer\NavBar\index.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
       </file>
-      <file name="styles.js" path="C:\Users\Erick Daniel\Desktop\Platzi_Master\Proyecto_Final_C2\frontend\src\components\Footer\NavBar\styles.js">
+      <file name="styles.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\Footer\NavBar\styles.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="54" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.Footer.Social">
+    <package name="src.components.Footer.Social">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.js" path="C:\Users\Erick Daniel\Desktop\Platzi_Master\Proyecto_Final_C2\frontend\src\components\Footer\Social\index.js">
+      <file name="index.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\Footer\Social\index.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
       </file>
-      <file name="styles.js" path="C:\Users\Erick Daniel\Desktop\Platzi_Master\Proyecto_Final_C2\frontend\src\components\Footer\Social\styles.js">
+      <file name="styles.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\Footer\Social\styles.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Header">
+      <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\Header\index.js">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+      <file name="styles.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\Header\styles.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Header.NavBar">
+      <metrics statements="22" coveredstatements="9" conditionals="16" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="index.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\Header\NavBar\index.js">
+        <metrics statements="18" coveredstatements="5" conditionals="16" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="48" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="72" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="73" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+      </file>
+      <file name="styles.js" path="D:\Cursos\Platzi\Platzi Master\Cursos\Git_GitHub\ProyectoC2\frontend\src\components\Header\NavBar\styles.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
       </file>
     </package>
   </project>
