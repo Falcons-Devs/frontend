@@ -12,7 +12,6 @@ export const Wrap = styled.div`
   /* Responsive */
   @media (max-width: 768px) {
     width: 90vw;
-    height: calc(100vh - 200px);
   }
 `;
 export const Form = styled.div`
@@ -22,14 +21,6 @@ export const Form = styled.div`
   display: flex;
   justify-content: center;
 `;
-export const CancelButton = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
-`;
-export const CreateButton = styled.div`
-  grid-column: 2 / 3;
-  grid-row: 4 / 5;
-`;
 export const SectionForm = styled.section`
   width: 50%;
   border: 5px solid #de18ad;
@@ -37,6 +28,9 @@ export const SectionForm = styled.section`
   padding: 30px 60px;
   margin-block-end: 20px;
   font-family: "Lato", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 75px 50px;
   /* Responsive */
   @media (max-width: 768px) {
     width: 75vw;
@@ -44,7 +38,7 @@ export const SectionForm = styled.section`
 
   h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
 
   div {
@@ -82,13 +76,29 @@ export const SectionForm = styled.section`
   }
 `;
 
+export const InputContainer = styled.form`
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+`;
+
 export const Title = styled.h2`
   margin-top: 20px;
   width: 100%;
   border-top: 5px solid #de18ad;
   text-align: center;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
   /* Responsive */
   @media (max-width: 768px) {
     font-size: 32px;
   }
+`;
+
+export const CancelButton = styled.div`
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+`;
+export const CreateButton = styled.div`
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
 `;

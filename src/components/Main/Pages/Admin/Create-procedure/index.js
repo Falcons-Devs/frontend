@@ -32,9 +32,8 @@ export const CreateProcedure = () => {
         <Hero>
           <HeaderImages numberImg="1" />
         </Hero>
-     
-        <AdminForms actionUser="Crear Procedimiento" buttonAction="Crear Procedimiento"/>
 
+        <AdminForms actionUser="Crear Procedimiento" buttonAction="Crear" />
       </Container>
     </Wrap>
   );
