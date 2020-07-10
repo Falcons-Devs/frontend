@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterStyle = styled.footer`
   /* Positioning */
   position: absolute;
-  bottom: 0;
+  bottom: -50;
   /* Box-model */
   height: inherit;
   width: 100%;
