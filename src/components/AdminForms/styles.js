@@ -4,7 +4,6 @@ export const Wrap = styled.div`
   /* Positioning */
   /* (Box-model) */
   margin: 20px auto;
-  width: 1200px;
   max-width: 1200px;
   padding: 0px 20px;
   /* Typography */
@@ -35,6 +34,11 @@ export const SectionForm = styled.section`
   @media (max-width: 768px) {
     width: 75vw;
   }
+  @media (max-width: 375px) {
+    width: 90vw;
+    border-width: 3px;
+    padding: 30px 10px;
+  }
 
   h2 {
     text-align: center;
@@ -58,6 +62,9 @@ export const SectionForm = styled.section`
     /* Responsive */
     @media (max-width: 768px) {
       margin: 20px 0;
+    }
+    @media (max-width: 375px) {
+      width: 90%;
     }
     &::placeholder {
       color: rgba(47, 47, 47, 0.5);
@@ -91,6 +98,10 @@ export const Title = styled.h2`
   /* Responsive */
   @media (max-width: 768px) {
     font-size: 32px;
+  }
+  @media (max-width: 375px) {
+    font-size: 23px;
+    border-width: 3px;
   }
 `;
 

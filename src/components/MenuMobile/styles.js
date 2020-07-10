@@ -12,7 +12,17 @@ export const Menu = styled.div`
 `;
 
 export const Link = styled(LinkRouter)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 90%;
   color: #fcfcfc;
   font-size: 32px;
   text-transform: uppercase;
+  border-bottom: 2px solid #de18ad;
+  &:active {
+    color: black;
+    opacity: 0.8;
+  }
 `;
