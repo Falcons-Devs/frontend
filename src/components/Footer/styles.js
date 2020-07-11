@@ -10,15 +10,20 @@ export const FooterStyle = styled.footer`
   /* Typography */
   /* Visual */
   /* Misc */
-
+  /* Responsive */
   @media (max-width: 375px) {
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
+    /* Visual */
     background: #02b3b1;
+    /* Misc */
   }
 `;
 
 export const Wrap = styled.div`
   /* Positioning */
-  /* (Box-model) */
+  /* Box-model */
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -31,13 +36,23 @@ export const Wrap = styled.div`
   /* Misc */
   /* Responsive */
   @media (max-width: 768px) {
+    /* Positioning */
+    /* Box-model */
     max-width: 90vw;
+    /* Typography */
+    /* Visual */
+    /* Misc */
   }
-  /* Responsive */
   @media (max-width: 375px) {
+    /* Positioning */
+    /* Box-model */
     width: 100vw;
-    border-radius: 0;
     height: 140px;
+    /* Typography */
     font-size: 24px;
+    /* Visual */
+    border-radius: 0;
+    /* Misc */
+    /* Responsive */
   }
 `;

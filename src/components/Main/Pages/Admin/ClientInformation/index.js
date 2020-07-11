@@ -1,4 +1,14 @@
 import React, { useEffect } from "react";
+// Import the components
+import { NameStatus } from "../../../../NameStatus";
+import { Buttons } from "../../../../Buttons";
+import { Table as TableInfo } from "../../../../Table";
+import { CardInformation } from "../../../../CardInformation";
+
+// Import the icons svg
+import { IconArrowNext } from "../../../../../assets/static/icon-arrow-next";
+
+// Import presentational components of styled components
 import {
   Container,
   HistoryAppointments,
@@ -11,12 +21,8 @@ import {
   Select,
   SelectContainer,
 } from "./styles";
-import { NameStatus } from "../../../../NameStatus";
-import { Buttons } from "../../../../Buttons";
-import { Table as TableInfo } from "../../../../Table";
-import { IconArrowNext } from "../../../../../assets/static/icon-arrow-next";
-import { CardInformation } from "../../../../CardInformation";
 
+// Import useEffect So that when the user changes the page it goes to the top
 export const ClientInformation = () => {
   useEffect(() => {
     window.scroll(0, 0);
@@ -24,9 +30,11 @@ export const ClientInformation = () => {
   return (
     <Wrap>
       <Main>
+        {/* Title creation and redirection arrow */}
         <NameStatus title="Informacion de [NAME]" to="/admin-clients" />
       </Main>
       <Container>
+        {/* Button creation */}
         {screen.width <= 375 ? (
           <SelectContainer>
             <IconArrowNext width="50px" height="50px" fill="#de18ad" />
@@ -71,6 +79,7 @@ export const ClientInformation = () => {
             </FollowingAppointments>
           </>
         )}
+        {/* Creating the customer table */}
         <Table>
           {screen.width <= 375 ? (
             <>

@@ -1,8 +1,13 @@
 import React, { useEffect } from "react";
-import { Wrap, Container, Span } from "./styles";
+
+// Import the components
 import { ShowAppointmentHistory } from "../../../../ShowAppointmentHistory";
 import { NameStatus } from "../../../../NameStatus";
 
+// Import presentational components of styled components
+import { Wrap, Container, Span } from "./styles";
+
+// Import useEffect So that when the user changes the page it goes to the top
 export const AppointmentHistory = () => {
   useEffect(() => {
     window.scroll(0, 0);
@@ -12,6 +17,7 @@ export const AppointmentHistory = () => {
       <NameStatus title="Mi historial de citas" to={"/client"} />
       <Container>
         <Span></Span>
+        {/* Sending the props for the component Show Appointment History  */}
         <ShowAppointmentHistory
           dateTime="01-08-2020"
           estheticianName="Esteticista 1"

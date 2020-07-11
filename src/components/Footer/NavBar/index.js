@@ -1,4 +1,6 @@
 import React from "react";
+
+// Import presentational components of styled components
 import { Nav, Link, P } from "./styles";
 
 export const NavBarFooter = () => {

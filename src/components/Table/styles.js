@@ -1,33 +1,68 @@
 import styled from "styled-components";
 
 export const Table = styled.table`
+  /* Positioning */
+  /* Box-model */
   width: 100%;
+  /* Typography */
+  /* Visual */
   border: 6px solid #de18ad;
   border-collapse: collapse;
   vertical-align: top;
+  /* Misc */
   /* Responsive */
   @media (max-width: 768px) {
+    /* Positioning */
+    /* Box-model */
     width: 88vw;
+    /* Typography */
+    /* Visual */
+    /* Misc */
+    /* Responsive */
   }
 
   th,
   td {
-    line-height: 50px;
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
     text-align: left;
-    vertical-align: top;
+    /* Visual */
     border: 4px solid #de18ad;
     border-spacing: 0;
+    line-height: 50px;
+    vertical-align: top;
+    /* Misc */
+    /* Responsive */
   }
 
   th {
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
     text-align: center;
+    /* Visual */
+    /* Misc */
+    /* Responsive */
   }
 
   td {
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
     text-align: left;
+    /* Visual */
+    /* Misc */
+    /* Responsive */
   }
   td[colspan] {
-    text-align: center;
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
     font-weight: 900;
+    text-align: center;
+    /* Visual */
+    /* Misc */
+    /* Responsive */
   }
 `;

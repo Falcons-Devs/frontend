@@ -1,9 +1,15 @@
 import React from "react";
+
+// Import the icons components
 import { IconAccountCircle } from "../../assets/static/icon-accountCircle";
-import { Person, PersonName, Information, Link } from "./styles";
-import { Buttons } from "../Buttons";
 import { IconAdd } from "../../assets/static/icon-add";
 import { IconEdit } from "../../assets/static/icon-edit";
+
+// Import the components
+import { Buttons } from "../Buttons";
+
+// Import presentational components of styled components
+import { Person, PersonName, Information, Link } from "./styles";
 
 export const CardPerson = ({ name, email, schedule, to, type }) => {
   return (

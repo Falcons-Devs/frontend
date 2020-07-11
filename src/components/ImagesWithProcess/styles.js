@@ -3,10 +3,15 @@ import { Link as LinkRouter } from "@reach/router";
 
 export const Link = styled(LinkRouter)`
   /* Positioning */
+  position: relative;
+  overflow: hidden;
   /* Box-model */
+  display: block;
+  margin-bottom: 20px;
   width: ${(props) => props.width || "300px"};
   height: ${(props) => props.height || "368px"};
   /* Typography */
+  color: #fff;
   outline: none;
   /* Visual */
   background-image: url('${(props) => props.cover}');
@@ -16,29 +21,39 @@ export const Link = styled(LinkRouter)`
   background-size: cover;
   border-radius: 69px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-  color: #fff;
-  display: block;
-  overflow: hidden;
-  position: relative;
   transition: background-color .2s cubic-bezier(0.4, 0, 0.2, 1),box-shadow .3s cubic-bezier(0.4, 0, 0.2, 1),color .2s cubic-bezier(0.4, 0, 0.2, 1),fill .2s cubic-bezier(0.4, 0, 0.2, 1);
   /* Misc */
-  margin-bottom: 20px;
   /* Responsive */
   @media (max-width: 768px) {
-    width: 300px;
-    height: 368px;
-    border-radius: 20px;
+    /* Positioning */
+    /* Box-model */
     margin-bottom: 30px;
+    width: 300px;
     height: ${(props) => (props.responsivetablet ? "184px" : "")};
+    /* Typography */
+    /* Visual */
+    border-radius: 20px;
+    /* Misc */
+    /* Responsive */
   }
   @media (max-width: 375px) {
-    width: 150px;
-    border-radius: 5px;
-    height: ${(props) => (props.responsivemobile ? "150px" : "")};
+    /* Positioning */
+    /* Box-model */
     width: ${(props) => (props.responsivemobile ? "300px" : "")};
+    height: ${(props) => (props.responsivemobile ? "150px" : "")};
+    /* Typography */
+    /* Visual */
+    border-radius: 5px;
+    /* Misc */
   }
   &:hover {
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
+    /* Visual */
     box-shadow: 0 4px 5px rgba(0,0,0,0.4);
+    /* Misc */
+    /* Responsive */
   }
 `;
 
@@ -81,6 +96,11 @@ export const H2 = styled.h2`
   /* Misc */
   /* Responsive */
   @media (max-width: 375px) {
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
     font-size: 18px;
+    /* Visual */
+    /* Misc */
   }
 `;

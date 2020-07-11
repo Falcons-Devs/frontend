@@ -1,4 +1,15 @@
 import React, { useEffect } from "react";
+
+// Import the components
+import { Buttons } from "../../../../Buttons";
+import { NameStatus } from "../../../../NameStatus";
+import { HeaderImages } from "../../../../HeaderImages";
+import { List } from "../../../../List";
+
+// Import the Navigation Link
+import { Link } from "@reach/router";
+
+// Import presentational components of styled components
 import {
   Container,
   Hero,
@@ -9,11 +20,6 @@ import {
   ArrowButton,
   Wrap,
 } from "./styles";
-import { Buttons } from "../../../../Buttons";
-import { NameStatus } from "../../../../NameStatus";
-import { HeaderImages } from "../../../../HeaderImages";
-import { List } from "../../../../List";
-import { Link } from "@reach/router";
 
 const days = [
   "Lunes",
@@ -26,6 +32,7 @@ const days = [
 ];
 const schedules = ["8:00 - 14:00", "15:00 - 21:00"];
 
+// Import useEffect So that when the user changes the page it goes to the top
 export const Schedules = () => {
   useEffect(() => {
     window.scroll(0, 0);
@@ -35,22 +42,28 @@ export const Schedules = () => {
       <Wrap>
         <Container>
           <ArrowButton>
+            {/* Title creation and redirection arrow */}
             <NameStatus title="Mis horarios" to={"/beautician"} />
           </ArrowButton>
           <Hero>
+            {/* Show image component according to number */}
             <HeaderImages numberImg="1" />
           </Hero>
           <DayCard>
+            {/* Show list component */}
             <List list={days} topic="Dia" title="Días" />
           </DayCard>
           <ScheduleCard>
+            {/* Show list component */}
             <List list={schedules} topic="Horario" title="Horario" full />
           </ScheduleCard>
+          {/* Show component of cancel button */}
           <CancelButton>
             <Link to="/beautician">
               <Buttons value="Cancelar" color="#DE3C48" />
             </Link>
           </CancelButton>
+          {/* Show component of accept button */}
           <ConfirmButton>
             <Buttons value="Confirmar" color="#2DD881" />
           </ConfirmButton>

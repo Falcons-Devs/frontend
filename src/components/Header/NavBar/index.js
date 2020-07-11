@@ -1,8 +1,12 @@
 import React from "react";
-import { IconAvatar } from "../../../assets/static/icon-avatar";
-import { Nav, Link, Profile, NavMobile } from "./styles";
+
+// Import the components
 import Context from "../../../Context";
+import { IconAvatar } from "../../../assets/static/icon-avatar";
 import { IconMenu } from "../../../assets/static/icon-menu";
+
+// Import presentational components of styled components
+import { Nav, Link, Profile, NavMobile } from "./styles";
 
 export const NavBar = () => (
   <Context.Consumer>

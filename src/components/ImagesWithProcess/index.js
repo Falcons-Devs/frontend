@@ -1,11 +1,13 @@
 import React from "react";
 
+// Import the images
 import Client_1 from "../../assets/img/Background-client1.jpg";
-
 import Hero_card1 from "../../assets/img/hero_card1.jpg";
 import Hero_card2 from "../../assets/img/hero_card2.jpg";
 import Hero_card3 from "../../assets/img/hero_card3.jpg";
 import Hero_card4 from "../../assets/img/hero_card4.jpg";
+
+// Import presentational components of styled components
 import { Link, Article, Section, H2 } from "./styles";
 
 export const ImagesWithProcess = ({
@@ -17,6 +19,7 @@ export const ImagesWithProcess = ({
   responsivetablet,
   responsivemobile,
 }) => {
+  // Condition for select the image of accorded the number receive in the props
   let cover;
   nameImage == 1 ? (cover = Hero_card1) : "";
   nameImage == 2 ? (cover = Hero_card2) : "";

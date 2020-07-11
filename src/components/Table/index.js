@@ -1,14 +1,18 @@
 import React from "react";
+
+// Import pres-entational components of styled components
 import { Table as ShowTable } from "./styles";
 
 export const Table = (props) => {
   const { col1, col2, col3, col4, col5, col6, col7, col8, title } = props;
   let countColum = -1;
 
+  // Counting the props receive for know the columns to create
   Object.keys(props).forEach((col) => {
     countColum++;
   });
 
+  // Function for create table. Receive propiedades for create the columns necessary
   const createTable = (countColum) => {
     let table = [];
 
@@ -26,6 +30,7 @@ export const Table = (props) => {
     <ShowTable>
       <thead>
         <tr>
+          {/* Condition for create columns if receive the props  */}
           {col1 && <th> {col1} </th>}
           {col2 && <th> {col2} </th>}
           {col3 && <th> {col3} </th>}
@@ -37,6 +42,7 @@ export const Table = (props) => {
         </tr>
       </thead>
       <tbody>
+        {/* Calling the function for create the rows */}
         {createTable(countColum)}
         <tr>
           <td colSpan={countColum}> {title} </td>

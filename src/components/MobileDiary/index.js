@@ -1,11 +1,15 @@
 import React from "react";
+
+// Import the icons svg
+import { IconAccountCircle } from "../../assets/static/icon-accountCircle";
+
+// Import presentational components of styled components
 import {
   Container,
   ProceduresContainer,
   DurationContainer,
   ClientContainer,
 } from "./styles";
-import { IconAccountCircle } from "../../assets/static/icon-accountCircle";
 
 export const MobileDiary = ({ datetime, time, client }) => {
   return (
@@ -18,7 +22,7 @@ export const MobileDiary = ({ datetime, time, client }) => {
         <p>Procedimiento 3</p>
       </ProceduresContainer>
       <DurationContainer>
-        <h3>Duracion:</h3>
+        <h3>Duración:</h3>
         <p>{time}</p>
       </DurationContainer>
       <ClientContainer>

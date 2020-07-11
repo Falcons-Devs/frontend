@@ -1,9 +1,14 @@
 import React, { useEffect } from "react";
-import { Container, ArrowButton, Wrap, Table } from "./styles";
+
+// Import the components
 import { NameStatus } from "../../../../NameStatus";
 import { Schedule as ShowSchedule } from "../../../../Schedule";
 import { MobileDiary } from "../../../../MobileDiary";
 
+// Import presentational components of styled components
+import { Container, ArrowButton, Wrap, Table } from "./styles";
+
+// Import useEffect So that when the user changes the page it goes to the top
 export const Diary = () => {
   useEffect(() => {
     window.scroll(0, 0);
@@ -12,8 +17,10 @@ export const Diary = () => {
     <Wrap>
       <Container>
         <ArrowButton>
+          {/* Title creation and redirection arrow */}
           <NameStatus title="Agenda de [NAME]" to="/admin-beautician" />
         </ArrowButton>
+        {/* Creating the customer table */}
         <Table>
           {screen.width <= 375 ? (
             <>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrap = styled.div`
   /* Positioning */
-  /* (Box-model) */
+  /* Box-model */
   margin: 20px auto;
   height: inherit;
   width: 1200px;
@@ -12,38 +12,78 @@ export const Wrap = styled.div`
   /* Misc */
   /* Responsive */
   @media (max-width: 768px) {
+    /* Positioning */
+    /* Box-model */
     width: 90vw;
+    /* Typography */
+    /* Visual */
   }
   @media (max-width: 375px) {
+    /* Positioning */
+    /* Box-model */
     margin: 10px;
+    /* Typography */
+    /* Visual */
+    /* Responsive */
   }
 `;
 
 export const Container = styled.div`
+  /* Positioning */
+  /* Box-model */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 75px 250px 1fr;
   grid-gap: 20px;
+  /* Typography */
+  /* Visual */
+  /* Misc */
   /* Responsive */
   @media (max-width: 768px) {
+    /* Positioning */
+    /* Box-model */
     grid-template-rows: 75px 150px 1fr;
+    /* Typography */
+    /* Visual */
   }
   @media (max-width: 375px) {
+    /* Positioning */
+    /* Box-model */
     grid-template-rows: 50px 1px 1fr;
     width: 90%;
+    /* Typography */
+    /* Visual */
   }
 `;
 export const ArrowButton = styled.div`
-  margin-top: 20px;
-  margin-left: 20px;
+  /* Positioning */
+  /* Box-model */
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  margin-top: 20px;
+  margin-left: 20px;
+  /* Typography */
+  /* Visual */
+  /* Misc */
+  /* Responsive */
 `;
 export const Hero = styled.div`
+  /* Positioning */
+  /* Box-model */
   grid-column: 1 / 3;
   grid-row: 2 / 3;
+  /* Typography */
+  /* Visual */
+  /* Misc */
+  /* Responsive */
 `;
 export const Table = styled.div`
+  /* Positioning */
+  /* Box-model */
   grid-column: 1 / 3;
   grid-row: 3 / 4;
+  /* Typography */
+  /* Visual */
+  /* Misc */
+  /* Responsive */
 `;

@@ -1,10 +1,15 @@
 import React, { useEffect } from "react";
-import { Wrap, Container, ArrowButton, Title, Hero, Table } from "./styles";
+
+// Import the components
 import { NameStatus } from "../../../../NameStatus";
-import { BackgroudImages } from "../../../../HeaderImages/styles";
 import { Table as TableInfo } from "../../../../Table";
 import { CardPerson } from "../../../../CardPerson";
 
+// Import presentational components of styled components
+import { BackgroudImages } from "../../../../HeaderImages/styles";
+import { Wrap, Container, ArrowButton, Title, Hero, Table } from "./styles";
+
+// Import useEffect So that when the user changes the page it goes to the top
 export const Client = () => {
   useEffect(() => {
     window.scroll(0, 0);
@@ -12,12 +17,15 @@ export const Client = () => {
   return (
     <Wrap>
       <Container>
+        {/* Title creation and redirection arrow */}
         <ArrowButton>
           <NameStatus title="Clientes" to="/admin" />
         </ArrowButton>
         <Hero>
+          {/* Show image component according to number */}
           <BackgroudImages numberImg="3" />
         </Hero>
+        {/* Creating the customer table */}
         <Table>
           {screen.width <= 375 ? (
             <>

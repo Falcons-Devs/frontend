@@ -1,17 +1,27 @@
 import React, { useEffect } from "react";
-import { Wrap, Container, ArrowButton, Title } from "./styles";
+
+// Import the components
 import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
 import { CardPerson } from "../../../../CardPerson";
-import { Link } from "@reach/router";
+
+// Import the icons svg
 import { IconAdd } from "../../../../../assets/static/icon-add";
 
+// Import the Navigation Link
+import { Link } from "@reach/router";
+
+// Import presentational components of styled components
+import { Wrap, Container, ArrowButton, Title } from "./styles";
+
+// Import useEffect So that when the user changes the page it goes to the top
 export const Beautician = () => {
   useEffect(() => {
     window.scroll(0, 0);
   });
   return (
     <Wrap>
+      {/* Title creation, creation button and redirection arrow */}
       <Title>
         <NameStatus title="Esteticistas" to={"/admin"} />
         <Link to="/admin-create-beautician">
@@ -26,6 +36,7 @@ export const Beautician = () => {
           )}
         </Link>
       </Title>
+      {/* Creation of cards to present information to beauticians */}
       <Container>
         <ArrowButton></ArrowButton>
         <CardPerson

@@ -1,12 +1,21 @@
 import React, { useEffect } from "react";
-import { Container, Main, Table, Wrap } from "./styles";
+
+// Import the components
 import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
 import { Table as TableInfo } from "../../../../Table";
-import { Link } from "@reach/router";
-import { IconAdd } from "../../../../../assets/static/icon-add";
 import { CardPerson } from "../../../../CardPerson";
 
+// Import the icons svg
+import { IconAdd } from "../../../../../assets/static/icon-add";
+
+// Import the Navigation Link
+import { Link } from "@reach/router";
+
+// Import presentational components of styled components
+import { Container, Main, Table, Wrap } from "./styles";
+
+// Import useEffect So that when the user changes the page it goes to the top
 export const Users = () => {
   useEffect(() => {
     window.scroll(0, 0);
@@ -15,6 +24,7 @@ export const Users = () => {
     <Wrap>
       <Container>
         <Main>
+          {/* Title creation, creation button and redirection arrow */}
           <NameStatus title="Ver usuarios" to="/admin" />
           <Link to="/admin-create-user">
             {screen.width <= 375 ? (
@@ -24,6 +34,7 @@ export const Users = () => {
             )}
           </Link>
         </Main>
+        {/* Creating the customer table */}
         <Table>
           {screen.width <= 375 ? (
             <>

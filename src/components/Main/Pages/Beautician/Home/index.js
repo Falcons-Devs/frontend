@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
+import Context from "../../../../../Context";
+
+// Import the components
 import { ShowMyProfile } from "../../../../ShowMyProfile";
 import { ImagesWithProcess } from "../../../../ImagesWithProcess";
-import Context from "../../../../../Context";
+
+// Import presentational components of styled components
 import {
   Wrap,
   Container,
@@ -12,6 +16,7 @@ import {
   Title,
 } from "./styles";
 
+// Import useEffect So that when the user changes the page it goes to the top
 export const Home = () => {
   useEffect(() => {
     window.scroll(0, 0);
@@ -30,7 +35,7 @@ export const Home = () => {
                   <ShowMyProfile nameUser="Nombre del usuario" />{" "}
                 </Profile>
                 <Agenda>
-                  {" "}
+                  {/* Show the image component according to the number and add the title at the bottom */}{" "}
                   <ImagesWithProcess
                     nameImage="3"
                     alt="Mi agenda"
@@ -38,6 +43,7 @@ export const Home = () => {
                   />{" "}
                 </Agenda>
                 <Schedule>
+                  {/* Show the image component according to the number and add the title at the bottom */}
                   <ImagesWithProcess
                     nameImage="4"
                     alt="Mis horarios"
@@ -48,6 +54,7 @@ export const Home = () => {
                   />
                 </Schedule>
                 <Procedures>
+                  {/* Show the image component according to the number and add the title at the bottom */}
                   <ImagesWithProcess
                     nameImage="2"
                     alt="Mis procedimientos"

@@ -1,12 +1,16 @@
 import React, { useEffect } from "react";
 
+// Import the icons
 import { IconEmail } from "../../assets/static/icon-email";
 import { IconPassword } from "../../assets/static/icon-password";
 import { IconAccountCircle } from "../../assets/static/icon-accountCircle";
 import { IconType } from "../../assets/static/icon-type";
-import { Buttons } from "../../components/Buttons";
 import { IconPrice } from "../../assets/static/icon-price";
 import { IconDuration } from "../../assets/static/icon-duration";
+// Import the component Button
+import { Buttons } from "../../components/Buttons";
+
+// Import presentational components of styled components
 import {
   Form,
   SectionForm,
@@ -16,11 +20,13 @@ import {
   InputContainer,
 } from "./styles";
 
+// Import useEffect So that when the user changes the page it goes to the top
 export const AdminForms = ({ actionUser, buttonAction, type }) => {
   useEffect(() => {
     window.scroll(0, 0);
   });
 
+  // Condition for show form the according the user sender in the props
   let contenido =
     type === "Usuario" ? (
       <InputContainer>
