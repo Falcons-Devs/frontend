@@ -1,14 +1,18 @@
 import React, { useEffect } from "react";
 import LogoFalconsDevs from "../../../../assets/img/Logo_Falcons_Devs.jpg";
-import { Wrap, SectionAbout, SectionMembers } from "./styles";
+// Import components members card for the members of the team
 import { CardMembers } from "../../../CardMembers";
-
+// Import images of the members the team
 import ErickMata from "../../../../assets/img/erick-mata.jpg";
 import ByronPiedrahita from "../../../../assets/img/byron-piedrahita.png";
 import JhonColorado from "../../../../assets/img/jhon-colorado.jpg";
 import ErnestoLazaro from "../../../../assets/img/ernesto-lazaro.png";
 import HectorMartinez from "../../../../assets/img/hector-martinez.jpg";
 
+// Import presentational components of styled components
+import { Wrap, SectionAbout, SectionMembers } from "./styles";
+
+// Import useEffect So that when the user changes the page it goes to the top
 export const About = () => {
   useEffect(() => {
     window.scroll(0, 0);
@@ -42,6 +46,7 @@ export const About = () => {
       </SectionAbout>
       <SectionMembers>
         <h3>Integrantes</h3>
+        {/* Using the CardMember component. Props must be sent. */}
         <CardMembers
           nameMember="Erick Daniel Pérez Mata"
           position="Project Manager"
