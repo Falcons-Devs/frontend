@@ -11,92 +11,93 @@ import { Nav, Link, Profile, NavMobile } from "./styles";
 export const NavBar = () => (
   <Context.Consumer>
     {({ userType }) => {
-      if (userType === "Public") {
-        if (screen.width <= 375) {
+      switch (userType) {
+        case "Public":
+          if (screen.width <= 375) {
+            return (
+              <NavMobile>
+                <Link to="/menu">
+                  <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+                </Link>
+              </NavMobile>
+            );
+          }
           return (
-            <NavMobile>
-              <Link to="/menu">
-                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
-              </Link>
-            </NavMobile>
+            <Nav>
+              <Link to="/">Inicio</Link>
+              <Link to="/about">Nosotros</Link>
+              <Link to="/signin">Registrarse</Link>
+              <Link to="/login">Iniciar sesión</Link>
+            </Nav>
           );
-        }
-        return (
-          <Nav>
-            <Link to="/">Inicio</Link>
-            <Link to="/about">Nosotros</Link>
-            <Link to="/signin">Registrarse</Link>
-            <Link to="/login">Iniciar sesión</Link>
-          </Nav>
-        );
-      }
-      if (userType === "Admin") {
-        if (screen.width <= 375) {
+
+        case "Client":
+          if (screen.width <= 375) {
+            return (
+              <NavMobile>
+                <Profile>
+                  <IconAvatar fill="#DE18AD" width="48px" height="48px" />
+                </Profile>
+                <Link to="/menu">
+                  <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+                </Link>
+              </NavMobile>
+            );
+          }
           return (
-            <NavMobile>
-              <Link to="/menu">
-                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
-              </Link>
-            </NavMobile>
-          );
-        }
-        return (
-          <Nav>
-            <Link to="/admin">Inicio</Link>
-            <Link to="/about">Nosotros</Link>
-            <Link to="#">Cerrar sesión</Link>
-          </Nav>
-        );
-      }
-      if (userType === "Client") {
-        if (screen.width <= 375) {
-          return (
-            <NavMobile>
+            <Nav>
+              <Link to="/client">Inicio</Link>
+              <Link to="/about">Nosotros</Link>
+              <Link to="/client-appointments">Mis citas</Link>
               <Profile>
-                <IconAvatar fill="#DE18AD" width="48px" height="48px" />
+                <IconAvatar fill="#DE18AD" />
               </Profile>
-              <Link to="/menu">
-                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
-              </Link>
-            </NavMobile>
+              <Link to="#">Cerrar sesión</Link>
+            </Nav>
           );
-        }
-        return (
-          <Nav>
-            <Link to="/client">Inicio</Link>
-            <Link to="/about">Nosotros</Link>
-            <Link to="/client-appointments">Mis citas</Link>
-            <Profile>
-              <IconAvatar fill="#DE18AD" />
-            </Profile>
-            <Link to="#">Cerrar sesión</Link>
-          </Nav>
-        );
-      }
-      if (userType === "Beautician") {
-        if (screen.width <= 375) {
+
+        case "Beautician":
+          if (screen.width <= 375) {
+            return (
+              <NavMobile>
+                <Profile>
+                  <IconAvatar fill="#DE18AD" width="48px" height="48px" />
+                </Profile>
+                <Link to="/menu">
+                  <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+                </Link>
+              </NavMobile>
+            );
+          }
           return (
-            <NavMobile>
+            <Nav>
+              <Link to="/beautician">Inicio</Link>
+              <Link to="/about">Nosotros</Link>
+              <Link to="/beautician-diary">Ver agenda</Link>
               <Profile>
-                <IconAvatar fill="#DE18AD" width="48px" height="48px" />
+                <IconAvatar fill="#DE18AD" />
               </Profile>
-              <Link to="/menu">
-                <IconMenu fill="#FCFCFC" width="50px" height="50px" />
-              </Link>
-            </NavMobile>
+              <Link to="#">Cerrar sesión</Link>
+            </Nav>
           );
-        }
-        return (
-          <Nav>
-            <Link to="/beautician">Inicio</Link>
-            <Link to="/about">Nosotros</Link>
-            <Link to="/beautician-diary">Ver agenda</Link>
-            <Profile>
-              <IconAvatar fill="#DE18AD" />
-            </Profile>
-            <Link to="#">Cerrar sesión</Link>
-          </Nav>
-        );
+
+        case "Admin":
+          if (screen.width <= 375) {
+            return (
+              <NavMobile>
+                <Link to="/menu">
+                  <IconMenu fill="#FCFCFC" width="50px" height="50px" />
+                </Link>
+              </NavMobile>
+            );
+          }
+          return (
+            <Nav>
+              <Link to="/admin">Inicio</Link>
+              <Link to="/about">Nosotros</Link>
+              <Link to="#">Cerrar sesión</Link>
+            </Nav>
+          );
       }
     }}
   </Context.Consumer>
