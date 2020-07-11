@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Axios from "axios";
 
 // Import the components
 import { NameStatus } from "../../../../NameStatus";
@@ -19,6 +20,15 @@ import { Container, Main, Table, Wrap } from "./styles";
 export const Users = () => {
   useEffect(() => {
     window.scroll(0, 0);
+    const fetchData = async () => {
+      const result = await Axios.get(
+        "https://hn.algolia.com/api/v1/search?query=redux"
+      );
+
+      console.log(result.data);
+    };
+
+    fetchData();
   });
   return (
     <Wrap>
