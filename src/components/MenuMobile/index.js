@@ -1,9 +1,12 @@
 import React from "react";
 import Context from "../../Context";
+
+// Import presentational components of styled components
 import { Menu, Link } from "./styles";
 
 export const MenuMobile = () => (
   <Context.Consumer>
+    {/* Show component with menu according to user */}
     {({ userType }) => {
       if (userType === "Public") {
         return (

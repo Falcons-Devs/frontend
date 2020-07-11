@@ -1,4 +1,14 @@
 import React, { useEffect } from "react";
+// Import the components
+import { NameStatus } from "../../../../NameStatus";
+import { Buttons } from "../../../../Buttons";
+import { Table as TableInfo } from "../../../../Table";
+import { CardInformation } from "../../../../CardInformation";
+
+// Import the icons svg
+import { IconArrowNext } from "../../../../../assets/static/icon-arrow-next";
+
+// Import presentational components of styled components
 import {
   Container,
   HistoryAppointments,
@@ -11,12 +21,8 @@ import {
   Select,
   SelectContainer,
 } from "./styles";
-import { NameStatus } from "../../../../NameStatus";
-import { Buttons } from "../../../../Buttons";
-import { Table as TableInfo } from "../../../../Table";
-import { IconArrowNext } from "../../../../../assets/static/icon-arrow-next";
-import { CardInformation } from "../../../../CardInformation";
 
+// Import useEffect So that when the user changes the page it goes to the top
 export const ClientInformation = () => {
   useEffect(() => {
     window.scroll(0, 0);

@@ -1,6 +1,9 @@
 import React from "react";
+
+// Import the icons svg
 import { IconAccountCircle } from "../../assets/static/icon-accountCircle";
 
+// Import pres-entational components of styled components
 import { MyProfile, Profile, NextAppointment } from "./styles";
 
 export const ShowAppointmentHistory = ({
@@ -19,6 +22,7 @@ export const ShowAppointmentHistory = ({
           <p>{estheticianName}</p>
         </div>
       </Profile>
+      {/* Show components with appointment history */}
       <NextAppointment>
         <div>
           <label htmlFor="cost">Costo</label>

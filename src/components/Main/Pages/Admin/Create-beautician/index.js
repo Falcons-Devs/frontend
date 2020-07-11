@@ -1,9 +1,14 @@
 import React, { useEffect } from "react";
-import { Container, Main, Hero, Wrap } from "./styles";
+
+// Import the components
 import { NameStatus } from "../../../../NameStatus";
 import { HeaderImages } from "../../../../HeaderImages";
 import { AdminForms } from "../../../../AdminForms";
 
+// Import presentational components of styled components
+import { Container, Main, Hero, Wrap } from "./styles";
+
+// Import useEffect So that when the user changes the page it goes to the top
 export const CreateBeautician = () => {
   useEffect(() => {
     window.scroll(0, 0);

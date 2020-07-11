@@ -1,4 +1,10 @@
 import React, { useEffect } from "react";
+
+// Import the components
+import Context from "../../../../../Context";
+import { ImagesWithProcess } from "../../../../ImagesWithProcess";
+
+// Import presentational components of styled components
 import {
   Wrap,
   Container,
@@ -7,10 +13,8 @@ import {
   Procedures,
   Users,
 } from "./styles";
-import Context from "../../../../../Context";
 
-import { ImagesWithProcess } from "../../../../ImagesWithProcess";
-
+// Import useEffect So that when the user changes the page it goes to the top
 export const Home = () => {
   useEffect(() => {
     window.scroll(0, 0);

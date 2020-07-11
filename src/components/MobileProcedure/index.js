@@ -1,5 +1,9 @@
 import React from "react";
+
+// Import the icons svg
 import { IconDelete } from "../../assets/static/icon-delete";
+
+// Import presentational components of styled components
 import { Container } from "./styles";
 
 export const MobileProcedure = ({ value }) => {

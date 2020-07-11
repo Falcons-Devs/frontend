@@ -1,6 +1,9 @@
 import React from "react";
+
+// Import the icons svg
 import { IconAccountCircle } from "../../assets/static/icon-accountCircle";
 
+// Import pres-entational components of styled components
 import { MyProfile, Profile, NextAppointment, NameClient } from "./styles";
 
 export const ShowMyProfile = ({ nameUser }) => {

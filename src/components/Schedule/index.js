@@ -1,4 +1,6 @@
 import React, { Fragment } from "react";
+
+// Import the components
 import {
   NameOfTheDay,
   DayNumber,
@@ -7,6 +9,8 @@ import {
   SummaryOfTheAppointment,
   MonthAndYear,
 } from "./Components";
+
+// Import pres-entational components of styled components
 import { Week, Title, InputContainer } from "./styles";
 
 /*---Getting the name of the day---*/

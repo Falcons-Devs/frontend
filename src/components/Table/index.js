@@ -1,4 +1,6 @@
 import React from "react";
+
+// Import pres-entational components of styled components
 import { Table as ShowTable } from "./styles";
 
 export const Table = (props) => {
