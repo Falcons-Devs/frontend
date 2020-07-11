@@ -42,19 +42,24 @@ export const Procedures = () => {
       <Wrap>
         <Container>
           <ArrowButton>
+            {/* Title creation and redirection arrow */}
             <NameStatus title="Mis procedimientos" to={"/beautician"} />
           </ArrowButton>
           <Hero>
+            {/* Show image component according to number */}
             <HeaderImages numberImg="2" />
           </Hero>
           <ProceduresContainer>
+            {/* Show list component */}
             <List list={list} title="Procedimientos" />
           </ProceduresContainer>
+          {/* Show component of cancel button */}
           <CancelButton>
             <Link to="/beautician">
               <Buttons value="Cancelar" color="#DE3C48" />
             </Link>
           </CancelButton>
+          {/* Show component of accept button */}
           <ConfirmButton>
             <Buttons value="Confirmar" color="#2DD881" />
           </ConfirmButton>

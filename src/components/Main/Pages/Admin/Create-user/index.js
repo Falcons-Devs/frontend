@@ -1,16 +1,10 @@
 import React, { useEffect } from "react";
-import {
-  Container,
-  Main,
-  Hero,
-  Wrap,
-} from "./styles";
+import { Container, Main, Hero, Wrap } from "./styles";
 import { NameStatus } from "../../../../NameStatus";
 import { HeaderImages } from "../../../../HeaderImages";
 import { AdminForms } from "../../../../AdminForms";
 
 import { Link } from "@reach/router";
-
 
 export const CreateUser = () => {
   useEffect(() => {
@@ -20,14 +14,19 @@ export const CreateUser = () => {
     <Wrap>
       <Container>
         <Main>
+          {/* Title creation and redirection arrow */}
           <NameStatus title="Crear usuario" to="/admin-users" />
         </Main>
         <Hero>
+          {/* Show image component according to number */}
           <HeaderImages numberImg="4" />
         </Hero>
-          
-        <AdminForms actionUser="Crear Usuario" type="Usuario" buttonAction="Crear"/>
-      
+        {/* Form creation */}
+        <AdminForms
+          actionUser="Crear Usuario"
+          type="Usuario"
+          buttonAction="Crear"
+        />
       </Container>
     </Wrap>
   );

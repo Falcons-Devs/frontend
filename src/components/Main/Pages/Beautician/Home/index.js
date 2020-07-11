@@ -30,7 +30,7 @@ export const Home = () => {
                   <ShowMyProfile nameUser="Nombre del usuario" />{" "}
                 </Profile>
                 <Agenda>
-                  {" "}
+                  {/* Show the image component according to the number and add the title at the bottom */}{" "}
                   <ImagesWithProcess
                     nameImage="3"
                     alt="Mi agenda"
@@ -38,6 +38,7 @@ export const Home = () => {
                   />{" "}
                 </Agenda>
                 <Schedule>
+                  {/* Show the image component according to the number and add the title at the bottom */}
                   <ImagesWithProcess
                     nameImage="4"
                     alt="Mis horarios"
@@ -48,6 +49,7 @@ export const Home = () => {
                   />
                 </Schedule>
                 <Procedures>
+                  {/* Show the image component according to the number and add the title at the bottom */}
                   <ImagesWithProcess
                     nameImage="2"
                     alt="Mis procedimientos"

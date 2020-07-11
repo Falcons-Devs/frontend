@@ -12,10 +12,12 @@ export const Client = () => {
   return (
     <Wrap>
       <Container>
+        {/* Title creation and redirection arrow */}
         <ArrowButton>
           <NameStatus title="Clientes" to="/admin" />
         </ArrowButton>
         <Hero>
+          {/* Show image component according to number */}
           <BackgroudImages numberImg="3" />
         </Hero>
         {/* Creating the customer table */}

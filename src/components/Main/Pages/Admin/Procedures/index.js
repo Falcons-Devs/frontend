@@ -15,6 +15,7 @@ export const Procedures = () => {
     <Wrap>
       <Container>
         <Main>
+          {/* Title creation, creation button and redirection arrow */}
           <NameStatus title="Procedimientos" to="/admin" />
           <Link to="/admin-create-procedure">
             {screen.width <= 375 ? (
@@ -28,6 +29,7 @@ export const Procedures = () => {
             )}
           </Link>
         </Main>
+        {/* Creating the customer table */}
         <Table>
           {screen.width <= 375 ? (
             <ProcedureContainer>

@@ -22,6 +22,7 @@ export const Home = () => {
         return (
           <Wrap>
             <Container>
+              {/* Show image components according to the number and adding the title below */}
               <Clients>
                 {" "}
                 <ImagesWithProcess

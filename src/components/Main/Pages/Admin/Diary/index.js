@@ -12,8 +12,10 @@ export const Diary = () => {
     <Wrap>
       <Container>
         <ArrowButton>
+          {/* Title creation and redirection arrow */}
           <NameStatus title="Agenda de [NAME]" to="/admin-beautician" />
         </ArrowButton>
+        {/* Creating the customer table */}
         <Table>
           {screen.width <= 375 ? (
             <>

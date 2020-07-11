@@ -27,12 +27,14 @@ export const CreateProcedure = () => {
     <Wrap>
       <Container>
         <Main>
+          {/* Title creation and redirection arrow */}
           <NameStatus title="Crear procedimiento" to="/admin-procedures" />
         </Main>
         <Hero>
+          {/* Show image component according to number */}
           <HeaderImages numberImg="1" />
         </Hero>
-
+        {/* Form creation */}
         <AdminForms actionUser="Crear Procedimiento" buttonAction="Crear" />
       </Container>
     </Wrap>

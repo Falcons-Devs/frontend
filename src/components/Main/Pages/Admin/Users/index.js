@@ -15,6 +15,7 @@ export const Users = () => {
     <Wrap>
       <Container>
         <Main>
+          {/* Title creation, creation button and redirection arrow */}
           <NameStatus title="Ver usuarios" to="/admin" />
           <Link to="/admin-create-user">
             {screen.width <= 375 ? (
@@ -24,6 +25,7 @@ export const Users = () => {
             )}
           </Link>
         </Main>
+        {/* Creating the customer table */}
         <Table>
           {screen.width <= 375 ? (
             <>

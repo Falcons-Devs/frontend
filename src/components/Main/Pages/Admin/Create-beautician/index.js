@@ -12,11 +12,14 @@ export const CreateBeautician = () => {
     <Wrap>
       <Container>
         <Main>
+          {/* Title creation and redirection arrow */}
           <NameStatus title="Crear esteticista" to="/admin-beautician" />
         </Main>
         <Hero>
+          {/* Show image component according to number */}
           <HeaderImages numberImg="2" />
         </Hero>
+        {/* Form creation */}
         <AdminForms
           actionUser="Crear Esteticista"
           type="Esteticista"

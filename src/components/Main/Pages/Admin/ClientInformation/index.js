@@ -24,9 +24,11 @@ export const ClientInformation = () => {
   return (
     <Wrap>
       <Main>
+        {/* Title creation and redirection arrow */}
         <NameStatus title="Informacion de [NAME]" to="/admin-clients" />
       </Main>
       <Container>
+        {/* Button creation */}
         {screen.width <= 375 ? (
           <SelectContainer>
             <IconArrowNext width="50px" height="50px" fill="#de18ad" />
@@ -71,6 +73,7 @@ export const ClientInformation = () => {
             </FollowingAppointments>
           </>
         )}
+        {/* Creating the customer table */}
         <Table>
           {screen.width <= 375 ? (
             <>

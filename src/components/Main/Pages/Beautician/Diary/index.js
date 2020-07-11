@@ -12,8 +12,10 @@ export const Diary = () => {
     <Wrap>
       <Container>
         <ArrowButton>
+          {/* Title creation, creation button and redirection arrow */}
           <NameStatus title="Ver agenda" to={"/beautician"} />
         </ArrowButton>
+        {/* Show agenda component */}
         <Dairy>
           {screen.width <= 375 ? (
             <>
