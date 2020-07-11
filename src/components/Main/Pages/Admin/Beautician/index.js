@@ -44,24 +44,28 @@ export const Beautician = () => {
           email="correo@correo.com"
           schedule="15:00 - 21:00"
           to="/admin-beautician-diary"
+          title="Agenda"
         />
         <CardPerson
           name="Esteticista 2"
           email="correo@correo.com"
           schedule="8:00 - 14:00"
           to="/admin-beautician-diary"
+          title="Agenda"
         />
         <CardPerson
           name="Esteticista 3"
           email="correo@correo.com"
           schedule="15:00 - 21:00"
           to="/admin-beautician-diary"
+          title="Agenda"
         />
         <CardPerson
           name="Esteticista 4"
           email="correo@correo.com"
           schedule="8:00 - 14:00"
           to="/admin-beautician-diary"
+          title="Agenda"
         />
       </Container>
     </Wrap>
