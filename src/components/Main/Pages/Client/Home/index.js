@@ -4,7 +4,7 @@ import { ShowMyProfile } from "../../../../ShowMyProfile";
 import { ImagesWithProcess } from "../../../../ImagesWithProcess";
 import Context from "../../../../../Context";
 
-// Import useEffect So that when the user changes the page it goes to the top
+// Import presentational components of styled components
 import {
   Wrap,
   Container,
@@ -14,6 +14,7 @@ import {
   H2,
 } from "./styles";
 
+// Import useEffect So that when the user changes the page it goes to the top
 export const Home = () => {
   useEffect(() => {
     window.scroll(0, 0);

@@ -1,5 +1,9 @@
 import React from "react";
+
+// Import the icons components
 import { IconGitHub } from "../../../assets/static/icon-github";
+
+// Import presentational components of styled components
 import { Ul, Li, Anchor } from "./styles";
 
 export const Social = () => (

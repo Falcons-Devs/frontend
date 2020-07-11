@@ -1,4 +1,12 @@
 import React, { useEffect } from "react";
+
+// Import the components
+import { Buttons } from "../../../../Buttons";
+import { NameStatus } from "../../../../NameStatus";
+import { Schedule as ShowSchedule } from "../../../../Schedule";
+import { List } from "../../../../List";
+
+// Import presentational components of styled components
 import {
   Wrap,
   Container,
@@ -8,10 +16,6 @@ import {
   Schedule,
   ConfirmButton,
 } from "./styles";
-import { Buttons } from "../../../../Buttons";
-import { NameStatus } from "../../../../NameStatus";
-import { Schedule as ShowSchedule } from "../../../../Schedule";
-import { List } from "../../../../List";
 
 const listBeauticians = [
   "Esteticista 1",
@@ -46,6 +50,7 @@ const listProcedures = [
   "Procedimiento 15",
 ];
 
+// Import useEffect So that when the user changes the page it goes to the top
 export const CreateAppointment = () => {
   useEffect(() => {
     window.scroll(0, 0);

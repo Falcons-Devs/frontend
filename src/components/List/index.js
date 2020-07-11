@@ -1,7 +1,10 @@
 import React from "react";
-import { Container, ProcedureContainer, P, Title } from "./styles";
 
+// Import the icons components
 import { IconCheckboxFalse } from "../../assets/static/icon-checkbox-false";
+
+// Import presentational components of styled components
+import { Container, ProcedureContainer, P, Title } from "./styles";
 
 export const List = ({ list, title, full, topic }) => {
   return (

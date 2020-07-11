@@ -1,4 +1,6 @@
 import React from "react";
+
+// Import presentational components of styled components
 import { Container } from "./styles";
 
 export const CardInformation = ({ name }) => {

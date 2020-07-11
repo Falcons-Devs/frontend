@@ -1,9 +1,13 @@
 import React from "react";
+
+// Import the icons components
 import { IconAccountCircle } from "../../assets/static/icon-accountCircle";
-import { Article, Image } from "./styles";
 import { IconGitHub } from "../../assets/static/icon-github";
 import { IconLinkedIn } from "../../assets/static/icon-linkedin";
 import { IconTwitter } from "../../assets/static/icon-twitter";
+
+// Import presentational components of styled components
+import { Article, Image } from "./styles";
 
 export const CardMembers = ({
   nameMember,
@@ -18,6 +22,7 @@ export const CardMembers = ({
       <h2>{nameMember}</h2>
       <article>
         <span>
+          {/* Condition for show the images the profile if is receive */}
           {img ? (
             <Image src={img} />
           ) : (
@@ -26,6 +31,7 @@ export const CardMembers = ({
         </span>
         <div id="name">
           <p> {nameMember} </p>
+          {/* Condition for show the link to github if is receive */}
           {github ? (
             <a href={github} target="_blank">
               <IconGitHub width="25px" height="25px" fill="#DE18AD" />
@@ -33,6 +39,7 @@ export const CardMembers = ({
           ) : (
             ""
           )}
+          {/* Condition for show the link to Linkedin if is receive */}
           {linkedin ? (
             <a href={linkedin} target="_blank">
               <IconLinkedIn width="25px" height="25px" />
@@ -40,6 +47,7 @@ export const CardMembers = ({
           ) : (
             ""
           )}
+          {/* Condition for show the link to twitter if is receive */}
           {twitter ? (
             <a href={twitter} target="_blank">
               <IconTwitter width="25px" height="25px" />
