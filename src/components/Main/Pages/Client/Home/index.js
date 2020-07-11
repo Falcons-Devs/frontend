@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
+// Import component for show Profile and images with process
 import { ShowMyProfile } from "../../../../ShowMyProfile";
 import { ImagesWithProcess } from "../../../../ImagesWithProcess";
+import Context from "../../../../../Context";
+
+// Import useEffect So that when the user changes the page it goes to the top
 import {
   Wrap,
   Container,
@@ -9,7 +13,6 @@ import {
   CreateAppointment,
   H2,
 } from "./styles";
-import Context from "../../../../../Context";
 
 export const Home = () => {
   useEffect(() => {
