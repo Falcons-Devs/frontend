@@ -18,6 +18,17 @@ export const Wrap = styled.div`
     /* Typography */
     /* Visual */
   }
+  @media (max-width: 375px) {
+    /* Positioning */
+    /* Box-model */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Typography */
+    /* Visual */
+    /* Misc */
+  }
 `;
 
 export const Container = styled.div`
@@ -26,6 +37,7 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  justify-items: center;
   /* Typography */
   /* Visual */
   /* Responsive */
@@ -41,6 +53,7 @@ export const Container = styled.div`
     /* Box-model */
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
     /* Typography */
     /* Visual */
   }
