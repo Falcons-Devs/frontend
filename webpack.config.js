@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: ["@babel/polyfill", "./src/index.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -13,7 +13,7 @@ module.exports = {
   devServer: {
     hot: true,
     open: true,
-    port: 3000,
+    port: 8080,
   },
   module: {
     rules: [
@@ -41,6 +41,10 @@ module.exports = {
             options: { name: "assets/[hash].[ext]" },
           },
         ],
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },

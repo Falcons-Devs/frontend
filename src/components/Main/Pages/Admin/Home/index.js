@@ -34,7 +34,8 @@ export const Home = () => {
                   alt="Clientes"
                   to="/admin-clients"
                   height="500px"
-                  responsivemobile
+                  responsivemobilewidth="85vw"
+                  responsivemobileheight="150px"
                 />{" "}
               </Clients>
               <Beautician>
@@ -44,7 +45,9 @@ export const Home = () => {
                   alt="Esteticistas"
                   to="/admin-beautician"
                   height="250px"
-                  responsivemobile
+                  responsivetablet="500px"
+                  responsivemobilewidth="85vw"
+                  responsivemobileheight="150px"
                 />{" "}
               </Beautician>
               <Procedures>
@@ -54,7 +57,9 @@ export const Home = () => {
                   alt="Procedimientos"
                   to="/admin-procedures"
                   height="250px"
-                  responsivemobile
+                  responsivetablet="500px"
+                  responsivemobilewidth="85vw"
+                  responsivemobileheight="150px"
                 />{" "}
               </Procedures>
               <Users>
@@ -64,7 +69,9 @@ export const Home = () => {
                   alt="Usuarios"
                   to="/admin-users"
                   height="500px"
-                  responsivemobile
+                  responsivetablet
+                  responsivemobilewidth="85vw"
+                  responsivemobileheight="150px"
                 />{" "}
               </Users>
             </Container>

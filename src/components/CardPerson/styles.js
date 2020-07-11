@@ -17,7 +17,9 @@ export const Person = styled.section`
   @media (max-width: 768px) {
     /* Positioning */
     /* Box-model */
-    width: 350px;
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 10px;
     /* Typography */
     /* Visual */
     /* Misc */
@@ -65,17 +67,22 @@ export const PersonName = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     /* Typography */
     /* Visual */
     /* Misc */
     /* Responsive */
   }
-  input {
-    /* Positioning */
+  p {
     /* Box-model */
     padding: 7px 0px;
     margin-left: 10px;
-    width: 100%;
+    /* Typography */
+    text-align: center;
+  }
+  input {
+    /* Positioning */
+    /* Box-model */
     /* Typography */
     text-align: center;
     outline: none;

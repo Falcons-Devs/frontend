@@ -5,6 +5,7 @@ export const Wrap = styled.div`
   /* Box-model */
   margin: 20px auto;
   height: inherit;
+  width: 1200px;
   max-width: 1200px;
   /* Typography */
   /* Visual */
@@ -17,15 +18,22 @@ export const Wrap = styled.div`
     /* Typography */
     /* Visual */
   }
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
 `;
 
 export const Container = styled.div`
   /* Positioning */
   /* Box-model */
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  justify-items: center;
   /* Typography */
   /* Visual */
   /* Responsive */
@@ -34,6 +42,16 @@ export const Container = styled.div`
     /* Box-model */
     grid-template-rows: 190px 190px 1fr;
     grid-row-gap: 20px;
+    /* Typography */
+    /* Visual */
+  }
+  @media (max-width: 375px) {
+    /* Positioning */
+    /* Box-model */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 190px 150px 150px;
+    grid-row-gap: 0;
+    align-items: center;
     /* Typography */
     /* Visual */
   }

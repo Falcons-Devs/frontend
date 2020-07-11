@@ -11,22 +11,20 @@ import { Buttons } from "../Buttons";
 // Import presentational components of styled components
 import { Person, PersonName, Information, Link } from "./styles";
 
-export const CardPerson = ({ name, email, schedule, to, type }) => {
+export const CardPerson = ({ name, email, schedule, to, type, title }) => {
   return (
     <Person>
       <PersonName>
         <IconAccountCircle width="80px" height="90px" fill="#DE18AD" />
         <div>
-          <input type="text" defaultValue={name} />
+          <p>{name}</p>
           {type ? <p>{type}</p> : ""}
         </div>
       </PersonName>
       <Information>
         <div>
-          <label htmlFor="cost">Email</label>
-          <input type="text" className="duration" defaultValue={email} />
-          <label htmlFor="duration">Horario</label>
-          <input type="text" className="hous" defaultValue={schedule} />
+          <p>{email}</p>
+          {schedule ? <p>Horario: {schedule}</p> : ""}
         </div>
       </Information>
       <Link to={to}>
@@ -37,7 +35,7 @@ export const CardPerson = ({ name, email, schedule, to, type }) => {
             <IconAdd width="30px" height="30px" fill="#de18ad" />
           )
         ) : (
-          <Buttons value="Ver agenda" color="#2DD881" />
+          <Buttons value={title} color="#2DD881" />
         )}
       </Link>
     </Person>

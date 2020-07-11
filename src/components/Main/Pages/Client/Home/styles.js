@@ -20,8 +20,10 @@ export const Wrap = styled.div`
   /* Responsive */
   @media (max-width: 375px) {
     /* Positioning */
+    display: flex;
+    justify-content: center;
     /* Box-model */
-    margin: 0 auto;
+    margin: 0 10px;
     /* Typography */
     /* Visual */
   }
@@ -33,16 +35,14 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 20px;
-  align-items: center;
-  justify-items: center;
   /* Typography */
   /* Visual */
   /* Responsive */
   @media (max-width: 375px) {
     /* Positioning */
     /* Box-model */
+    grid-template-columns: 150px 150px;
     grid-template-rows: 180px 1fr;
-    grid-gap: 5px;
     /* Typography */
     /* Visual */
   }

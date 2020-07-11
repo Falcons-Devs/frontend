@@ -17,7 +17,8 @@ export const ImagesWithProcess = ({
   height,
   to,
   responsivetablet,
-  responsivemobile,
+  responsivemobilewidth,
+  responsivemobileheight,
 }) => {
   // Condition for select the image of accorded the number receive in the props
   let cover;
@@ -34,7 +35,8 @@ export const ImagesWithProcess = ({
       width={width}
       height={height}
       responsivetablet={responsivetablet}
-      responsivemobile={responsivemobile}
+      responsivemobilewidth={responsivemobilewidth}
+      responsivemobileheight={responsivemobileheight}
     >
       <Article>
         <Section>
