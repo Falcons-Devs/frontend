@@ -4,8 +4,8 @@ export const Wrap = styled.div`
   /* Box-model */
   margin: 20px auto;
   height: inherit;
-  width: 1200px;
   max-width: 1200px;
+  padding: 0px 20px;
   /* Typography */
   /* Visual */
   /* Misc */

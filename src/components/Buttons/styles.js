@@ -7,7 +7,7 @@ export const Button = styled.button`
   justify-content: center;
   padding: 8px 50px;
   margin: 30px auto;
-  width: 90%;
+  /* width: 90%; */
   /* Typography */
   color: #fcfcfc;
   font-size: 1.5em;
@@ -20,6 +20,7 @@ export const Button = styled.button`
   @media (max-width: 768px) {
     /* Positioning */
     /* Box-model */
+    width: ${(props) => (props.responsivetablet ? "125px" : "")};
     justify-content: ${(props) => (props.responsivetablet ? "center" : "")};
     /* Typography */
     font-size: ${(props) => (props.responsivetablet ? "1em" : "")};
