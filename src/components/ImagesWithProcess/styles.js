@@ -29,7 +29,7 @@ export const Link = styled(LinkRouter)`
     /* Box-model */
     margin-bottom: 30px;
     width: 300px;
-    height: ${(props) => (props.responsivetablet ? "184px" : "")};
+    height: ${(props) => props.responsivetablet};
     /* Typography */
     /* Visual */
     border-radius: 20px;
@@ -39,8 +39,8 @@ export const Link = styled(LinkRouter)`
   @media (max-width: 375px) {
     /* Positioning */
     /* Box-model */
-    width: ${(props) => (props.responsivemobile ? "300px" : "")};
-    height: ${(props) => (props.responsivemobile ? "150px" : "")};
+    width: ${(props) => props.responsivemobilewidth};
+    height: ${(props) => props.responsivemobileheight};
     /* Typography */
     /* Visual */
     border-radius: 5px;

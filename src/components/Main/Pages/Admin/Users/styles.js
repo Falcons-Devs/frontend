@@ -4,7 +4,7 @@ export const Wrap = styled.div`
   /* Positioning */
   /* Box-model */
   margin: 20px auto;
-  width: 1200px;
+  width: 100vw;
   max-width: 1200px;
   padding: 0px 20px;
   /* Typography */
@@ -50,6 +50,8 @@ export const Main = styled.div`
 `;
 export const Table = styled.div`
   /* Positioning */
+  display: flex;
+  flex-wrap: wrap;
   /* Box-model */
   grid-column: 1 / 4;
   grid-row: 2 / 3;

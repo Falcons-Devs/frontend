@@ -25,7 +25,7 @@ export const MyProfile = styled.section`
     /* Positioning */
     /* Box-model */
     padding: 10px 10px;
-    width: 90vw;
+    width: 85vw;
     /* Typography */
     /* Visual */
     border-width: 1px;

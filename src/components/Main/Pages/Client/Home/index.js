@@ -38,15 +38,17 @@ export const Home = () => {
                     nameImage="1"
                     alt="Mis citas"
                     to="/client-appointments"
+                    responsivemobilewidth="40vw"
+                    responsivemobileheight="200px"
                   />{" "}
                 </MyAppointment>
                 <CreateAppointment>
                   <ImagesWithProcess
                     nameImage="5"
                     alt="Crear cita"
-                    width="1200px"
-                    height="300px"
                     to="/client-create-appointment"
+                    responsivemobilewidth="40vw"
+                    responsivemobileheight="200px"
                   />
                 </CreateAppointment>
               </Container>
