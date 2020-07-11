@@ -22,22 +22,22 @@ export const ShowAppointmentHistory = ({
       <NextAppointment>
         <div>
           <label htmlFor="cost">Costo</label>
-          <input type="text" className="cost" value={cost} />
+          <input type="text" className="cost" defaultValue={cost} />
           <label htmlFor="duration">Duración</label>
-          <input type="text" className="hous" value={duration} />
+          <input type="text" className="hous" defaultValue={duration} />
         </div>
         <h4>Descripción</h4>
         <div>
           <label htmlFor="process">Procedimiento 1</label>
-          <input type="text" className="process" value={process} />
+          <input type="text" className="process" defaultValue={process} />
         </div>
         <div>
           <label htmlFor="process">Procedimiento 2</label>
-          <input type="text" className="process" value={process} />
+          <input type="text" className="process" defaultValue={process} />
         </div>
         <div>
           <label htmlFor="process">Procedimiento 3</label>
-          <input type="text" className="process" value={process} />
+          <input type="text" className="process" defaultValue={process} />
         </div>
       </NextAppointment>
     </MyProfile>
