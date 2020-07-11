@@ -7,6 +7,7 @@ import { createGlobalStyle } from "styled-components";
 /* Typography */
 /* Visual */
 /* Misc */
+/* Responsive */
 
 /*-- Misc: (Miscellaneous - can be known as all properties that are highly experimental or do not fit any other category) --*/
 
@@ -69,8 +70,6 @@ export const GlobalStyle = createGlobalStyle`
     /* Box-model */
     width: 100%;
     margin-bottom: 60px;
-    ${"" /* margin: 0 auto;
-    height: 100vh; */}
     /* Typography */
     font-size: 17px;
     color: #202124;
@@ -79,15 +78,27 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #fff;
     /* Misc */
     overscroll-behavior: none; /* Avoid bounces when we scroll */
-    
+
+    /* Responsive */
     @media (max-width: 375px) {
-      margin-bottom: 150px;
+      /* Positioning */
+      /* Box-model */
+        margin-bottom: 150px;
+      /* Typography */
+      /* Visual */
+      /* Misc */
     }
   }
 
   body a {
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
     color: #3266D5;
     text-decoration: none;
     font-weight: 500;
+    /* Visual */
+    /* Misc */
+    /* Responsive */
   }
 `;

@@ -12,6 +12,7 @@ export const Beautician = () => {
   });
   return (
     <Wrap>
+      {/* Title creation, creation button and redirection arrow */}
       <Title>
         <NameStatus title="Esteticistas" to={"/admin"} />
         <Link to="/admin-create-beautician">
@@ -26,6 +27,7 @@ export const Beautician = () => {
           )}
         </Link>
       </Title>
+      {/* Creation of cards to present information to beauticians */}
       <Container>
         <ArrowButton></ArrowButton>
         <CardPerson

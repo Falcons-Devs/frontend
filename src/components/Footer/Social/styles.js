@@ -19,6 +19,7 @@ export const Li = styled.li`
   /* Typography */
   /* Visual */
   /* Misc */
+  /* Responsive */
 `;
 
 export const Anchor = styled.a`
@@ -27,4 +28,5 @@ export const Anchor = styled.a`
   /* Typography */
   /* Visual */
   /* Misc */
+  /* Responsive */
 `;
