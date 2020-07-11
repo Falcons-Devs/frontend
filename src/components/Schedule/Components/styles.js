@@ -61,6 +61,7 @@ export const TimeOfDayStyle = styled.div`
   font-size: 20px;
   /* Visual */
   /* Misc */
+  /* Responsive */
 `;
 
 export const SummaryOfTheAppointmentStyle = styled.div`
@@ -82,7 +83,12 @@ export const SummaryOfTheAppointmentStyle = styled.div`
   cursor: pointer;
 
   &:hover {
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
+    /* Visual */
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+    /* Responsive */
   }
 `;
 
@@ -98,7 +104,11 @@ export const Name = styled.div`
   /* Misc */
   /* Responsive */
   @media (max-width: 768px) {
+    /* Positioning */
+    /* Box-model */
     display: none;
+    /* Typography */
+    /* Visual */
   }
 `;
 

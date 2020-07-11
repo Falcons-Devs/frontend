@@ -12,7 +12,12 @@ export const Nav = styled.nav`
   /* Misc */
   /* Responsive */
   @media (max-width: 768px) {
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
     font-size: 24px;
+    /* Visual */
+    /* Misc */
   }
 `;
 
@@ -50,8 +55,21 @@ export const Link = styled(LinkRouter)`
     /* Misc */
     /* Responsive */
     @media (max-width: 375px) {
+      /* Positioning */
+      /* Box-model */
+      /* Typography */
+      /* Visual */
       border: none;
+      /* Misc */
     }
+  }
+  @media (max-width: 768px) {
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
+    font-size: 24px;
+    /* Visual */
+    /* Misc */
   }
 
   &[aria-current] {
@@ -65,19 +83,33 @@ export const Link = styled(LinkRouter)`
     /* Misc */
     /* Responsive */
     @media (max-width: 375px) {
+      /* Positioning */
+      /* Box-model */
+      /* Typography */
+      /* Visual */
       border: none;
+      /* Misc */
     }
-  }
-  @media (max-width: 768px) {
-    font-size: 24px;
   }
 `;
 
 export const Profile = styled.div`
+  /* Positioning */
+  /* Box-model */
   margin-left: 15px;
+  /* Typography */
+  /* Visual */
+  /* Misc */
+  /* Responsive */
 `;
 
 export const NavMobile = styled.nav`
+  /* Positioning */
+  /* Box-model */
   display: flex;
   align-items: center;
+  /* Typography */
+  /* Visual */
+  /* Misc */
+  /* Responsive */
 `;

@@ -18,6 +18,7 @@ export const Client = () => {
         <Hero>
           <BackgroudImages numberImg="3" />
         </Hero>
+        {/* Creating the customer table */}
         <Table>
           {screen.width <= 375 ? (
             <>

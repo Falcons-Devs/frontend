@@ -1,7 +1,7 @@
 {
     "name": "falcons-devs",
     "version": "1.0.0",
-    "description": "Repositorio del código frontend para el proyecto final C2 [OneClickStyle](https://ocs.life)",
+    "description": "Repository of the frontend code for the final project C2 [OneClickStyle](https://ocs.life)",
     "main": "index.js",
     "scripts": {
         "build": "webpack --mode production",
