@@ -19,21 +19,26 @@ export const Wrap = styled.div`
     /* Visual */
   }
   @media (max-width: 375px) {
+    /* Positioning */
+    /* Box-model */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    /* Typography */
+    /* Visual */
+    /* Misc */
   }
 `;
 
 export const Container = styled.div`
   /* Positioning */
   /* Box-model */
-  width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  justify-items: center;
   /* Typography */
   /* Visual */
   /* Responsive */
