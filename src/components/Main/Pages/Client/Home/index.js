@@ -47,6 +47,8 @@ export const Home = () => {
                     nameImage="5"
                     alt="Crear cita"
                     to="/client-create-appointment"
+                    width="100%"
+                    height="300px"
                     responsivemobilewidth="40vw"
                     responsivemobileheight="200px"
                   />

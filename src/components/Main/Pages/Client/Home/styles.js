@@ -4,8 +4,10 @@ export const Wrap = styled.div`
   /* Box-model */
   margin: 20px auto;
   height: inherit;
+  width: 100%;
   max-width: 1200px;
   padding: 0px 20px;
+  display: grid;
   /* Typography */
   /* Visual */
   /* Misc */
@@ -34,6 +36,7 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  justify-items: center;
   grid-gap: 20px;
   /* Typography */
   /* Visual */
@@ -102,6 +105,8 @@ export const CreateAppointment = styled.div`
   /* Box-model */
   grid-column: 1 / 3;
   grid-row: 2 / 3;
+  align-items: flex-start;
+  width: 90%;
   /* Typography */
   /* Visual */
   /* Responsive */
