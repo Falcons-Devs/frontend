@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, Redirect } from "@reach/router";
+import Swal from "sweetalert2";
 import Axios from "axios";
 
 // Import the icons svg
@@ -27,13 +28,26 @@ export const Login = () => {
 
   return (
     <Context.Consumer>
-      {({ changeToken }) => {
+      {({ changeToken, token }) => {
         const auth = async (e) => {
           e.preventDefault();
-          const result = await Axios.post("http://104.198.182.133/auth/login", {
-            email: email,
-            password: password,
-          });
+          try {
+            const result = await Axios.post(
+              "http://104.198.182.133/auth/login",
+              {
+                email: email,
+                password: password,
+              }
+            );
+            changeToken(result.data.body);
+          } catch (error) {
+            return Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "¡Datos incorrectos!",
+              footer: "<h3>One Click Style</h3>",
+            });
+          }
           let user;
           const admins = await Axios.get("http://104.198.182.133/admin");
           for (const key in admins.data.body) {
@@ -49,12 +63,24 @@ export const Login = () => {
               }
             }
           }
-          changeToken(result.data.body);
+
           if (user === "Admin") {
             setRedirect("/admin");
+            Swal.fire({
+              icon: "success",
+              title: "Inicio de sesión exitoso",
+              showConfirmButton: false,
+              timer: 3000,
+            });
           }
           if (user === "Client") {
             setRedirect("/client");
+            Swal.fire({
+              icon: "success",
+              title: "Inicio de sesión exitoso",
+              showConfirmButton: false,
+              timer: 3000,
+            });
           }
         };
         if (redirect) return <Redirect to={redirect} />;

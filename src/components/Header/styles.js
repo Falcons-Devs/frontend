@@ -10,7 +10,7 @@ export const HeaderStyle = styled.header`
   /* Visual */
   background: #02b3b1;
   /* Misc */
-  z-index: 999999;
+  z-index: 100;
 
   @media (max-width: 768px) {
     /* Positioning */

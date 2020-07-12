@@ -1,5 +1,6 @@
 import React from "react";
 import Context from "../../Context";
+import Swal from "sweetalert2";
 import { Redirect } from "@reach/router";
 
 export const Logout = () => (
@@ -7,6 +8,12 @@ export const Logout = () => (
     {({ changeType, changeToken }) => {
       changeType("Public");
       changeToken("");
+      Swal.fire({
+        icon: "success",
+        title: "Cierre de sesión exitoso",
+        showConfirmButton: false,
+        timer: 3000,
+      });
       return <Redirect to="/" />;
     }}
   </Context.Consumer>
