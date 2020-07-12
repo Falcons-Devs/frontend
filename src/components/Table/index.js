@@ -27,7 +27,7 @@ export const Table = (props) => {
       children.push(
         <td>
           <Link to={`/admin-edit-user/${data[i].id}`}>
-            <IconEdit width="25px" height="25px" />
+            <IconEdit width="25px" height="25px" fill="#de18ad" />
           </Link>
         </td>
       );

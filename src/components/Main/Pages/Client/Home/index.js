@@ -49,6 +49,7 @@ export const Home = () => {
                     to="/client-create-appointment"
                     width="100%"
                     height="300px"
+                    responsivetablet="368px"
                     responsivemobilewidth="40vw"
                     responsivemobileheight="200px"
                   />
