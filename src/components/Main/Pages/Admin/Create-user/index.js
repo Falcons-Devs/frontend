@@ -38,14 +38,18 @@ class CreateUserAdmin extends React.Component {
         console.log("Guardado");
         console.log(this.state.form);
         let url = "";
+        let headers = "";
         if (this.state.form.type === "admin") {
           url = "http://104.198.182.133/admin";
+          token =
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkRBcEtJcXE0TUEiLCJlbWFpbCI6ImhlY3Rvcm1yQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDA1JE1NY3U5cTdCbjl3UkFLZVNBMXFGdC45TG5hdkhOdXcyQnBPU1JYS3A5VGFBTlpnY3pwY3ZlIiwiaWF0IjoxNTk0NTM5MjkyfQ.3XMew-f3W-w2ZWifM3LZil5zT2z9c7WXtGZW3_IawxY";
+          headers = `headers: { Authorization: 'Bearer ${token}' }`;
         } else if (this.state.form.type === "beautician") {
           // url = "http://104.198.182.133/admin/stylist/:id";
         } else if (this.state.form.type === "client") {
           url = "http://104.198.182.133/user";
         }
-        const result = await Axios.post(url, {
+        const result = await Axios.post(url, headers, {
           email: this.state.form.email,
           name: this.state.form.name,
           password: this.state.form.password,
