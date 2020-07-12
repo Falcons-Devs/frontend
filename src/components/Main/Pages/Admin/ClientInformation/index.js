@@ -48,7 +48,7 @@ export const ClientInformation = ({ clientId }) => {
       {({ changeType }) => {
         changeType("Admin");
         if (!client) return <Loader />;
-        let table;
+        let table, cards;
         if (topic === "History" || topic === "Following") {
           table = (
             <TableInfo
@@ -65,6 +65,29 @@ export const ClientInformation = ({ clientId }) => {
               data={[]}
             />
           );
+          cards = (
+            <>
+              <h2>
+                {topic === "History" ? "Historial de citas" : "Próximas citas"}
+              </h2>
+              <CardInformation
+                name="Cita 1"
+                data={{
+                  name: "Jessica Olmos",
+                  day: "03/08/2020",
+                  time: "18:00 horas",
+                  duration: "2:00 horas",
+                  procedures: [
+                    "Procedimiento 1",
+                    "Procedimiento 2",
+                    "Procedimiento 3",
+                  ],
+                  cost: "$ 100",
+                }}
+                appointment
+              />
+            </>
+          );
         }
         if (topic === "Procedures" || topic === "Payments") {
           table = (
@@ -79,6 +102,24 @@ export const ClientInformation = ({ clientId }) => {
               }
               data={[]}
             />
+          );
+          cards = (
+            <>
+              <h2>
+                {topic === "Procedures"
+                  ? "Procedimientos realizados"
+                  : "Pagos realizados"}
+              </h2>
+              <CardInformation
+                name={topic === "Procedures" ? "Procedimiento 1" : "Pago 1"}
+                data={
+                  topic === "Procedures"
+                    ? { name: "Procedimiento 1", times: "2" }
+                    : { day: "03/08/2020", time: "18:00 horas", cost: "$ 100" }
+                }
+                type={topic === "Procedures" ? "procedures" : "payments"}
+              />
+            </>
           );
         }
         return (
@@ -95,15 +136,16 @@ export const ClientInformation = ({ clientId }) => {
               {screen.width <= 375 ? (
                 <SelectContainer>
                   <IconArrowNext width="50px" height="50px" fill="#de18ad" />
-                  <Select>
-                    <option value="historical" selected>
-                      Historial de citas
+                  <Select onChange={(e) => setTopic(e.target.value)}>
+                    <option value="" selected disabled>
+                      Elige una opcion
                     </option>
-                    <option value="procedures">
+                    <option value="History">Historial de citas</option>
+                    <option value="Procedures">
                       Procedimientos realizados
                     </option>
-                    <option value="payments">Pagos realizados</option>
-                    <option value="appointments">Próximas citas</option>
+                    <option value="Payments">Pagos realizados</option>
+                    <option value="Following">Próximas citas</option>
                   </Select>
                 </SelectContainer>
               ) : (
@@ -143,33 +185,7 @@ export const ClientInformation = ({ clientId }) => {
                 </>
               )}
               {/* Creating the customer table */}
-              <Table>
-                {table}
-                {/* {table === false ? (
-                    screen.width <= 375 ? (
-                      <>
-                        <h2>Historial de citas</h2>
-                        <CardInformation name="Cita 1" />
-                        <CardInformation name="Cita 2" />
-                      </>
-                    ) : (
-                      <TableInfo
-                        col1="#"
-                        col2="Día"
-                        col3="Hora"
-                        col4="Esteticista"
-                        col5="Procedimientos"
-                        col6="Duración"
-                        col7="Horas"
-                        col8="Costos"
-                        title="[Citas | Procedimientos | Pagos | Futuras citas ] "
-                        data={[]}
-                      />
-                    )
-                  ) : (
-                    ""
-                  )} */}
-              </Table>
+              <Table>{screen.width <= 375 ? cards : table}</Table>
             </Container>
           </Wrap>
         );
