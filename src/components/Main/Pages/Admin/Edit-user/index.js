@@ -1,137 +1,155 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Axios from "axios";
-import { Loader } from "../../../../Loader";
 
 // Import the components
 import { NameStatus } from "../../../../NameStatus";
 import { HeaderImages } from "../../../../HeaderImages";
-import { Buttons } from "../../../../Buttons";
-
-import { IconEmail } from "../../../../../assets/static/icon-email";
-import { IconPassword } from "../../../../../assets/static/icon-password";
-import { IconAccountCircle } from "../../../../../assets/static/icon-accountCircle";
+import { AdminForms } from "../../../../AdminForms";
 
 // Import presentational components of styled components
-import {
-  Container,
-  Main,
-  Hero,
-  Wrap,
-  CancelButton,
-  CreateButton,
-  Form,
-  InputContainer,
-  SectionForm,
-  Title,
-} from "./styles";
+import { Container, Main, Hero, Wrap } from "./styles";
 
 // Import useEffect So that when the user changes the page it goes to the top
-export const EditUser = ({ userId }) => {
-  const [data, setData] = useState(false);
-  const [user, setUser] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  useEffect(() => {
-    window.scroll(0, 0);
-    const fetchData = async () => {
-      const result = await Axios.get(`http://104.198.182.133/user/"${userId}"`);
-      if (result.data.body.length === 0) {
-        const admins = await Axios.get(
-          `http://104.198.182.133/admin/"${userId}"`
-        );
-        setUser(admins.data.body);
-      } else {
-        setUser(result.data.body);
-      }
-      setName(user[0].name);
-      setEmail(user[0].email);
-      setPassword("123456");
-      setData(true);
-    };
-    if (data === false) fetchData();
-  });
-  const editUser = async () => {
-    // TODO: Create function of PUT
-    console.log(name);
-    console.log(email);
-    console.log(password);
-    // const result = await Axios.post("http://104.198.182.133/user");
+class editUserAdmin extends React.Component {
+  state = {
+    loading: true,
+    error: null,
+    form: {
+      name: "",
+      email: "",
+      type: "",
+      password: "",
+    },
   };
-  if (!user) return <Loader />;
-  return (
-    <Wrap>
-      <Container>
-        <Main>
-          {/* Title creation and redirection arrow */}
-          <NameStatus title="Editar usuario" to="/admin-users" />
-        </Main>
-        <Hero>
-          {/* Show image component according to number */}
-          <HeaderImages numberImg="4" />
-        </Hero>
-        {/* Form creation */}
-        <Form>
-          <SectionForm>
-            <InputContainer>
-              <div>
-                <label htmlFor="name">
-                  {" "}
-                  <IconAccountCircle
-                    width="50px"
-                    height="50px"
-                    fill="#DE18AD"
-                  />{" "}
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  placeholder="Nombre"
-                  defaultValue={user ? user[0].name : ""}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </div>
-              <div>
-                <label htmlFor="email">
-                  {" "}
-                  <IconEmail width="50px" height="50px" fill="#DE18AD" />{" "}
-                </label>
-                <input
-                  type="text"
-                  id="email"
-                  placeholder="Correo electronico"
-                  defaultValue={user ? user[0].email : ""}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-              <div>
-                <label htmlFor="password">
-                  {" "}
-                  <IconPassword
-                    width="50px"
-                    height="50px"
-                    fill="#DE18AD"
-                  />{" "}
-                </label>
-                <input
-                  type="password"
-                  id="password"
-                  placeholder="Password"
-                  defaultValue={user ? "123456" : ""}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </div>
-            </InputContainer>
-            <Title>Editar Usuario</Title>
-            <CreateButton>
-              <Buttons color="#2DD881" value="Editar" onClick={editUser} />
-            </CreateButton>
-            <CancelButton>
-              <Buttons color="#DE3C48" value="Cancelar" />
-            </CancelButton>
-          </SectionForm>
-        </Form>
-      </Container>
-    </Wrap>
-  );
-};
+
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData = async (e) => {
+    this.setState({ loading: true, error: null });
+
+    try {
+      const data = await Axios.get(
+        `http://104.198.182.133/user/"${this.props.userId}"`
+      );
+      if (data.data.body.length > 0) {
+        this.setState({
+          loading: false,
+          form: {
+            name: data.data.body[0].name,
+            email: data.data.body[0].email,
+            type: "client",
+          },
+        });
+      } else {
+        const data = await Axios.get(
+          `http://104.198.182.133/admin/"${this.props.userId}"`
+        );
+        if (data.data.body.length > 0) {
+          this.setState({
+            loading: false,
+            form: {
+              name: data.data.body[0].name,
+              email: data.data.body[0].email,
+              type: "admin",
+            },
+          });
+        } else {
+          const data = await Axios.get(
+            `http://104.198.182.133/stylist/"${this.props.userId}"`
+          );
+          if (data.data.body.length > 0) {
+            this.setState({
+              loading: false,
+              form: {
+                name: data.data.body[0].name,
+                email: data.data.body[0].email,
+                type: "beautician",
+              },
+            });
+          }
+        }
+      }
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
+  };
+
+  handleChange = (e) => {
+    console.log("Change");
+    this.setState({
+      form: {
+        ...this.state.form,
+        [e.target.id]: e.target.value,
+      },
+    });
+  };
+
+  handleClick = async (e) => {
+    this.setState({ loading: true, error: null });
+
+    // try {
+    //   if (
+    //     this.state.form.email !== "" &&
+    //     this.state.form.name !== "" &&
+    //     this.state.form.password !== "" &&
+    //     this.state.form.type !== ""
+    //   ) {
+    //     console.log("Guardado");
+    //     console.log(this.state.form);
+    //     let url = "";
+    //     let headers = "";
+    //     if (this.state.form.type === "admin") {
+    //       const token = localStorage.getItem("token");
+    //       url = "http://104.198.182.133/admin";
+    //       headers = `headers: { Authorization: 'Bearer ${token}' }`;
+    //     } else if (this.state.form.type === "beautician") {
+    //       // url = "http://104.198.182.133/admin/stylist/:id";
+    //     } else if (this.state.form.type === "client") {
+    //       url = "http://104.198.182.133/user";
+    //     }
+    //     const result = await Axios.post(url, headers, {
+    //       email: this.state.form.email,
+    //       name: this.state.form.name,
+    //       password: this.state.form.password,
+    //     });
+    //     console.log(result.status);
+    //   } else {
+    //     console.log("Ningún campo debe estar vació");
+    //   }
+    //   this.setState({ loading: false });
+    // } catch (error) {
+    //   this.setState({ loading: false, error: error });
+    //   console.log(error);
+    // }
+  };
+
+  render() {
+    return (
+      <Wrap>
+        <Container>
+          <Main>
+            {/* Title creation and redirection arrow */}
+            <NameStatus title="Editar usuario" to="/admin-users" />
+          </Main>
+          <Hero>
+            {/* Show image component according to number */}
+            <HeaderImages numberImg="4" />
+          </Hero>
+          {/* Form creation */}
+          <AdminForms
+            actionUser="Editar Usuario"
+            type="Usuario"
+            buttonAction="Editar"
+            onClick={this.handleClick}
+            onChange={this.handleChange}
+            formValues={this.state.form}
+          />
+        </Container>
+      </Wrap>
+    );
+  }
+}
+
+export default editUserAdmin;

@@ -28,6 +28,7 @@ export const Home = () => {
     <Context.Consumer>
       {({ changeType, token }) => {
         console.log(token);
+        localStorage.setItem("token", token);
         changeType("Public");
         return (
           <>

@@ -2,12 +2,10 @@ import React from "react";
 import Axios from "axios";
 
 // Import the components
+import Context from "../../../../../Context";
 import { NameStatus } from "../../../../NameStatus";
 import { HeaderImages } from "../../../../HeaderImages";
 import { AdminForms } from "../../../../AdminForms";
-
-// Import the Navigation Link
-import { Link } from "@reach/router";
 
 // Import presentational components of styled components
 import { Container, Main, Hero, Wrap } from "./styles";
@@ -40,10 +38,9 @@ class CreateUserAdmin extends React.Component {
         let url = "";
         let headers = "";
         if (this.state.form.type === "admin") {
+          const token = localStorage.getItem("token");
           url = "http://104.198.182.133/admin";
-          token =
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkRBcEtJcXE0TUEiLCJlbWFpbCI6ImhlY3Rvcm1yQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDA1JE1NY3U5cTdCbjl3UkFLZVNBMXFGdC45TG5hdkhOdXcyQnBPU1JYS3A5VGFBTlpnY3pwY3ZlIiwiaWF0IjoxNTk0NTM5MjkyfQ.3XMew-f3W-w2ZWifM3LZil5zT2z9c7WXtGZW3_IawxY";
-          headers = `headers: { Authorization: 'Bearer ${token}' }`;
+          headers = `headers: { Authorization: 'Bearer Token ${token}' }`;
         } else if (this.state.form.type === "beautician") {
           // url = "http://104.198.182.133/admin/stylist/:id";
         } else if (this.state.form.type === "client") {
@@ -76,26 +73,34 @@ class CreateUserAdmin extends React.Component {
 
   render() {
     return (
-      <Wrap>
-        <Container>
-          <Main>
-            {/* Title creation and redirection arrow */}
-            <NameStatus title="Crear usuario" to="/admin-users" />
-          </Main>
-          <Hero>
-            {/* Show image component according to number */}
-            <HeaderImages numberImg="4" />
-          </Hero>
-          {/* Form creation */}
-          <AdminForms
-            actionUser="Crear Usuario"
-            type="Usuario"
-            buttonAction="Crear"
-            onClick={this.handleClick}
-            onChange={this.handleChange}
-          />
-        </Container>
-      </Wrap>
+      <Context.Consumer>
+        {({ token }) => {
+          console.log(token);
+          return (
+            <Wrap>
+              <Container>
+                <Main>
+                  {/* Title creation and redirection arrow */}
+                  <NameStatus title="Crear usuario" to="/admin-users" />
+                </Main>
+                <Hero>
+                  {/* Show image component according to number */}
+                  <HeaderImages numberImg="4" />
+                </Hero>
+                {/* Form creation */}
+                <AdminForms
+                  actionUser="Crear Usuario"
+                  type="Usuario"
+                  buttonAction="Crear"
+                  onClick={this.handleClick}
+                  onChange={this.handleChange}
+                  formValues={this.state.form}
+                />
+              </Container>
+            </Wrap>
+          );
+        }}
+      </Context.Consumer>
     );
   }
 }

@@ -31,7 +31,7 @@ import { CreateBeautician as CreateBeauticianAdmin } from "./components/Main/Pag
 import { Diary as DiaryAdmin } from "./components/Main/Pages/Admin/Diary";
 import { Users as UsersAdmin } from "./components/Main/Pages/Admin/Users";
 import CreateUserAdmin from "./components/Main/Pages/Admin/Create-user/index.js";
-import { EditUser as EditUserAdmin } from "./components/Main/Pages/Admin/Edit-user";
+import EditUserAdmin from "./components/Main/Pages/Admin/Edit-user";
 import { AdminForms } from "./components/AdminForms";
 
 export const App = () => {

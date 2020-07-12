@@ -27,6 +27,7 @@ export const AdminForms = ({
   type,
   onClick,
   onChange,
+  formValues,
 }) => {
   useEffect(() => {
     window.scroll(0, 0);
@@ -46,6 +47,7 @@ export const AdminForms = ({
             id="name"
             placeholder="Nombre"
             onChange={onChange}
+            value={formValues.name}
           />
         </div>
         <div>
@@ -58,6 +60,7 @@ export const AdminForms = ({
             id="email"
             placeholder="Coreo electronico"
             onChange={onChange}
+            value={formValues.email}
           />
         </div>
         <div>
@@ -77,7 +80,12 @@ export const AdminForms = ({
             {" "}
             <IconType width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <select name="type" id="type" onChange={onChange}>
+          <select
+            name="type"
+            id="type"
+            onChange={onChange}
+            value={formValues.type}
+          >
             <option value="">Elige una opción</option>
             <option value="admin">Administrador</option>
             <option value="beautician">Esteticista</option>
