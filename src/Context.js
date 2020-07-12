@@ -4,6 +4,7 @@ const Context = createContext();
 const Provider = ({ children }) => {
   const [userType, setUserType] = useState("Public");
   const [token, setToken] = useState("");
+  const [userId, setIdUser] = useState("");
   const value = {
     userType,
     changeType: (name) => {
@@ -12,6 +13,10 @@ const Provider = ({ children }) => {
     token,
     changeToken: (token) => {
       setToken(token);
+    },
+    userId,
+    changeIdUser: (userId) => {
+      setIdUser(userId);
     },
   };
 
