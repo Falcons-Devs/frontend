@@ -58,7 +58,7 @@ export const App = () => {
         {/* Admin */}
         <HomeAdmin path="/admin" />
         <ClientAdmin path="/admin-clients" />
-        <ClientInformationAdmin path="/admin-client-info" />
+        <ClientInformationAdmin path="/admin-client-info/:clientId" />
         <ProceduresAdmin path="/admin-procedures" />
         <CreateProcedureAdmin path="/admin-create-procedure" />
         <BeauticianAdmin path="/admin-beautician" />

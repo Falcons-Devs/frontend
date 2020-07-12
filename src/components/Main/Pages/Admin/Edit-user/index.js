@@ -2,6 +2,7 @@ import React from "react";
 import Axios from "axios";
 
 // Import the components
+import Context from "../../../../../Context";
 import { NameStatus } from "../../../../NameStatus";
 import { HeaderImages } from "../../../../HeaderImages";
 import { AdminForms } from "../../../../AdminForms";
@@ -125,27 +126,34 @@ class editUserAdmin extends React.Component {
 
   render() {
     return (
-      <Wrap>
-        <Container>
-          <Main>
-            {/* Title creation and redirection arrow */}
-            <NameStatus title="Editar usuario" to="/admin-users" />
-          </Main>
-          <Hero>
-            {/* Show image component according to number */}
-            <HeaderImages numberImg="4" />
-          </Hero>
-          {/* Form creation */}
-          <AdminForms
-            actionUser="Editar Usuario"
-            type="Usuario"
-            buttonAction="Editar"
-            onClick={this.handleClick}
-            onChange={this.handleChange}
-            formValues={this.state.form}
-          />
-        </Container>
-      </Wrap>
+      <Context.Consumer>
+        {({ changeType }) => {
+          changeType("Admin");
+          return (
+            <Wrap>
+              <Container>
+                <Main>
+                  {/* Title creation and redirection arrow */}
+                  <NameStatus title="Editar usuario" to="/admin-users" />
+                </Main>
+                <Hero>
+                  {/* Show image component according to number */}
+                  <HeaderImages numberImg="4" />
+                </Hero>
+                {/* Form creation */}
+                <AdminForms
+                  actionUser="Editar Usuario"
+                  type="Usuario"
+                  buttonAction="Editar"
+                  onClick={this.handleClick}
+                  onChange={this.handleChange}
+                  formValues={this.state.form}
+                />
+              </Container>
+            </Wrap>
+          );
+        }}
+      </Context.Consumer>
     );
   }
 }

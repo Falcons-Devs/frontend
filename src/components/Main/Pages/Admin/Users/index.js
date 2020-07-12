@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
 // Import the components
+import Context from "../../../../../Context";
 import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
 import { Table as TableInfo } from "../../../../Table";
@@ -71,29 +72,40 @@ export const Users = () => {
           name={item.name}
           to={`/admin-edit-user/${item.id}`}
           email={item.email}
-          type="Cliente"
+          type={item.type}
           title="Editar"
         />
       );
     });
   }
   return (
-    <Wrap>
-      <Container>
-        <Main>
-          {/* Title creation, creation button and redirection arrow */}
-          <NameStatus title="Ver usuarios" to="/admin" />
-          <Link to="/admin-create-user">
-            {screen.width <= 375 ? (
-              <IconAdd width="40px" height="40px" fill="#2DD881" />
-            ) : (
-              <Buttons value="Crear usuario" responsivetablet color="#2DD881" />
-            )}
-          </Link>
-        </Main>
-        {/* Creating the customer table */}
-        <Table>{content.length === 0 ? <Loader /> : mainContent}</Table>
-      </Container>
-    </Wrap>
+    <Context.Consumer>
+      {({ changeType }) => {
+        changeType("Admin");
+        return (
+          <Wrap>
+            <Container>
+              <Main>
+                {/* Title creation, creation button and redirection arrow */}
+                <NameStatus title="Ver usuarios" to="/admin" />
+                <Link to="/admin-create-user">
+                  {screen.width <= 375 ? (
+                    <IconAdd width="40px" height="40px" fill="#2DD881" />
+                  ) : (
+                    <Buttons
+                      value="Crear usuario"
+                      responsivetablet
+                      color="#2DD881"
+                    />
+                  )}
+                </Link>
+              </Main>
+              {/* Creating the customer table */}
+              <Table>{content.length === 0 ? <Loader /> : mainContent}</Table>
+            </Container>
+          </Wrap>
+        );
+      }}
+    </Context.Consumer>
   );
 };

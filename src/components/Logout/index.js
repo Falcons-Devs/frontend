@@ -7,6 +7,7 @@ export const Logout = () => (
   <Context.Consumer>
     {({ changeType, changeToken }) => {
       changeType("Public");
+      localStorage.removeItem("token");
       changeToken("");
       Swal.fire({
         icon: "success",
