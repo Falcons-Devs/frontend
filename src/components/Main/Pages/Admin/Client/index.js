@@ -58,7 +58,7 @@ export const Client = () => {
         <CardPerson
           key={`Cliente ${item.id}`}
           name={item.name}
-          to={`/admin-edit-user/${item.id}`}
+          to={`/admin-client-info/${item.id}`}
           email={item.email}
           type={item.type}
           title="Informacion"

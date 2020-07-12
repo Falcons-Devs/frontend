@@ -24,7 +24,7 @@ export const Wrap = styled.div`
   @media (max-width: 375px) {
     /* Positioning */
     /* Box-model */
-    margin-top: 20px;
+    margin: 30px auto;
     /* Typography */
     /* Visual */
     /* Misc */

@@ -28,7 +28,7 @@ export const Person = styled.section`
     /* Positioning */
     /* Box-model */
     display: grid;
-    grid-template-columns: 1fr 50px;
+    grid-template-columns: 250px 50px;
     grid-template-rows: 75px;
     margin-bottom: 10px;
     padding: 10px 15px;
