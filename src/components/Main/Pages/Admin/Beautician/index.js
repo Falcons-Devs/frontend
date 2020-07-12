@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Axios from "axios";
 
 // Import the components
 import { NameStatus } from "../../../../NameStatus";
@@ -13,12 +14,52 @@ import { Link } from "@reach/router";
 
 // Import presentational components of styled components
 import { Wrap, Container, ArrowButton, Title } from "./styles";
+import { Loader } from "../../../../Loader";
 
 // Import useEffect So that when the user changes the page it goes to the top
 export const Beautician = () => {
+  const [data, setData] = useState(false);
+  const [stylist, setStylist] = useState({});
+  const [content, setContent] = useState([]);
   useEffect(() => {
     window.scroll(0, 0);
+    const fetchData = async () => {
+      const beautician = await Axios.get("http://104.198.182.133/stylists");
+      for (const key in beautician.data.body) {
+        beautician.data.body[key].type = "Esteticista";
+      }
+      setStylist(beautician.data.body);
+      setData(true);
+      let content = [];
+      for (const key in stylist) {
+        if (stylist[key].active === 1) {
+          let person = {};
+          person.id = stylist[key].id.toString();
+          person.name = stylist[key].name_stylist.toString();
+          person.email = stylist[key].email.toString();
+          person.dealy_time = stylist[key].dealy_time.toString();
+          content.push(person);
+        }
+      }
+      setContent(content);
+      console.log(content);
+    };
+    if (data === false) fetchData();
   });
+
+  let mainContent = content.map((item) => {
+    return (
+      <CardPerson
+        key={`Estilista ${item.id}`}
+        name={item.name}
+        email={item.email}
+        schedule={item.dealy_time}
+        to={`/admin-beautician-diary/${item.id}`}
+        title="Agenda"
+      />
+    );
+  });
+
   return (
     <Wrap>
       {/* Title creation, creation button and redirection arrow */}
@@ -39,29 +80,9 @@ export const Beautician = () => {
       {/* Creation of cards to present information to beauticians */}
       <Container>
         <ArrowButton></ArrowButton>
-        <CardPerson
-          name="Esteticista 1"
-          email="correo@correo.com"
-          schedule="15:00 - 21:00"
-          to="/admin-beautician-diary"
-          title="Agenda"
-        />
+        {content.length === 0 ? <Loader /> : mainContent}
         <CardPerson
           name="Esteticista 2"
-          email="correo@correo.com"
-          schedule="8:00 - 14:00"
-          to="/admin-beautician-diary"
-          title="Agenda"
-        />
-        <CardPerson
-          name="Esteticista 3"
-          email="correo@correo.com"
-          schedule="15:00 - 21:00"
-          to="/admin-beautician-diary"
-          title="Agenda"
-        />
-        <CardPerson
-          name="Esteticista 4"
           email="correo@correo.com"
           schedule="8:00 - 14:00"
           to="/admin-beautician-diary"

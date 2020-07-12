@@ -7,7 +7,7 @@ import { IconFacebook } from "../../../../assets/static/icon-facebook";
 import { IconGoogle } from "../../../../assets/static/icon-google";
 // Import the button component
 import { Buttons } from "../../../Buttons";
-import AuthContext from "../../../../context/Authentication/authContext";
+import AuthContext from "../../../../context/Authentication/AuthContext";
 
 // Import useEffect So that when the user changes the page it goes to the top
 import { Wrap, SectionForm } from "./styles";
@@ -63,14 +63,7 @@ export const Signin = (props) => {
         <form>
           <div>
             <label htmlFor="nombre">{iconUser}</label>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              value={nombre}
-              placeholder="Nombre"
-              onChange={onChange}
-            />
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
           </div>
           <div>
             <label htmlFor="email">{iconEmail}</label>
@@ -78,9 +71,7 @@ export const Signin = (props) => {
               type="text"
               id="email"
               name="email"
-              value={email}
               placeholder="Coreo electronico"
-              onChange={onChange}
             />
           </div>
           <div>
@@ -89,9 +80,7 @@ export const Signin = (props) => {
               type="text"
               id="password"
               name="password"
-              value={password}
               placeholder="Password"
-              onChange={onChange}
             />
           </div>
           {/* Componente buton. Se envia dos propiedades para su uso */}
