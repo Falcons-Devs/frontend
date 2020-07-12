@@ -98,6 +98,7 @@ export const ClientInformation = () => {
               col7="Horas"
               col8="Costos"
               title="[Citas | Procedimientos | Pagos | Futuras citas ] "
+              data={[]}
             />
           )}
         </Table>

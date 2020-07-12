@@ -46,7 +46,7 @@ export const Client = () => {
       col2="Nombre"
       col3="Email"
       col4="Tipo"
-      col5="Editar Cliente"
+      col5="Ver más informacion"
       title="Clientes"
       data={content}
     />
@@ -60,7 +60,7 @@ export const Client = () => {
           to={`/admin-edit-user/${item.id}`}
           email={item.email}
           type={item.type}
-          title="Editar"
+          title="Informacion"
         />
       );
     });
