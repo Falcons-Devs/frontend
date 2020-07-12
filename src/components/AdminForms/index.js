@@ -73,6 +73,7 @@ export const AdminForms = ({
             id="password"
             placeholder="Password"
             onChange={onChange}
+            value={formValues.password || 1234}
           />
         </div>
         <div>
