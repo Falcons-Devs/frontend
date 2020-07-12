@@ -38,7 +38,6 @@ export const Login = () => {
           const admins = await Axios.get("http://104.198.182.133/admin");
           for (const key in admins.data.body) {
             if (admins.data.body[key].email === email) {
-              localStorage.setItem("userId", admins.data.body[key].id);
               user = "Admin";
               idUser = admins.data.body[key].id;
             }
@@ -47,7 +46,6 @@ export const Login = () => {
             const client = await Axios.get("http://104.198.182.133/user");
             for (const key in client.data.body) {
               if (client.data.body[key].email === email) {
-                localStorage.setItem("userId", client.data.body[key].id);
                 user = "Client";
               }
             }

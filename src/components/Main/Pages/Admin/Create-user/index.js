@@ -35,7 +35,7 @@ class CreateUserAdmin extends React.Component {
         let body = "";
         let headers = "";
         const token = localStorage.getItem("token");
-        const userId = localStorage.getItem("userId");
+        const userId = localStorage.getItem("UserId");
         if (this.state.form.type === "admin") {
           url = "http://104.198.182.133/admin";
           body = {
