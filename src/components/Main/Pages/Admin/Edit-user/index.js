@@ -78,7 +78,6 @@ class editUserAdmin extends React.Component {
   };
 
   handleChange = (e) => {
-    console.log("Change");
     this.setState({
       form: {
         ...this.state.form,
@@ -94,7 +93,6 @@ class editUserAdmin extends React.Component {
     //   if (
     //     this.state.form.email !== "" &&
     //     this.state.form.name !== "" &&
-    //     this.state.form.password !== "" &&
     //     this.state.form.type !== ""
     //   ) {
     //     console.log("Guardado");
@@ -113,7 +111,7 @@ class editUserAdmin extends React.Component {
     //     const result = await Axios.post(url, headers, {
     //       email: this.state.form.email,
     //       name: this.state.form.name,
-    //       password: this.state.form.password,
+    //       password: this.state.form.password || 1234,
     //     });
     //     console.log(result.status);
     //   } else {
