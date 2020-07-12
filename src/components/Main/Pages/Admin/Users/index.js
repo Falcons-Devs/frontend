@@ -28,15 +28,17 @@ export const Users = () => {
       const result = await Axios.get("http://104.198.182.133/api/user");
       setUsers(result.data.body);
       setData(true);
+      // console.log(users);
       let content = [];
       for (const key in users) {
-        if (users[key].active === 1) {
+        if (users[key].active === 1 && users[key].name != null) {
           let person = {};
           person.id = users[key].id.toString();
           person.name = users[key].name.toString();
           person.email = users[key].email.toString();
           person.type = "Cliente";
           content.push(person);
+          console.log(person);
         }
       }
       setContent(content);
