@@ -2,6 +2,7 @@ import React from "react";
 import Axios from "axios";
 
 // Import the components
+import Context from "../../../../../Context";
 import { NameStatus } from "../../../../NameStatus";
 import { HeaderImages } from "../../../../HeaderImages";
 import { AdminForms } from "../../../../AdminForms";
@@ -35,10 +36,10 @@ class CreateUserAdmin extends React.Component {
         let headers = "";
 
         const today = new Date();
-        const hour = `${today.getHours()}:${today.getMinutes()}`;
+        const hour = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
 
+        const token = localStorage.getItem("token");
         if (this.state.form.type === "admin") {
-          const token = localStorage.getItem("token");
           url = "http://104.198.182.133/admin";
           body = {
             email: this.state.form.email,
@@ -50,12 +51,15 @@ class CreateUserAdmin extends React.Component {
           };
         } else if (this.state.form.type === "beautician") {
           console.log("Entro esteticista");
-          url = `http://104.198.182.133/stylist/"${this.props.userId}"`;
+          url = `http://104.198.182.133/admin/stylist/"${this.props.userId}"`;
           body = {
             name_stylist: this.state.form.name,
             email: this.state.form.email,
-            dealy_time: hour,
             password: this.state.form.password,
+            dealy_time: hour,
+          };
+          headers = {
+            headers: { Authorization: `Bearer ${token}` },
           };
         } else if (this.state.form.type === "client") {
           console.log("Entro");

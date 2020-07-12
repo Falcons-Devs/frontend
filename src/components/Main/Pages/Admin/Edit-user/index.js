@@ -88,40 +88,70 @@ class editUserAdmin extends React.Component {
 
   handleClick = async (e) => {
     this.setState({ loading: true, error: null });
+    try {
+      if (
+        this.state.form.email !== "" &&
+        this.state.form.name !== "" &&
+        this.state.form.type !== ""
+      ) {
+        let url = "";
+        let body = "";
+        let headers = "";
 
-    // try {
-    //   if (
-    //     this.state.form.email !== "" &&
-    //     this.state.form.name !== "" &&
-    //     this.state.form.type !== ""
-    //   ) {
-    //     console.log("Guardado");
-    //     console.log(this.state.form);
-    //     let url = "";
-    //     let headers = "";
-    //     if (this.state.form.type === "admin") {
-    //       const token = localStorage.getItem("token");
-    //       url = "http://104.198.182.133/admin";
-    //       headers = `headers: { Authorization: 'Bearer ${token}' }`;
-    //     } else if (this.state.form.type === "beautician") {
-    //       // url = "http://104.198.182.133/admin/stylist/:id";
-    //     } else if (this.state.form.type === "client") {
-    //       url = "http://104.198.182.133/user";
-    //     }
-    //     const result = await Axios.post(url, headers, {
-    //       email: this.state.form.email,
-    //       name: this.state.form.name,
-    //       password: this.state.form.password || 1234,
-    //     });
-    //     console.log(result.status);
-    //   } else {
-    //     console.log("Ningún campo debe estar vació");
-    //   }
-    //   this.setState({ loading: false });
-    // } catch (error) {
-    //   this.setState({ loading: false, error: error });
-    //   console.log(error);
-    // }
+        const today = new Date();
+        const hour = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
+
+        const token = localStorage.getItem("token");
+        if (this.state.form.type === "admin") {
+          url = "http://104.198.182.133/admin";
+          body = {
+            id: this.props.userId,
+            email: this.state.form.email,
+            name: this.state.form.name,
+            password: this.state.form.password,
+            active: "1",
+          };
+          headers = {
+            headers: { Authorization: `Bearer ${token}` },
+          };
+        } else if (this.state.form.type === "beautician") {
+          console.log("Entro esteticista");
+          url = `http://104.198.182.133/stylist`;
+          body = {
+            id: this.props.userId,
+            name_stylist: this.state.form.name,
+            email: this.state.form.email,
+            availabitily: 1,
+            password: this.state.form.password,
+            dealy_time: hour,
+            active: 1,
+          };
+          headers = {
+            headers: { Authorization: `Bearer ${token}` },
+          };
+        } else if (this.state.form.type === "client") {
+          console.log("Entro");
+          url = "http://104.198.182.133/user";
+          body = {
+            id: this.props.userId,
+            name: this.state.form.name,
+            email: this.state.form.email,
+            password: this.state.form.password,
+          };
+          headers = {
+            headers: { Authorization: `Bearer ${token}` },
+          };
+        }
+        const result = await Axios.put(url, body, headers);
+        console.log(result.status);
+      } else {
+        console.log("Ningún campo debe estar vació");
+      }
+      this.setState({ loading: false });
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+      console.log(error);
+    }
   };
 
   render() {
