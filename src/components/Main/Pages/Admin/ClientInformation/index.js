@@ -1,10 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Axios from "axios";
+import { Redirect } from "@reach/router";
+
 // Import the components
 import Context from "../../../../../Context";
 import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
 import { Table as TableInfo } from "../../../../Table";
 import { CardInformation } from "../../../../CardInformation";
+import { Loader } from "../../../../Loader";
 
 // Import the icons svg
 import { IconArrowNext } from "../../../../../assets/static/icon-arrow-next";
@@ -24,19 +28,67 @@ import {
 } from "./styles";
 
 // Import useEffect So that when the user changes the page it goes to the top
-export const ClientInformation = () => {
+export const ClientInformation = ({ clientId }) => {
+  const [client, setClient] = useState("");
+  const [data, setData] = useState(false);
+  const [topic, setTopic] = useState("");
   useEffect(() => {
     window.scroll(0, 0);
+    const fetchData = async () => {
+      const result = await Axios.get(
+        `http://104.198.182.133/user/"${clientId}"`
+      );
+      setClient(result.data.body[0]);
+      setData(true);
+    };
+    if (data === false) fetchData();
   });
   return (
     <Context.Consumer>
       {({ changeType }) => {
         changeType("Admin");
+        if (!client) return <Loader />;
+        let table;
+        if (topic === "History" || topic === "Following") {
+          table = (
+            <TableInfo
+              col1="#"
+              col2="Día"
+              col3="Hora"
+              col4="Esteticista"
+              col5="Procedimientos"
+              col6="Duración"
+              col7="Costo"
+              title={
+                topic === "History" ? "Historial de citas" : "Próximas citas"
+              }
+              data={[]}
+            />
+          );
+        }
+        if (topic === "Procedures" || topic === "Payments") {
+          table = (
+            <TableInfo
+              col1="#"
+              col2={topic === "Procedures" ? "Nombre" : "Dia"}
+              col3={topic === "Procedures" ? "Hora" : "Dia"}
+              title={
+                topic === "Procedures"
+                  ? "Procedimientos realizados"
+                  : "Pagos realizados"
+              }
+              data={[]}
+            />
+          );
+        }
         return (
           <Wrap>
             <Main>
               {/* Title creation and redirection arrow */}
-              <NameStatus title="Informacion de [NAME]" to="/admin-clients" />
+              <NameStatus
+                title={`Informacion de ${client.name}`}
+                to="/admin-clients"
+              />
             </Main>
             <Container>
               {/* Button creation */}
@@ -61,6 +113,7 @@ export const ClientInformation = () => {
                       value="Historial de citas"
                       responsivetablet
                       color="#de18ad"
+                      onClick={() => setTopic("History")}
                     />
                   </HistoryAppointments>
                   <RealizedProcedures>
@@ -68,6 +121,7 @@ export const ClientInformation = () => {
                       value="Procedimientos realizados"
                       responsivetablet
                       color="#de18ad"
+                      onClick={() => setTopic("Procedures")}
                     />
                   </RealizedProcedures>
                   <RealizedPayments>
@@ -75,6 +129,7 @@ export const ClientInformation = () => {
                       value="Pagos realizados"
                       responsivetablet
                       color="#de18ad"
+                      onClick={() => setTopic("Payments")}
                     />
                   </RealizedPayments>
                   <FollowingAppointments>
@@ -82,32 +137,38 @@ export const ClientInformation = () => {
                       value="Próximas citas"
                       responsivetablet
                       color="#de18ad"
+                      onClick={() => setTopic("Following")}
                     />
                   </FollowingAppointments>
                 </>
               )}
               {/* Creating the customer table */}
               <Table>
-                {screen.width <= 375 ? (
-                  <>
-                    <h2>Historial de citas</h2>
-                    <CardInformation name="Cita 1" />
-                    <CardInformation name="Cita 2" />
-                  </>
-                ) : (
-                  <TableInfo
-                    col1="#"
-                    col2="Día"
-                    col3="Hora"
-                    col4="Esteticista"
-                    col5="Procedimientos"
-                    col6="Duración"
-                    col7="Horas"
-                    col8="Costos"
-                    title="[Citas | Procedimientos | Pagos | Futuras citas ] "
-                    data={[]}
-                  />
-                )}
+                {table}
+                {/* {table === false ? (
+                    screen.width <= 375 ? (
+                      <>
+                        <h2>Historial de citas</h2>
+                        <CardInformation name="Cita 1" />
+                        <CardInformation name="Cita 2" />
+                      </>
+                    ) : (
+                      <TableInfo
+                        col1="#"
+                        col2="Día"
+                        col3="Hora"
+                        col4="Esteticista"
+                        col5="Procedimientos"
+                        col6="Duración"
+                        col7="Horas"
+                        col8="Costos"
+                        title="[Citas | Procedimientos | Pagos | Futuras citas ] "
+                        data={[]}
+                      />
+                    )
+                  ) : (
+                    ""
+                  )} */}
               </Table>
             </Container>
           </Wrap>

@@ -24,7 +24,7 @@ export const MenuMobile = () => (
               <Link to="/client">Inicio</Link>
               <Link to="/about">About</Link>
               <Link to="/client-appointments">Mis citas</Link>
-              <Link to="#">Cerrar sesión</Link>
+              <Link to="/logout">Cerrar sesión</Link>
             </Menu>
           );
         case "Beautician":
@@ -33,7 +33,7 @@ export const MenuMobile = () => (
               <Link to="/beautician">Inicio</Link>
               <Link to="/about">About</Link>
               <Link to="/beautician-diary">Mi agenda</Link>
-              <Link to="#">Cerrar sesión</Link>
+              <Link to="/logout">Cerrar sesión</Link>
             </Menu>
           );
         case "Admin":
@@ -41,7 +41,7 @@ export const MenuMobile = () => (
             <Menu>
               <Link to="/admin">Inicio</Link>
               <Link to="/about">About</Link>
-              <Link to="#">Cerrar sesión</Link>
+              <Link to="/logout">Cerrar sesión</Link>
             </Menu>
           );
       }

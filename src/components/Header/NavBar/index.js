@@ -14,7 +14,6 @@ export const NavBar = () => (
       let existToken = localStorage.getItem("token");
       if (existToken) {
         token = existToken;
-        console.log(`Token existe ${token}`);
       } else {
         localStorage.setItem("token", token);
       }
