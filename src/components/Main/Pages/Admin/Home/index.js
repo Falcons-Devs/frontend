@@ -22,7 +22,9 @@ export const Home = () => {
   return (
     <Context.Consumer>
       {({ changeType, token }) => {
-        console.log(token);
+        {
+          /* console.log(token); */
+        }
         changeType("Admin");
         return (
           <Wrap>
