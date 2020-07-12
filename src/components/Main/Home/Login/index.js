@@ -27,7 +27,7 @@ export const Login = () => {
 
   return (
     <Context.Consumer>
-      {({ changeToken }) => {
+      {({ changeToken, changeId }) => {
         const auth = async (e) => {
           e.preventDefault();
           const result = await Axios.post("http://104.198.182.133/auth/login", {
@@ -39,6 +39,7 @@ export const Login = () => {
           for (const key in admins.data.body) {
             if (admins.data.body[key].email === email) {
               user = "Admin";
+              changeId(admins.data.body[key].id);
             }
           }
           if (!user) {
@@ -46,6 +47,7 @@ export const Login = () => {
             for (const key in client.data.body) {
               if (client.data.body[key].email === email) {
                 user = "Client";
+                changeId(client.data.body[key].id);
               }
             }
           }

@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Axios from "axios";
+
 // Import component for show Profile and images with process
 import { ShowMyProfile } from "../../../../ShowMyProfile";
 import { ImagesWithProcess } from "../../../../ImagesWithProcess";
 import Context from "../../../../../Context";
+import { Loader } from "../../../../Loader";
 
 // Import presentational components of styled components
 import {
@@ -16,22 +19,33 @@ import {
 
 // Import useEffect So that when the user changes the page it goes to the top
 export const Home = () => {
+  const [client, setClient] = useState("");
+  const [data, setData] = useState(false);
   useEffect(() => {
     window.scroll(0, 0);
   });
+  const getUser = async (userId) => {
+    const result = await Axios.get(`http://104.198.182.133/user/"${userId}"`);
+    setClient(result.data.body[0]);
+    setData(true);
+  };
   return (
     <Context.Consumer>
-      {({ changeType, token }) => {
-        console.log(token);
+      {({ changeType, userId }) => {
+        if (data === false) getUser(userId);
         changeType("Client");
+        if (!client) return <Loader />;
         return (
           <>
-            <H2>Hola [NAME]</H2>
+            <H2>Hola {client.name}</H2>
             <Wrap>
               <Container>
                 <Profile>
                   {" "}
-                  <ShowMyProfile nameUser="Nombre del esteticista" />{" "}
+                  <ShowMyProfile
+                    nameUser={client.name}
+                    nameBeautician="Nombre Esteticista"
+                  />{" "}
                 </Profile>
                 <MyAppointment>
                   {" "}
