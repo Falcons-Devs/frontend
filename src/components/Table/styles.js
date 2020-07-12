@@ -50,7 +50,7 @@ export const Table = styled.table`
     /* Positioning */
     /* Box-model */
     /* Typography */
-    text-align: left;
+    text-align: center;
     /* Visual */
     /* Misc */
     /* Responsive */
