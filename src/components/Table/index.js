@@ -1,6 +1,7 @@
 import React from "react";
 import { IconEdit } from "../../assets/static/icon-edit";
 import { IconDelete } from "../../assets/static/icon-delete";
+import { IconAdd } from "../../assets/static/icon-add";
 import { Link } from "@reach/router";
 
 // Import pres-entational components of styled components
@@ -55,8 +56,8 @@ export const Table = (props) => {
         }
         if (props.title == "Clientes") {
           link = (
-            <Link to={`/admin-client-info`}>
-              <IconEdit width="25px" height="25px" fill="#000" />
+            <Link to={`/admin-client-info/${data[i].id}`}>
+              <IconAdd width="25px" height="25px" fill="#de18ad" />
             </Link>
           );
         }
