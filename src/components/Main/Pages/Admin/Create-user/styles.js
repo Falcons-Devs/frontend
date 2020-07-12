@@ -66,19 +66,10 @@ export const Form = styled.div`
   /* Visual */
   /* Responsive */
 `;
-export const CancelButton = styled.div`
-  /* Positioning */
-  /* Box-model */
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
-  /* Typography */
-  /* Visual */
-  /* Responsive */
-`;
 export const CreateButton = styled.div`
   /* Positioning */
   /* Box-model */
-  grid-column: 2 / 3;
+  grid-column: 1 / 3;
   grid-row: 4 / 5;
   /* Typography */
   /* Visual */

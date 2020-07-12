@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Axios from "axios";
 
 // Import the components
 import { NameStatus } from "../../../../NameStatus";
@@ -15,6 +16,15 @@ import { Container, Main, Hero, Wrap } from "./styles";
 export const CreateUser = () => {
   useEffect(() => {
     window.scroll(0, 0);
+    const fetchData = async () => {
+      // const result = await Axios.post("http://104.198.182.133/api/user", {
+      //   email: "hectormr@gmail.com",
+      //   name: "hectormr",
+      //   password: "2626",
+      // });
+      // console.log(result.status);
+    };
+    fetchData();
   });
   return (
     <Wrap>

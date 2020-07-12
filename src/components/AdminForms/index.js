@@ -122,7 +122,7 @@ export const AdminForms = ({ actionUser, buttonAction, type }) => {
         {contenido}
         <Title> {actionUser}</Title>
         <CreateButton>
-          <Buttons color="#2DD881" value={buttonAction} />
+          <Buttons color="#2DD881" value={buttonAction} save={"true"} />
         </CreateButton>
         <CancelButton>
           <Buttons color="#DE3C48" value="Cancelar" />
