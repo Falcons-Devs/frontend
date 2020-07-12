@@ -47,6 +47,7 @@ export const PersonName = styled.section`
   display: flex;
   align-items: center;
   /* Typography */
+  text-transform: capitalize;
   /* Visual */
   /* Misc */
   /* Responsive */
@@ -120,6 +121,7 @@ export const Information = styled.section`
     justify-content: space-between;
     margin-bottom: 10px;
     /* Typography */
+    text-transform: lowercase;
     /* Visual */
     /* Misc */
     /* Responsive */
@@ -134,7 +136,8 @@ export const Information = styled.section`
     @media (max-width: 375px) {
       /* Positioning */
       /* Box-model */
-      display: none;
+      align-items: flex-start;
+      /* display: none; */
       /* Typography */
       /* Visual */
       /* Misc */
