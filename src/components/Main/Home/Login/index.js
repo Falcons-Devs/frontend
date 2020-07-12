@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "@reach/router";
-import Facebook from "../../../../apk/Facebook";
-import Google from "../../../../apk/Google";
+import AuthState from "../../../../context/Authentication/authState";
+// import Facebook from "../../../../apk/Facebook";
+// import Google from "../../../../apk/Google";
 // Import the icons svg
 import { IconEmail } from "../../../../assets/static/icon-email";
 import { IconPassword } from "../../../../assets/static/icon-password";
@@ -22,27 +23,29 @@ export const Login = () => {
   }
 
   return (
-    <Wrap>
-      <SectionForm>
-        <h2>Iniciar sesión</h2>
-        <form>
+    <AuthState>
+      <Wrap>
+        <SectionForm>
+          <h2>Iniciar sesión</h2>
+          <form>
+            <div>
+              <label htmlFor="email"> {iconEmail} </label>
+              <input type="text" id="email" placeholder="Coreo electronico" />
+            </div>
+            <div>
+              <label htmlFor="password">{iconPassword}</label>
+              <input type="text" id="password" placeholder="Password" />
+            </div>
+            {/* Componente buton. Se envia dos propiedades para su uso */}
+            <Buttons value="Iniciar sesión" color="#DE18AD" />
+          </form>
           <div>
-            <label htmlFor="email"> {iconEmail} </label>
-            <input type="text" id="email" placeholder="Coreo electronico" />
+            <p>
+              ¿Cliente nuevo? <Link to="/signin">Registrate aquí</Link>
+            </p>
           </div>
-          <div>
-            <label htmlFor="password">{iconPassword}</label>
-            <input type="text" id="password" placeholder="Password" />
-          </div>
-          {/* Componente buton. Se envia dos propiedades para su uso */}
-          <Buttons value="Iniciar sesión" color="#DE18AD" />
-        </form>
-        <div>
-          <p>
-            ¿Cliente nuevo? <Link to="/signin">Registrate aquí</Link>
-          </p>
-        </div>
-      </SectionForm>
-    </Wrap>
+        </SectionForm>
+      </Wrap>
+    </AuthState>
   );
 };
