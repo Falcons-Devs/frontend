@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 // Import the components
+import Context from "../../../../../Context";
 import { Buttons } from "../../../../Buttons";
 import { NameStatus } from "../../../../NameStatus";
 import { Schedule as ShowSchedule } from "../../../../Schedule";
@@ -56,32 +57,39 @@ export const CreateAppointment = () => {
     window.scroll(0, 0);
   });
   return (
-    <Wrap>
-      <Container>
-        <ArrowButton>
-          <NameStatus title="Crear cita" to={"/client"} />
-        </ArrowButton>
-        <Beautician>
-          <List
-            list={listBeauticians}
-            topic="Beautician"
-            title="Elige esteticista"
-          />
-        </Beautician>
-        <Procedures>
-          <List
-            list={listProcedures}
-            topic="Procedure"
-            title="Elige procedimientos"
-          />
-        </Procedures>
-        <Schedule>
-          <ShowSchedule title="Elige un horario" />
-        </Schedule>
-        <ConfirmButton>
-          <Buttons value="Crear cita" color="#2DD881" />
-        </ConfirmButton>
-      </Container>
-    </Wrap>
+    <Context.Consumer>
+      {({ changeType, token }) => {
+        changeType("Client");
+        return (
+          <Wrap>
+            <Container>
+              <ArrowButton>
+                <NameStatus title="Crear cita" to={"/client"} />
+              </ArrowButton>
+              <Beautician>
+                <List
+                  list={listBeauticians}
+                  topic="Beautician"
+                  title="Elige esteticista"
+                />
+              </Beautician>
+              <Procedures>
+                <List
+                  list={listProcedures}
+                  topic="Procedure"
+                  title="Elige procedimientos"
+                />
+              </Procedures>
+              <Schedule>
+                <ShowSchedule title="Elige un horario" />
+              </Schedule>
+              <ConfirmButton>
+                <Buttons value="Crear cita" color="#2DD881" />
+              </ConfirmButton>
+            </Container>
+          </Wrap>
+        );
+      }}
+    </Context.Consumer>
   );
 };
