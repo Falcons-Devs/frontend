@@ -21,7 +21,8 @@ export const Home = () => {
   });
   return (
     <Context.Consumer>
-      {({ changeType }) => {
+      {({ changeType, token }) => {
+        console.log(token);
         changeType("Client");
         return (
           <>

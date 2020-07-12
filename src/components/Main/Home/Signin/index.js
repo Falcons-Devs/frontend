@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 // Import the icons svg
 import { IconAccountCircle } from "../../../../assets/static/icon-accountCircle";
 import { IconEmail } from "../../../../assets/static/icon-email";
@@ -7,11 +7,15 @@ import { IconFacebook } from "../../../../assets/static/icon-facebook";
 import { IconGoogle } from "../../../../assets/static/icon-google";
 // Import the button component
 import { Buttons } from "../../../Buttons";
+// import AuthContext from "../../../../context/Authentication/authContext";
 
 // Import useEffect So that when the user changes the page it goes to the top
 import { Wrap, SectionForm } from "./styles";
 
-export const Signin = () => {
+export const Signin = (props) => {
+  // const authContext = useContext(AuthContext);
+  const { registrarUsuario } = authContext;
+
   let iconUser = (
     <IconAccountCircle width="50px" height="50px" fill="#DE18AD" />
   );
@@ -25,30 +29,78 @@ export const Signin = () => {
     iconPassword = <IconPassword width="30px" height="30px" fill="#DE18AD" />;
   }
 
+  // State para iniciar sesión
+  const [usuario, guardarUsuario] = useState({
+    nombre: "",
+    email: "",
+    password: "",
+  });
+
+  // extraer de usuario
+  const { nombre, email, password } = usuario;
+
+  const onChange = (e) => {
+    guardarUsuario({
+      ...usuario,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    registrarUsuario({
+      nombre,
+      email,
+      password,
+    });
+  };
+
   return (
     <Wrap>
-      <SectionForm>
+      <SectionForm onSubmit={onSubmit}>
         <h2>Registrate</h2>
         <form>
           <div>
             <label htmlFor="nombre">{iconUser}</label>
-            <input type="text" id="nombre" placeholder="Nombre" />
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              value={nombre}
+              placeholder="Nombre"
+              onChange={onChange}
+            />
           </div>
           <div>
             <label htmlFor="email">{iconEmail}</label>
-            <input type="text" id="email" placeholder="Coreo electronico" />
+            <input
+              type="text"
+              id="email"
+              name="email"
+              value={email}
+              placeholder="Coreo electronico"
+              onChange={onChange}
+            />
           </div>
           <div>
             <label htmlFor="password">{iconPassword}</label>
-            <input type="text" id="password" placeholder="Password" />
+            <input
+              type="text"
+              id="password"
+              name="password"
+              value={password}
+              placeholder="Password"
+              onChange={onChange}
+            />
           </div>
           {/* Componente buton. Se envia dos propiedades para su uso */}
           <Buttons value="Registrarse" color="#DE18AD" />
         </form>
         <div>
           <p>O registrate con:</p>
-          <IconFacebook />
-          <IconGoogle />
+          {/* <IconFacebook />
+          <IconGoogle /> */}
         </div>
       </SectionForm>
     </Wrap>

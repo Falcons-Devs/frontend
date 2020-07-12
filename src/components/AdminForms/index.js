@@ -84,6 +84,21 @@ export const AdminForms = ({
             <option value="client">Cliente</option>
           </select>
         </div>
+        {actionUser === "Crear Usuario" ? (
+          <div>
+            <label htmlFor="type">
+              {" "}
+              <IconType width="50px" height="50px" fill="#DE18AD" />{" "}
+            </label>
+            <select name="type" id="type">
+              <option value="admin">Administrador</option>
+              <option value="beautician">Esteticista</option>
+              <option value="client">Cliente</option>
+            </select>
+          </div>
+        ) : (
+          ""
+        )}
       </InputContainer>
     ) : (
       <InputContainer>

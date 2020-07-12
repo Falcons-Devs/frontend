@@ -25,8 +25,16 @@ export const Users = () => {
   useEffect(() => {
     window.scroll(0, 0);
     const fetchData = async () => {
-      const result = await Axios.get("http://104.198.182.133/api/user");
-      setUsers(result.data.body);
+      const result = await Axios.get("http://104.198.182.133/user");
+      const admins = await Axios.get("http://104.198.182.133/admin");
+      for (const key in admins.data.body) {
+        admins.data.body[key].type = "Admin";
+      }
+      for (const key in result.data.body) {
+        result.data.body[key].type = "Client";
+      }
+      const union = Object.assign(result.data.body, admins.data.body);
+      setUsers(union);
       setData(true);
       let content = [];
       for (const key in users) {
@@ -35,7 +43,7 @@ export const Users = () => {
           person.id = users[key].id.toString();
           person.name = users[key].name.toString();
           person.email = users[key].email.toString();
-          person.type = "Cliente";
+          person.type = users[key].type.toString();
           content.push(person);
         }
       }
