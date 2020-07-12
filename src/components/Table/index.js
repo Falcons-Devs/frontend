@@ -1,12 +1,25 @@
 import React from "react";
 import { IconEdit } from "../../assets/static/icon-edit";
+import { IconDelete } from "../../assets/static/icon-delete";
 import { Link } from "@reach/router";
 
 // Import pres-entational components of styled components
 import { Table as ShowTable } from "./styles";
 
 export const Table = (props) => {
-  const { col1, col2, col3, col4, col5, col6, col7, col8, title, data } = props;
+  const {
+    col1,
+    col2,
+    col3,
+    col4,
+    col5,
+    col6,
+    col7,
+    col8,
+    title,
+    data,
+    iconDelete = false,
+  } = props;
   let countColum = -1;
 
   // Counting the props receive for know the columns to create
@@ -20,17 +33,30 @@ export const Table = (props) => {
 
     for (let i = 0; i < data.length; i++) {
       let children = [];
-      children.push(<td key={"Number " + data[i].id}>{i + 1}</td>);
-      children.push(<td key={"Name " + data[i].id}>{data[i].name}</td>);
-      children.push(<td key={"Email " + data[i].id}>{data[i].email}</td>);
-      children.push(<td key={"Type " + data[i].id}>{data[i].type}</td>);
-      children.push(
-        <td key={"Link " + data[i].id}>
-          <Link to={`/admin-edit-user/${data[i].id}`}>
-            <IconEdit width="25px" height="25px" fill="#de18ad" />
-          </Link>
-        </td>
-      );
+
+      if (iconDelete) {
+        children.push(<td key={"Number " + data[i].id}>{i + 1}</td>);
+        children.push(<td key={"Name " + data[i].id}>{data[i].name}</td>);
+        children.push(
+          <td key={"Link " + data[i].id}>
+            <Link to={`/admin-procedure-delete/${data[i].id}`}>
+              <IconDelete fill="#de18ad" width="50px" heigth="50px" />
+            </Link>
+          </td>
+        );
+      } else {
+        children.push(<td key={"Number " + data[i].id}>{i + 1}</td>);
+        children.push(<td key={"Name " + data[i].id}>{data[i].name}</td>);
+        children.push(<td key={"Email " + data[i].id}>{data[i].email}</td>);
+        children.push(<td key={"Type " + data[i].id}>{data[i].type}</td>);
+        children.push(
+          <td key={"Link " + data[i].id}>
+            <Link to={`/admin-edit-user/${data[i].id}`}>
+              <IconEdit width="25px" height="25px" fill="#de18ad" />
+            </Link>
+          </td>
+        );
+      }
       table.push(<tr key={data[i].id}>{children}</tr>);
     }
     return table;
