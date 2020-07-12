@@ -41,6 +41,7 @@ export const Client = () => {
               col3="Email"
               col4="Ver más información"
               title="Home"
+              data={[]}
             />
           )}
         </Table>

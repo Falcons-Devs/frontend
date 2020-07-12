@@ -54,6 +54,7 @@ export const Procedures = () => {
               col2="Nombre"
               col3="Acciones"
               title="Procedimientos"
+              data={[]}
             />
           )}
         </Table>

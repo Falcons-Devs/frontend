@@ -4,18 +4,11 @@ export const Wrap = styled.div`
   /* Positioning */
   /* Box-model */
   margin: 20px auto;
-  width: 1200px;
+  width: 95vw;
   max-width: 1200px;
   padding: 0px 20px;
   /* Typography */
   /* Visual */
-  @media (max-width: 768px) {
-    /* Positioning */
-    /* Box-model */
-    width: 100vw;
-    /* Typography */
-    /* Visual */
-  }
 `;
 
 export const Container = styled.div`
