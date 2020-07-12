@@ -40,7 +40,6 @@ export const Users = () => {
           person.email = users[key].email.toString();
           person.type = "Cliente";
           content.push(person);
-          console.log(person);
         }
       }
       setContent(content);
@@ -48,6 +47,7 @@ export const Users = () => {
     console.log(`data: ${data}`);
     if (data === false) fetchData();
   });
+
   let mainContent = (
     <TableInfo
       col1="#"
@@ -60,7 +60,6 @@ export const Users = () => {
   );
   if (screen.width <= 768) {
     mainContent = content.map((item) => {
-      // console.log();
       return (
         <CardPerson
           key={`Cliente ${item.id}`}

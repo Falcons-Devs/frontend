@@ -25,6 +25,8 @@ export const Table = (props) => {
     }
     return table;
   };
+  console.log("Mostrando data");
+  console.log(content);
 
   return (
     <ShowTable>
