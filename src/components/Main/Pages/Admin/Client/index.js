@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
 // Import the components
+import Context from "../../../../../Context";
 import { NameStatus } from "../../../../NameStatus";
 import { Table as TableInfo } from "../../../../Table";
 import { CardPerson } from "../../../../CardPerson";
@@ -66,19 +67,26 @@ export const Client = () => {
     });
   }
   return (
-    <Wrap>
-      <Container>
-        {/* Title creation and redirection arrow */}
-        <ArrowButton>
-          <NameStatus title="Clientes" to="/admin" />
-        </ArrowButton>
-        <Hero>
-          {/* Show image component according to number */}
-          <BackgroudImages numberImg="3" />
-        </Hero>
-        {/* Creating the customer table */}
-        <Table>{content.length === 0 ? <Loader /> : mainContent}</Table>
-      </Container>
-    </Wrap>
+    <Context.Consumer>
+      {({ changeType }) => {
+        changeType("Admin");
+        return (
+          <Wrap>
+            <Container>
+              {/* Title creation and redirection arrow */}
+              <ArrowButton>
+                <NameStatus title="Clientes" to="/admin" />
+              </ArrowButton>
+              <Hero>
+                {/* Show image component according to number */}
+                <BackgroudImages numberImg="3" />
+              </Hero>
+              {/* Creating the customer table */}
+              <Table>{content.length === 0 ? <Loader /> : mainContent}</Table>
+            </Container>
+          </Wrap>
+        );
+      }}
+    </Context.Consumer>
   );
 };

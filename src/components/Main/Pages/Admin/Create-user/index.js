@@ -73,27 +73,34 @@ class CreateUserAdmin extends React.Component {
 
   render() {
     return (
-      <Wrap>
-        <Container>
-          <Main>
-            {/* Title creation and redirection arrow */}
-            <NameStatus title="Crear usuario" to="/admin-users" />
-          </Main>
-          <Hero>
-            {/* Show image component according to number */}
-            <HeaderImages numberImg="4" />
-          </Hero>
-          {/* Form creation */}
-          <AdminForms
-            actionUser="Crear Usuario"
-            type="Usuario"
-            buttonAction="Crear"
-            onClick={this.handleClick}
-            onChange={this.handleChange}
-            formValues={this.state.form}
-          />
-        </Container>
-      </Wrap>
+      <Context.Consumer>
+        {({ changeType }) => {
+          changeType("Admin");
+          return (
+            <Wrap>
+              <Container>
+                <Main>
+                  {/* Title creation and redirection arrow */}
+                  <NameStatus title="Crear usuario" to="/admin-users" />
+                </Main>
+                <Hero>
+                  {/* Show image component according to number */}
+                  <HeaderImages numberImg="4" />
+                </Hero>
+                {/* Form creation */}
+                <AdminForms
+                  actionUser="Crear Usuario"
+                  type="Usuario"
+                  buttonAction="Crear"
+                  onClick={this.handleClick}
+                  onChange={this.handleChange}
+                  formValues={this.state.form}
+                />
+              </Container>
+            </Wrap>
+          );
+        }}
+      </Context.Consumer>
     );
   }
 }
