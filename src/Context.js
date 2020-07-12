@@ -3,10 +3,15 @@ const Context = createContext();
 
 const Provider = ({ children }) => {
   const [userType, setUserType] = useState("Public");
+  const [token, setToken] = useState("");
   const value = {
     userType,
     changeType: (name) => {
       setUserType(name);
+    },
+    token,
+    changeToken: (token) => {
+      setToken(token);
     },
   };
 

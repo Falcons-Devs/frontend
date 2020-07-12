@@ -64,7 +64,7 @@ export const App = () => {
         <DiaryAdmin path="/admin-beautician-diary" />
         <UsersAdmin path="/admin-users" />
         <CreateUserAdmin path="/admin-create-user" />
-        <EditUserAdmin path="/admin-edit-user" />
+        <EditUserAdmin path="/admin-edit-user/:userId" />
         <AdminForms path="/admin-forms" />
       </Router>
       <Footer />

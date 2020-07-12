@@ -25,40 +25,46 @@ export const Users = () => {
   useEffect(() => {
     window.scroll(0, 0);
     const fetchData = async () => {
-      console.log("Entro");
-      const result = await Axios.get("http://104.198.182.133/api/user");
-      console.log(`result: ${result}`);
-      setUsers(result.data.body);
+      const result = await Axios.get("http://104.198.182.133/user");
+      const admins = await Axios.get("http://104.198.182.133/admin");
+      for (const key in admins.data.body) {
+        admins.data.body[key].type = "Admin";
+      }
+      for (const key in result.data.body) {
+        result.data.body[key].type = "Client";
+      }
+      const union = Object.assign(result.data.body, admins.data.body);
+      setUsers(union);
       setData(true);
       let content = [];
       for (const key in users) {
-        if (users[key].active === 1) {
+        if (users[key].active === 1 && users[key].name != null) {
           let person = {};
           person.id = users[key].id.toString();
           person.name = users[key].name.toString();
           person.email = users[key].email.toString();
-          person.type = "Cliente";
+          person.type = users[key].type.toString();
           content.push(person);
         }
       }
       setContent(content);
     };
-    console.log(`data: ${data}`);
     if (data === false) fetchData();
   });
+
   let mainContent = (
     <TableInfo
       col1="#"
       col2="Nombre"
       col3="Email"
       col4="Tipo"
-      col5="Editar usuarios"
+      col5="Editar usuario"
       title="Usuarios"
+      data={content}
     />
   );
-  if (screen.width <= 768) {
+  if (screen.width <= 375) {
     mainContent = content.map((item) => {
-      // console.log();
       return (
         <CardPerson
           key={`Cliente ${item.id}`}

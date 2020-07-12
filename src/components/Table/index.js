@@ -1,10 +1,12 @@
 import React from "react";
+import { IconEdit } from "../../assets/static/icon-edit";
+import { Link } from "@reach/router";
 
 // Import pres-entational components of styled components
 import { Table as ShowTable } from "./styles";
 
 export const Table = (props) => {
-  const { col1, col2, col3, col4, col5, col6, col7, col8, title } = props;
+  const { col1, col2, col3, col4, col5, col6, col7, col8, title, data } = props;
   let countColum = -1;
 
   // Counting the props receive for know the columns to create
@@ -16,12 +18,20 @@ export const Table = (props) => {
   const createTable = (countColum) => {
     let table = [];
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < data.length; i++) {
       let children = [];
-      for (let j = 0; j < countColum; j++) {
-        children.push(<td key={j}>&nbsp;</td>);
-      }
-      table.push(<tr key={i}>{children}</tr>);
+      children.push(<td key={"Number " + data[i].id}>{i + 1}</td>);
+      children.push(<td key={"Name " + data[i].id}>{data[i].name}</td>);
+      children.push(<td key={"Email " + data[i].id}>{data[i].email}</td>);
+      children.push(<td key={"Type " + data[i].id}>{data[i].type}</td>);
+      children.push(
+        <td key={"Link " + data[i].id}>
+          <Link to={`/admin-edit-user/${data[i].id}`}>
+            <IconEdit width="25px" height="25px" fill="#de18ad" />
+          </Link>
+        </td>
+      );
+      table.push(<tr key={data[i].id}>{children}</tr>);
     }
     return table;
   };

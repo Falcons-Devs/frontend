@@ -21,7 +21,13 @@ import {
 } from "./styles";
 
 // Import useEffect So that when the user changes the page it goes to the top
-export const AdminForms = ({ actionUser, buttonAction, type }) => {
+export const AdminForms = ({
+  actionUser,
+  buttonAction,
+  type,
+  user,
+  onClick,
+}) => {
   useEffect(() => {
     window.scroll(0, 0);
   });
@@ -35,33 +41,52 @@ export const AdminForms = ({ actionUser, buttonAction, type }) => {
             {" "}
             <IconAccountCircle width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <input type="text" id="name" placeholder="Nombre" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Nombre"
+            defaultValue={user ? user[0].name : ""}
+          />
         </div>
         <div>
           <label htmlFor="email">
             {" "}
             <IconEmail width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <input type="text" id="email" placeholder="Coreo electronico" />
+          <input
+            type="text"
+            id="email"
+            placeholder="Correo electronico"
+            defaultValue={user ? user[0].email : ""}
+          />
         </div>
         <div>
           <label htmlFor="password">
             {" "}
             <IconPassword width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <input type="password" id="password" placeholder="Password" />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            defaultValue={user ? "123456" : ""}
+          />
         </div>
-        <div>
-          <label htmlFor="type">
-            {" "}
-            <IconType width="50px" height="50px" fill="#DE18AD" />{" "}
-          </label>
-          <select name="type" id="type">
-            <option value="admin">Administrador</option>
-            <option value="beautician">Esteticista</option>
-            <option value="client">Cliente</option>
-          </select>
-        </div>
+        {actionUser === "Crear Usuario" ? (
+          <div>
+            <label htmlFor="type">
+              {" "}
+              <IconType width="50px" height="50px" fill="#DE18AD" />{" "}
+            </label>
+            <select name="type" id="type">
+              <option value="admin">Administrador</option>
+              <option value="beautician">Esteticista</option>
+              <option value="client">Cliente</option>
+            </select>
+          </div>
+        ) : (
+          ""
+        )}
       </InputContainer>
     ) : (
       <InputContainer>
@@ -103,7 +128,7 @@ export const AdminForms = ({ actionUser, buttonAction, type }) => {
             {" "}
             <IconEmail width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <input type="text" id="email" placeholder="Coreo electronico" />
+          <input type="text" id="email" placeholder="Correo electronico" />
         </div>
         <div>
           <label htmlFor="password">
@@ -122,7 +147,7 @@ export const AdminForms = ({ actionUser, buttonAction, type }) => {
         {contenido}
         <Title> {actionUser}</Title>
         <CreateButton>
-          <Buttons color="#2DD881" value={buttonAction} />
+          <Buttons color="#2DD881" value={buttonAction} onClick={onClick} />
         </CreateButton>
         <CancelButton>
           <Buttons color="#DE3C48" value="Cancelar" />
