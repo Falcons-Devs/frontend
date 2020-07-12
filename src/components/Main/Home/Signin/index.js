@@ -1,4 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
+import Axios from "axios";
+
 // Import the icons svg
 import { IconAccountCircle } from "../../../../assets/static/icon-accountCircle";
 import { IconEmail } from "../../../../assets/static/icon-email";
@@ -13,9 +15,6 @@ import { Buttons } from "../../../Buttons";
 import { Wrap, SectionForm } from "./styles";
 
 export const Signin = (props) => {
-  // const authContext = useContext(AuthContext);
-  const { registrarUsuario } = authContext;
-
   let iconUser = (
     <IconAccountCircle width="50px" height="50px" fill="#DE18AD" />
   );
@@ -30,66 +29,70 @@ export const Signin = (props) => {
   }
 
   // State para iniciar sesión
-  const [usuario, guardarUsuario] = useState({
-    nombre: "",
-    email: "",
-    password: "",
-  });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  // extraer de usuario
-  const { nombre, email, password } = usuario;
-
-  const onChange = (e) => {
-    guardarUsuario({
-      ...usuario,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-
-    registrarUsuario({
-      nombre,
+    const body = {
       email,
+      name,
       password,
-    });
+    };
+    try {
+      const result = await Axios.post("http://104.198.182.133/user", body);
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
   };
-
   return (
     <Wrap>
-      <SectionForm onSubmit={onSubmit}>
+      <SectionForm>
         <h2>Registrate</h2>
         <form>
           <div>
             <label htmlFor="nombre">{iconUser}</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Nombre"
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
           <div>
             <label htmlFor="email">{iconEmail}</label>
             <input
-              type="text"
+              type="email"
               id="email"
               name="email"
-              placeholder="Coreo electronico"
+              placeholder="Correo electronico"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div>
             <label htmlFor="password">{iconPassword}</label>
             <input
-              type="text"
+              type="password"
               id="password"
               name="password"
               placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           {/* Componente buton. Se envia dos propiedades para su uso */}
-          <Buttons value="Registrarse" color="#DE18AD" />
+          <Buttons
+            value="Registrarse"
+            color="#DE18AD"
+            onClick={(e) => onSubmit(e)}
+          />
         </form>
         <div>
           <p>O registrate con:</p>
-          {/* <IconFacebook />
-          <IconGoogle /> */}
+          <IconFacebook />
+          <IconGoogle />
         </div>
       </SectionForm>
     </Wrap>
