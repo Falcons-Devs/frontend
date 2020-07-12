@@ -21,7 +21,13 @@ import {
 } from "./styles";
 
 // Import useEffect So that when the user changes the page it goes to the top
-export const AdminForms = ({ actionUser, buttonAction, type }) => {
+export const AdminForms = ({
+  actionUser,
+  buttonAction,
+  type,
+  onClick,
+  onChange,
+}) => {
   useEffect(() => {
     window.scroll(0, 0);
   });
@@ -35,28 +41,44 @@ export const AdminForms = ({ actionUser, buttonAction, type }) => {
             {" "}
             <IconAccountCircle width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <input type="text" id="name" placeholder="Nombre" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Nombre"
+            onChange={onChange}
+          />
         </div>
         <div>
           <label htmlFor="email">
             {" "}
             <IconEmail width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <input type="text" id="email" placeholder="Coreo electronico" />
+          <input
+            type="text"
+            id="email"
+            placeholder="Coreo electronico"
+            onChange={onChange}
+          />
         </div>
         <div>
           <label htmlFor="password">
             {" "}
             <IconPassword width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <input type="password" id="password" placeholder="Password" />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            onChange={onChange}
+          />
         </div>
         <div>
           <label htmlFor="type">
             {" "}
             <IconType width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <select name="type" id="type">
+          <select name="type" id="type" onChange={onChange}>
+            <option value="">Elige una opción</option>
             <option value="admin">Administrador</option>
             <option value="beautician">Esteticista</option>
             <option value="client">Cliente</option>
@@ -70,21 +92,36 @@ export const AdminForms = ({ actionUser, buttonAction, type }) => {
             {" "}
             <IconAccountCircle width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <input type="text" id="name" placeholder="Nombre" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Nombre"
+            onChange={onChange}
+          />
         </div>
         <div>
           <label htmlFor="price">
             {" "}
             <IconPrice width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <input type="number" id="price" placeholder="Price" />
+          <input
+            type="number"
+            id="price"
+            placeholder="Price"
+            onChange={onChange}
+          />
         </div>
         <div>
           <label htmlFor="duration">
             {" "}
             <IconDuration width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <input type="number" id="duration" placeholder="Duracion (horas)" />
+          <input
+            type="number"
+            id="duration"
+            placeholder="Duracion (horas)"
+            onChange={onChange}
+          />
         </div>
       </InputContainer>
     );
@@ -96,21 +133,36 @@ export const AdminForms = ({ actionUser, buttonAction, type }) => {
             {" "}
             <IconAccountCircle width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <input type="text" id="name" placeholder="Nombre" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Nombre"
+            onChange={onChange}
+          />
         </div>
         <div>
           <label htmlFor="email">
             {" "}
             <IconEmail width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <input type="text" id="email" placeholder="Coreo electronico" />
+          <input
+            type="text"
+            id="email"
+            placeholder="Coreo electronico"
+            onChange={onChange}
+          />
         </div>
         <div>
           <label htmlFor="password">
             {" "}
             <IconPassword width="50px" height="50px" fill="#DE18AD" />{" "}
           </label>
-          <input type="password" id="password" placeholder="Password" />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            onChange={onChange}
+          />
         </div>
       </InputContainer>
     );
@@ -122,7 +174,7 @@ export const AdminForms = ({ actionUser, buttonAction, type }) => {
         {contenido}
         <Title> {actionUser}</Title>
         <CreateButton>
-          <Buttons color="#2DD881" value={buttonAction} save={"true"} />
+          <Buttons color="#2DD881" value={buttonAction} onClick={onClick} />
         </CreateButton>
         <CancelButton>
           <Buttons color="#DE3C48" value="Cancelar" />
