@@ -7,13 +7,13 @@ import { IconFacebook } from "../../../../assets/static/icon-facebook";
 import { IconGoogle } from "../../../../assets/static/icon-google";
 // Import the button component
 import { Buttons } from "../../../Buttons";
-import AuthContext from "../../../../context/Authentication/AuthContext";
+// import AuthContext from "../../../../context/Authentication/authContext";
 
 // Import useEffect So that when the user changes the page it goes to the top
 import { Wrap, SectionForm } from "./styles";
 
 export const Signin = (props) => {
-  const authContext = useContext(AuthContext);
+  // const authContext = useContext(AuthContext);
   const { registrarUsuario } = authContext;
 
   let iconUser = (
