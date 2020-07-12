@@ -21,7 +21,7 @@ You can register with an email, Facebook account or Google account.
 
 `npm run dev`
 
-> Note: this project runs in **localhost:3000**
+> Note: this project runs in **localhost:8080**
 
 ### Production
 
