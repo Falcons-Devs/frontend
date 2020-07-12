@@ -22,6 +22,7 @@ export const Wrap = styled.div`
     /* Positioning */
     /* Box-model */
     margin: 10px;
+    width: calc(100% - 20px);
     /* Typography */
     /* Visual */
     /* Responsive */
@@ -50,7 +51,7 @@ export const Container = styled.div`
     /* Positioning */
     /* Box-model */
     grid-template-rows: 50px 1px 1fr;
-    width: 90%;
+    width: 100%;
     /* Typography */
     /* Visual */
   }

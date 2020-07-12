@@ -25,7 +25,6 @@ export const Wrap = styled.div`
     display: flex;
     justify-content: center;
     /* Box-model */
-    margin: 0 10px;
     /* Typography */
     /* Visual */
   }

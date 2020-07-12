@@ -28,6 +28,7 @@ export const Status = styled.div`
   h3 {
     /* Positioning */
     /* Box-model */
+    width: 100%;
     /* Typography */
     font-size: 2em;
     /* Visual */

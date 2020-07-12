@@ -25,7 +25,9 @@ export const Users = () => {
   useEffect(() => {
     window.scroll(0, 0);
     const fetchData = async () => {
+      console.log("Entro");
       const result = await Axios.get("http://104.198.182.133/api/user");
+      console.log(`result: ${result}`);
       setUsers(result.data.body);
       setData(true);
       let content = [];
@@ -41,6 +43,7 @@ export const Users = () => {
       }
       setContent(content);
     };
+    console.log(`data: ${data}`);
     if (data === false) fetchData();
   });
   let mainContent = (

@@ -21,6 +21,7 @@ export const Wrap = styled.div`
     /* Positioning */
     /* Box-model */
     margin: 0;
+    width: 100vw;
     /* Typography */
     /* Visual */
   }
@@ -46,7 +47,6 @@ export const Container = styled.div`
   @media (max-width: 375px) {
     /* Positioning */
     /* Box-model */
-    grid-template-columns: 150px 150px;
     grid-template-rows: 50px 1fr 200px 100px;
     /* Typography */
     /* Visual */

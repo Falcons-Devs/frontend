@@ -21,6 +21,7 @@ export const Wrap = styled.div`
     /* Positioning */
     /* Box-model */
     margin: 10px 0;
+    width: 100vw;
     /* Typography */
     /* Visual */
   }
