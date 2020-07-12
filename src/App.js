@@ -27,7 +27,7 @@ import { ClientInformation as ClientInformationAdmin } from "./components/Main/P
 import { Procedures as ProceduresAdmin } from "./components/Main/Pages/Admin/Procedures";
 import { CreateProcedure as CreateProcedureAdmin } from "./components/Main/Pages/Admin/Create-procedure";
 import { Beautician as BeauticianAdmin } from "./components/Main/Pages/Admin/Beautician";
-import { CreateBeautician as CreateBeauticianAdmin } from "./components/Main/Pages/Admin/Create-beautician";
+import CreateBeauticianAdmin from "./components/Main/Pages/Admin/Create-beautician";
 import { Diary as DiaryAdmin } from "./components/Main/Pages/Admin/Diary";
 import { Users as UsersAdmin } from "./components/Main/Pages/Admin/Users";
 import CreateUserAdmin from "./components/Main/Pages/Admin/Create-user/index.js";
@@ -65,7 +65,7 @@ export const App = () => {
         <CreateBeauticianAdmin path="/admin-create-beautician" />
         <DiaryAdmin path="/admin-beautician-diary" />
         <UsersAdmin path="/admin-users" />
-        <CreateUserAdmin path="/admin-create-user/:userId" />
+        <CreateUserAdmin path="/admin-create-user" />
         <EditUserAdmin path="/admin-edit-user/:userId" />
         <AdminForms path="/admin-forms" />
       </Router>

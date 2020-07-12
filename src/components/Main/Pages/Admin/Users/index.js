@@ -28,21 +28,35 @@ export const Users = () => {
     const fetchData = async () => {
       const result = await Axios.get("http://104.198.182.133/user");
       const admins = await Axios.get("http://104.198.182.133/admin");
+      const stylist = await Axios.get("http://104.198.182.133/stylists");
       for (const key in admins.data.body) {
         admins.data.body[key].type = "Admin";
       }
       for (const key in result.data.body) {
         result.data.body[key].type = "Client";
       }
-      const union = Object.assign(result.data.body, admins.data.body);
+      for (const key in stylist.data.body) {
+        stylist.data.body[key].type = "Stylist";
+      }
+      const union = Object.assign(
+        result.data.body,
+        admins.data.body,
+        stylist.data.body
+      );
       setUsers(union);
       setData(true);
       let content = [];
       for (const key in users) {
-        if (users[key].active === 1 && users[key].name != null) {
+        if (
+          users[key].active === 1 &&
+          (users[key].name != null || users[key].name_stylist != null)
+        ) {
           let person = {};
           person.id = users[key].id.toString();
-          person.name = users[key].name.toString();
+          person.name =
+            users[key].type.toString() != "Stylist"
+              ? users[key].name.toString()
+              : users[key].name_stylist.toString();
           person.email = users[key].email.toString();
           person.type = users[key].type.toString();
           content.push(person);

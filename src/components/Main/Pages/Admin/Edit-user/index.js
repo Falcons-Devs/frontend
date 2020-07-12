@@ -19,7 +19,7 @@ class editUserAdmin extends React.Component {
       name: "",
       email: "",
       type: "",
-      password: "",
+      password: "1234",
     },
   };
 
@@ -58,13 +58,13 @@ class editUserAdmin extends React.Component {
           });
         } else {
           const data = await Axios.get(
-            `http://104.198.182.133/stylist/"${this.props.userId}"`
+            `http://104.198.182.133/stylists/"${this.props.userId}"`
           );
           if (data.data.body.length > 0) {
             this.setState({
               loading: false,
               form: {
-                name: data.data.body[0].name,
+                name: data.data.body[0].name_stylist,
                 email: data.data.body[0].email,
                 type: "beautician",
               },
@@ -98,6 +98,8 @@ class editUserAdmin extends React.Component {
         let body = "";
         let headers = "";
 
+        console.log(this.props.userId);
+
         const today = new Date();
         const hour = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
 
@@ -116,7 +118,7 @@ class editUserAdmin extends React.Component {
           };
         } else if (this.state.form.type === "beautician") {
           console.log("Entro esteticista");
-          url = `http://104.198.182.133/stylist`;
+          url = `http://104.198.182.133/stylists`;
           body = {
             id: this.props.userId,
             name_stylist: this.state.form.name,

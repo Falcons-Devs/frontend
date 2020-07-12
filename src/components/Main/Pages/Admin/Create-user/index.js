@@ -19,7 +19,7 @@ class CreateUserAdmin extends React.Component {
       name: "",
       email: "",
       type: "",
-      password: "",
+      password: "1234",
     },
   };
 
@@ -34,11 +34,8 @@ class CreateUserAdmin extends React.Component {
         let url = "";
         let body = "";
         let headers = "";
-
-        const today = new Date();
-        const hour = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
-
         const token = localStorage.getItem("token");
+        const userId = localStorage.getItem("userId");
         if (this.state.form.type === "admin") {
           url = "http://104.198.182.133/admin";
           body = {
@@ -51,12 +48,11 @@ class CreateUserAdmin extends React.Component {
           };
         } else if (this.state.form.type === "beautician") {
           console.log("Entro esteticista");
-          url = `http://104.198.182.133/admin/stylist/"${this.props.userId}"`;
+          url = `http://104.198.182.133/admin/stylist/"${userId}"`;
           body = {
             name_stylist: this.state.form.name,
             email: this.state.form.email,
             password: this.state.form.password,
-            dealy_time: hour,
           };
           headers = {
             headers: { Authorization: `Bearer ${token}` },
