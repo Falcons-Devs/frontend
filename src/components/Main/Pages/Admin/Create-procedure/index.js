@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 // Import the components
+import Context from "../../../../../Context";
 import { NameStatus } from "../../../../NameStatus";
 import { HeaderImages } from "../../../../HeaderImages";
 import { Buttons } from "../../../../Buttons";
@@ -33,19 +34,32 @@ export const CreateProcedure = () => {
     window.scroll(0, 0);
   });
   return (
-    <Wrap>
-      <Container>
-        <Main>
-          {/* Title creation and redirection arrow */}
-          <NameStatus title="Crear procedimiento" to="/admin-procedures" />
-        </Main>
-        <Hero>
-          {/* Show image component according to number */}
-          <HeaderImages numberImg="1" />
-        </Hero>
-        {/* Form creation */}
-        <AdminForms actionUser="Crear Procedimiento" buttonAction="Crear" />
-      </Container>
-    </Wrap>
+    <Context.Consumer>
+      {({ changeType }) => {
+        changeType("Admin");
+        return (
+          <Wrap>
+            <Container>
+              <Main>
+                {/* Title creation and redirection arrow */}
+                <NameStatus
+                  title="Crear procedimiento"
+                  to="/admin-procedures"
+                />
+              </Main>
+              <Hero>
+                {/* Show image component according to number */}
+                <HeaderImages numberImg="1" />
+              </Hero>
+              {/* Form creation */}
+              <AdminForms
+                actionUser="Crear Procedimiento"
+                buttonAction="Crear"
+              />
+            </Container>
+          </Wrap>
+        );
+      }}
+    </Context.Consumer>
   );
 };

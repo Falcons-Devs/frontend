@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
 // Import the components
+import Context from "../../../../../Context";
 import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
 import { CardPerson } from "../../../../CardPerson";
@@ -61,34 +62,41 @@ export const Beautician = () => {
   });
 
   return (
-    <Wrap>
-      {/* Title creation, creation button and redirection arrow */}
-      <Title>
-        <NameStatus title="Esteticistas" to={"/admin"} />
-        <Link to="/admin-create-beautician">
-          {screen.width <= 375 ? (
-            <IconAdd width="35px" height="35px" fill="#2DD881" />
-          ) : (
-            <Buttons
-              value="Crear esteticista"
-              responsivetablet
-              color="#2DD881"
-            />
-          )}
-        </Link>
-      </Title>
-      {/* Creation of cards to present information to beauticians */}
-      <Container>
-        <ArrowButton></ArrowButton>
-        {content.length === 0 ? <Loader /> : mainContent}
-        <CardPerson
-          name="Esteticista 2"
-          email="correo@correo.com"
-          schedule="8:00 - 14:00"
-          to="/admin-beautician-diary"
-          title="Agenda"
-        />
-      </Container>
-    </Wrap>
+    <Context.Consumer>
+      {({ changeType }) => {
+        changeType("Admin");
+        return (
+          <Wrap>
+            {/* Title creation, creation button and redirection arrow */}
+            <Title>
+              <NameStatus title="Esteticistas" to={"/admin"} />
+              <Link to="/admin-create-beautician">
+                {screen.width <= 375 ? (
+                  <IconAdd width="35px" height="35px" fill="#2DD881" />
+                ) : (
+                  <Buttons
+                    value="Crear esteticista"
+                    responsivetablet
+                    color="#2DD881"
+                  />
+                )}
+              </Link>
+            </Title>
+            {/* Creation of cards to present information to beauticians */}
+            <Container>
+              <ArrowButton></ArrowButton>
+              {content.length === 0 ? <Loader /> : mainContent}
+              <CardPerson
+                name="Esteticista 2"
+                email="correo@correo.com"
+                schedule="8:00 - 14:00"
+                to="/admin-beautician-diary"
+                title="Agenda"
+              />
+            </Container>
+          </Wrap>
+        );
+      }}
+    </Context.Consumer>
   );
 };
