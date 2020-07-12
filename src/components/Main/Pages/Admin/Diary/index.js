@@ -9,7 +9,7 @@ import { MobileDiary } from "../../../../MobileDiary";
 import { Container, ArrowButton, Wrap, Table } from "./styles";
 
 // Import useEffect So that when the user changes the page it goes to the top
-export const Diary = () => {
+export const Diary = ({ userId }) => {
   useEffect(() => {
     window.scroll(0, 0);
   });

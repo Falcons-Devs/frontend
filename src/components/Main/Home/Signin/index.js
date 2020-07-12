@@ -63,14 +63,7 @@ export const Signin = (props) => {
         <form>
           <div>
             <label htmlFor="nombre">{iconUser}</label>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              value={nombre}
-              placeholder="Nombre"
-              onChange={onChange}
-            />
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
           </div>
           <div>
             <label htmlFor="email">{iconEmail}</label>
@@ -78,9 +71,7 @@ export const Signin = (props) => {
               type="text"
               id="email"
               name="email"
-              value={email}
               placeholder="Coreo electronico"
-              onChange={onChange}
             />
           </div>
           <div>
@@ -89,9 +80,7 @@ export const Signin = (props) => {
               type="text"
               id="password"
               name="password"
-              value={password}
               placeholder="Password"
-              onChange={onChange}
             />
           </div>
           {/* Componente buton. Se envia dos propiedades para su uso */}
