@@ -71,7 +71,7 @@ export const Users = () => {
           name={item.name}
           to={`/admin-edit-user/${item.id}`}
           email={item.email}
-          type="Cliente"
+          type={item.type}
           title="Editar"
         />
       );
