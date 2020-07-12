@@ -48,18 +48,15 @@ class CreateUserAdmin extends React.Component {
           headers = {
             headers: { Authorization: `Bearer ${token}` },
           };
-          const result = await Axios.post(url, body, headers);
-          console.log(result.status);
         } else if (this.state.form.type === "beautician") {
           console.log("Entro esteticista");
           url = `http://104.198.182.133/stylist/"${this.props.userId}"`;
-          const result = await Axios.post(url, {
+          body = {
             name_stylist: this.state.form.name,
             email: this.state.form.email,
             dealy_time: hour,
             password: this.state.form.password,
-          });
-          console.log(result.status);
+          };
         } else if (this.state.form.type === "client") {
           console.log("Entro");
           url = "http://104.198.182.133/user";
@@ -68,9 +65,9 @@ class CreateUserAdmin extends React.Component {
             name: this.state.form.name,
             password: this.state.form.password,
           };
-          const result = await Axios.post(url, body);
-          console.log(result.status);
         }
+        const result = await Axios.post(url, body, headers);
+        console.log(result.status);
       } else {
         console.log("Ningún campo debe estar vació");
       }
