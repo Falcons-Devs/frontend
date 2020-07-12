@@ -10,6 +10,7 @@ import { Login } from "./components/Main/Home/Login";
 import { Signin } from "./components/Main/Home/Signin";
 import { Footer } from "./components/Footer";
 import { MenuMobile } from "./components/MenuMobile";
+import { Logout } from "./components/Logout";
 
 import { Home as HomeBeautician } from "./components/Main/Pages/Beautician/Home";
 import { Schedules as ScheduleBeautician } from "./components/Main/Pages/Beautician/Schedules";
@@ -44,6 +45,7 @@ export const App = () => {
         <Signin path="/signin" />
         <Login path="/login" />
         <MenuMobile path="/menu" />
+        <Logout path="/logout" />
         {/* Beautician */}
         <HomeBeautician path="/beautician" />
         <ScheduleBeautician path="/beautician-schedule" />

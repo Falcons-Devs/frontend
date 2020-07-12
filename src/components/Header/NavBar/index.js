@@ -52,7 +52,7 @@ export const NavBar = () => (
               <Profile>
                 <IconAvatar fill="#DE18AD" />
               </Profile>
-              <Link to="#">Cerrar sesión</Link>
+              <Link to="/logout">Cerrar sesión</Link>
             </Nav>
           );
 
@@ -77,7 +77,7 @@ export const NavBar = () => (
               <Profile>
                 <IconAvatar fill="#DE18AD" />
               </Profile>
-              <Link to="#">Cerrar sesión</Link>
+              <Link to="/logout">Cerrar sesión</Link>
             </Nav>
           );
 
@@ -95,7 +95,7 @@ export const NavBar = () => (
             <Nav>
               <Link to="/admin">Inicio</Link>
               <Link to="/about">Nosotros</Link>
-              <Link to="#">Cerrar sesión</Link>
+              <Link to="/logout">Cerrar sesión</Link>
             </Nav>
           );
       }
