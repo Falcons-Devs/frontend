@@ -30,15 +30,17 @@ export const Users = () => {
       console.log(`result: ${result}`);
       setUsers(result.data.body);
       setData(true);
+      // console.log(users);
       let content = [];
       for (const key in users) {
-        if (users[key].active === 1) {
+        if (users[key].active === 1 && users[key].name != null) {
           let person = {};
           person.id = users[key].id.toString();
           person.name = users[key].name.toString();
           person.email = users[key].email.toString();
           person.type = "Cliente";
           content.push(person);
+          console.log(person);
         }
       }
       setContent(content);
