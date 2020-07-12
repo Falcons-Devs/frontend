@@ -59,43 +59,30 @@ export const Form = styled.div`
   /* Positioning */
   /* Box-model */
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
   grid-column: 1 / 3;
   grid-row: 3 / 4;
+  justify-content: center;
+  margin-top: 20px;
   /* Typography */
   /* Visual */
+  /* Misc */
   /* Responsive */
 `;
-export const CancelButton = styled.div`
-  /* Positioning */
-  /* Box-model */
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
-  /* Typography */
-  /* Visual */
-  /* Responsive */
-`;
-export const CreateButton = styled.div`
-  /* Positioning */
-  /* Box-model */
-  grid-column: 2 / 3;
-  grid-row: 4 / 5;
-  /* Typography */
-  /* Visual */
-  /* Responsive */
-`;
-
 export const SectionForm = styled.section`
   /* Positioning */
   /* Box-model */
-  border: 5px solid #de18ad;
-  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 75px 50px;
   padding: 30px 60px;
+  margin-block-end: 20px;
   width: 50%;
   /* Typography */
   font-family: "Lato", sans-serif;
   /* Visual */
+  border: 5px solid #de18ad;
+  border-radius: 20px;
+  /* Misc */
   /* Responsive */
   @media (max-width: 768px) {
     /* Positioning */
@@ -103,23 +90,27 @@ export const SectionForm = styled.section`
     width: 75vw;
     /* Typography */
     /* Visual */
+    /* Misc */
   }
   @media (max-width: 375px) {
     /* Positioning */
     /* Box-model */
-    padding: 10px 15px;
-    width: 80vw;
+    width: 90vw;
+    padding: 30px 10px;
     /* Typography */
     /* Visual */
-    border-width: 1px;
+    border-width: 3px;
+    /* Misc */
   }
+
   h2 {
     /* Positioning */
     /* Box-model */
-    margin-bottom: 20px;
+    margin: 20px 0;
     /* Typography */
     text-align: center;
     /* Visual */
+    /* Misc */
     /* Responsive */
   }
 
@@ -131,6 +122,7 @@ export const SectionForm = styled.section`
     justify-content: space-between;
     /* Typography */
     /* Visual */
+    /* Misc */
     /* Responsive */
   }
 
@@ -141,11 +133,12 @@ export const SectionForm = styled.section`
     padding: 7px 0px;
     width: 80%;
     /* Typography */
-    border: 1px solid #02b3b1;
     text-align: center;
-    border-radius: 10px;
     outline: none;
     /* Visual */
+    border: 1px solid #02b3b1;
+    border-radius: 10px;
+    /* Misc */
     /* Responsive */
     @media (max-width: 768px) {
       /* Positioning */
@@ -153,13 +146,23 @@ export const SectionForm = styled.section`
       margin: 20px 0;
       /* Typography */
       /* Visual */
+      /* Misc */
+    }
+    @media (max-width: 375px) {
+      /* Positioning */
+      /* Box-model */
+      width: 90%;
+      /* Typography */
+      /* Visual */
+      /* Misc */
     }
     &::placeholder {
       /* Positioning */
       /* Box-model */
-      color: rgba(47, 47, 47, 0.5);
       /* Typography */
       /* Visual */
+      color: rgba(47, 47, 47, 0.5);
+      /* Misc */
       /* Responsive */
       @media (max-width: 768px) {
         /* Positioning */
@@ -167,35 +170,52 @@ export const SectionForm = styled.section`
         /* Typography */
         font-size: 22px;
         /* Visual */
+        /* Misc */
       }
     }
   }
   select {
     /* Positioning */
     /* Box-model */
-    color: rgba(47, 47, 47, 0.5);
     /* Typography */
+    color: rgba(47, 47, 47, 0.5);
     /* Visual */
+    /* Misc */
     /* Responsive */
     @media (max-width: 768px) {
       /* Positioning */
       /* Box-model */
-      font-size: 22px;
       /* Typography */
+      font-size: 22px;
       /* Visual */
+      /* Misc */
     }
   }
+`;
+
+export const InputContainer = styled.form`
+  /* Positioning */
+  /* Box-model */
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  /* Typography */
+  /* Visual */
+  /* Misc */
+  /* Responsive */
 `;
 
 export const Title = styled.h2`
   /* Positioning */
   /* Box-model */
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
   margin-top: 20px;
   width: 100%;
   /* Typography */
   text-align: center;
   /* Visual */
   border-top: 5px solid #de18ad;
+  /* Misc */
   /* Responsive */
   @media (max-width: 768px) {
     /* Positioning */
@@ -203,13 +223,37 @@ export const Title = styled.h2`
     /* Typography */
     font-size: 32px;
     /* Visual */
+    /* Misc */
   }
   @media (max-width: 375px) {
     /* Positioning */
     /* Box-model */
-    display: none;
     /* Typography */
+    font-size: 23px;
     /* Visual */
+    border-width: 3px;
+    /* Misc */
     /* Responsive */
   }
+`;
+
+export const CancelButton = styled.div`
+  /* Positioning */
+  /* Box-model */
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  /* Typography */
+  /* Visual */
+  /* Misc */
+  /* Responsive */
+`;
+export const CreateButton = styled.div`
+  /* Positioning */
+  /* Box-model */
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  /* Typography */
+  /* Visual */
+  /* Misc */
+  /* Responsive */
 `;
