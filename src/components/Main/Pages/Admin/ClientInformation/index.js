@@ -1,4 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Axios from "axios";
+
 // Import the components
 import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
@@ -23,10 +25,13 @@ import {
 } from "./styles";
 
 // Import useEffect So that when the user changes the page it goes to the top
-export const ClientInformation = () => {
+export const ClientInformation = ({ clientId }) => {
+  const [client, setClient] = useState("");
   useEffect(() => {
     window.scroll(0, 0);
+    fetchData = async(e);
   });
+  console.log(clientId);
   return (
     <Wrap>
       <Main>
