@@ -7,6 +7,7 @@ import { Buttons } from "../../../../Buttons";
 import { NameStatus } from "../../../../NameStatus";
 import { Schedule as ShowSchedule } from "../../../../Schedule";
 import { List } from "../../../../List";
+import { Loader } from "../../../../Loader";
 
 // Import presentational components of styled components
 import {
@@ -18,25 +19,6 @@ import {
   Schedule,
   ConfirmButton,
 } from "./styles";
-import { Loader } from "../../../../Loader";
-
-const listProcedures = [
-  "Procedimiento 1",
-  "Procedimiento 2",
-  "Procedimiento 3",
-  "Procedimiento 4",
-  "Procedimiento 5",
-  "Procedimiento 6",
-  "Procedimiento 7",
-  "Procedimiento 8",
-  "Procedimiento 9",
-  "Procedimiento 10",
-  "Procedimiento 11",
-  "Procedimiento 12",
-  "Procedimiento 13",
-  "Procedimiento 14",
-  "Procedimiento 15",
-];
 
 // Import useEffect So that when the user changes the page it goes to the top
 export const CreateAppointment = () => {
@@ -71,7 +53,6 @@ export const CreateAppointment = () => {
   return (
     <Context.Consumer>
       {({ changeType }) => {
-        console.log(stylist);
         if (stylist.length === 0 || !procedures.length === 0) return <Loader />;
         changeType("Client");
         return (
