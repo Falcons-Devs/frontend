@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
+import Axios from "axios";
 
 // Import the components
 import Context from "../../../../../Context";
@@ -17,7 +18,7 @@ class CreateBeauticianAdmin extends React.Component {
     form: {
       name: "",
       email: "",
-      password: "",
+      password: "1234",
     },
   };
 
@@ -29,7 +30,7 @@ class CreateBeauticianAdmin extends React.Component {
         let body = "";
         let headers = "";
         const token = localStorage.getItem("token");
-        const userId = localStorage.getItem("userId");
+        const userId = localStorage.getItem("UserId");
         url = `http://104.198.182.133/admin/stylist/"${userId}"`;
         body = {
           name_stylist: this.state.form.name,
@@ -83,6 +84,9 @@ class CreateBeauticianAdmin extends React.Component {
                   actionUser="Crear Esteticista"
                   type="Esteticista"
                   buttonAction="Crear"
+                  onClick={this.handleClick}
+                  onChange={this.handleChange}
+                  formValues={this.state.form}
                 />
               </Container>
             </Wrap>

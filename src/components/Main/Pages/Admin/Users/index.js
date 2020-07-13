@@ -47,10 +47,7 @@ export const Users = () => {
       setData(true);
       let content = [];
       for (const key in users) {
-        if (
-          users[key].active === 1 &&
-          (users[key].name != null || users[key].name_stylist != null)
-        ) {
+        if (users[key].name != null || users[key].name_stylist != null) {
           let person = {};
           person.id = users[key].id.toString();
           person.name =
