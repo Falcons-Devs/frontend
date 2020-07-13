@@ -1,7 +1,7 @@
 import React from "react";
 import Context from "../../Context";
 import Swal from "sweetalert2";
-import { Redirect } from "@reach/router";
+import { navigate } from "@reach/router";
 
 export const Logout = () => (
   <Context.Consumer>
@@ -13,8 +13,9 @@ export const Logout = () => (
         title: "Cierre de sesión exitoso",
         showConfirmButton: false,
         timer: 3000,
+      }).then(() => {
+        return navigate("/");
       });
-      return <Redirect to="/" />;
     }}
   </Context.Consumer>
 );

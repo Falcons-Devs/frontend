@@ -95,7 +95,36 @@
 <a name='L36'></a><a href='#L36'>36</a>
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -126,7 +155,36 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -137,39 +195,68 @@
 &nbsp;
 export const Article = styled.article`
   article {
+    /* Positioning */
     position: relative;
-    height: 93px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #02b3b1;
-    border-radius: 200px;
+    /* Box-model */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    margin-bottom: 20px;
+    padding: 10px;
+    height: 93px;
+    /* Typography */
+    /* Visual */
+    border: 1px solid #02b3b1;
+    border-radius: 200px;
+    /* Misc */
+    /* Responsive */
     div {
       p {
         @media (max-width: 375px) {
+          /* Positioning */
+          /* Box-model */
           display: none;
+          /* Typography */
+          /* Visual */
+          /* Misc */
+          /* Responsive */
         }
       }
     }
   }
   h2 {
+    /* Positioning */
+    /* Box-model */
     display: none;
+    /* Typography */
+    /* Visual */
+    /* Misc */
+    /* Responsive */
     @media (max-width: 375px) {
+      /* Positioning */
+      /* Box-model */
       display: block;
       margin: 5px 0;
+      /* Typography */
       font-size: 18px;
+      /* Visual */
+      /* Misc */
     }
   }
 `;
 &nbsp;
 export const Image = styled.img`
+  /* Positioning */
+  /* Box-model */
   margin-left: 10px;
   margin-top: 10px;
   width: 90px;
   height: 90px;
+  /* Typography */
+  /* Visual */
   border-radius: 200px;
+  /* Misc */
+  /* Responsive */
 `;
 &nbsp;</pre></td></tr></table></pre>
 
@@ -178,15 +265,7 @@ export const Image = styled.img`
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                at Fri Jul 10 2020 19:31:56 GMT-0500 (GMT-05:00)
-=======
-                at Fri Jul 10 2020 16:48:05 GMT-0500 (hora de verano central)
->>>>>>> dce3f4fe506a91113577023a005196cf3ef70e1a
-=======
-                at Fri Jul 10 2020 23:03:50 GMT-0500 (hora de verano central)
->>>>>>> abfa4395f63648de0a932d4f96d79c1d9b08c7ac
+                at Sun Jul 12 2020 23:15:45 GMT-0500 (hora de verano central)
             </div>
         </div>
         <script src="../../../prettify.js"></script>

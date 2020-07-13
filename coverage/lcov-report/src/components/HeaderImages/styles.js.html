@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/10</span>
+                <span class='fraction'>4/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -86,7 +86,19 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -98,9 +110,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -123,26 +147,38 @@ import Header_3 from "../../assets/img/Background-header3.jpg";
 import Header_4 from "../../assets/img/Background-header4.jpg";
 &nbsp;
 export const BackgroudImages = styled.div`
+  /* Positioning */
+  /* Box-model */
   height: 200px;
   width: 100%;
-  border-radius: 20px;
-    /* background: ${(props) =&gt;
-      props.numberImg == 1 ? <span class="branch-0 cbranch-no" title="branch not covered" >"red" </span>: `url(${Header_1})`}; */
-    background: ${(props) =&gt;
-      (props.numberImg == 1 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >`url(${Header_1})`)</span> ||
-      (props.numberImg == 2 &amp;&amp; <span class="branch-3 cbranch-no" title="branch not covered" >`url(${Header_2})`)</span> ||
-      (props.numberImg == 3 &amp;&amp; <span class="branch-5 cbranch-no" title="branch not covered" >`url(${Header_3})`)</span> ||
-      (props.numberImg == 4 &amp;&amp; <span class="branch-7 cbranch-no" title="branch not covered" >`url(${Header_4})`)</span>};
+  /* Typography */
+  /* Visual */
+  background: ${(props) =&gt;
+    (props.numberImg == 1 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >`url(${Header_1})`)</span> ||
+    (props.numberImg == 2 &amp;&amp; <span class="branch-3 cbranch-no" title="branch not covered" >`url(${Header_2})`)</span> ||
+    (props.numberImg == 3 &amp;&amp; <span class="branch-5 cbranch-no" title="branch not covered" >`url(${Header_3})`)</span> ||
+    (props.numberImg == 4 &amp;&amp; <span class="branch-7 cbranch-no" title="branch not covered" >`url(${Header_4})`)</span>};
   background-size: cover;
-    /* Responsive */
-    @media (max-width: 768px) {
+  border-radius: 20px;
+  /* Misc */
+  /* Responsive */
+  @media (max-width: 768px) {
+    /* Positioning */
+    /* Box-model */
     max-width: 100%;
     height: 150px;
+    /* Typography */
+    /* Visual */
+    /* Misc */
   }
   @media (max-width: 375px) {
+    /* Positioning */
+    /* Box-model */
     display: none;
+    /* Typography */
+    /* Visual */
+    /* Misc */
   }
-&nbsp;
 `;
 &nbsp;</pre></td></tr></table></pre>
 
@@ -151,15 +187,7 @@ export const BackgroudImages = styled.div`
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                at Fri Jul 10 2020 19:31:56 GMT-0500 (GMT-05:00)
-=======
-                at Fri Jul 10 2020 16:48:05 GMT-0500 (hora de verano central)
->>>>>>> dce3f4fe506a91113577023a005196cf3ef70e1a
-=======
-                at Fri Jul 10 2020 23:03:50 GMT-0500 (hora de verano central)
->>>>>>> abfa4395f63648de0a932d4f96d79c1d9b08c7ac
+                at Sun Jul 12 2020 23:15:45 GMT-0500 (hora de verano central)
             </div>
         </div>
         <script src="../../../prettify.js"></script>

@@ -6,7 +6,18 @@ import { Link } from "@reach/router";
 import { Table as ShowTable } from "./styles";
 
 export const Table = (props) => {
-  const { col1, col2, col3, col4, col5, col6, col7, col8, title, data } = props;
+  const {
+    col1,
+    col2,
+    col3,
+    col4,
+    col5,
+    col6,
+    col7,
+    col8,
+    title,
+    data = [],
+  } = props;
   let countColum = -1;
 
   // Counting the props receive for know the columns to create

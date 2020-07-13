@@ -21,3 +21,4 @@ export const createTable = (countColum) => {
 };
 export const countColum = 8;
 export const title = "Titulo";
+export const data = [];
