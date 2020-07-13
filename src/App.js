@@ -19,7 +19,7 @@ import { Diary as DiaryBeautician } from "./components/Main/Pages/Beautician/Dia
 
 import HomeClient from "./components/Main/Pages/Client/Home";
 import { AppointmentHistory as AppointmentsClient } from "./components/Main/Pages/Client/AppointmentHistory";
-import { CreateAppointment as CreateAppointmentClient } from "./components/Main/Pages/Client/appointment";
+import CreateAppointmentClient from "./components/Main/Pages/Client/appointment";
 
 import { Home as HomeAdmin } from "./components/Main/Pages/Admin/Home";
 import { Client as ClientAdmin } from "./components/Main/Pages/Admin/Client";
