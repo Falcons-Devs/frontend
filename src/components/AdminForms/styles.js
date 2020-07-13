@@ -200,20 +200,10 @@ export const Title = styled.h2`
   }
 `;
 
-export const CancelButton = styled.div`
-  /* Positioning */
-  /* Box-model */
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-  /* Typography */
-  /* Visual */
-  /* Misc */
-  /* Responsive */
-`;
 export const CreateButton = styled.div`
   /* Positioning */
   /* Box-model */
-  grid-column: 2 / 3;
+  grid-column: 1 / 3;
   grid-row: 3 / 4;
   /* Typography */
   /* Visual */

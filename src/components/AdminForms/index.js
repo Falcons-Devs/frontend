@@ -16,7 +16,6 @@ import {
   Form,
   SectionForm,
   Title,
-  CancelButton,
   CreateButton,
   InputContainer,
 } from "./styles";
@@ -198,9 +197,6 @@ export const AdminForms = ({
         <CreateButton>
           <Buttons color="#2DD881" value={buttonAction} onClick={onClick} />
         </CreateButton>
-        <CancelButton>
-          <Buttons color="#DE3C48" value="Cancelar" />
-        </CancelButton>
       </SectionForm>
     </Form>
   );
