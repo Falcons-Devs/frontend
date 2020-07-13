@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Axios from "axios";
+import Swal from "sweetalert2";
 
 // Import the icons svg
 import { IconAccountCircle } from "../../../../assets/static/icon-accountCircle";
@@ -13,6 +14,7 @@ import { Buttons } from "../../../Buttons";
 
 // Import useEffect So that when the user changes the page it goes to the top
 import { Wrap, SectionForm } from "./styles";
+import { Redirect } from "@reach/router";
 
 export const Signin = (props) => {
   let iconUser = (
@@ -32,6 +34,7 @@ export const Signin = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [redirect, setRedirect] = useState(false);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -42,11 +45,22 @@ export const Signin = (props) => {
     };
     try {
       const result = await Axios.post("http://104.198.182.133/user", body);
-      console.log(result);
+      Swal.fire({
+        icon: "success",
+        title: "¡Registro exitoso! Inicia sesión",
+        showConfirmButton: false,
+        timer: 2500,
+      });
+      setRedirect(true);
     } catch (error) {
-      console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "¡Hubo un error!",
+      });
     }
   };
+  if (redirect === true) return <Redirect to="/login" />;
   return (
     <Wrap>
       <SectionForm>
