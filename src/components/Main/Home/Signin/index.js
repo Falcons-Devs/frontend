@@ -107,8 +107,6 @@ export const Signin = (props) => {
           <p>O registrate con:</p>
           <IconFacebook />
           <IconGoogle />
-          <Facebook />
-          <Google />
         </div>
       </SectionForm>
     </Wrap>
