@@ -27,10 +27,10 @@ class CreateAppointmentClient extends React.Component {
     error: null,
     form: {
       beautician: [],
-      beauticianCheck: "",
+      radioBeautician: "",
       procedure: [],
-      procedureCheck: "",
-      hour: "",
+      checkboxProcedure: "",
+      hour: "8:00",
     },
   };
 
@@ -44,23 +44,11 @@ class CreateAppointmentClient extends React.Component {
     try {
       const stylists = await Axios.get(`http://104.198.182.133/stylists`);
       if (stylists.data.body.length > 0) {
-        for (const key in stylists.data.body) {
-          if (stylists.data.body[key].active === 1) {
-            this.state.form.beautician.push(
-              stylists.data.body[key].name_stylist
-            );
-          }
-        }
+        this.state.form.beautician.push(stylists.data.body);
       }
       const procedures = await Axios.get(`http://104.198.182.133/procedures`);
       if (procedures.data.body.length > 0) {
-        for (const key in procedures.data.body) {
-          if (procedures.data.body[key].active === 1) {
-            this.state.form.procedure.push(
-              procedures.data.body[key].name_procedure
-            );
-          }
-        }
+        this.state.form.procedure.push(procedures.data.body);
       }
       this.setState({ loading: false });
     } catch (error) {
@@ -72,45 +60,12 @@ class CreateAppointmentClient extends React.Component {
     this.setState({ loading: true, error: null });
     try {
       if (
-        this.state.form.beautician !== "" &&
-        this.state.form.procedure !== ""
+        this.state.form.radioBeautician !== "" &&
+        this.state.form.checkboxProcedure !== ""
       ) {
-        console.log("Click");
-        // let url = "";
-        // let body = "";
-        // let headers = "";
-        // const token = localStorage.getItem("token");
-        // const userId = localStorage.getItem("UserId");
-        // if (this.state.form.type === "admin") {
-        //   url = "http://104.198.182.133/admin";
-        //   body = {
-        //     email: this.state.form.email,
-        //     name: this.state.form.name,
-        //     password: this.state.form.password,
-        //   };
-        //   headers = {
-        //     headers: { Authorization: `Bearer ${token}` },
-        //   };
-        // } else if (this.state.form.type === "beautician") {
-        //   url = `http://104.198.182.133/admin/stylist/"${userId}"`;
-        //   body = {
-        //     name_stylist: this.state.form.name,
-        //     email: this.state.form.email,
-        //     password: this.state.form.password,
-        //   };
-        //   headers = {
-        //     headers: { Authorization: `Bearer ${token}` },
-        //   };
-        // } else if (this.state.form.type === "client") {
-        //   url = "http://104.198.182.133/user";
-        //   body = {
-        //     email: this.state.form.email,
-        //     name: this.state.form.name,
-        //     password: this.state.form.password,
-        //   };
-        // }
-        // const result = await Axios.post(url, body, headers);
-        // console.log(result.status);
+        console.log(
+          `Guardar ${this.state.form.radioBeautician} ${this.state.form.checkboxProcedure} ${this.state.form.hour}`
+        );
       } else {
         console.log("Ningún campo debe estar vació");
       }
@@ -125,7 +80,7 @@ class CreateAppointmentClient extends React.Component {
     this.setState({
       form: {
         ...this.state.form,
-        [e.target.id]: e.target.value,
+        [e.target.name]: e.target.value,
       },
     });
   };
@@ -149,15 +104,19 @@ class CreateAppointmentClient extends React.Component {
                 <Beautician>
                   <List
                     list={this.state.form.beautician}
+                    listFull={this.state.form.beautician}
                     topic="Beautician"
                     title="Elige esteticista"
+                    onChange={this.handleChange}
                   />
                 </Beautician>
                 <Procedures>
                   <List
                     list={this.state.form.procedure}
+                    listFull={this.state.form.procedure}
                     topic="Procedure"
                     title="Elige procedimientos"
+                    onChange={this.handleChange}
                   />
                 </Procedures>
                 <Schedule>
@@ -168,8 +127,6 @@ class CreateAppointmentClient extends React.Component {
                     value="Crear cita"
                     color="#2DD881"
                     onClick={this.handleClick}
-                    onChange={this.handleChange}
-                    formValues={this.state.form}
                   />
                 </ConfirmButton>
               </Container>
