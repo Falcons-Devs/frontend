@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 // Import the components
+import Context from "../../../../../Context";
 import { NameStatus } from "../../../../NameStatus";
 import { Schedule as ShowSchedule } from "../../../../Schedule";
 import { MobileDiary } from "../../../../MobileDiary";
