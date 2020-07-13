@@ -18,7 +18,7 @@ export const Table = (props) => {
     col7,
     col8,
     title,
-    data,
+    data = [],
     iconDelete = false,
     onClick,
   } = props;
