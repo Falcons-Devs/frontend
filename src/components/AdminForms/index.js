@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { IconEmail } from "../../assets/static/icon-email";
 import { IconPassword } from "../../assets/static/icon-password";
 import { IconAccountCircle } from "../../assets/static/icon-accountCircle";
+import { IconDescription } from "../../assets/static/icon-description";
 import { IconType } from "../../assets/static/icon-type";
 import { IconPrice } from "../../assets/static/icon-price";
 import { IconDuration } from "../../assets/static/icon-duration";
@@ -105,6 +106,18 @@ export const AdminForms = ({
             type="text"
             id="name"
             placeholder="Nombre"
+            onChange={onChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="name">
+            {" "}
+            <IconDescription width="50px" height="50px" fill="#DE18AD" />{" "}
+          </label>
+          <input
+            type="text"
+            id="description"
+            placeholder="Descripción"
             onChange={onChange}
           />
         </div>

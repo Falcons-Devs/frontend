@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
+import Axios from "axios";
 
 // Import the components
 import Context from "../../../../../Context";
@@ -17,7 +18,7 @@ class CreateBeauticianAdmin extends React.Component {
     form: {
       name: "",
       email: "",
-      password: "",
+      password: "1234",
     },
   };
 
@@ -83,6 +84,9 @@ class CreateBeauticianAdmin extends React.Component {
                   actionUser="Crear Esteticista"
                   type="Esteticista"
                   buttonAction="Crear"
+                  onClick={this.handleClick}
+                  onChange={this.handleChange}
+                  formValues={this.state.form}
                 />
               </Container>
             </Wrap>

@@ -47,7 +47,6 @@ class CreateUserAdmin extends React.Component {
             headers: { Authorization: `Bearer ${token}` },
           };
         } else if (this.state.form.type === "beautician") {
-          console.log("Entro esteticista");
           url = `http://104.198.182.133/admin/stylist/"${userId}"`;
           body = {
             name_stylist: this.state.form.name,
@@ -58,7 +57,6 @@ class CreateUserAdmin extends React.Component {
             headers: { Authorization: `Bearer ${token}` },
           };
         } else if (this.state.form.type === "client") {
-          console.log("Entro");
           url = "http://104.198.182.133/user";
           body = {
             email: this.state.form.email,

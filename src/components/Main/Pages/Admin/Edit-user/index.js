@@ -102,11 +102,10 @@ class editUserAdmin extends React.Component {
         if (this.state.form.type === "admin") {
           url = "http://104.198.182.133/admin";
           body = {
-            id: this.props.userId,
+            id: userId,
             email: this.state.form.email,
             name: this.state.form.name,
             password: this.state.form.password,
-            active: "1",
           };
           headers = {
             headers: { Authorization: `Bearer ${token}` },
@@ -118,10 +117,7 @@ class editUserAdmin extends React.Component {
             id: userId,
             name_stylist: this.state.form.name,
             email: this.state.form.email,
-            availabitily: 1,
             password: this.state.form.password,
-            dealy_time: hour,
-            active: 1,
           };
           headers = {
             headers: { Authorization: `Bearer ${token}` },
@@ -130,7 +126,7 @@ class editUserAdmin extends React.Component {
           console.log("Entro");
           url = "http://104.198.182.133/user";
           body = {
-            id: this.props.userId,
+            id: userId,
             name: this.state.form.name,
             email: this.state.form.email,
             password: this.state.form.password,
