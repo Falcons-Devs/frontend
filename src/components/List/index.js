@@ -9,12 +9,13 @@ import { Container, ProcedureContainer, P, Title } from "./styles";
 export const List = ({ list, title, full, topic }) => {
   let content = [];
   for (const key in list) {
+    console.log(list[key]);
     content.push(
-      <ProcedureContainer full={full} key={topic + list[key].id}>
-        <P>{list[key].name}</P>
+      <ProcedureContainer full={full} key={topic + list[key]}>
+        <P>{list[key]}</P>
         <input
           type={topic === "Beautician" ? "radio" : "checkbox"}
-          value={list[key].id}
+          value={list[key]}
           id={topic + key}
           name="check"
         />
