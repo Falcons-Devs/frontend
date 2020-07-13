@@ -34,6 +34,12 @@ export const Login = () => {
           const result = await Axios.post("http://104.198.182.133/auth/login", {
             email: email,
             password: password,
+          }).catch(() => {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "¡Comprueba que tus datos sean correctos!",
+            });
           });
           let user, idUser;
           const admins = await Axios.get("http://104.198.182.133/admin");

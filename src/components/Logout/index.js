@@ -11,9 +11,9 @@ export const Logout = () => (
       changeToken("");
       Swal.fire({
         icon: "success",
-        title: "Cierre de sesión exitoso",
+        title: "Cerrando sesión...",
         showConfirmButton: false,
-        timer: 3000,
+        timer: 1500,
       }).then(() => {
         return navigate("/");
       });
