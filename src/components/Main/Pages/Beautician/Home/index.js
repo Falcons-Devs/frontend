@@ -41,6 +41,7 @@ class HomeBeautician extends React.Component {
         `http://104.198.182.133/stylists/"${userId}"`
       );
       if (data.data.body.length > 0) {
+        console.log("Entro");
         this.setState({
           loading: false,
           form: {
@@ -61,11 +62,11 @@ class HomeBeautician extends React.Component {
           changeType("Beautician");
           return (
             <Wrap>
-              <Title>Hola {this.state.form.name}</Title>
+              <Title>Hola</Title>
               <Container>
                 <Profile>
                   {" "}
-                  <ShowMyProfile nameUser="Nombre del usuario" />{" "}
+                  <ShowMyProfile nameUser={this.state.form.name} />{" "}
                 </Profile>
                 <Agenda>
                   {/* Show the image component according to the number and add the title at the bottom */}{" "}
