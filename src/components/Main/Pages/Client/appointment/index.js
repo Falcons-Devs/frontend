@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Axios from "axios";
 
 // Import the components
 import Context from "../../../../../Context";
@@ -6,6 +7,7 @@ import { Buttons } from "../../../../Buttons";
 import { NameStatus } from "../../../../NameStatus";
 import { Schedule as ShowSchedule } from "../../../../Schedule";
 import { List } from "../../../../List";
+import { Loader } from "../../../../Loader";
 
 // Import presentational components of styled components
 import {
@@ -18,47 +20,40 @@ import {
   ConfirmButton,
 } from "./styles";
 
-const listBeauticians = [
-  "Esteticista 1",
-  "Esteticista 2",
-  "Esteticista 3",
-  "Esteticista 4",
-  "Esteticista 5",
-  "Esteticista 6",
-  "Esteticista 7",
-  "Esteticista 8",
-  "Esteticista 9",
-  "Esteticista 10",
-  "Esteticista 11",
-  "Esteticista 12",
-];
-
-const listProcedures = [
-  "Procedimiento 1",
-  "Procedimiento 2",
-  "Procedimiento 3",
-  "Procedimiento 4",
-  "Procedimiento 5",
-  "Procedimiento 6",
-  "Procedimiento 7",
-  "Procedimiento 8",
-  "Procedimiento 9",
-  "Procedimiento 10",
-  "Procedimiento 11",
-  "Procedimiento 12",
-  "Procedimiento 13",
-  "Procedimiento 14",
-  "Procedimiento 15",
-];
-
 // Import useEffect So that when the user changes the page it goes to the top
 export const CreateAppointment = () => {
+  const [data, setData] = useState(false);
+  const [stylist, setStylist] = useState([]);
+  const [procedures, setProcedures] = useState([]);
   useEffect(() => {
     window.scroll(0, 0);
+    const fetchData = async () => {
+      let beauticianArray = [];
+      let procedureArray = [];
+      const beautician = await Axios.get("http://104.198.182.133/stylists");
+      const procedures = await Axios.get("http://104.198.182.133/procedures");
+      for (const key in beautician.data.body) {
+        let person = {};
+        person.id = beautician.data.body[key].id;
+        person.name = beautician.data.body[key].name_stylist;
+        beauticianArray.push(person);
+      }
+      for (const key in procedures.data.body) {
+        let procedure = {};
+        procedure.id = procedures.data.body[key].id;
+        procedure.name = procedures.data.body[key].name_procedure;
+        procedureArray.push(procedure);
+      }
+      setProcedures(procedureArray);
+      setStylist(beauticianArray);
+      setData(true);
+    };
+    if (data === false) fetchData();
   });
   return (
     <Context.Consumer>
-      {({ changeType, token }) => {
+      {({ changeType }) => {
+        if (stylist.length === 0 || !procedures.length === 0) return <Loader />;
         changeType("Client");
         return (
           <Wrap>
@@ -68,14 +63,14 @@ export const CreateAppointment = () => {
               </ArrowButton>
               <Beautician>
                 <List
-                  list={listBeauticians}
+                  list={stylist}
                   topic="Beautician"
                   title="Elige esteticista"
                 />
               </Beautician>
               <Procedures>
                 <List
-                  list={listProcedures}
+                  list={procedures}
                   topic="Procedure"
                   title="Elige procedimientos"
                 />

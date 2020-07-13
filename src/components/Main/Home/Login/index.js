@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, Redirect } from "@reach/router";
 import Axios from "axios";
+import Swal from "sweetalert2";
 
 // Import the icons svg
 import { IconEmail } from "../../../../assets/static/icon-email";
@@ -62,6 +63,12 @@ export const Login = () => {
           }
           changeIdUser(idUser);
           changeToken(result.data.body);
+          Swal.fire({
+            icon: "success",
+            title: "Inicio de sesión exitoso",
+            showConfirmButton: false,
+            timer: 1500,
+          });
           user === "Admin" && setRedirect("/admin");
           user === "Client" && setRedirect("/client");
           user === "Beautician" && setRedirect("/beautician");
