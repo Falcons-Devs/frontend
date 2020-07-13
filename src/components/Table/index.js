@@ -5,7 +5,7 @@ import { IconAdd } from "../../assets/static/icon-add";
 import { Link } from "@reach/router";
 
 // Import pres-entational components of styled components
-import { Table as ShowTable } from "./styles";
+import { Table as ShowTable, Delete } from "./styles";
 
 export const Table = (props) => {
   const {
@@ -20,6 +20,7 @@ export const Table = (props) => {
     title,
     data,
     iconDelete = false,
+    onClick,
   } = props;
   let countColum = -1;
 
@@ -40,9 +41,14 @@ export const Table = (props) => {
         children.push(<td key={"Name " + data[i].id}>{data[i].name}</td>);
         children.push(
           <td key={"Link " + data[i].id}>
-            <Link to={`/admin-procedure-delete/${data[i].id}`}>
-              <IconDelete fill="#de18ad" width="50px" heigth="50px" />
-            </Link>
+            <Delete onClick={onClick}>
+              <IconDelete
+                fill="#de18ad"
+                width="50px"
+                heigth="50px"
+                id={data[i].id}
+              />
+            </Delete>
           </td>
         );
       } else {

@@ -47,7 +47,7 @@ class CreateProcedureAdmin extends React.Component {
           name_procedure: this.state.form.name,
           description: this.state.form.description,
           price: this.state.form.price,
-          duration_time: this.state.form.duration,
+          duration_time: this.state.form.duration * 10000,
           active: 1,
         };
         headers = {
