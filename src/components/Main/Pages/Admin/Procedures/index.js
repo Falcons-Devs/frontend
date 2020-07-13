@@ -29,9 +29,6 @@ export const Procedures = () => {
     window.scroll(0, 0);
     const fetchData = async () => {
       const resultData = await Axios.get("http://104.198.182.133/procedures");
-      for (const key in resultData.data.body) {
-        resultData.data.body[key].type = "Client";
-      }
       setProcedures(resultData.data.body);
       setData(true);
       let content = [];
