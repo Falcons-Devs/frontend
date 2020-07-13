@@ -12,7 +12,7 @@ import { Footer } from "./components/Footer";
 import { MenuMobile } from "./components/MenuMobile";
 import { Logout } from "./components/Logout";
 
-import { Home as HomeBeautician } from "./components/Main/Pages/Beautician/Home";
+import HomeBeautician from "./components/Main/Pages/Beautician/Home";
 import { Schedules as ScheduleBeautician } from "./components/Main/Pages/Beautician/Schedules";
 import { Procedures as ProcedureBeautician } from "./components/Main/Pages/Beautician/Procedures";
 import { Diary as DiaryBeautician } from "./components/Main/Pages/Beautician/Diary";

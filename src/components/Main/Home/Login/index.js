@@ -48,6 +48,7 @@ export const Login = () => {
             for (const key in client.data.body) {
               if (client.data.body[key].email === email) {
                 user = "Client";
+                idUser = client.data.body[key].id;
               }
             }
           }
@@ -58,6 +59,7 @@ export const Login = () => {
             for (const key in beautician.data.body) {
               if (beautician.data.body[key].email === email) {
                 user = "Beautician";
+                idUser = beautician.data.body[key].id;
               }
             }
           }
