@@ -1,6 +1,6 @@
 import React from "react";
-
 // Import the icons components
+import { Loader } from "../Loader";
 import { IconCheckboxFalse } from "../../assets/static/icon-checkbox-false";
 
 // Import presentational components of styled components

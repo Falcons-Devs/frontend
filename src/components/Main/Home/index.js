@@ -27,7 +27,6 @@ export const Home = () => {
   return (
     <Context.Consumer>
       {({ changeType, token }) => {
-        console.log(token);
         changeType("Public");
         return (
           <>
