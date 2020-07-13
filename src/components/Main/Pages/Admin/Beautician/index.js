@@ -20,30 +20,27 @@ import { Loader } from "../../../../Loader";
 // Import useEffect So that when the user changes the page it goes to the top
 export const Beautician = () => {
   const [data, setData] = useState(false);
-  const [stylist, setStylist] = useState({});
+  const [stylist, setStylist] = useState([]);
   const [content, setContent] = useState([]);
   useEffect(() => {
     window.scroll(0, 0);
     const fetchData = async () => {
       const beautician = await Axios.get("http://104.198.182.133/stylists");
-      for (const key in beautician.data.body) {
-        beautician.data.body[key].type = "Esteticista";
-      }
       setStylist(beautician.data.body);
       setData(true);
       let content = [];
+      // console.log(stylist);
       for (const key in stylist) {
         if (stylist[key].active === 1) {
           let person = {};
-          person.id = stylist[key].id.toString();
-          person.name = stylist[key].name_stylist.toString();
-          person.email = stylist[key].email.toString();
-          person.dealy_time = stylist[key].dealy_time.toString();
+          person.id = stylist[key].id;
+          person.name = stylist[key].name_stylist;
+          person.email = stylist[key].email;
+          person.dealy_time = stylist[key].dealy_time;
           content.push(person);
         }
       }
       setContent(content);
-      console.log(content);
     };
     if (data === false) fetchData();
   });
@@ -86,13 +83,6 @@ export const Beautician = () => {
             <Container>
               <ArrowButton></ArrowButton>
               {content.length === 0 ? <Loader /> : mainContent}
-              <CardPerson
-                name="Esteticista 2"
-                email="correo@correo.com"
-                schedule="8:00 - 14:00"
-                to="/admin-beautician-diary"
-                title="Agenda"
-              />
             </Container>
           </Wrap>
         );
