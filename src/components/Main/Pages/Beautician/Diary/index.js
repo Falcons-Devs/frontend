@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { NameStatus } from "../../../../NameStatus";
 import { Schedule as ShowSchedule } from "../../../../Schedule";
 import { MobileDiary } from "../../../../MobileDiary";
+import Context from "../../../../../Context";
 
 // Import presentational components of styled components
 import { Container, ArrowButton, Dairy, Wrap } from "./styles";
