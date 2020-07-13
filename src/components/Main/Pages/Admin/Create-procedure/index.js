@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import Swal from "sweetalert2";
 
 // Import the components
 import Context from "../../../../../Context";
@@ -9,6 +10,7 @@ import { AdminForms } from "../../../../AdminForms";
 
 // Import presentational components of styled components
 import { Container, Main, Hero, Wrap } from "./styles";
+import { Redirect } from "@reach/router";
 
 // Import useEffect So that when the user changes the page it goes to the top
 class CreateProcedureAdmin extends React.Component {
@@ -21,6 +23,7 @@ class CreateProcedureAdmin extends React.Component {
       price: "",
       duration: "",
     },
+    redirect: false,
   };
 
   handleClick = async (e) => {
@@ -30,7 +33,9 @@ class CreateProcedureAdmin extends React.Component {
         this.state.form.name !== "" &&
         this.state.form.description !== "" &&
         this.state.form.price !== "" &&
-        this.state.form.duration !== ""
+        this.state.form.duration !== "" &&
+        this.state.form.price > 0 &&
+        this.state.form.duration > 0
       ) {
         let url = "";
         let body = "";
@@ -43,19 +48,42 @@ class CreateProcedureAdmin extends React.Component {
           description: this.state.form.description,
           price: this.state.form.price,
           duration_time: this.state.form.duration,
+          active: 1,
         };
         headers = {
           headers: { Authorization: `Bearer ${token}` },
         };
         const result = await Axios.post(url, body, headers);
-        console.log(result.status);
+        if (result.status === 201) {
+          Swal.fire({
+            icon: "success",
+            title: "¡Procedimiento creado exitosamente!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          this.setState({ redirect: true });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "¡Hubo un error!",
+          });
+        }
       } else {
-        console.log("Ningún campo debe estar vació");
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Ningún campo debe estar vació o valores en 0.",
+        });
       }
       this.setState({ loading: false });
     } catch (error) {
       this.setState({ loading: false, error: error });
-      console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "¡Hubo un error!",
+      });
     }
   };
 
@@ -69,6 +97,8 @@ class CreateProcedureAdmin extends React.Component {
   };
 
   render() {
+    if (this.state.redirect === true)
+      return <Redirect to="/admin-procedures" />;
     return (
       <Context.Consumer>
         {({ changeType }) => {

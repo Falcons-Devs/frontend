@@ -130,6 +130,7 @@ export const AdminForms = ({
             id="price"
             placeholder="Price"
             onChange={onChange}
+            min="1"
           />
         </div>
         <div>
@@ -142,6 +143,7 @@ export const AdminForms = ({
             id="duration"
             placeholder="Duracion (horas)"
             onChange={onChange}
+            min="1"
           />
         </div>
       </InputContainer>
