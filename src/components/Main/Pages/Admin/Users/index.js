@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
 // Import the components
+import Context from "../../../../../Context";
 import { NameStatus } from "../../../../NameStatus";
 import { Buttons } from "../../../../Buttons";
 import { Table as TableInfo } from "../../../../Table";
@@ -27,21 +28,32 @@ export const Users = () => {
     const fetchData = async () => {
       const result = await Axios.get("http://104.198.182.133/user");
       const admins = await Axios.get("http://104.198.182.133/admin");
+      const stylist = await Axios.get("http://104.198.182.133/stylists");
       for (const key in admins.data.body) {
         admins.data.body[key].type = "Admin";
       }
       for (const key in result.data.body) {
         result.data.body[key].type = "Client";
       }
-      const union = Object.assign(result.data.body, admins.data.body);
+      for (const key in stylist.data.body) {
+        stylist.data.body[key].type = "Stylist";
+      }
+      const union = Object.assign(
+        result.data.body,
+        admins.data.body,
+        stylist.data.body
+      );
       setUsers(union);
       setData(true);
       let content = [];
       for (const key in users) {
-        if (users[key].active === 1 && users[key].name != null) {
+        if (users[key].name != null || users[key].name_stylist != null) {
           let person = {};
           person.id = users[key].id.toString();
-          person.name = users[key].name.toString();
+          person.name =
+            users[key].type.toString() != "Stylist"
+              ? users[key].name.toString()
+              : users[key].name_stylist.toString();
           person.email = users[key].email.toString();
           person.type = users[key].type.toString();
           content.push(person);
@@ -71,29 +83,40 @@ export const Users = () => {
           name={item.name}
           to={`/admin-edit-user/${item.id}`}
           email={item.email}
-          type="Cliente"
+          type={item.type}
           title="Editar"
         />
       );
     });
   }
   return (
-    <Wrap>
-      <Container>
-        <Main>
-          {/* Title creation, creation button and redirection arrow */}
-          <NameStatus title="Ver usuarios" to="/admin" />
-          <Link to="/admin-create-user">
-            {screen.width <= 375 ? (
-              <IconAdd width="40px" height="40px" fill="#2DD881" />
-            ) : (
-              <Buttons value="Crear usuario" responsivetablet color="#2DD881" />
-            )}
-          </Link>
-        </Main>
-        {/* Creating the customer table */}
-        <Table>{content.length === 0 ? <Loader /> : mainContent}</Table>
-      </Container>
-    </Wrap>
+    <Context.Consumer>
+      {({ changeType }) => {
+        changeType("Admin");
+        return (
+          <Wrap>
+            <Container>
+              <Main>
+                {/* Title creation, creation button and redirection arrow */}
+                <NameStatus title="Ver usuarios" to="/admin" />
+                <Link to="/admin-create-user">
+                  {screen.width <= 375 ? (
+                    <IconAdd width="40px" height="40px" fill="#2DD881" />
+                  ) : (
+                    <Buttons
+                      value="Crear usuario"
+                      responsivetablet
+                      color="#2DD881"
+                    />
+                  )}
+                </Link>
+              </Main>
+              {/* Creating the customer table */}
+              <Table>{content.length === 0 ? <Loader /> : mainContent}</Table>
+            </Container>
+          </Wrap>
+        );
+      }}
+    </Context.Consumer>
   );
 };

@@ -84,7 +84,7 @@ export const Procedures = styled.div`
 export const Schedule = styled.div`
   /* Positioning */
   /* Box-model */
-  grid-column: 0 / 3;
+  grid-column: 1 / 3;
   grid-row: 5 / 6;
   /* Typography */
   /* Visual */

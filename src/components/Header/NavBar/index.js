@@ -10,7 +10,16 @@ import { Nav, Link, Profile, NavMobile } from "./styles";
 
 export const NavBar = () => (
   <Context.Consumer>
-    {({ userType }) => {
+    {({ userType, token, userId }) => {
+      let existToken = localStorage.getItem("token");
+      let UserId = localStorage.getItem("UserId");
+      if (existToken) {
+        token = existToken;
+        userId = UserId;
+      } else {
+        localStorage.setItem("token", token);
+        localStorage.setItem("UserId", userId);
+      }
       switch (userType) {
         case "Public":
           if (screen.width <= 375) {

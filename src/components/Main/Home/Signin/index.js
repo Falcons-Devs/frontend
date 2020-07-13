@@ -1,4 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
+import Axios from "axios";
+import Swal from "sweetalert2";
+
 // Import the icons svg
 import { IconAccountCircle } from "../../../../assets/static/icon-accountCircle";
 import { IconEmail } from "../../../../assets/static/icon-email";
@@ -7,15 +10,15 @@ import { IconFacebook } from "../../../../assets/static/icon-facebook";
 import { IconGoogle } from "../../../../assets/static/icon-google";
 // Import the button component
 import { Buttons } from "../../../Buttons";
+import { Facebook } from "../../../Facebook";
+import { Google } from "../../../Google";
 // import AuthContext from "../../../../context/Authentication/authContext";
 
 // Import useEffect So that when the user changes the page it goes to the top
 import { Wrap, SectionForm } from "./styles";
+import { Redirect } from "@reach/router";
 
 export const Signin = (props) => {
-  // const authContext = useContext(AuthContext);
-  const { registrarUsuario } = authContext;
-
   let iconUser = (
     <IconAccountCircle width="50px" height="50px" fill="#DE18AD" />
   );
@@ -30,77 +33,84 @@ export const Signin = (props) => {
   }
 
   // State para iniciar sesión
-  const [usuario, guardarUsuario] = useState({
-    nombre: "",
-    email: "",
-    password: "",
-  });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [redirect, setRedirect] = useState(false);
 
-  // extraer de usuario
-  const { nombre, email, password } = usuario;
-
-  const onChange = (e) => {
-    guardarUsuario({
-      ...usuario,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-
-    registrarUsuario({
-      nombre,
+    const body = {
       email,
+      name,
       password,
-    });
+    };
+    try {
+      const result = await Axios.post("http://104.198.182.133/user", body);
+      Swal.fire({
+        icon: "success",
+        title: "¡Registro exitoso! Inicia sesión",
+        showConfirmButton: false,
+        timer: 2500,
+      });
+      setRedirect(true);
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "¡Hubo un error!",
+      });
+    }
   };
-
+  if (redirect === true) return <Redirect to="/login" />;
   return (
     <Wrap>
-      <SectionForm onSubmit={onSubmit}>
+      <SectionForm>
         <h2>Registrate</h2>
         <form>
           <div>
             <label htmlFor="nombre">{iconUser}</label>
             <input
               type="text"
-              id="nombre"
-              name="nombre"
-              value={nombre}
+              id="name"
+              name="name"
               placeholder="Nombre"
-              onChange={onChange}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div>
             <label htmlFor="email">{iconEmail}</label>
             <input
-              type="text"
+              type="email"
               id="email"
               name="email"
-              value={email}
-              placeholder="Coreo electronico"
-              onChange={onChange}
+              placeholder="Correo electronico"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div>
             <label htmlFor="password">{iconPassword}</label>
             <input
-              type="text"
+              type="password"
               id="password"
               name="password"
-              value={password}
               placeholder="Password"
-              onChange={onChange}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           {/* Componente buton. Se envia dos propiedades para su uso */}
-          <Buttons value="Registrarse" color="#DE18AD" />
+          <Buttons
+            value="Registrarse"
+            color="#DE18AD"
+            onClick={(e) => onSubmit(e)}
+          />
         </form>
         <div>
           <p>O registrate con:</p>
           {/* <IconFacebook />
           <IconGoogle /> */}
+          <Facebook />
+          <Google />
         </div>
       </SectionForm>
     </Wrap>

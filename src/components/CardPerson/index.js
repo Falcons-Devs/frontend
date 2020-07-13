@@ -29,10 +29,10 @@ export const CardPerson = ({ name, email, schedule, to, type, title }) => {
       </Information>
       <Link to={to}>
         {screen.width <= 375 ? (
-          type ? (
-            <IconEdit width="30px" height="30px" fill="#de18ad" />
-          ) : (
+          title === "Informacion" ? (
             <IconAdd width="30px" height="30px" fill="#de18ad" />
+          ) : (
+            <IconEdit width="30px" height="30px" fill="#de18ad" />
           )
         ) : (
           <Buttons value={title} color="#2DD881" />

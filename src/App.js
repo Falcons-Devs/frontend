@@ -12,26 +12,26 @@ import { Footer } from "./components/Footer";
 import { MenuMobile } from "./components/MenuMobile";
 import { Logout } from "./components/Logout";
 
-import { Home as HomeBeautician } from "./components/Main/Pages/Beautician/Home";
+import HomeBeautician from "./components/Main/Pages/Beautician/Home";
 import { Schedules as ScheduleBeautician } from "./components/Main/Pages/Beautician/Schedules";
 import { Procedures as ProcedureBeautician } from "./components/Main/Pages/Beautician/Procedures";
 import { Diary as DiaryBeautician } from "./components/Main/Pages/Beautician/Diary";
 
-import { Home as HomeClient } from "./components/Main/Pages/Client/Home";
+import HomeClient from "./components/Main/Pages/Client/Home";
 import { AppointmentHistory as AppointmentsClient } from "./components/Main/Pages/Client/AppointmentHistory";
-import { CreateAppointment as CreateAppointmentClient } from "./components/Main/Pages/Client/appointment";
+import CreateAppointmentClient from "./components/Main/Pages/Client/appointment";
 
 import { Home as HomeAdmin } from "./components/Main/Pages/Admin/Home";
 import { Client as ClientAdmin } from "./components/Main/Pages/Admin/Client";
 import { ClientInformation as ClientInformationAdmin } from "./components/Main/Pages/Admin/ClientInformation";
 import { Procedures as ProceduresAdmin } from "./components/Main/Pages/Admin/Procedures";
-import { CreateProcedure as CreateProcedureAdmin } from "./components/Main/Pages/Admin/Create-procedure";
+import CreateProcedureAdmin from "./components/Main/Pages/Admin/Create-procedure";
 import { Beautician as BeauticianAdmin } from "./components/Main/Pages/Admin/Beautician";
-import { CreateBeautician as CreateBeauticianAdmin } from "./components/Main/Pages/Admin/Create-beautician";
+import CreateBeauticianAdmin from "./components/Main/Pages/Admin/Create-beautician";
 import { Diary as DiaryAdmin } from "./components/Main/Pages/Admin/Diary";
 import { Users as UsersAdmin } from "./components/Main/Pages/Admin/Users";
-import { CreateUser as CreateUserAdmin } from "./components/Main/Pages/Admin/Create-user";
-import { EditUser as EditUserAdmin } from "./components/Main/Pages/Admin/Edit-user";
+import CreateUserAdmin from "./components/Main/Pages/Admin/Create-user/index.js";
+import EditUserAdmin from "./components/Main/Pages/Admin/Edit-user";
 import { AdminForms } from "./components/AdminForms";
 
 export const App = () => {
@@ -58,12 +58,12 @@ export const App = () => {
         {/* Admin */}
         <HomeAdmin path="/admin" />
         <ClientAdmin path="/admin-clients" />
-        <ClientInformationAdmin path="/admin-client-info" />
+        <ClientInformationAdmin path="/admin-client-info/:clientId" />
         <ProceduresAdmin path="/admin-procedures" />
         <CreateProcedureAdmin path="/admin-create-procedure" />
         <BeauticianAdmin path="/admin-beautician" />
         <CreateBeauticianAdmin path="/admin-create-beautician" />
-        <DiaryAdmin path="/admin-beautician-diary" />
+        <DiaryAdmin path="/admin-beautician-diary/:beauticianId" />
         <UsersAdmin path="/admin-users" />
         <CreateUserAdmin path="/admin-create-user" />
         <EditUserAdmin path="/admin-edit-user/:userId" />

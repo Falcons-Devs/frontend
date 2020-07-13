@@ -66,3 +66,9 @@ export const Table = styled.table`
     /* Responsive */
   }
 `;
+
+export const Delete = styled.div`
+  cursor: pointer;
+  width: 50px;
+  margin: 0 auto;
+`;
