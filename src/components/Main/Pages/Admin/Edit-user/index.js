@@ -100,9 +100,8 @@ class editUserAdmin extends React.Component {
         const token = localStorage.getItem("token");
         const userId = localStorage.getItem("UserId");
         if (this.state.form.type === "admin") {
-          url = "http://104.198.182.133/admin";
+          url = `http://104.198.182.133/admin/"${userId}"`;
           body = {
-            id: userId,
             email: this.state.form.email,
             name: this.state.form.name,
             password: this.state.form.password,
@@ -112,9 +111,8 @@ class editUserAdmin extends React.Component {
           };
         } else if (this.state.form.type === "beautician") {
           console.log("Entro esteticista");
-          url = `http://104.198.182.133/stylists`;
+          url = `http://104.198.182.133/stylists/"${userId}"`;
           body = {
-            id: userId,
             name_stylist: this.state.form.name,
             email: this.state.form.email,
             password: this.state.form.password,
@@ -124,9 +122,8 @@ class editUserAdmin extends React.Component {
           };
         } else if (this.state.form.type === "client") {
           console.log("Entro");
-          url = "http://104.198.182.133/user";
+          url = `http://104.198.182.133/user/"${userId}"`;
           body = {
-            id: userId,
             name: this.state.form.name,
             email: this.state.form.email,
             password: this.state.form.password,
