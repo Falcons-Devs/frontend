@@ -33,7 +33,9 @@ class CreateProcedureAdmin extends React.Component {
         this.state.form.name !== "" &&
         this.state.form.description !== "" &&
         this.state.form.price !== "" &&
-        this.state.form.duration !== ""
+        this.state.form.duration !== "" &&
+        this.state.form.price > 0 &&
+        this.state.form.duration > 0
       ) {
         let url = "";
         let body = "";
@@ -46,6 +48,7 @@ class CreateProcedureAdmin extends React.Component {
           description: this.state.form.description,
           price: this.state.form.price,
           duration_time: this.state.form.duration,
+          active: 1,
         };
         headers = {
           headers: { Authorization: `Bearer ${token}` },
@@ -70,7 +73,7 @@ class CreateProcedureAdmin extends React.Component {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "Ningún campo debe estar vació",
+          text: "Ningún campo debe estar vació o valores en 0.",
         });
       }
       this.setState({ loading: false });

@@ -34,11 +34,11 @@ export const Procedures = () => {
       setData(true);
       let content = [];
       for (const key in procedures) {
-        if (procedures[key].active === null) {
-          let procedur = {};
-          procedur.id = procedures[key].id.toString();
-          procedur.name = procedures[key].name_procedure.toString();
-          content.push(procedur);
+        if (procedures[key].active !== null) {
+          let procedure = {};
+          procedure.id = procedures[key].id.toString();
+          procedure.name = procedures[key].name_procedure.toString();
+          content.push(procedure);
         }
       }
       setContent(content);
