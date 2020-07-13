@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import Swal from "sweetalert2";
 
 // Import the components
 import Context from "../../../../../Context";
@@ -9,6 +10,7 @@ import { AdminForms } from "../../../../AdminForms";
 
 // Import presentational components of styled components
 import { Container, Main, Hero, Wrap } from "./styles";
+import { Redirect } from "@reach/router";
 
 // Import useEffect So that when the user changes the page it goes to the top
 class CreateBeauticianAdmin extends React.Component {
@@ -20,6 +22,7 @@ class CreateBeauticianAdmin extends React.Component {
       email: "",
       password: "1234",
     },
+    redirect: false,
   };
 
   handleClick = async (e) => {
@@ -41,9 +44,28 @@ class CreateBeauticianAdmin extends React.Component {
           headers: { Authorization: `Bearer ${token}` },
         };
         const result = await Axios.post(url, body, headers);
-        console.log(result.status);
+        console.log(result);
+        if (result.status === 201) {
+          this.setState({ redirect: true });
+          Swal.fire({
+            icon: "success",
+            title: "¡Esteticista creado!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "¡Algo salió mal!",
+          });
+        }
       } else {
-        console.log("Ningún campo debe estar vació");
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Ningún campo debe estar vació",
+        });
       }
       this.setState({ loading: false });
     } catch (error) {
@@ -65,6 +87,7 @@ class CreateBeauticianAdmin extends React.Component {
       <Context.Consumer>
         {({ changeType }) => {
           changeType("Admin");
+          if (this.state.redirect) return <Redirect to="/admin-beautician" />;
           return (
             <Wrap>
               <Container>
