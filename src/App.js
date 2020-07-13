@@ -63,7 +63,7 @@ export const App = () => {
         <CreateProcedureAdmin path="/admin-create-procedure" />
         <BeauticianAdmin path="/admin-beautician" />
         <CreateBeauticianAdmin path="/admin-create-beautician" />
-        <DiaryAdmin path="/admin-beautician-diary" />
+        <DiaryAdmin path="/admin-beautician-diary/:beauticianId" />
         <UsersAdmin path="/admin-users" />
         <CreateUserAdmin path="/admin-create-user" />
         <EditUserAdmin path="/admin-edit-user/:userId" />

@@ -13,7 +13,7 @@ export const Logout = () => (
         icon: "success",
         title: "Cierre de sesión exitoso",
         showConfirmButton: false,
-        timer: 3000,
+        timer: 1500,
       });
       return <Redirect to="/" />;
     }}
